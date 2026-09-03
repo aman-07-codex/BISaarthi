@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import { Menu, Search, Sparkles, ChevronRight, ShieldCheck, Bell } from 'lucide-react';
+import { Menu, Sparkles, ChevronRight, ShieldCheck, Sun, Moon } from 'lucide-react';
+import { useTheme } from '@/context/ThemeContext';
 
 interface AppHeaderProps {
   onMobileMenuToggle?: () => void;
@@ -12,6 +13,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({ onMobileMenuToggle }) => {
   const pathname = usePathname();
   const router = useRouter();
   const [quickQuery, setQuickQuery] = useState('');
+  const { isDark, toggleTheme } = useTheme();
 
   const getPageTitle = () => {
     if (pathname === '/dashboard') return { title: 'Dashboard', category: 'Overview' };
@@ -30,29 +32,28 @@ export const AppHeader: React.FC<AppHeaderProps> = ({ onMobileMenuToggle }) => {
   const handleQuickAsk = (e: React.FormEvent) => {
     e.preventDefault();
     if (!quickQuery.trim()) return;
-    // In UI MVP, navigate to chat with query or find-standards
     router.push(`/chat?prompt=${encodeURIComponent(quickQuery.trim())}`);
   };
 
   return (
-    <header className="h-16 sticky top-0 z-30 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 px-4 sm:px-6 flex items-center justify-between gap-4">
+    <header className="h-16 sticky top-0 z-30 bg-[#FAF9F5]/90 dark:bg-[#15221E]/90 backdrop-blur-md border-b border-[#D9DDD8] dark:border-[#253831] px-4 sm:px-6 flex items-center justify-between gap-4 transition-colors">
       {/* Left: Mobile hamburger + Page Breadcrumb */}
       <div className="flex items-center gap-3 min-w-0">
         <button
           type="button"
           onClick={onMobileMenuToggle}
-          className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 lg:hidden cursor-pointer"
+          className="p-2 rounded-xl text-[#606E66] dark:text-[#BAC5BF] hover:bg-[#EFECE6] dark:hover:bg-[#1B2B26] lg:hidden cursor-pointer"
           aria-label="Open Navigation Menu"
         >
           <Menu className="w-5 h-5" />
         </button>
 
         <div className="flex items-center gap-1.5 text-xs sm:text-sm min-w-0">
-          <span className="text-slate-400 dark:text-slate-400 hidden sm:inline truncate">
+          <span className="text-[#8B978F] hidden sm:inline truncate font-medium">
             {category}
           </span>
-          <ChevronRight className="w-3.5 h-3.5 text-slate-400 hidden sm:inline shrink-0" />
-          <h1 className="font-semibold text-slate-800 dark:text-slate-100 truncate">
+          <ChevronRight className="w-3.5 h-3.5 text-[#8B978F] hidden sm:inline shrink-0" />
+          <h1 className="font-bold text-[#18211D] dark:text-[#F7F5EF] truncate">
             {title}
           </h1>
         </div>
@@ -62,17 +63,17 @@ export const AppHeader: React.FC<AppHeaderProps> = ({ onMobileMenuToggle }) => {
       <div className="hidden md:flex flex-1 max-w-md mx-2">
         <form onSubmit={handleQuickAsk} className="w-full relative">
           <div className="relative flex items-center">
-            <Sparkles className="w-4 h-4 text-[#2563EB] absolute left-3 pointer-events-none" />
+            <Sparkles className="w-4 h-4 text-[#5B8272] absolute left-3 pointer-events-none" />
             <input
               type="text"
               value={quickQuery}
               onChange={(e) => setQuickQuery(e.target.value)}
               placeholder="Ask BISaarthi about any Indian Standard or product..."
-              className="w-full pl-9 pr-16 py-1.5 text-xs rounded-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-[#2563EB] focus:ring-2 focus:ring-blue-500/20 text-slate-900 dark:text-slate-100 placeholder-slate-400 transition-all"
+              className="w-full pl-9 pr-16 py-1.5 text-xs rounded-full bg-[#FFFFFF] dark:bg-[#1B2B26] border border-[#D9DDD8] dark:border-[#253831] focus:outline-none focus:border-[#0D3328] focus:ring-2 focus:ring-[#5B8272]/20 text-[#18211D] dark:text-[#F7F5EF] placeholder-[#8B978F] transition-all"
             />
             <button
               type="submit"
-              className="absolute right-1 px-2.5 py-0.5 text-[11px] font-semibold bg-[#1E3A8A] hover:bg-[#1D4ED8] text-white rounded-full transition-colors cursor-pointer"
+              className="absolute right-1 px-3 py-1 text-[11px] font-semibold bg-[#0D3328] hover:bg-[#164B3A] text-white rounded-full transition-colors cursor-pointer"
             >
               Ask
             </button>
@@ -80,22 +81,37 @@ export const AppHeader: React.FC<AppHeaderProps> = ({ onMobileMenuToggle }) => {
         </form>
       </div>
 
-      {/* Right: Source verification status & User profile avatar */}
+      {/* Right: Source verification status, Theme Toggle, & User profile avatar */}
       <div className="flex items-center gap-3 shrink-0">
-        <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-[11px] font-medium text-emerald-800 dark:text-emerald-300">
-          <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+        <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8F4EC] dark:bg-[#113624] border border-[#C2E4CD] dark:border-[#1E5438] text-[11px] font-semibold text-[#1B5E39] dark:text-[#A7F3D0]">
+          <ShieldCheck className="w-3.5 h-3.5 text-[#2D9D5D]" />
           <span>Authoritative Sources</span>
         </div>
 
-        <div className="flex items-center gap-2 pl-2 border-l border-slate-200 dark:border-slate-800">
-          <div className="w-8 h-8 rounded-full bg-[#1E3A8A] text-white font-semibold text-xs flex items-center justify-center border border-blue-400/30">
+        {/* Dark / Light Mode Toggle Button */}
+        <button
+          type="button"
+          onClick={toggleTheme}
+          className="p-2 rounded-full border border-[#D9DDD8] dark:border-[#253831] bg-white dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] hover:bg-[#EFECE6] dark:hover:bg-[#20312B] transition-colors cursor-pointer shadow-2xs flex items-center justify-center"
+          title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+          aria-label="Toggle Theme"
+        >
+          {isDark ? (
+            <Sun className="w-4 h-4 text-[#B88746] transition-transform rotate-0 hover:rotate-45" />
+          ) : (
+            <Moon className="w-4 h-4 text-[#5B8272] transition-transform rotate-0 hover:-rotate-12" />
+          )}
+        </button>
+
+        <div className="flex items-center gap-2 pl-2 border-l border-[#D9DDD8] dark:border-[#253831]">
+          <div className="w-8 h-8 rounded-full bg-[#0D3328] text-white font-bold text-xs flex items-center justify-center border border-[#5B8272]/40">
             AM
           </div>
           <div className="hidden xl:block text-left">
-            <p className="text-xs font-semibold text-slate-800 dark:text-slate-200 leading-tight">
+            <p className="text-xs font-bold text-[#18211D] dark:text-[#F7F5EF] leading-tight">
               Aman Mishra
             </p>
-            <p className="text-[10px] text-slate-500 dark:text-slate-400">
+            <p className="text-[10px] text-[#8B978F]">
               MSME Verified
             </p>
           </div>

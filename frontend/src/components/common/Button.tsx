@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'accent' | 'ghost' | 'destructive';
+  variant?: 'primary' | 'secondary' | 'accent' | 'ghost' | 'destructive' | 'pill' | 'dark-outline';
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
   icon?: React.ReactNode;
@@ -18,17 +18,19 @@ export const Button: React.FC<ButtonProps> = ({
   const baseStyles = "inline-flex items-center justify-center font-medium transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-1 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer";
   
   const sizeStyles = {
-    sm: "px-3 py-1.5 text-xs rounded-[var(--radius-md)] gap-1.5",
-    md: "px-4 py-2 text-sm rounded-[var(--radius-md)] gap-2",
-    lg: "px-5 py-2.5 text-base rounded-[var(--radius-md)] gap-2.5",
+    sm: "px-3.5 py-1.5 text-xs rounded-full gap-1.5",
+    md: "px-4.5 py-2.5 text-sm rounded-full gap-2",
+    lg: "px-6 py-3 text-base rounded-full gap-2.5",
   }[size];
 
   const variantStyles = {
-    primary: "bg-[#1E3A8A] hover:bg-[#1D4ED8] text-white shadow-sm focus:ring-[#2563EB]",
-    secondary: "bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/60 shadow-sm focus:ring-slate-400",
-    accent: "bg-[#2563EB] hover:bg-[#1D4ED8] text-white shadow-sm focus:ring-[#2563EB]",
-    ghost: "text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white focus:ring-slate-400",
-    destructive: "bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-900/60 hover:bg-red-100 dark:hover:bg-red-900/40 focus:ring-red-500",
+    primary: "bg-[#0D3328] hover:bg-[#164B3A] text-white shadow-xs focus:ring-[#5B8272]",
+    secondary: "bg-[#FFFFFF] dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] border border-[#D9DDD8] dark:border-[#253831] hover:bg-[#F2EFE9] dark:hover:bg-[#20312B] shadow-2xs focus:ring-[#8FA89B]",
+    accent: "bg-[#5B8272] hover:bg-[#47675A] text-white shadow-xs focus:ring-[#5B8272]",
+    ghost: "text-[#606E66] dark:text-[#BAC5BF] hover:bg-[#EFECE6] dark:hover:bg-[#1B2B26] hover:text-[#18211D] dark:hover:text-white focus:ring-[#8FA89B]",
+    destructive: "bg-[#FDF2EE] dark:bg-[#3E1A14] text-[#C86D51] dark:text-[#FECACA] border border-[#FBE0D6] dark:border-[#52251D] hover:bg-[#FBE0D6] focus:ring-[#C86D51]",
+    pill: "bg-[#0D3328] hover:bg-[#164B3A] text-white rounded-full shadow-xs focus:ring-[#5B8272]",
+    'dark-outline': "bg-transparent text-white border border-white/25 hover:bg-white/10 rounded-full focus:ring-white",
   }[variant];
 
   return (

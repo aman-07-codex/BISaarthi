@@ -7,7 +7,7 @@ import { ChatMessage } from './ChatMessage';
 import { ChatComposer } from './ChatComposer';
 import { ChatEmptyState } from './ChatEmptyState';
 import { MOCK_DEFAULT_CONVERSATION, MOCK_STANDARDS_ELECTRIC_HEATER, MOCK_SOURCES, getChatConversationById } from '@/data/mockChatData';
-import { Plus, History, ShieldCheck, Sparkles, Loader2 } from 'lucide-react';
+import { Plus, History, Sparkles, Loader2 } from 'lucide-react';
 
 interface ChatViewProps {
   initialConversationId?: string;
@@ -60,7 +60,6 @@ export const ChatView: React.FC<ChatViewProps> = ({
     setMessages((prev) => [...prev, userMsg]);
     setIsThinking(true);
 
-    // Realistic mock response simulation
     setTimeout(() => {
       let assistantMsg: ChatMessageData;
 
@@ -150,13 +149,13 @@ export const ChatView: React.FC<ChatViewProps> = ({
   const isEmpty = messages.length === 0;
 
   return (
-    <div className="flex flex-col h-[calc(100vh-140px)] min-h-[580px] bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs overflow-hidden">
+    <div className="flex flex-col h-[calc(100vh-140px)] min-h-[580px] bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] shadow-xs overflow-hidden">
       {/* Chat Conversation Sub-Header */}
-      <div className="h-14 px-4 sm:px-6 bg-slate-50 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between shrink-0">
+      <div className="h-14 px-4 sm:px-6 bg-[#FAF9F5] dark:bg-[#1B2B26]/80 border-b border-[#D9DDD8] dark:border-[#253831] flex items-center justify-between shrink-0">
         <div className="flex items-center gap-2.5">
-          <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+          <div className="w-2.5 h-2.5 rounded-full bg-[#2D9D5D] animate-pulse" />
           <div>
-            <h2 className="text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-100">
+            <h2 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
               BISaarthi Guidance Chat
             </h2>
           </div>
@@ -165,7 +164,7 @@ export const ChatView: React.FC<ChatViewProps> = ({
         <div className="flex items-center gap-2">
           <Link
             href="/history"
-            className="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-medium text-slate-600 dark:text-slate-300 hover:text-[#1E3A8A] dark:hover:text-blue-300 hover:bg-slate-200/60 dark:hover:bg-slate-700/60 rounded-lg transition-colors"
+            className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-[#606E66] dark:text-[#BAC5BF] hover:text-[#0D3328] dark:hover:text-[#F7F5EF] hover:bg-[#EFECE6] dark:hover:bg-[#20312B] rounded-full transition-colors"
             title="View chat history"
           >
             <History className="w-3.5 h-3.5" />
@@ -175,7 +174,7 @@ export const ChatView: React.FC<ChatViewProps> = ({
           <button
             type="button"
             onClick={handleResetChat}
-            className="inline-flex items-center gap-1 px-3 py-1 text-xs font-semibold bg-white dark:bg-slate-800 text-[#1E3A8A] dark:text-blue-400 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-lg shadow-2xs transition-colors cursor-pointer"
+            className="inline-flex items-center gap-1 px-3 py-1 text-xs font-bold bg-[#FAF9F5] dark:bg-[#15221E] text-[#0D3328] dark:text-[#8FA89B] border border-[#D9DDD8] dark:border-[#253831] hover:bg-[#EFECE6] dark:hover:bg-[#20312B] rounded-full shadow-2xs transition-colors cursor-pointer"
           >
             <Plus className="w-3.5 h-3.5" />
             <span>New Chat</span>
@@ -197,12 +196,12 @@ export const ChatView: React.FC<ChatViewProps> = ({
             {isThinking && (
               <div className="flex justify-start mb-6 animate-in fade-in duration-150">
                 <div className="w-full max-w-xl flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-linear-to-br from-blue-600 to-[#1E3A8A] text-white flex items-center justify-center shrink-0 shadow-xs mt-1">
-                    <Loader2 className="w-4 h-4 animate-spin text-amber-300" />
+                  <div className="w-8 h-8 rounded-full bg-[#0D3328] text-white flex items-center justify-center shrink-0 shadow-xs mt-1">
+                    <Loader2 className="w-4 h-4 animate-spin text-[#A7B8AE]" />
                   </div>
-                  <div className="bg-white dark:bg-slate-800/90 rounded-2xl rounded-tl-xs border border-slate-200 dark:border-slate-700/80 p-4 shadow-xs">
-                    <div className="flex items-center gap-2 text-xs font-medium text-slate-600 dark:text-slate-300">
-                      <Sparkles className="w-3.5 h-3.5 text-[#2563EB] animate-pulse" />
+                  <div className="bg-[#FAF9F5] dark:bg-[#1B2B26] rounded-2xl rounded-tl-xs border border-[#D9DDD8] dark:border-[#253831] p-4 shadow-xs">
+                    <div className="flex items-center gap-2 text-xs font-semibold text-[#606E66] dark:text-[#BAC5BF]">
+                      <Sparkles className="w-3.5 h-3.5 text-[#5B8272] animate-pulse" />
                       <span>Searching Indian Standards and regulatory publications...</span>
                     </div>
                   </div>

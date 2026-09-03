@@ -12,59 +12,59 @@ export const StatusBadge: React.FC<StatusBadgeProps> = ({ status, className = ''
       case 'active':
         return {
           label: 'Active',
-          bg: 'bg-emerald-50 dark:bg-emerald-950/50',
-          text: 'text-emerald-700 dark:text-emerald-300',
-          border: 'border-emerald-200 dark:border-emerald-800',
-          dot: 'bg-emerald-500',
+          bg: 'bg-[#E8F4EC] dark:bg-[#113624]',
+          text: 'text-[#1B5E39] dark:text-[#A7F3D0]',
+          border: 'border-[#C2E4CD] dark:border-[#1E5438]',
+          dot: 'bg-[#2D9D5D]',
         };
       case 'mandatory':
         return {
           label: 'Mandatory Certification',
-          bg: 'bg-red-50 dark:bg-red-950/50',
-          text: 'text-red-700 dark:text-red-300',
-          border: 'border-red-200 dark:border-red-800',
-          dot: 'bg-red-500',
+          bg: 'bg-[#FDF2EE] dark:bg-[#3E1A14]',
+          text: 'text-[#9E3A20] dark:text-[#FECACA]',
+          border: 'border-[#FBE0D6] dark:border-[#5C2B20]',
+          dot: 'bg-[#C86D51]',
         };
       case 'voluntary':
         return {
           label: 'Voluntary Scheme',
-          bg: 'bg-blue-50 dark:bg-blue-950/50',
-          text: 'text-blue-700 dark:text-blue-300',
-          border: 'border-blue-200 dark:border-blue-800',
-          dot: 'bg-blue-500',
+          bg: 'bg-[#E8EFEA] dark:bg-[#1B2B26]',
+          text: 'text-[#0D3328] dark:text-[#BAC5BF]',
+          border: 'border-[#D9DDD8] dark:border-[#253831]',
+          dot: 'bg-[#5B8272]',
         };
       case 'under_revision':
         return {
           label: 'Under Revision',
-          bg: 'bg-amber-50 dark:bg-amber-950/50',
-          text: 'text-amber-700 dark:text-amber-300',
-          border: 'border-amber-200 dark:border-amber-800',
-          dot: 'bg-amber-500',
+          bg: 'bg-[#FAF4EB] dark:bg-[#38240D]',
+          text: 'text-[#8C6126] dark:text-[#FDE68A]',
+          border: 'border-[#F2E4CD] dark:border-[#523A1B]',
+          dot: 'bg-[#B88746]',
         };
       case 'superseded':
         return {
           label: 'Superseded',
-          bg: 'bg-slate-100 dark:bg-slate-800',
-          text: 'text-slate-600 dark:text-slate-400',
-          border: 'border-slate-200 dark:border-slate-700',
-          dot: 'bg-slate-400',
+          bg: 'bg-[#EFECE6] dark:bg-[#20312B]',
+          text: 'text-[#606E66] dark:text-[#BAC5BF]',
+          border: 'border-[#D9DDD8] dark:border-[#253831]',
+          dot: 'bg-[#8B978F]',
         };
       case 'withdrawn':
         return {
           label: 'Withdrawn',
-          bg: 'bg-rose-50 dark:bg-rose-950/50',
-          text: 'text-rose-700 dark:text-rose-300',
-          border: 'border-rose-200 dark:border-rose-800',
-          dot: 'bg-rose-500',
+          bg: 'bg-[#FDF2EE] dark:bg-[#3E1A14]',
+          text: 'text-[#9E3A20] dark:text-[#FECACA]',
+          border: 'border-[#FBE0D6] dark:border-[#5C2B20]',
+          dot: 'bg-[#C86D51]',
         };
       case 'unknown':
       default:
         return {
           label: 'Status Unverified',
-          bg: 'bg-slate-100 dark:bg-slate-800',
-          text: 'text-slate-600 dark:text-slate-400',
-          border: 'border-slate-200 dark:border-slate-700',
-          dot: 'bg-slate-400',
+          bg: 'bg-[#EFECE6] dark:bg-[#20312B]',
+          text: 'text-[#606E66] dark:text-[#BAC5BF]',
+          border: 'border-[#D9DDD8] dark:border-[#253831]',
+          dot: 'bg-[#8B978F]',
         };
     }
   };

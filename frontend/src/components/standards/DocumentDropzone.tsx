@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef } from 'react';
-import { UploadCloud, FileText, X, CheckCircle2, AlertCircle } from 'lucide-react';
+import { UploadCloud, FileText, X, CheckCircle2 } from 'lucide-react';
 
 interface DocumentDropzoneProps {
   onFileSelect?: (file: File | null) => void;
@@ -59,14 +59,14 @@ export const DocumentDropzone: React.FC<DocumentDropzoneProps> = ({
     <div className={`space-y-2 ${className}`}>
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
+          <label className="text-xs font-bold text-[#18211D] dark:text-[#F7F5EF]">
             Attach Product Specification
           </label>
-          <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
+          <span className="text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-[#EFECE6] dark:bg-[#1B2B26] text-[#606E66] dark:text-[#BAC5BF] border border-[#D9DDD8] dark:border-[#253831]">
             Optional
           </span>
         </div>
-        <span className="text-[11px] text-slate-500 dark:text-slate-400">
+        <span className="text-[11px] text-[#8B978F]">
           PDF, DOCX, TXT (up to 10MB)
         </span>
       </div>
@@ -81,19 +81,19 @@ export const DocumentDropzone: React.FC<DocumentDropzoneProps> = ({
 
       {selectedFile ? (
         /* Selected File Card */
-        <div className="p-3.5 rounded-xl bg-blue-50/60 dark:bg-slate-800/80 border border-blue-200 dark:border-blue-900/60 flex items-center justify-between gap-3 animate-in fade-in duration-150">
+        <div className="p-3.5 rounded-2xl bg-[#E8EFEA] dark:bg-[#1B2B26] border border-[#D9DDD8] dark:border-[#253831] flex items-center justify-between gap-3 animate-in fade-in duration-150">
           <div className="flex items-center gap-3 min-w-0">
-            <div className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-950 flex items-center justify-center text-[#1E3A8A] dark:text-blue-400 shrink-0">
-              <FileText className="w-4 h-4" />
+            <div className="w-8 h-8 rounded-full bg-[#0D3328] flex items-center justify-center text-white shrink-0">
+              <FileText className="w-4 h-4 text-[#A7B8AE]" />
             </div>
             <div className="min-w-0">
-              <p className="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">
+              <p className="text-xs font-bold text-[#18211D] dark:text-[#F7F5EF] truncate">
                 {selectedFile.name}
               </p>
-              <div className="flex items-center gap-2 text-[11px] text-slate-500 dark:text-slate-400">
+              <div className="flex items-center gap-2 text-[11px] text-[#606E66] dark:text-[#BAC5BF]">
                 <span>{selectedFile.size}</span>
                 <span>•</span>
-                <span className="text-emerald-600 dark:text-emerald-400 flex items-center gap-1 font-medium">
+                <span className="text-[#1B5E39] dark:text-[#A7F3D0] flex items-center gap-1 font-semibold">
                   <CheckCircle2 className="w-3 h-3" /> Ready for analysis
                 </span>
               </div>
@@ -103,7 +103,7 @@ export const DocumentDropzone: React.FC<DocumentDropzoneProps> = ({
           <button
             type="button"
             onClick={handleRemove}
-            className="p-1.5 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors cursor-pointer"
+            className="p-1.5 rounded-full text-[#8B978F] hover:text-[#C86D51] hover:bg-white dark:hover:bg-[#20312B] transition-colors cursor-pointer"
             title="Remove file"
           >
             <X className="w-4 h-4" />
@@ -116,19 +116,19 @@ export const DocumentDropzone: React.FC<DocumentDropzoneProps> = ({
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
-          className={`p-4 rounded-xl border border-dashed text-center transition-all cursor-pointer ${
+          className={`p-4 rounded-2xl border border-dashed text-center transition-all cursor-pointer ${
             isDragging
-              ? 'border-[#2563EB] bg-blue-50/80 dark:bg-blue-950/30'
-              : 'border-slate-300 dark:border-slate-700 bg-slate-50/60 dark:bg-slate-800/40 hover:bg-slate-100/70 dark:hover:bg-slate-800/70 hover:border-slate-400 dark:hover:border-slate-600'
+              ? 'border-[#0D3328] bg-[#E8EFEA] dark:bg-[#1B2B26]'
+              : 'border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#1B2B26]/60 hover:bg-[#EFECE6] dark:hover:bg-[#1B2B26] hover:border-[#5B8272]'
           }`}
         >
-          <div className="flex items-center justify-center gap-2.5 text-xs text-slate-600 dark:text-slate-300">
-            <UploadCloud className="w-4 h-4 text-[#2563EB] shrink-0" />
+          <div className="flex items-center justify-center gap-2.5 text-xs text-[#606E66] dark:text-[#BAC5BF]">
+            <UploadCloud className="w-4 h-4 text-[#5B8272] shrink-0" />
             <span className="font-medium">
-              Drag & drop technical specification or <span className="text-[#1E3A8A] dark:text-blue-400 underline font-semibold">Browse</span>
+              Drag & drop technical specification or <span className="text-[#0D3328] dark:text-[#A7B8AE] underline font-bold">Browse</span>
             </span>
           </div>
-          <p className="text-[11px] text-slate-400 dark:text-slate-400 mt-1">
+          <p className="text-[11px] text-[#8B978F] mt-1">
             Provide additional technical parameters to refine applicability matching
           </p>
         </div>

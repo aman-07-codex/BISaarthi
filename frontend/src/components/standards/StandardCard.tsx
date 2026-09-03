@@ -32,13 +32,13 @@ export const StandardCard: React.FC<StandardCardProps> = ({
 
   return (
     <div
-      className={`group relative bg-white dark:bg-slate-800/90 rounded-xl border border-slate-200 dark:border-slate-700/80 p-5 shadow-xs hover:shadow-md hover:border-blue-400 dark:hover:border-blue-500/80 transition-all duration-200 flex flex-col justify-between ${className}`}
+      className={`group relative bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] p-5 shadow-2xs hover:shadow-md hover:border-[#5B8272] transition-all duration-200 flex flex-col justify-between ${className}`}
     >
       <div>
         {/* Header row: IS Number + Badges */}
         <div className="flex flex-wrap items-start justify-between gap-2 mb-2.5">
           <div className="flex items-center gap-2 flex-wrap">
-            <span className="font-mono font-bold text-base text-[#1E3A8A] dark:text-blue-400 tracking-tight">
+            <span className="font-mono font-black text-base text-[#0D3328] dark:text-[#8FA89B] tracking-tight">
               {standard.is_number}
             </span>
             <StatusBadge status={standard.status} />
@@ -51,15 +51,15 @@ export const StandardCard: React.FC<StandardCardProps> = ({
             <button
               type="button"
               onClick={handleSave}
-              className={`p-1.5 rounded-lg border transition-colors cursor-pointer ${
+              className={`p-1.5 rounded-full border transition-colors cursor-pointer ${
                 isSaved
-                  ? 'bg-blue-50 dark:bg-blue-950/60 border-blue-300 dark:border-blue-800 text-blue-600 dark:text-blue-400'
-                  : 'border-slate-200 dark:border-slate-700 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50'
+                  ? 'bg-[#E8F4EC] dark:bg-[#113624] border-[#C2E4CD] dark:border-[#1E5438] text-[#1B5E39] dark:text-[#A7F3D0]'
+                  : 'border-[#D9DDD8] dark:border-[#253831] text-[#8B978F] hover:text-[#18211D] dark:hover:text-[#F7F5EF] hover:bg-[#FAF9F5] dark:hover:bg-[#1B2B26]'
               }`}
               title={isSaved ? "Saved to your list" : "Save Standard"}
             >
               {isSaved ? (
-                <Check className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                <Check className="w-4 h-4 text-[#1B5E39] dark:text-[#A7F3D0]" />
               ) : (
                 <Bookmark className="w-4 h-4" />
               )}
@@ -68,17 +68,17 @@ export const StandardCard: React.FC<StandardCardProps> = ({
         </div>
 
         {/* Standard Title */}
-        <h3 className="text-sm sm:text-base font-semibold text-slate-900 dark:text-slate-100 leading-snug mb-3 group-hover:text-[#1E3A8A] dark:group-hover:text-blue-300 transition-colors">
+        <h3 className="text-sm sm:text-base font-bold text-[#18211D] dark:text-[#F7F5EF] leading-snug mb-3 group-hover:text-[#0D3328] dark:group-hover:text-[#8FA89B] transition-colors">
           {standard.title}
         </h3>
 
         {/* Why Applicable Callout */}
         {standard.why_applicable && (
-          <div className="p-3 rounded-lg bg-slate-50 dark:bg-slate-900/60 border-l-3 border-l-[#2563EB] border-t border-r border-b border-slate-200/80 dark:border-slate-800 mb-4">
-            <p className="text-[11px] font-semibold text-[#1E3A8A] dark:text-blue-400 uppercase tracking-wider mb-1">
+          <div className="p-3.5 rounded-2xl bg-[#FAF9F5] dark:bg-[#1B2B26]/60 border-l-4 border-l-[#0D3328] dark:border-l-[#5B8272] border border-[#EFECE6] dark:border-[#253831] mb-4 space-y-1">
+            <p className="text-[11px] font-bold text-[#0D3328] dark:text-[#8FA89B] uppercase tracking-wider">
               Why Applicable
             </p>
-            <p className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+            <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
               {standard.why_applicable}
             </p>
           </div>
@@ -86,14 +86,14 @@ export const StandardCard: React.FC<StandardCardProps> = ({
       </div>
 
       {/* Footer row: Source Reference Tag + View Details CTA */}
-      <div className="pt-3 border-t border-slate-100 dark:border-slate-700/60 flex flex-wrap items-center justify-between gap-3 mt-2">
+      <div className="pt-3 border-t border-[#EFECE6] dark:border-[#1C2E28] flex flex-wrap items-center justify-between gap-3 mt-2">
         <div>
           <SourceReferenceTag sources={standard.source_refs} />
         </div>
 
         <Link
           href={`/standards/${encodeURIComponent(standard.is_number)}`}
-          className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1E3A8A] hover:text-[#1D4ED8] dark:text-blue-400 dark:hover:text-blue-300 transition-colors group-hover:translate-x-0.5 transform duration-150 cursor-pointer ml-auto"
+          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] hover:text-[#164B3A] dark:text-[#8FA89B] dark:hover:text-[#A7B8AE] transition-colors group-hover:translate-x-0.5 transform duration-150 cursor-pointer ml-auto"
         >
           <span>View Details</span>
           <ArrowRight className="w-3.5 h-3.5" />

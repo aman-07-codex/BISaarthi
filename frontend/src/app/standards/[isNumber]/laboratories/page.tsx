@@ -19,14 +19,10 @@ import {
   Search,
   MapPin,
   Filter,
-  CheckCircle2,
-  ExternalLink,
   ArrowRight,
   FileText,
   Clock,
   Check,
-  Layers,
-  Sparkles,
   AlertTriangle,
   BadgeAlert,
 } from 'lucide-react';
@@ -42,19 +38,16 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
   const data = getLaboratoriesDataBySlug(isNumber);
   const encodedStandard = encodeURIComponent(data.is_number);
 
-  // Search & Filter state
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedType, setSelectedType] = useState<string>('all');
   const [selectedCity, setSelectedCity] = useState<string>('all');
   const [selectedLabForModal, setSelectedLabForModal] = useState<LaboratoryItem | null>(null);
 
-  // Unique cities from data
   const cities = useMemo(() => {
     const unique = Array.from(new Set(data.laboratories.map((l) => l.city)));
     return ['all', ...unique];
   }, [data.laboratories]);
 
-  // Filtered laboratories
   const filteredLaboratories = useMemo(() => {
     return data.laboratories.filter((lab) => {
       const matchesSearch =
@@ -80,42 +73,42 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
     <AppLayout>
       <div className="space-y-8 animate-in fade-in duration-200">
         {/* Top Breadcrumb & Navigation */}
-        <div className="flex flex-wrap items-center justify-between gap-3 text-xs text-slate-500 dark:text-slate-400">
+        <div className="flex flex-wrap items-center justify-between gap-3 text-xs text-[#606E66] dark:text-[#BAC5BF]">
           <div className="flex items-center gap-1.5 min-w-0">
             <Link
               href="/find-standards"
-              className="inline-flex items-center gap-1 text-slate-600 dark:text-slate-300 hover:text-[#1E3A8A] dark:hover:text-blue-400 font-medium"
+              className="inline-flex items-center gap-1 text-[#606E66] dark:text-[#BAC5BF] hover:text-[#0D3328] dark:hover:text-white font-medium"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Find Standards</span>
             </Link>
-            <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+            <ChevronRight className="w-3.5 h-3.5 text-[#8B978F]" />
             <Link
               href={`/standards/${encodedStandard}`}
-              className="text-slate-600 dark:text-slate-300 hover:text-[#1E3A8A] dark:hover:text-blue-400 font-medium truncate max-w-[140px] sm:max-w-none"
+              className="text-[#606E66] dark:text-[#BAC5BF] hover:text-[#0D3328] dark:hover:text-white font-medium truncate max-w-[140px] sm:max-w-none"
             >
               Standard Details
             </Link>
-            <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-            <span className="font-semibold text-slate-900 dark:text-slate-100 truncate">
+            <ChevronRight className="w-3.5 h-3.5 text-[#8B978F]" />
+            <span className="font-bold text-[#18211D] dark:text-[#F7F5EF] truncate">
               Recognized Laboratories
             </span>
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="text-[11px] font-medium text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-950/60 px-2.5 py-0.5 rounded-full border border-blue-200 dark:border-blue-800 flex items-center gap-1">
-              <Building2 className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
+            <span className="text-[11px] font-bold text-[#0D3328] dark:text-[#A7B8AE] bg-[#E8EFEA] dark:bg-[#1B2B26] px-3 py-1 rounded-full border border-[#D9DDD8] dark:border-[#253831] flex items-center gap-1.5">
+              <Building2 className="w-3.5 h-3.5 text-[#5B8272]" />
               <span>Laboratory Discovery Directory</span>
             </span>
           </div>
         </div>
 
         {/* Page Header Card */}
-        <div className="bg-white dark:bg-slate-800/95 rounded-2xl border border-slate-200 dark:border-slate-700/80 p-6 sm:p-8 shadow-xs space-y-4">
+        <div className="bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] p-6 sm:p-8 shadow-2xs space-y-4">
           <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
             <div className="space-y-2 max-w-3xl">
               <div className="flex flex-wrap items-center gap-2">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-950/70 px-2.5 py-0.5 rounded-full border border-blue-200 dark:border-blue-900">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#0D3328] dark:text-[#A7B8AE] bg-[#E8EFEA] dark:bg-[#1B2B26] px-3 py-0.5 rounded-full border border-[#D9DDD8] dark:border-[#253831]">
                   Testing Facilities
                 </span>
                 <StatusBadge status={data.status} />
@@ -123,16 +116,16 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
               </div>
 
               <div className="flex items-center gap-2">
-                <p className="text-xs font-mono font-bold text-slate-500 dark:text-slate-400">
+                <p className="text-xs font-mono font-bold text-[#8B978F]">
                   {data.is_number}
                 </p>
               </div>
 
-              <h1 className="text-2xl sm:text-3xl font-bold text-[#1E3A8A] dark:text-blue-400 tracking-tight leading-tight">
+              <h1 className="text-2xl sm:text-3xl font-black text-[#0D3328] dark:text-[#8FA89B] tracking-tight leading-tight">
                 Recognized Laboratories
               </h1>
 
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+              <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed font-normal">
                 Explore laboratories that may be relevant for testing under the selected standard.
               </p>
             </div>
@@ -140,42 +133,42 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
             {/* Quick Action to return to Standard Details */}
             <div className="shrink-0">
               <Link href={`/standards/${encodedStandard}`}>
-                <Button variant="secondary" size="sm" icon={<ArrowLeft className="w-4 h-4" />}>
+                <Button variant="secondary" size="sm" icon={<ArrowLeft className="w-4 h-4" />} className="font-bold text-xs">
                   Back to Standard Details
                 </Button>
               </Link>
             </div>
           </div>
 
-          <div className="pt-3 border-t border-slate-100 dark:border-slate-700/60 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-500 dark:text-slate-400">
+          <div className="pt-3 border-t border-[#EFECE6] dark:border-[#1C2E28] flex flex-wrap items-center justify-between gap-3 text-xs text-[#606E66] dark:text-[#BAC5BF]">
             <div className="flex items-center gap-2 flex-wrap">
-              <span className="font-medium text-slate-700 dark:text-slate-300">Authoritative Citation:</span>
+              <span className="font-bold text-[#18211D] dark:text-[#F7F5EF]">Authoritative Citation:</span>
               <SourceReferenceTag sources={data.source_refs} />
             </div>
-            <span className="text-[11px] text-slate-400">
+            <span className="text-[11px] text-[#8B978F]">
               Directory updated: August 2026
             </span>
           </div>
         </div>
 
         {/* Demo Data Clarification Banner */}
-        <div className="p-3.5 rounded-xl bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-xs text-slate-600 dark:text-slate-300 flex items-start gap-2.5">
-          <BadgeAlert className="w-4 h-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
+        <div className="p-4 rounded-2xl bg-[#FAF9F5] dark:bg-[#1B2B26]/60 border border-[#EFECE6] dark:border-[#253831] text-xs text-[#606E66] dark:text-[#BAC5BF] flex items-start gap-2.5">
+          <BadgeAlert className="w-4 h-4 text-[#5B8272] shrink-0 mt-0.5" />
           <p className="leading-relaxed">
-            <strong className="text-slate-900 dark:text-slate-100">Mock Laboratory Listings:</strong> The testing facilities listed below represent simulated directory entries for demonstration and navigation workflows. Current accreditation and exact clause-level testing capabilities must be confirmed via the authoritative BIS Laboratory Information Management System (LIMS).
+            <strong className="text-[#18211D] dark:text-[#F7F5EF]">Mock Laboratory Listings:</strong> The testing facilities listed below represent simulated directory entries for demonstration and navigation workflows. Current accreditation and exact clause-level testing capabilities must be confirmed via the authoritative BIS Laboratory Information Management System (LIMS).
           </p>
         </div>
 
         {/* 1. SEARCH / FILTER AREA */}
-        <div className="bg-white dark:bg-slate-800/95 rounded-2xl border border-slate-200 dark:border-slate-700/80 p-6 shadow-xs space-y-4">
+        <div className="bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] p-6 shadow-xs space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Filter className="w-4 h-4 text-[#2563EB]" />
-              <h2 className="text-sm font-bold text-slate-900 dark:text-slate-100 uppercase tracking-wider">
+              <Filter className="w-4 h-4 text-[#5B8272]" />
+              <h2 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] uppercase tracking-wider">
                 Filter & Discover Laboratories
               </h2>
             </div>
-            <span className="text-xs text-slate-400">
+            <span className="text-xs text-[#8B978F]">
               Showing {filteredLaboratories.length} of {data.laboratories.length} facilities
             </span>
           </div>
@@ -183,13 +176,13 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
           <div className="grid grid-cols-1 sm:grid-cols-12 gap-3">
             {/* Search Input */}
             <div className="sm:col-span-6 relative">
-              <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+              <Search className="w-4 h-4 text-[#8B978F] absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search by lab name, capability, or location..."
-                className="w-full pl-9 pr-4 py-2.5 text-xs sm:text-sm rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/70 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all"
+                className="w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm rounded-full border border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] focus:outline-none focus:ring-2 focus:ring-[#5B8272]/20 focus:border-[#0D3328] transition-all"
               />
             </div>
 
@@ -198,7 +191,7 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
               <select
                 value={selectedType}
                 onChange={(e) => setSelectedType(e.target.value)}
-                className="w-full px-3 py-2.5 text-xs sm:text-sm rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/70 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all cursor-pointer"
+                className="w-full px-3.5 py-2.5 text-xs sm:text-sm rounded-full border border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] focus:outline-none focus:border-[#0D3328] transition-all cursor-pointer"
               >
                 <option value="all">All Laboratory Types</option>
                 <option value="bis_central">Central BIS Laboratories</option>
@@ -212,7 +205,7 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
               <select
                 value={selectedCity}
                 onChange={(e) => setSelectedCity(e.target.value)}
-                className="w-full px-3 py-2.5 text-xs sm:text-sm rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/70 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all cursor-pointer"
+                className="w-full px-3.5 py-2.5 text-xs sm:text-sm rounded-full border border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] focus:outline-none focus:border-[#0D3328] transition-all cursor-pointer"
               >
                 <option value="all">All Locations (India)</option>
                 {cities
@@ -228,7 +221,7 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
 
           {/* Quick Filter Badges */}
           <div className="flex flex-wrap items-center gap-2 pt-1">
-            <span className="text-[11px] text-slate-400 font-medium">Quick filter:</span>
+            <span className="text-[11px] text-[#8B978F] font-medium">Quick filter:</span>
             <button
               type="button"
               onClick={() => {
@@ -236,10 +229,10 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
                 setSelectedType('all');
                 setSelectedCity('all');
               }}
-              className={`text-[11px] px-2.5 py-1 rounded-lg border transition-all cursor-pointer ${
+              className={`text-[11px] px-3 py-1 rounded-full border transition-all cursor-pointer font-bold ${
                 selectedType === 'all' && selectedCity === 'all' && searchQuery === ''
-                  ? 'bg-blue-50 dark:bg-blue-950/80 border-blue-300 dark:border-blue-700 text-blue-700 dark:text-blue-300 font-semibold'
-                  : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-50'
+                  ? 'bg-[#0D3328] text-white border-[#0D3328]'
+                  : 'bg-white dark:bg-[#15221E] border-[#D9DDD8] dark:border-[#253831] text-[#606E66] dark:text-[#BAC5BF] hover:bg-[#FAF9F5]'
               }`}
             >
               All Facilities
@@ -247,10 +240,10 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
             <button
               type="button"
               onClick={() => setSelectedType('bis_central')}
-              className={`text-[11px] px-2.5 py-1 rounded-lg border transition-all cursor-pointer ${
+              className={`text-[11px] px-3 py-1 rounded-full border transition-all cursor-pointer font-bold ${
                 selectedType === 'bis_central'
-                  ? 'bg-blue-50 dark:bg-blue-950/80 border-blue-300 dark:border-blue-700 text-blue-700 dark:text-blue-300 font-semibold'
-                  : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-50'
+                  ? 'bg-[#0D3328] text-white border-[#0D3328]'
+                  : 'bg-white dark:bg-[#15221E] border-[#D9DDD8] dark:border-[#253831] text-[#606E66] dark:text-[#BAC5BF] hover:bg-[#FAF9F5]'
               }`}
             >
               BIS Central Labs
@@ -258,10 +251,10 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
             <button
               type="button"
               onClick={() => setSelectedType('nabl_accredited')}
-              className={`text-[11px] px-2.5 py-1 rounded-lg border transition-all cursor-pointer ${
+              className={`text-[11px] px-3 py-1 rounded-full border transition-all cursor-pointer font-bold ${
                 selectedType === 'nabl_accredited'
-                  ? 'bg-blue-50 dark:bg-blue-950/80 border-blue-300 dark:border-blue-700 text-blue-700 dark:text-blue-300 font-semibold'
-                  : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-50'
+                  ? 'bg-[#0D3328] text-white border-[#0D3328]'
+                  : 'bg-white dark:bg-[#15221E] border-[#D9DDD8] dark:border-[#253831] text-[#606E66] dark:text-[#BAC5BF] hover:bg-[#FAF9F5]'
               }`}
             >
               NABL Accredited
@@ -272,21 +265,21 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
         {/* 2. LABORATORY CARDS */}
         <div className="space-y-4">
           <div className="flex items-center justify-between">
-            <h2 className="text-sm font-bold text-slate-900 dark:text-slate-100 uppercase tracking-wider">
+            <h2 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] uppercase tracking-wider">
               Recognized Laboratory Directory (Mock Data)
             </h2>
-            <span className="text-xs text-slate-400">
+            <span className="text-xs text-[#8B978F]">
               {filteredLaboratories.length} match{filteredLaboratories.length === 1 ? '' : 'es'}
             </span>
           </div>
 
           {filteredLaboratories.length === 0 ? (
-            <div className="bg-white dark:bg-slate-800/95 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 text-center space-y-3">
-              <Building2 className="w-8 h-8 text-slate-400 mx-auto" />
-              <h3 className="text-sm font-bold text-slate-800 dark:text-slate-200">
+            <div className="bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] p-8 text-center space-y-3">
+              <Building2 className="w-8 h-8 text-[#8B978F] mx-auto" />
+              <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
                 No laboratories match your filter criteria
               </h3>
-              <p className="text-xs text-slate-500 max-w-md mx-auto">
+              <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] max-w-md mx-auto">
                 Try clearing your search query or switching filters to view all mock laboratory listings.
               </p>
               <Button
@@ -297,6 +290,7 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
                   setSelectedType('all');
                   setSelectedCity('all');
                 }}
+                className="font-bold text-xs"
               >
                 Reset Filters
               </Button>
@@ -306,7 +300,7 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
               {filteredLaboratories.map((lab) => (
                 <div
                   key={lab.id}
-                  className="p-6 rounded-2xl border border-slate-200 dark:border-slate-700/80 bg-white dark:bg-slate-800/95 shadow-xs space-y-4 flex flex-col justify-between"
+                  className="p-6 rounded-3xl border border-[#D9DDD8] dark:border-[#253831] bg-white dark:bg-[#15221E] shadow-2xs space-y-4 flex flex-col justify-between"
                 >
                   <div className="space-y-3">
                     {/* Lab Header & Tag */}
@@ -314,56 +308,56 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
                       <div className="space-y-1">
                         <div className="flex flex-wrap items-center gap-1.5">
                           <span
-                            className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border ${
+                            className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border ${
                               lab.lab_type === 'bis_central'
-                                ? 'bg-blue-50 dark:bg-blue-950/70 border-blue-200 dark:border-blue-900 text-blue-700 dark:text-blue-300'
-                                : 'bg-emerald-50 dark:bg-emerald-950/70 border-emerald-200 dark:border-emerald-900 text-emerald-700 dark:text-emerald-300'
+                                ? 'bg-[#E8EFEA] dark:bg-[#1B2B26] border-[#D9DDD8] dark:border-[#253831] text-[#0D3328] dark:text-[#A7B8AE]'
+                                : 'bg-[#E8F4EC] dark:bg-[#113624] border-[#C2E4CD] dark:border-[#1E5438] text-[#1B5E39] dark:text-[#A7F3D0]'
                             }`}
                           >
                             {lab.type_label}
                           </span>
-                          <span className="text-[10px] font-medium text-slate-500 bg-slate-100 dark:bg-slate-700/60 px-1.5 py-0.5 rounded">
+                          <span className="text-[10px] font-semibold text-[#8B978F] bg-[#FAF9F5] dark:bg-[#1B2B26] px-2 py-0.5 rounded-full border border-[#D9DDD8] dark:border-[#253831]">
                             Example listing
                           </span>
                         </div>
-                        <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-slate-100">
+                        <h3 className="text-sm sm:text-base font-bold text-[#18211D] dark:text-[#F7F5EF]">
                           {lab.name}
                         </h3>
                       </div>
 
-                      <div className="p-2 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-700 text-[#1E3A8A] dark:text-blue-400 shrink-0">
+                      <div className="p-2.5 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] border border-[#D9DDD8] dark:border-[#253831] text-[#0D3328] dark:text-[#8FA89B] shrink-0">
                         <Building2 className="w-5 h-5" />
                       </div>
                     </div>
 
                     {/* Location Badge */}
-                    <div className="flex items-center gap-1.5 text-xs text-slate-600 dark:text-slate-300">
-                      <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-                      <span className="font-medium">
+                    <div className="flex items-center gap-1.5 text-xs text-[#606E66] dark:text-[#BAC5BF]">
+                      <MapPin className="w-3.5 h-3.5 text-[#8B978F] shrink-0" />
+                      <span className="font-semibold">
                         {lab.city}, {lab.state}
                       </span>
                     </div>
 
                     {/* Testing Capability */}
                     <div className="space-y-1">
-                      <p className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
+                      <p className="text-[11px] font-bold text-[#8B978F] uppercase tracking-wider">
                         Testing Scope & Capability
                       </p>
-                      <p className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+                      <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
                         {lab.testing_capability}
                       </p>
                     </div>
 
                     {/* Relevant Standards */}
                     <div className="space-y-1.5">
-                      <p className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
+                      <p className="text-[11px] font-bold text-[#8B978F] uppercase tracking-wider">
                         Covered Standards
                       </p>
                       <div className="flex flex-wrap gap-1.5">
                         {lab.applicable_standards.map((st, sIdx) => (
                           <span
                             key={sIdx}
-                            className="font-mono text-[10px] font-semibold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-900 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-800"
+                            className="font-mono text-[10px] font-bold text-[#0D3328] dark:text-[#A7B8AE] bg-[#FAF9F5] dark:bg-[#1B2B26] px-2.5 py-0.5 rounded-full border border-[#D9DDD8] dark:border-[#253831]"
                           >
                             {st}
                           </span>
@@ -372,14 +366,14 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
                     </div>
 
                     {/* Key Testing Equipment */}
-                    <div className="p-3 rounded-xl bg-slate-50/70 dark:bg-slate-900/50 border border-slate-200/60 dark:border-slate-800 space-y-1.5">
-                      <p className="text-[11px] font-semibold text-slate-500 dark:text-slate-400">
+                    <div className="p-3.5 rounded-2xl bg-[#FAF9F5] dark:bg-[#1B2B26]/50 border border-[#EFECE6] dark:border-[#253831] space-y-1.5">
+                      <p className="text-[11px] font-bold text-[#18211D] dark:text-[#F7F5EF]">
                         Facility Highlights (Mock Profile):
                       </p>
-                      <ul className="space-y-1 text-xs text-slate-600 dark:text-slate-400">
+                      <ul className="space-y-1 text-xs text-[#606E66] dark:text-[#BAC5BF]">
                         {lab.facilities_overview.map((fac, fIdx) => (
                           <li key={fIdx} className="flex items-start gap-1.5">
-                            <Check className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
+                            <Check className="w-3.5 h-3.5 text-[#2D9D5D] shrink-0 mt-0.5" />
                             <span className="leading-snug">{fac}</span>
                           </li>
                         ))}
@@ -387,32 +381,32 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
                     </div>
 
                     {/* Accreditation & Lead Time */}
-                    <div className="pt-2 border-t border-slate-100 dark:border-slate-700/60 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px] text-slate-500 dark:text-slate-400">
+                    <div className="pt-2 border-t border-[#EFECE6] dark:border-[#1C2E28] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px] text-[#606E66] dark:text-[#BAC5BF]">
                       <div className="flex items-center gap-1">
-                        <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                        <span className="font-medium text-slate-700 dark:text-slate-300">
+                        <ShieldCheck className="w-3.5 h-3.5 text-[#2D9D5D]" />
+                        <span className="font-bold text-[#18211D] dark:text-[#F7F5EF]">
                           {lab.accreditation_indicator}
                         </span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Clock className="w-3.5 h-3.5 text-slate-400" />
+                        <Clock className="w-3.5 h-3.5 text-[#8B978F]" />
                         <span>{lab.lead_time_guidance}</span>
                       </div>
                     </div>
                   </div>
 
                   {/* Actions Area */}
-                  <div className="pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between gap-2">
+                  <div className="pt-3 border-t border-[#EFECE6] dark:border-[#1C2E28] flex items-center justify-between gap-2">
                     <button
                       type="button"
                       onClick={() => setSelectedLabForModal(lab)}
-                      className="text-xs font-semibold text-[#1E3A8A] dark:text-blue-400 hover:underline flex items-center gap-1 cursor-pointer"
+                      className="text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:underline flex items-center gap-1 cursor-pointer"
                     >
                       <span>View Sample Guidelines</span>
                       <ChevronRight className="w-3.5 h-3.5" />
                     </button>
 
-                    <span className="text-[10px] text-slate-400">
+                    <span className="text-[10px] text-[#8B978F]">
                       Demo Profile
                     </span>
                   </div>
@@ -424,31 +418,31 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
 
         {/* Mock Sample Modal / Drawer if user clicks */}
         {selectedLabForModal && (
-          <div className="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-xs flex items-center justify-center p-4">
-            <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 max-w-lg w-full p-6 space-y-4 shadow-xl animate-in fade-in zoom-in-95 duration-150">
+          <div className="fixed inset-0 z-50 bg-[#091E18]/60 backdrop-blur-xs flex items-center justify-center p-4">
+            <div className="bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] max-w-lg w-full p-6 space-y-4 shadow-xl animate-in fade-in zoom-in-95 duration-150">
               <div className="flex items-start justify-between gap-3">
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-950/70 px-2 py-0.5 rounded">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#0D3328] dark:text-[#A7B8AE] bg-[#E8EFEA] dark:bg-[#1B2B26] px-2.5 py-0.5 rounded-full">
                     Sample Submission Guidance
                   </span>
-                  <h3 className="text-base font-bold text-slate-900 dark:text-slate-100 mt-1">
+                  <h3 className="text-base font-bold text-[#18211D] dark:text-[#F7F5EF] mt-1">
                     {selectedLabForModal.name}
                   </h3>
-                  <p className="text-xs text-slate-500">
+                  <p className="text-xs text-[#8B978F]">
                     {selectedLabForModal.city}, {selectedLabForModal.state}
                   </p>
                 </div>
                 <button
                   type="button"
                   onClick={() => setSelectedLabForModal(null)}
-                  className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1 cursor-pointer"
+                  className="text-[#8B978F] hover:text-[#18211D] dark:hover:text-white p-1 cursor-pointer"
                 >
                   ✕
                 </button>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 space-y-2 text-xs text-slate-600 dark:text-slate-300">
-                <p className="font-semibold text-slate-800 dark:text-slate-200">
+              <div className="p-4 rounded-2xl bg-[#FAF9F5] dark:bg-[#1B2B26]/60 border border-[#EFECE6] dark:border-[#253831] space-y-2 text-xs text-[#606E66] dark:text-[#BAC5BF]">
+                <p className="font-bold text-[#18211D] dark:text-[#F7F5EF]">
                   Standard Sample Checklist for {data.is_number}:
                 </p>
                 <ul className="space-y-1 list-disc pl-4">
@@ -459,15 +453,15 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
                 </ul>
               </div>
 
-              <div className="p-3 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/60 text-xs text-amber-900 dark:text-amber-200 flex items-start gap-2">
-                <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+              <div className="p-3.5 rounded-2xl bg-[#FAF4EB] dark:bg-[#38240D]/40 border border-[#F2E4CD] dark:border-[#523A1B] text-xs text-[#8C6126] dark:text-[#FDE68A] flex items-start gap-2">
+                <AlertTriangle className="w-4 h-4 text-[#8C6126] shrink-0 mt-0.5" />
                 <p className="leading-relaxed">
                   Laboratory selection and test sample dispatch for statutory ISI certification must follow official allocation through the BIS Manakonline portal.
                 </p>
               </div>
 
               <div className="flex justify-end gap-2 pt-2">
-                <Button variant="secondary" size="sm" onClick={() => setSelectedLabForModal(null)}>
+                <Button variant="secondary" size="sm" onClick={() => setSelectedLabForModal(null)} className="font-bold text-xs">
                   Close
                 </Button>
               </div>
@@ -479,10 +473,10 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
         <UncertaintyNotice message="Laboratory recognition, scope, accreditation status, and testing capability can change. Verify current recognition and scope with the authoritative BIS source before submitting samples." />
 
         {/* 4. AUTHORITATIVE SOURCE */}
-        <div className="bg-white dark:bg-slate-800/95 rounded-2xl border border-slate-200 dark:border-slate-700/80 p-6 shadow-xs space-y-4">
+        <div className="bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] p-6 shadow-xs space-y-4">
           <div className="flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-            <h2 className="text-sm font-bold text-slate-900 dark:text-slate-100 uppercase tracking-wider">
+            <ShieldCheck className="w-4 h-4 text-[#5B8272]" />
+            <h2 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] uppercase tracking-wider">
               Authoritative Laboratory Directory Citation
             </h2>
           </div>
@@ -491,44 +485,44 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
             {data.source_refs.map((src, idx) => (
               <div
                 key={src.source_id || idx}
-                className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-700/80 bg-slate-50/60 dark:bg-slate-900/40 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs"
+                className="p-4 rounded-2xl border border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#1B2B26]/60 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs"
               >
                 <div className="space-y-0.5 min-w-0">
                   <div className="flex items-center gap-2">
-                    <span className="font-semibold text-slate-800 dark:text-slate-200 truncate">
+                    <span className="font-bold text-[#18211D] dark:text-[#F7F5EF] truncate">
                       {src.title}
                     </span>
                     <span
-                      className={`text-[10px] px-2 py-0.5 rounded-full font-medium ${
+                      className={`text-[10px] px-2.5 py-0.5 rounded-full font-bold ${
                         src.reliability_tier === 'primary'
-                          ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800'
-                          : 'bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800'
+                          ? 'bg-[#E8F4EC] dark:bg-[#113624] text-[#1B5E39] dark:text-[#A7F3D0] border border-[#C2E4CD]'
+                          : 'bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#A7B8AE] border border-[#D9DDD8]'
                       }`}
                     >
                       {src.reliability_tier === 'primary' ? 'Primary BIS' : 'Government Gazette'}
                     </span>
                   </div>
-                  <p className="text-[11px] text-slate-500 dark:text-slate-400">
-                    Source Citation: <span className="font-mono text-slate-600 dark:text-slate-300">{src.source_type}</span>
+                  <p className="text-[11px] text-[#606E66] dark:text-[#BAC5BF]">
+                    Source Citation: <span className="font-mono text-[#18211D] dark:text-[#F7F5EF]">{src.source_type}</span>
                   </p>
                 </div>
 
-                <div className="text-[11px] text-slate-400 shrink-0">
+                <div className="text-[11px] text-[#8B978F] shrink-0">
                   Last verified: {src.retrieved_at || 'August 2026'}
                 </div>
               </div>
             ))}
           </div>
 
-          <p className="text-[11px] text-slate-500 dark:text-slate-400 italic">
+          <p className="text-[11px] text-[#8B978F] italic">
             Note: For official sample routing under Scheme-I or CRS, refer exclusively to the National Laboratory Information Management System (LIMS) on the BIS portal.
           </p>
         </div>
 
         {/* 5. RELATED NAVIGATION & TOOLS */}
-        <div className="bg-white dark:bg-slate-800/95 rounded-2xl border border-slate-200 dark:border-slate-700/80 p-6 shadow-xs space-y-4">
+        <div className="bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] p-6 shadow-xs space-y-4">
           <div>
-            <h2 className="text-sm font-bold text-slate-900 dark:text-slate-100 uppercase tracking-wider">
+            <h2 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] uppercase tracking-wider">
               Related Compliance Navigation
             </h2>
           </div>
@@ -537,23 +531,23 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
             {/* Nav Card 1: Standard Details */}
             <Link
               href={`/standards/${encodedStandard}`}
-              className="group p-4 rounded-xl border border-slate-200 dark:border-slate-700/80 bg-white dark:bg-slate-800/90 hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-xs transition-all flex items-start justify-between gap-3"
+              className="group p-5 rounded-3xl border border-[#D9DDD8] dark:border-[#253831] bg-white dark:bg-[#15221E] hover:border-[#5B8272] hover:shadow-xs transition-all flex items-start justify-between gap-3"
             >
-              <div className="flex items-start gap-3 min-w-0">
-                <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/70 border border-blue-200 dark:border-blue-900 flex items-center justify-center text-[#1E3A8A] dark:text-blue-400 shrink-0 group-hover:scale-105 transition-transform">
+              <div className="flex items-start gap-3.5 min-w-0">
+                <div className="w-10 h-10 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] border border-[#D9DDD8] dark:border-[#253831] flex items-center justify-center text-[#0D3328] dark:text-[#8FA89B] shrink-0 group-hover:scale-105 transition-transform">
                   <FileText className="w-5 h-5" />
                 </div>
                 <div className="min-w-0">
-                  <h3 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-slate-100 group-hover:text-[#1E3A8A] dark:group-hover:text-blue-300 transition-colors">
+                  <h3 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] group-hover:text-[#0D3328] dark:group-hover:text-[#8FA89B] transition-colors">
                     Standard Details Overview
                   </h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 mt-0.5 leading-relaxed">
+                  <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] line-clamp-2 mt-0.5 leading-relaxed">
                     Review {data.is_number} full metadata, clause breakdown, and statutory applicability.
                   </p>
                 </div>
               </div>
 
-              <div className="p-1 rounded-lg bg-slate-50 dark:bg-slate-700/60 text-slate-400 group-hover:text-[#1E3A8A] dark:group-hover:text-blue-300 group-hover:translate-x-0.5 transition-all shrink-0 mt-1">
+              <div className="p-1.5 rounded-full bg-[#FAF9F5] dark:bg-[#1B2B26] text-[#8B978F] group-hover:text-[#0D3328] dark:group-hover:text-[#8FA89B] group-hover:translate-x-0.5 transition-all shrink-0 mt-1">
                 <ArrowRight className="w-4 h-4" />
               </div>
             </Link>
@@ -561,23 +555,23 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
             {/* Nav Card 2: Tests & Certification */}
             <Link
               href={`/standards/${encodedStandard}/tests-certification`}
-              className="group p-4 rounded-xl border border-slate-200 dark:border-slate-700/80 bg-white dark:bg-slate-800/90 hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-xs transition-all flex items-start justify-between gap-3"
+              className="group p-5 rounded-3xl border border-[#D9DDD8] dark:border-[#253831] bg-white dark:bg-[#15221E] hover:border-[#5B8272] hover:shadow-xs transition-all flex items-start justify-between gap-3"
             >
-              <div className="flex items-start gap-3 min-w-0">
-                <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/70 border border-blue-200 dark:border-blue-900 flex items-center justify-center text-[#1E3A8A] dark:text-blue-400 shrink-0 group-hover:scale-105 transition-transform">
+              <div className="flex items-start gap-3.5 min-w-0">
+                <div className="w-10 h-10 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] border border-[#D9DDD8] dark:border-[#253831] flex items-center justify-center text-[#0D3328] dark:text-[#8FA89B] shrink-0 group-hover:scale-105 transition-transform">
                   <FlaskConical className="w-5 h-5" />
                 </div>
                 <div className="min-w-0">
-                  <h3 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-slate-100 group-hover:text-[#1E3A8A] dark:group-hover:text-blue-300 transition-colors">
+                  <h3 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] group-hover:text-[#0D3328] dark:group-hover:text-[#8FA89B] transition-colors">
                     Tests & Certification Roadmap
                   </h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 mt-0.5 leading-relaxed">
+                  <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] line-clamp-2 mt-0.5 leading-relaxed">
                     Examine required testing batteries, Scheme-I compliance workflows, and licensing milestones.
                   </p>
                 </div>
               </div>
 
-              <div className="p-1 rounded-lg bg-slate-50 dark:bg-slate-700/60 text-slate-400 group-hover:text-[#1E3A8A] dark:group-hover:text-blue-300 group-hover:translate-x-0.5 transition-all shrink-0 mt-1">
+              <div className="p-1.5 rounded-full bg-[#FAF9F5] dark:bg-[#1B2B26] text-[#8B978F] group-hover:text-[#0D3328] dark:group-hover:text-[#8FA89B] group-hover:translate-x-0.5 transition-all shrink-0 mt-1">
                 <ArrowRight className="w-4 h-4" />
               </div>
             </Link>

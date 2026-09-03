@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, HelpCircle } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
 
 interface UncertaintyNoticeProps {
   message?: string;
@@ -12,14 +12,14 @@ export const UncertaintyNotice: React.FC<UncertaintyNoticeProps> = ({
 }) => {
   return (
     <div
-      className={`p-3.5 rounded-lg border-l-4 border-l-amber-500 bg-amber-50/80 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900/60 text-amber-900 dark:text-amber-200 flex items-start gap-3 ${className}`}
+      className={`p-4 rounded-2xl border-l-4 border-l-[#B88746] bg-[#FAF4EB] dark:bg-[#38240D]/40 border border-[#F2E4CD] dark:border-[#523A1B] text-[#8C6126] dark:text-[#FDE68A] flex items-start gap-3 shadow-2xs ${className}`}
     >
-      <AlertTriangle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+      <AlertTriangle className="w-4 h-4 text-[#B88746] dark:text-[#FDE68A] shrink-0 mt-0.5" />
       <div className="text-xs space-y-1">
-        <p className="font-semibold text-amber-900 dark:text-amber-100 flex items-center gap-1.5">
+        <p className="font-bold text-[#8C6126] dark:text-[#FDE68A] flex items-center gap-1.5">
           <span>Authoritative Verification Notice</span>
         </p>
-        <p className="text-amber-800/90 dark:text-amber-300/90 leading-relaxed">
+        <p className="text-[#8C6126]/90 dark:text-[#FDE68A]/90 leading-relaxed">
           {message}
         </p>
       </div>

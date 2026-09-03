@@ -18,6 +18,7 @@ import {
   Loader2,
   Info,
 } from 'lucide-react';
+import { Logo } from '@/components/common/Logo';
 
 export default function SignupPage() {
   const router = useRouter();
@@ -111,117 +112,105 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-between bg-[#F8FAFC] dark:bg-[#0B0F17] text-slate-900 dark:text-slate-100">
+    <div className="min-h-screen flex flex-col justify-between bg-[#F7F5EF] dark:bg-[#0E1815] text-[#18211D] dark:text-[#F7F5EF]">
       {/* Toast Notification */}
       {infoToast && (
-        <div className="fixed top-5 right-5 z-50 bg-[#1E3A8A] text-white px-4 py-2.5 rounded-xl shadow-lg border border-blue-400/30 flex items-center gap-2 text-xs animate-in fade-in slide-in-from-top-2 duration-150">
-          <Info className="w-4 h-4 text-blue-300 shrink-0" />
+        <div className="fixed top-5 right-5 z-50 bg-[#0D3328] text-white px-4 py-2.5 rounded-2xl shadow-lg border border-[#5B8272]/40 flex items-center gap-2 text-xs animate-in fade-in slide-in-from-top-2 duration-150">
+          <Info className="w-4 h-4 text-[#A7B8AE] shrink-0" />
           <span>{infoToast}</span>
         </div>
       )}
 
       {/* Main Container */}
       <div className="flex-1 flex items-center justify-center p-4 sm:p-6 lg:p-8">
-        <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-12 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-xl overflow-hidden min-h-[620px]">
+        <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-12 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-xl overflow-hidden min-h-[620px]">
           {/* Left Panel: Value Proposition & Trust (Desktop / Tablet) */}
-          <div className="lg:col-span-5 bg-linear-to-br from-[#0F172A] via-[#1E3A8A] to-[#1E40AF] p-8 sm:p-10 text-white flex flex-col justify-between relative overflow-hidden">
+          <div className="lg:col-span-5 bg-[#091E18] p-8 sm:p-10 text-white flex flex-col justify-between relative overflow-hidden border-r border-[#16382E]">
             {/* Background pattern */}
-            <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none translate-x-8 translate-y-8">
+            <div className="absolute right-0 bottom-0 opacity-5 pointer-events-none translate-x-8 translate-y-8">
               <Shield className="w-72 h-72 text-white" />
             </div>
 
             <div className="relative z-10 space-y-6">
               {/* Brand Header */}
-              <Link href="/" className="inline-flex items-center gap-2.5 group">
-                <div className="w-8 h-8 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-white backdrop-blur-xs">
-                  <Shield className="w-5 h-5 text-amber-400" />
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <span className="font-bold text-lg text-white tracking-tight">
-                    BISaarthi
-                  </span>
-                  <span className="text-[10px] uppercase font-semibold px-1.5 py-0.2 bg-blue-500/20 text-blue-200 border border-blue-400/30 rounded">
-                    MVP
-                  </span>
-                </div>
-              </Link>
+              <Logo variant="light" size="md" linkHref="/" />
 
               <div className="space-y-2">
-                <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug">
+                <h2 className="text-xl sm:text-2xl font-black text-white tracking-tight leading-snug">
                   AI-Powered Guidance for Indian Standards
                 </h2>
-                <p className="text-xs sm:text-sm text-blue-100/90 leading-relaxed font-normal">
+                <p className="text-xs sm:text-sm text-[#BAC5BF] leading-relaxed font-normal">
                   Democratizing regulatory discovery, testing routines, and BIS compliance pathways for Indian manufacturers and MSMEs.
                 </p>
               </div>
 
-              {/* Core Feature Highlights */}
+              {/* Feature Highlights */}
               <div className="space-y-2.5 pt-2">
-                <div className="p-3 rounded-xl bg-white/10 border border-white/15 backdrop-blur-xs flex items-start gap-2.5 text-xs text-blue-50">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <div className="p-3 rounded-2xl bg-[#12332A] border border-[#1E4D3E] flex items-start gap-2.5 text-xs text-[#F7F5EF]">
+                  <CheckCircle2 className="w-4 h-4 text-[#A7B8AE] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-white block">AI Chatbot</strong>
-                    <span>Ask multi-turn regulatory questions with citations</span>
+                    <span className="text-[#BAC5BF]">Ask multi-turn regulatory questions with citations</span>
                   </div>
                 </div>
 
-                <div className="p-3 rounded-xl bg-white/10 border border-white/15 backdrop-blur-xs flex items-start gap-2.5 text-xs text-blue-50">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <div className="p-3 rounded-2xl bg-[#12332A] border border-[#1E4D3E] flex items-start gap-2.5 text-xs text-[#F7F5EF]">
+                  <CheckCircle2 className="w-4 h-4 text-[#A7B8AE] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-white block">Find Applicable Standards</strong>
-                    <span>Map products & specs to indexed IS codes</span>
+                    <span className="text-[#BAC5BF]">Map products & specs to indexed IS codes</span>
                   </div>
                 </div>
 
-                <div className="p-3 rounded-xl bg-white/10 border border-white/15 backdrop-blur-xs flex items-start gap-2.5 text-xs text-blue-50">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <div className="p-3 rounded-2xl bg-[#12332A] border border-[#1E4D3E] flex items-start gap-2.5 text-xs text-[#F7F5EF]">
+                  <CheckCircle2 className="w-4 h-4 text-[#A7B8AE] shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-white block">Compare 2 Standards</strong>
-                    <span>Side-by-side matrices & scope differences</span>
+                    <span className="text-[#BAC5BF]">Side-by-side matrices & scope differences</span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Micro footer in panel */}
-            <div className="relative z-10 pt-6 border-t border-white/15 text-[11px] text-blue-200/80 flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-amber-400 shrink-0" />
+            <div className="relative z-10 pt-6 border-t border-[#16382E] text-[11px] text-[#8FA89B] flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-[#5B8272] shrink-0" />
               <span>Referenced from Indian Standards & Quality Control Orders</span>
             </div>
           </div>
 
           {/* Right Panel: Signup Form */}
-          <div className="lg:col-span-7 p-6 sm:p-10 lg:p-12 flex flex-col justify-between bg-white dark:bg-slate-900">
+          <div className="lg:col-span-7 p-6 sm:p-10 lg:p-12 flex flex-col justify-between bg-white dark:bg-[#15221E]">
             <div>
               {/* Back to landing link */}
               <div className="flex items-center justify-between mb-6">
                 <Link
                   href="/"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-[#1E3A8A] dark:hover:text-blue-400 transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#606E66] dark:text-[#BAC5BF] hover:text-[#0D3328] dark:hover:text-white transition-colors"
                 >
                   <ArrowLeft className="w-3.5 h-3.5" />
                   <span>Back to BISaarthi</span>
                 </Link>
 
-                <span className="text-[11px] text-slate-400 hidden sm:inline">
+                <span className="text-[11px] text-[#8B978F] hidden sm:inline">
                   Prototype Access
                 </span>
               </div>
 
               {/* Form Heading */}
               <div className="space-y-1.5 mb-6">
-                <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">
+                <h1 className="text-2xl sm:text-3xl font-black text-[#18211D] dark:text-white tracking-tight">
                   Create your BISaarthi account
                 </h1>
-                <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+                <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF]">
                   Get started with AI-powered guidance for Indian Standards.
                 </p>
               </div>
 
               {/* Error Alert */}
               {errorMessage && (
-                <div className="mb-5 p-3 rounded-xl bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-900/60 flex items-start gap-2.5 text-xs text-red-700 dark:text-red-300 animate-in fade-in duration-150">
-                  <AlertCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+                <div className="mb-5 p-3 rounded-2xl bg-[#FDF2EE] dark:bg-[#3E1A14] border border-[#FBE0D6] dark:border-[#52251D] flex items-start gap-2.5 text-xs text-[#9E3A20] dark:text-[#FECACA] animate-in fade-in duration-150">
+                  <AlertCircle className="w-4 h-4 text-[#C86D51] shrink-0 mt-0.5" />
                   <span>{errorMessage}</span>
                 </div>
               )}
@@ -230,12 +219,12 @@ export default function SignupPage() {
               <form onSubmit={handleSignupSubmit} className="space-y-3.5" noValidate>
                 {/* Full Name Field */}
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center justify-between">
+                  <label className="text-xs font-bold uppercase tracking-wider text-[#18211D] dark:text-[#F7F5EF] flex items-center justify-between">
                     <span>Full Name</span>
-                    <span className="text-[10px] text-slate-400 font-normal normal-case">Required</span>
+                    <span className="text-[10px] text-[#8B978F] font-normal normal-case">Required</span>
                   </label>
                   <div className="relative">
-                    <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                    <User className="w-4 h-4 text-[#8B978F] absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
                     <input
                       type="text"
                       value={fullName}
@@ -247,26 +236,26 @@ export default function SignupPage() {
                         if (errorMessage) setErrorMessage(null);
                       }}
                       placeholder="Enter your full name"
-                      className={`w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm rounded-xl border ${
+                      className={`w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm rounded-full border ${
                         fieldErrors.fullName
-                          ? 'border-red-400 dark:border-red-500 ring-1 ring-red-400'
-                          : 'border-slate-200 dark:border-slate-700'
-                      } bg-slate-50 dark:bg-slate-800/80 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all`}
+                          ? 'border-[#C86D51] ring-1 ring-[#C86D51]'
+                          : 'border-[#D9DDD8] dark:border-[#253831]'
+                      } bg-[#FAF9F5] dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] placeholder-[#8B978F] focus:outline-none focus:ring-2 focus:ring-[#5B8272]/30 focus:border-[#0D3328] transition-all`}
                     />
                   </div>
                   {fieldErrors.fullName && (
-                    <p className="text-[11px] text-red-600 dark:text-red-400 pl-1">{fieldErrors.fullName}</p>
+                    <p className="text-[11px] text-[#C86D51] pl-3">{fieldErrors.fullName}</p>
                   )}
                 </div>
 
                 {/* Email Field */}
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center justify-between">
+                  <label className="text-xs font-bold uppercase tracking-wider text-[#18211D] dark:text-[#F7F5EF] flex items-center justify-between">
                     <span>Email</span>
-                    <span className="text-[10px] text-slate-400 font-normal normal-case">Required</span>
+                    <span className="text-[10px] text-[#8B978F] font-normal normal-case">Required</span>
                   </label>
                   <div className="relative">
-                    <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                    <Mail className="w-4 h-4 text-[#8B978F] absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
                     <input
                       type="email"
                       value={email}
@@ -278,26 +267,26 @@ export default function SignupPage() {
                         if (errorMessage) setErrorMessage(null);
                       }}
                       placeholder="you@example.com"
-                      className={`w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm rounded-xl border ${
+                      className={`w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm rounded-full border ${
                         fieldErrors.email
-                          ? 'border-red-400 dark:border-red-500 ring-1 ring-red-400'
-                          : 'border-slate-200 dark:border-slate-700'
-                      } bg-slate-50 dark:bg-slate-800/80 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all`}
+                          ? 'border-[#C86D51] ring-1 ring-[#C86D51]'
+                          : 'border-[#D9DDD8] dark:border-[#253831]'
+                      } bg-[#FAF9F5] dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] placeholder-[#8B978F] focus:outline-none focus:ring-2 focus:ring-[#5B8272]/30 focus:border-[#0D3328] transition-all`}
                     />
                   </div>
                   {fieldErrors.email && (
-                    <p className="text-[11px] text-red-600 dark:text-red-400 pl-1">{fieldErrors.email}</p>
+                    <p className="text-[11px] text-[#C86D51] pl-3">{fieldErrors.email}</p>
                   )}
                 </div>
 
                 {/* Password Field */}
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center justify-between">
+                  <label className="text-xs font-bold uppercase tracking-wider text-[#18211D] dark:text-[#F7F5EF] flex items-center justify-between">
                     <span>Password</span>
-                    <span className="text-[10px] text-slate-400 font-normal normal-case">Required</span>
+                    <span className="text-[10px] text-[#8B978F] font-normal normal-case">Required</span>
                   </label>
                   <div className="relative">
-                    <Lock className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                    <Lock className="w-4 h-4 text-[#8B978F] absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
                     <input
                       type={showPassword ? 'text' : 'password'}
                       value={password}
@@ -309,16 +298,16 @@ export default function SignupPage() {
                         if (errorMessage) setErrorMessage(null);
                       }}
                       placeholder="Create a password"
-                      className={`w-full pl-10 pr-10 py-2.5 text-xs sm:text-sm rounded-xl border ${
+                      className={`w-full pl-10 pr-10 py-2.5 text-xs sm:text-sm rounded-full border ${
                         fieldErrors.password
-                          ? 'border-red-400 dark:border-red-500 ring-1 ring-red-400'
-                          : 'border-slate-200 dark:border-slate-700'
-                      } bg-slate-50 dark:bg-slate-800/80 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all`}
+                          ? 'border-[#C86D51] ring-1 ring-[#C86D51]'
+                          : 'border-[#D9DDD8] dark:border-[#253831]'
+                      } bg-[#FAF9F5] dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] placeholder-[#8B978F] focus:outline-none focus:ring-2 focus:ring-[#5B8272]/30 focus:border-[#0D3328] transition-all`}
                     />
                     <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-0.5 cursor-pointer"
+                      className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#8B978F] hover:text-[#18211D] dark:hover:text-white p-0.5 cursor-pointer"
                       aria-label={showPassword ? 'Hide password' : 'Show password'}
                     >
                       {showPassword ? (
@@ -329,18 +318,18 @@ export default function SignupPage() {
                     </button>
                   </div>
                   {fieldErrors.password && (
-                    <p className="text-[11px] text-red-600 dark:text-red-400 pl-1">{fieldErrors.password}</p>
+                    <p className="text-[11px] text-[#C86D51] pl-3">{fieldErrors.password}</p>
                   )}
                 </div>
 
                 {/* Confirm Password Field */}
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center justify-between">
+                  <label className="text-xs font-bold uppercase tracking-wider text-[#18211D] dark:text-[#F7F5EF] flex items-center justify-between">
                     <span>Confirm Password</span>
-                    <span className="text-[10px] text-slate-400 font-normal normal-case">Required</span>
+                    <span className="text-[10px] text-[#8B978F] font-normal normal-case">Required</span>
                   </label>
                   <div className="relative">
-                    <Lock className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                    <Lock className="w-4 h-4 text-[#8B978F] absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
                     <input
                       type={showConfirmPassword ? 'text' : 'password'}
                       value={confirmPassword}
@@ -352,16 +341,16 @@ export default function SignupPage() {
                         if (errorMessage) setErrorMessage(null);
                       }}
                       placeholder="Re-enter your password"
-                      className={`w-full pl-10 pr-10 py-2.5 text-xs sm:text-sm rounded-xl border ${
+                      className={`w-full pl-10 pr-10 py-2.5 text-xs sm:text-sm rounded-full border ${
                         fieldErrors.confirmPassword
-                          ? 'border-red-400 dark:border-red-500 ring-1 ring-red-400'
-                          : 'border-slate-200 dark:border-slate-700'
-                      } bg-slate-50 dark:bg-slate-800/80 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#2563EB] focus:border-transparent transition-all`}
+                          ? 'border-[#C86D51] ring-1 ring-[#C86D51]'
+                          : 'border-[#D9DDD8] dark:border-[#253831]'
+                      } bg-[#FAF9F5] dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] placeholder-[#8B978F] focus:outline-none focus:ring-2 focus:ring-[#5B8272]/30 focus:border-[#0D3328] transition-all`}
                     />
                     <button
                       type="button"
                       onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                      className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-0.5 cursor-pointer"
+                      className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#8B978F] hover:text-[#18211D] dark:hover:text-white p-0.5 cursor-pointer"
                       aria-label={showConfirmPassword ? 'Hide confirm password' : 'Show confirm password'}
                     >
                       {showConfirmPassword ? (
@@ -372,7 +361,7 @@ export default function SignupPage() {
                     </button>
                   </div>
                   {fieldErrors.confirmPassword && (
-                    <p className="text-[11px] text-red-600 dark:text-red-400 pl-1">{fieldErrors.confirmPassword}</p>
+                    <p className="text-[11px] text-[#C86D51] pl-3">{fieldErrors.confirmPassword}</p>
                   )}
                 </div>
 
@@ -381,7 +370,7 @@ export default function SignupPage() {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full py-2.5 px-4 rounded-xl bg-[#1E3A8A] hover:bg-[#1D4ED8] text-white font-semibold text-xs sm:text-sm shadow-sm transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="w-full py-3 px-4 rounded-full bg-[#0D3328] hover:bg-[#164B3A] text-white font-bold text-xs sm:text-sm shadow-sm transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     {isLoading ? (
                       <>
@@ -401,9 +390,9 @@ export default function SignupPage() {
               {/* Divider */}
               <div className="relative my-5 text-center">
                 <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-slate-200 dark:border-slate-800" />
+                  <div className="w-full border-t border-[#D9DDD8] dark:border-[#253831]" />
                 </div>
-                <span className="relative bg-white dark:bg-slate-900 px-3 text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
+                <span className="relative bg-white dark:bg-[#15221E] px-3 text-[11px] font-bold text-[#8B978F] uppercase tracking-wider">
                   OR
                 </span>
               </div>
@@ -412,7 +401,7 @@ export default function SignupPage() {
               <button
                 type="button"
                 onClick={handleGoogleSignup}
-                className="w-full py-2.5 px-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700/60 text-slate-700 dark:text-slate-200 font-medium text-xs sm:text-sm transition-all flex items-center justify-center gap-2.5 cursor-pointer shadow-2xs"
+                className="w-full py-2.5 px-4 rounded-full border border-[#D9DDD8] dark:border-[#253831] bg-white dark:bg-[#1B2B26] hover:bg-[#FAF9F5] dark:hover:bg-[#20312B] text-[#18211D] dark:text-[#F7F5EF] font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2.5 cursor-pointer shadow-2xs"
               >
                 <svg className="w-4 h-4" viewBox="0 0 24 24">
                   <path
@@ -436,11 +425,11 @@ export default function SignupPage() {
               </button>
 
               {/* Sign in link */}
-              <div className="pt-5 text-center text-xs text-slate-600 dark:text-slate-400">
+              <div className="pt-5 text-center text-xs text-[#606E66] dark:text-[#BAC5BF]">
                 <span>Already have an account? </span>
                 <Link
                   href="/auth/login"
-                  className="text-[#2563EB] dark:text-blue-400 font-bold hover:underline"
+                  className="text-[#0D3328] dark:text-[#A7B8AE] font-black hover:underline"
                 >
                   Sign in
                 </Link>
@@ -448,7 +437,7 @@ export default function SignupPage() {
             </div>
 
             {/* Quick Demo Hint */}
-            <div className="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800 text-[11px] text-slate-400 text-center">
+            <div className="mt-6 pt-3 border-t border-[#EFECE6] dark:border-[#1C2E28] text-[11px] text-[#8B978F] text-center">
               <span>Demo Mode: Fill in the fields to test registration and access the dashboard.</span>
             </div>
           </div>
@@ -456,7 +445,7 @@ export default function SignupPage() {
       </div>
 
       {/* Public Footer Trust Note */}
-      <footer className="py-4 px-6 text-center text-[11px] text-slate-500 dark:text-slate-400 border-t border-slate-200/60 dark:border-slate-800/60">
+      <footer className="py-4 px-6 text-center text-[11px] text-[#606E66] dark:text-[#8B978F] border-t border-[#D9DDD8] dark:border-[#253831]">
         <p className="max-w-4xl mx-auto leading-normal">
           BISaarthi is an AI guidance tool based on authoritative BIS and government sources. It does not replace official BIS certification, testing laboratories, or statutory legal determinations.
         </p>

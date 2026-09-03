@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Shield,
   ShieldCheck,
@@ -11,88 +12,115 @@ import {
   MessageSquare,
   Scale,
   CheckCircle2,
-  Layers,
   FileText,
   Building2,
-  FlaskConical,
   Compass,
   AlertTriangle,
   Menu,
   X,
-  ExternalLink,
-  ChevronRight,
-  Info,
+  Plus,
+  Minus,
+  Layers,
+  ChevronDown,
+  BookOpen,
   Check,
+  HelpCircle,
 } from 'lucide-react';
 import { Button } from '@/components/common/Button';
+import { Logo } from '@/components/common/Logo';
 
 export default function LandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
+  const faqItems = [
+    {
+      q: 'What is an Indian Standard?',
+      a: 'An Indian Standard (IS) is an official technical specification established by the Bureau of Indian Standards (BIS) that prescribes minimum quality, performance, safety, and testing benchmarks for products, processes, and services in India.',
+    },
+    {
+      q: 'How does BISaarthi identify applicable standards?',
+      a: 'BISaarthi parses your natural language product descriptions, intended operating conditions, and technical parameters against indexed Indian Standards, Quality Control Orders (QCOs), and BIS product manuals to surface ranked applicable standards with explainable rationale.',
+    },
+    {
+      q: 'Does BISaarthi replace official BIS information?',
+      a: 'No. BISaarthi is an AI compliance guidance tool. It does not replace official BIS certification, laboratory testing reports, or statutory determinations. All formal applications must be submitted via official BIS portals (such as Manakonline).',
+    },
+    {
+      q: 'Can I verify the source/version of a standard?',
+      a: 'Yes. Every recommendation includes clickable source citations showing the exact standard title, gazette references, QCO mandatory dates, and version identifiers for complete transparency.',
+    },
+    {
+      q: 'What happens if multiple standards may apply?',
+      a: 'When multiple standards apply (such as general safety IS 302-1 combined with particular appliance requirements IS 302-2-201 and plug specifications IS 1293), BISaarthi organizes them hierarchically and explains how the standards interrelate.',
+    },
+  ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F8FAFC] dark:bg-[#0B0F17] text-slate-900 dark:text-slate-100 selection:bg-blue-100 selection:text-blue-900">
-      {/* 1. PUBLIC MARKETING HEADER */}
-      <header className="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
-          {/* Logo & Brand */}
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-8 h-8 rounded-lg bg-linear-to-br from-blue-600 to-[#1E3A8A] flex items-center justify-center text-white shadow-md shadow-blue-900/30">
-              <Shield className="w-5 h-5 text-amber-400" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-base tracking-tight text-slate-900 dark:text-white flex items-center gap-1.5">
-                BISaarthi
-                <span className="text-[10px] uppercase font-semibold px-1.5 py-0.2 bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900 rounded">
-                  MVP
-                </span>
-              </span>
-              <span className="text-[10px] text-slate-500 dark:text-slate-400 hidden sm:inline">
-                AI-powered guidance for Indian Standards
-              </span>
-            </div>
-          </Link>
+    <div className="min-h-screen flex flex-col bg-[#F7F5EF] dark:bg-[#0E1815] text-[#18211D] dark:text-[#F7F5EF] selection:bg-[#E8EFEA] selection:text-[#0D3328]">
+      {/* 1. TOP NAVBAR */}
+      <header className="sticky top-0 z-50 bg-[#F7F5EF]/95 dark:bg-[#0E1815]/95 backdrop-blur-md border-b border-[#D9DDD8] dark:border-[#253831]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4">
+          {/* Brand Logo */}
+          <Logo size="md" linkHref="/" />
 
-          {/* Desktop Nav Links */}
-          <nav className="hidden md:flex items-center gap-6 text-xs font-semibold text-slate-600 dark:text-slate-300">
+          {/* Desktop Navigation Links */}
+          <nav className="hidden lg:flex items-center gap-8 text-xs font-semibold text-[#606E66] dark:text-[#BAC5BF]">
             <a
-              href="#features"
-              className="hover:text-[#1E3A8A] dark:hover:text-blue-400 transition-colors"
+              href="#about"
+              className="hover:text-[#0D3328] dark:hover:text-[#F7F5EF] transition-colors"
             >
-              Features
+              About
             </a>
             <a
               href="#how-it-works"
-              className="hover:text-[#1E3A8A] dark:hover:text-blue-400 transition-colors"
+              className="hover:text-[#0D3328] dark:hover:text-[#F7F5EF] transition-colors"
             >
               How It Works
             </a>
             <a
-              href="#trust-sources"
-              className="hover:text-[#1E3A8A] dark:hover:text-blue-400 transition-colors"
+              href="#what-it-does"
+              className="hover:text-[#0D3328] dark:hover:text-[#F7F5EF] transition-colors"
             >
-              Trust & Sources
+              What It Can Do
+            </a>
+            <a
+              href="#faq"
+              className="hover:text-[#0D3328] dark:hover:text-[#F7F5EF] transition-colors"
+            >
+              FAQ
+            </a>
+            <a
+              href="#contact"
+              className="hover:text-[#0D3328] dark:hover:text-[#F7F5EF] transition-colors"
+            >
+              Contact
             </a>
           </nav>
 
-          {/* Right Action Buttons */}
+          {/* Right Action Button */}
           <div className="hidden sm:flex items-center gap-3">
             <Link href="/auth/login">
-              <Button variant="ghost" size="sm">
-                Login
-              </Button>
-            </Link>
-            <Link href="/auth/signup">
-              <Button variant="primary" size="sm" icon={<ArrowRight className="w-3.5 h-3.5" />}>
-                Get Started
+              <Button
+                variant="pill"
+                size="md"
+                icon={<ArrowRight className="w-3.5 h-3.5" />}
+                className="font-bold tracking-tight text-xs"
+              >
+                Ask BISAARTHI
               </Button>
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Toggle */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 md:hidden cursor-pointer"
+            className="p-2 rounded-xl text-[#606E66] dark:text-[#BAC5BF] hover:bg-[#EFECE6] dark:hover:bg-[#1B2B26] lg:hidden cursor-pointer"
             aria-label="Toggle Menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -101,39 +129,48 @@ export default function LandingPage() {
 
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-4 space-y-3 shadow-lg animate-in fade-in duration-150">
-            <nav className="flex flex-col space-y-2 text-sm font-medium text-slate-700 dark:text-slate-200">
+          <div className="lg:hidden border-t border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#15221E] px-4 py-4 space-y-3 shadow-lg animate-in fade-in duration-150">
+            <nav className="flex flex-col space-y-2 text-sm font-medium text-[#18211D] dark:text-[#F7F5EF]">
               <a
-                href="#features"
+                href="#about"
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800"
+                className="px-3 py-2 rounded-xl hover:bg-[#EFECE6] dark:hover:bg-[#1B2B26]"
               >
-                Features
+                About
               </a>
               <a
                 href="#how-it-works"
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800"
+                className="px-3 py-2 rounded-xl hover:bg-[#EFECE6] dark:hover:bg-[#1B2B26]"
               >
                 How It Works
               </a>
               <a
-                href="#trust-sources"
+                href="#what-it-does"
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800"
+                className="px-3 py-2 rounded-xl hover:bg-[#EFECE6] dark:hover:bg-[#1B2B26]"
               >
-                Trust & Sources
+                What It Can Do
+              </a>
+              <a
+                href="#faq"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-3 py-2 rounded-xl hover:bg-[#EFECE6] dark:hover:bg-[#1B2B26]"
+              >
+                FAQ
+              </a>
+              <a
+                href="#contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-3 py-2 rounded-xl hover:bg-[#EFECE6] dark:hover:bg-[#1B2B26]"
+              >
+                Contact
               </a>
             </nav>
-            <div className="pt-2 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-2">
+            <div className="pt-2 border-t border-[#D9DDD8] dark:border-[#253831] flex flex-col gap-2">
               <Link href="/auth/login" className="w-full">
-                <Button variant="secondary" size="sm" className="w-full">
-                  Login
-                </Button>
-              </Link>
-              <Link href="/auth/signup" className="w-full">
-                <Button variant="primary" size="sm" className="w-full">
-                  Get Started
+                <Button variant="pill" size="md" className="w-full justify-center">
+                  Ask BISAARTHI
                 </Button>
               </Link>
             </div>
@@ -142,112 +179,167 @@ export default function LandingPage() {
       </header>
 
       {/* 2. HERO SECTION */}
-      <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24 border-b border-slate-200/80 dark:border-slate-800/80 bg-linear-to-b from-white via-slate-50/50 to-slate-100/30 dark:from-slate-900/60 dark:via-[#0B0F17] dark:to-[#0B0F17]">
+      <section id="about" className="relative overflow-hidden py-16 sm:py-20 lg:py-24 border-b border-[#D9DDD8] dark:border-[#253831]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Column: Heading & CTAs */}
-            <div className="lg:col-span-7 space-y-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/70 text-[#1E3A8A] dark:text-blue-300 border border-blue-200 dark:border-blue-900 text-xs font-semibold shadow-2xs">
-                <Sparkles className="w-3.5 h-3.5 text-[#2563EB]" />
-                <span>AI-Powered Indian Standards Assistant</span>
-              </div>
-
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.15]">
-                Find the right Indian Standards <span className="text-[#1E3A8A] dark:text-blue-400">with confidence.</span>
+            {/* Left Hero Column */}
+            <div className="lg:col-span-6 space-y-6 text-left">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#18211D] dark:text-white tracking-tight leading-[1.12]">
+                Navigate Indian Standards with{' '}
+                <span className="text-[#3D6B58] dark:text-[#8FA89B] underline decoration-[#8FA89B]/50 decoration-wavy underline-offset-6">
+                  confidence.
+                </span>
               </h1>
 
-              <p className="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl font-normal">
-                BISaarthi helps industries, manufacturers, and MSMEs understand applicable Indian Standards, testing expectations, Quality Control Orders, and BIS certification pathways using source-backed intelligence.
+              <p className="text-sm sm:text-base text-[#606E66] dark:text-[#BAC5BF] leading-relaxed max-w-xl font-normal">
+                BISaarthi is your AI-powered assistant that helps you discover, understand and explore the right Indian Standards for your products.
               </p>
 
-              {/* CTAs */}
-              <div className="flex flex-wrap items-center gap-3.5 pt-2">
+              {/* Main Hero CTA Button */}
+              <div className="pt-2">
                 <Link href="/auth/login">
-                  <Button variant="primary" size="lg" icon={<ArrowRight className="w-4 h-4" />}>
-                    Ask BISaarthi
-                  </Button>
-                </Link>
-                <Link href="/auth/login">
-                  <Button variant="secondary" size="lg" icon={<Search className="w-4 h-4" />}>
-                    Explore Standards
+                  <Button
+                    variant="pill"
+                    size="lg"
+                    icon={<ArrowRight className="w-4 h-4" />}
+                    className="font-bold text-sm tracking-wide shadow-md shadow-[#0D3328]/15 px-7 py-3.5"
+                  >
+                    Ask BISAARTHI
                   </Button>
                 </Link>
               </div>
 
-              {/* Micro Trust Points */}
-              <div className="pt-4 flex flex-wrap items-center gap-6 text-xs text-slate-500 dark:text-slate-400 border-t border-slate-200/60 dark:border-slate-800">
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                  <span>Authoritative IS Indexing</span>
+              {/* 3 Micro Feature Badges */}
+              <div className="pt-6 grid grid-cols-3 gap-3 border-t border-[#D9DDD8]/80 dark:border-[#253831] max-w-lg">
+                <div className="space-y-1">
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                    <Sparkles className="w-3.5 h-3.5 text-[#5B8272]" />
+                    <span>AI-Assisted</span>
+                  </div>
+                  <p className="text-[11px] text-[#606E66] dark:text-[#8FA89B]">
+                    Direct & Relevant
+                  </p>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                  <span>QCO & Scheme-I Roadmaps</span>
+
+                <div className="space-y-1">
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#5B8272]" />
+                    <span>Source-backed</span>
+                  </div>
+                  <p className="text-[11px] text-[#606E66] dark:text-[#8FA89B]">
+                    Technical & Government
+                  </p>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                  <span>Two-Standard Comparison</span>
+
+                <div className="space-y-1">
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                    <Compass className="w-3.5 h-3.5 text-[#5B8272]" />
+                    <span>Explainable</span>
+                  </div>
+                  <p className="text-[11px] text-[#606E66] dark:text-[#8FA89B]">
+                    Clear & Transparent
+                  </p>
                 </div>
               </div>
             </div>
 
-            {/* Right Column: Visual Product Mockup Card */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative rounded-2xl bg-white dark:bg-slate-800/95 border border-slate-200 dark:border-slate-700/80 p-5 sm:p-6 shadow-xl space-y-4 animate-in fade-in zoom-in-95 duration-200">
-                {/* Mock Card Header */}
-                <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/60 pb-3">
+            {/* Right Hero Column: UI Mockup Window */}
+            <div className="lg:col-span-6 relative">
+              <div className="relative mx-auto max-w-lg rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] p-5 sm:p-6 shadow-xl space-y-4">
+                {/* Mock Window Title Bar */}
+                <div className="flex items-center justify-between border-b border-[#EFECE6] dark:border-[#1C2E28] pb-3">
                   <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full bg-emerald-500" />
-                    <span className="text-xs font-bold text-slate-800 dark:text-slate-200 font-mono">
-                      Product Intelligence Summary
-                    </span>
+                    <div className="w-2.5 h-2.5 rounded-full bg-[#E5E2DC]" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-[#E5E2DC]" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-[#E5E2DC]" />
                   </div>
-                  <span className="text-[10px] font-semibold text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-950/70 px-2 py-0.5 rounded border border-blue-200 dark:border-blue-900">
-                    Standard Overview
+                  <span className="text-[11px] font-bold text-[#606E66] dark:text-[#BAC5BF] tracking-wider uppercase">
+                    BISAARTHI
                   </span>
+                  <div className="w-5" />
                 </div>
 
-                {/* Standard Identity Preview */}
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="font-mono text-xs sm:text-sm font-bold text-[#1E3A8A] dark:text-blue-400">
-                      IS 302 (Part 2/Sec 201)
+                {/* Simulated Chat Message Bubble from User */}
+                <div className="flex justify-end">
+                  <div className="bg-[#0D3328] text-white rounded-2xl rounded-tr-xs px-4 py-2.5 text-xs font-medium max-w-[85%] shadow-2xs">
+                    Which standards apply to my product?
+                  </div>
+                </div>
+
+                {/* Surfaced Standard Cards in Mockup */}
+                <div className="space-y-2 pt-1">
+                  {/* Item 1 */}
+                  <div className="p-3 rounded-2xl bg-[#F7F5EF] dark:bg-[#1B2B26] border border-[#E5E2DC] dark:border-[#253831] flex items-center justify-between gap-3 text-xs">
+                    <div className="flex items-center gap-2.5 min-w-0">
+                      <div className="w-6 h-6 rounded-full bg-[#E8EFEA] dark:bg-[#15221E] flex items-center justify-center text-[#0D3328] dark:text-[#8FA89B] shrink-0 font-bold text-[10px]">
+                        IS
+                      </div>
+                      <div className="min-w-0">
+                        <span className="font-bold text-[#18211D] dark:text-[#F7F5EF] block">
+                          IS 302 (Part 2/Sec 201)
+                        </span>
+                        <span className="text-[10px] text-[#606E66] dark:text-[#8B978F] truncate block">
+                          Immersion Water Heaters Safety
+                        </span>
+                      </div>
+                    </div>
+                    <span className="text-[10px] font-bold text-[#1B5E39] bg-[#E8F4EC] px-2 py-0.5 rounded-full shrink-0">
+                      Mandatory
                     </span>
-                    <span className="text-[10px] font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800">
-                      Active Standard
+                  </div>
+
+                  {/* Item 2 */}
+                  <div className="p-3 rounded-2xl bg-[#F7F5EF] dark:bg-[#1B2B26] border border-[#E5E2DC] dark:border-[#253831] flex items-center justify-between gap-3 text-xs">
+                    <div className="flex items-center gap-2.5 min-w-0">
+                      <div className="w-6 h-6 rounded-full bg-[#E8EFEA] dark:bg-[#15221E] flex items-center justify-center text-[#0D3328] dark:text-[#8FA89B] shrink-0 font-bold text-[10px]">
+                        IS
+                      </div>
+                      <div className="min-w-0">
+                        <span className="font-bold text-[#18211D] dark:text-[#F7F5EF] block">
+                          IS 1293:2019
+                        </span>
+                        <span className="text-[10px] text-[#606E66] dark:text-[#8B978F] truncate block">
+                          Plugs and Socket-Outlets (250V)
+                        </span>
+                      </div>
+                    </div>
+                    <span className="text-[10px] font-bold text-[#1B5E39] bg-[#E8F4EC] px-2 py-0.5 rounded-full shrink-0">
+                      Mandatory
                     </span>
                   </div>
-                  <h3 className="text-xs sm:text-sm font-semibold text-slate-900 dark:text-slate-100 line-clamp-2">
-                    Safety of Household and Similar Electrical Appliances — Particular Requirements: Electric Immersion Water Heaters
-                  </h3>
-                </div>
 
-                {/* Applicable Callout */}
-                <div className="p-3 rounded-xl bg-blue-50/50 dark:bg-slate-900/60 border-l-3 border-l-[#2563EB] border-t border-r border-b border-blue-100 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300 space-y-1">
-                  <p className="font-semibold text-[#1E3A8A] dark:text-blue-400 text-[11px] uppercase tracking-wider">
-                    Why Applicable
-                  </p>
-                  <p className="line-clamp-2 leading-relaxed text-[11px]">
-                    Directly applicable to portable immersion heating elements, earthing continuity, IPX7 immersion integrity, and boil-dry safety.
-                  </p>
-                </div>
-
-                {/* Metadata Pills */}
-                <div className="grid grid-cols-2 gap-2 text-[11px]">
-                  <div className="p-2 rounded-lg bg-slate-50 dark:bg-slate-900/40 border border-slate-200/70 dark:border-slate-700/60">
-                    <span className="text-slate-400 block text-[10px]">Mandate</span>
-                    <span className="font-semibold text-red-600 dark:text-red-400">Mandatory (QCO)</span>
-                  </div>
-                  <div className="p-2 rounded-lg bg-slate-50 dark:bg-slate-900/40 border border-slate-200/70 dark:border-slate-700/60">
-                    <span className="text-slate-400 block text-[10px]">Conformity Scheme</span>
-                    <span className="font-semibold text-slate-800 dark:text-slate-200 truncate block">Scheme-I (ISI Mark)</span>
+                  {/* Item 3 */}
+                  <div className="p-3 rounded-2xl bg-[#F7F5EF] dark:bg-[#1B2B26] border border-[#E5E2DC] dark:border-[#253831] flex items-center justify-between gap-3 text-xs">
+                    <div className="flex items-center gap-2.5 min-w-0">
+                      <div className="w-6 h-6 rounded-full bg-[#E8EFEA] dark:bg-[#15221E] flex items-center justify-center text-[#0D3328] dark:text-[#8FA89B] shrink-0 font-bold text-[10px]">
+                        IS
+                      </div>
+                      <div className="min-w-0">
+                        <span className="font-bold text-[#18211D] dark:text-[#F7F5EF] block">
+                          IS 16102 (Part 1)
+                        </span>
+                        <span className="text-[10px] text-[#606E66] dark:text-[#8B978F] truncate block">
+                          Self-Ballasted LED Lamps Safety
+                        </span>
+                      </div>
+                    </div>
+                    <span className="text-[10px] font-bold text-[#0D3328] bg-[#E8EFEA] px-2 py-0.5 rounded-full shrink-0">
+                      CRS Scheme
+                    </span>
                   </div>
                 </div>
 
-                {/* Footer preview tags */}
-                <div className="pt-2 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between text-[10px] text-slate-400">
-                  <span>Authoritative Citation: DPIIT Gazette & BIS</span>
-                  <span className="text-blue-600 dark:text-blue-400 font-semibold">Ready to explore →</span>
+                {/* Floating pill indicators on mockup edges */}
+                <div className="pt-2 flex items-center justify-between text-[11px]">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8EFEA] text-[#0D3328] font-semibold text-xs border border-[#D9DDD8]">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#5B8272]" />
+                    <span>Indian Standards</span>
+                  </div>
+
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF4EB] text-[#8C6126] font-semibold text-xs border border-[#F2E4CD]">
+                    <Building2 className="w-3.5 h-3.5 text-[#B88746]" />
+                    <span>BIS Services</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -255,260 +347,175 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 3. PROBLEM → SOLUTION SECTION */}
-      <section id="problem-solution" className="py-16 sm:py-20 border-b border-slate-200/80 dark:border-slate-800/80 bg-white dark:bg-slate-900/40">
+      {/* 3. THE PROBLEM SECTION */}
+      <section className="py-16 sm:py-20 lg:py-24 border-b border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#12201A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/60 px-2.5 py-0.5 rounded-full border border-blue-200 dark:border-blue-900">
-              The Challenge & The Solution
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">
-              Navigating Indian Standards shouldn&apos;t be a maze.
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              Manufacturers frequently struggle to determine which IS codes govern their products, whether certification is statutory, and how testing procedures align.
-            </p>
+          {/* Section Header */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div className="lg:col-span-5 space-y-3">
+              <span className="text-xs font-black uppercase tracking-widest text-[#5B8272] dark:text-[#8FA89B]">
+                THE PROBLEM
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#18211D] dark:text-white tracking-tight leading-tight">
+                Indian Standards shouldn&apos;t be this difficult to navigate.
+              </h2>
+              <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
+                Thousands of standards, complex language, multiple procedures and scattered information make compliance confusing and time-consuming.
+              </p>
+            </div>
+
+            {/* 4 Problem Cards */}
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Card 1 */}
+              <div className="p-5 rounded-2xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-2xs space-y-2">
+                <div className="w-8 h-8 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] flex items-center justify-center">
+                  <Layers className="w-4 h-4" />
+                </div>
+                <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                  Thousands of Standards
+                </h3>
+                <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed">
+                  Too many documents to search through manually without clarity.
+                </p>
+              </div>
+
+              {/* Card 2 */}
+              <div className="p-5 rounded-2xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-2xs space-y-2">
+                <div className="w-8 h-8 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] flex items-center justify-center">
+                  <BookOpen className="w-4 h-4" />
+                </div>
+                <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                  Complex Language
+                </h3>
+                <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed">
+                  Technical jargon is hard to interpret for engineers and MSMEs.
+                </p>
+              </div>
+
+              {/* Card 3 */}
+              <div className="p-5 rounded-2xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-2xs space-y-2">
+                <div className="w-8 h-8 rounded-full bg-[#FDF2EE] dark:bg-[#3E1A14] text-[#C86D51] flex items-center justify-center">
+                  <Building2 className="w-4 h-4" />
+                </div>
+                <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                  Multiple Procedures
+                </h3>
+                <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed">
+                  Different conformity paths for domestic vs imported goods.
+                </p>
+              </div>
+
+              {/* Card 4 */}
+              <div className="p-5 rounded-2xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-2xs space-y-2">
+                <div className="w-8 h-8 rounded-full bg-[#FAF4EB] dark:bg-[#38240D] text-[#B88746] flex items-center justify-center">
+                  <Search className="w-4 h-4" />
+                </div>
+                <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                  Difficult to Locate
+                </h3>
+                <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed">
+                  Finding the right gazettes and laboratory rules is challenging.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-            {/* The Problem Card */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-rose-50/40 dark:bg-rose-950/20 border border-rose-200/80 dark:border-rose-900/50 space-y-5 flex flex-col justify-between">
-              <div className="space-y-4">
-                <div className="flex items-center gap-2 text-rose-700 dark:text-rose-400 font-bold text-xs uppercase tracking-wider">
-                  <AlertTriangle className="w-4 h-4" />
-                  <span>The Traditional Bottleneck</span>
-                </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
-                  Fragmented regulatory documents and complex technical clauses
-                </h3>
-                <ul className="space-y-3 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
-                  <li className="flex items-start gap-2">
-                    <span className="text-rose-500 font-bold">•</span>
-                    <span><strong>20,000+ Indian Standards:</strong> Difficult to know which exact Part 1 base standard or Part 2 particular specification applies.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-rose-500 font-bold">•</span>
-                    <span><strong>Scattered QCO Notices:</strong> Mandatory enforcement dates are distributed across ministry gazettes and departmental circulars.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-rose-500 font-bold">•</span>
-                    <span><strong>Unclear Testing Pathways:</strong> Confusion over mandatory in-house factory testing apparatus versus independent laboratory type tests.</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="pt-4 border-t border-rose-200/60 dark:border-rose-900/40 text-xs text-rose-800 dark:text-rose-300 font-medium">
-                Results in regulatory delays and non-compliance risk.
-              </div>
-            </div>
-
-            {/* The Solution Workflow Card */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-blue-50/40 dark:bg-slate-900/70 border border-blue-200/80 dark:border-blue-900/60 space-y-5 flex flex-col justify-between">
-              <div className="space-y-4">
-                <div className="flex items-center gap-2 text-[#1E3A8A] dark:text-blue-400 font-bold text-xs uppercase tracking-wider">
-                  <CheckCircle2 className="w-4 h-4" />
-                  <span>The BISaarthi Solution</span>
-                </div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
-                  A structured compliance guidance workflow
-                </h3>
-
-                {/* Step Flow */}
-                <div className="space-y-2.5">
-                  <div className="p-3 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 flex items-center gap-3 text-xs">
-                    <span className="w-5 h-5 rounded-full bg-[#1E3A8A] text-white font-bold font-mono text-[10px] flex items-center justify-center shrink-0">
-                      1
-                    </span>
-                    <span className="font-semibold text-slate-800 dark:text-slate-200">
-                      Product / Requirement Input
-                    </span>
-                  </div>
-
-                  <div className="p-3 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 flex items-center gap-3 text-xs">
-                    <span className="w-5 h-5 rounded-full bg-[#1E3A8A] text-white font-bold font-mono text-[10px] flex items-center justify-center shrink-0">
-                      2
-                    </span>
-                    <span className="font-semibold text-slate-800 dark:text-slate-200">
-                      Context Understanding & Scheme Mapping
-                    </span>
-                  </div>
-
-                  <div className="p-3 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 flex items-center gap-3 text-xs">
-                    <span className="w-5 h-5 rounded-full bg-[#1E3A8A] text-white font-bold font-mono text-[10px] flex items-center justify-center shrink-0">
-                      3
-                    </span>
-                    <span className="font-semibold text-slate-800 dark:text-slate-200">
-                      Ranked Indian Standards & Clause Highlights
-                    </span>
-                  </div>
-
-                  <div className="p-3 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 flex items-center gap-3 text-xs">
-                    <span className="w-5 h-5 rounded-full bg-[#1E3A8A] text-white font-bold font-mono text-[10px] flex items-center justify-center shrink-0">
-                      4
-                    </span>
-                    <span className="font-semibold text-slate-800 dark:text-slate-200">
-                      Source-Backed Testing & Laboratory Guidance
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-4 border-t border-blue-200/60 dark:border-blue-900/40 text-xs text-blue-800 dark:text-blue-300 font-medium">
-                Delivers clarity in minutes with verifiable citations.
-              </div>
-            </div>
+          {/* Bottom Alert Pill */}
+          <div className="max-w-2xl mx-auto p-3 rounded-full bg-[#FDF2EE] dark:bg-[#3E1A14] border border-[#FBE0D6] dark:border-[#52251D] text-center text-xs font-semibold text-[#9E3A20] dark:text-[#FECACA] flex items-center justify-center gap-2 shadow-2xs">
+            <AlertTriangle className="w-4 h-4 text-[#C86D51] shrink-0" />
+            <span>Compliance becomes costly, delayed and overwhelming</span>
           </div>
         </div>
       </section>
 
-      {/* 4. CORE CAPABILITIES (EXACTLY 3 MVP CORE FEATURES) */}
-      <section id="features" className="py-16 sm:py-20 border-b border-slate-200/80 dark:border-slate-800/80 bg-slate-50/60 dark:bg-[#0B0F17]">
+      {/* 4. WHAT BISAARTHI DOES SECTION */}
+      <section id="what-it-does" className="py-16 sm:py-20 lg:py-24 border-b border-[#D9DDD8] dark:border-[#253831] bg-[#F7F5EF] dark:bg-[#0E1815]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/60 px-2.5 py-0.5 rounded-full border border-blue-200 dark:border-blue-900">
-              Core Capabilities
+          {/* Section Heading */}
+          <div className="text-left space-y-3 max-w-2xl">
+            <span className="text-xs font-black uppercase tracking-widest text-[#5B8272] dark:text-[#8FA89B]">
+              WHAT BISAARTHI DOES
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">
-              Three focused compliance workflows
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#18211D] dark:text-white tracking-tight leading-tight">
+              One assistant. Multiple compliance journeys.
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              Explore dedicated capabilities designed to answer regulatory questions, identify applicable standards, and compare technical specifications.
+            <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
+              From discovering applicable standards to understanding their requirements and related BIS services — BISaarthi is with you at every step.
             </p>
           </div>
 
+          {/* 3 Capabilities Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* 01: AI Chatbot */}
-            <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 shadow-xs hover:border-blue-400 dark:hover:border-blue-500/80 transition-all flex flex-col justify-between space-y-5">
+            {/* Card 1: Find Applicable Standards */}
+            <div className="p-7 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-xs hover:border-[#5B8272] transition-all flex flex-col justify-between space-y-6">
               <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/70 border border-blue-200 dark:border-blue-900 flex items-center justify-center text-[#1E3A8A] dark:text-blue-400">
-                    <MessageSquare className="w-5 h-5" />
-                  </div>
-                  <span className="text-xs font-bold font-mono text-slate-400">01</span>
+                <div className="w-11 h-11 rounded-full bg-[#0D3328] text-white flex items-center justify-center shadow-xs">
+                  <Search className="w-5 h-5" />
                 </div>
-
-                <div className="space-y-1.5">
-                  <h3 className="text-base font-bold text-slate-900 dark:text-slate-100">
-                    AI Chatbot
-                  </h3>
-                  <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                    Ask questions about Indian Standards, certification procedures, Quality Control Orders, and testing protocols in natural language.
-                  </p>
-                </div>
-
-                <ul className="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-700/60 text-xs text-slate-600 dark:text-slate-400">
-                  <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
-                    <span>Multi-turn conversational guidance</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
-                    <span>Inline standard reference cards</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
-                    <span>Authoritative source citations</span>
-                  </li>
-                </ul>
+                <h3 className="text-lg font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                  Find Applicable Standards
+                </h3>
+                <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
+                  Describe your product and discover relevant Indian Standards with rationale.
+                </p>
               </div>
 
-              <div className="pt-4 border-t border-slate-100 dark:border-slate-700/60">
+              <div className="pt-4 border-t border-[#EFECE6] dark:border-[#1C2E28]">
                 <Link
                   href="/auth/login"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1E3A8A] dark:text-blue-400 hover:text-[#1D4ED8] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:text-[#164B3A] transition-colors"
                 >
-                  <span>Start a Chat</span>
+                  <span>Explore</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
             </div>
 
-            {/* 02: Find Standards */}
-            <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 shadow-xs hover:border-blue-400 dark:hover:border-blue-500/80 transition-all flex flex-col justify-between space-y-5">
+            {/* Card 2: Understand Why It Applies */}
+            <div className="p-7 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-xs hover:border-[#5B8272] transition-all flex flex-col justify-between space-y-6">
               <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/70 border border-blue-200 dark:border-blue-900 flex items-center justify-center text-[#1E3A8A] dark:text-blue-400">
-                    <Search className="w-5 h-5" />
-                  </div>
-                  <span className="text-xs font-bold font-mono text-slate-400">02</span>
+                <div className="w-11 h-11 rounded-full bg-[#FDF2EE] dark:bg-[#3E1A14] text-[#C86D51] flex items-center justify-center shadow-xs">
+                  <Compass className="w-5 h-5" />
                 </div>
-
-                <div className="space-y-1.5">
-                  <h3 className="text-base font-bold text-slate-900 dark:text-slate-100">
-                    Find Standards
-                  </h3>
-                  <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                    Describe a product or requirement—or optionally provide a technical datasheet—to discover ranked, applicable Indian Standards.
-                  </p>
-                </div>
-
-                <ul className="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-700/60 text-xs text-slate-600 dark:text-slate-400">
-                  <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
-                    <span>Natural language requirement matching</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
-                    <span>Optional specification sheet upload</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
-                    <span>Tests & Laboratory compliance roadmaps</span>
-                  </li>
-                </ul>
+                <h3 className="text-lg font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                  Understand Why It Applies
+                </h3>
+                <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
+                  Get clear explanations on why a standard may apply to your product.
+                </p>
               </div>
 
-              <div className="pt-4 border-t border-slate-100 dark:border-slate-700/60">
+              <div className="pt-4 border-t border-[#EFECE6] dark:border-[#1C2E28]">
                 <Link
                   href="/auth/login"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1E3A8A] dark:text-blue-400 hover:text-[#1D4ED8] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:text-[#164B3A] transition-colors"
                 >
-                  <span>Discover Standards</span>
+                  <span>Explore</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
             </div>
 
-            {/* 03: Compare Standards */}
-            <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 shadow-xs hover:border-blue-400 dark:hover:border-blue-500/80 transition-all flex flex-col justify-between space-y-5">
+            {/* Card 3: Explore BIS Requirements */}
+            <div className="p-7 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-xs hover:border-[#5B8272] transition-all flex flex-col justify-between space-y-6">
               <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/70 border border-blue-200 dark:border-blue-900 flex items-center justify-center text-[#1E3A8A] dark:text-blue-400">
-                    <Scale className="w-5 h-5" />
-                  </div>
-                  <span className="text-xs font-bold font-mono text-slate-400">03</span>
+                <div className="w-11 h-11 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] flex items-center justify-center shadow-xs">
+                  <Building2 className="w-5 h-5" />
                 </div>
-
-                <div className="space-y-1.5">
-                  <h3 className="text-base font-bold text-slate-900 dark:text-slate-100">
-                    Compare Standards
-                  </h3>
-                  <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                    Compare exactly two Indian Standards side-by-side to understand their scope differences, test matrices, and parent-particular relationship.
-                  </p>
-                </div>
-
-                <ul className="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-700/60 text-xs text-slate-600 dark:text-slate-400">
-                  <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
-                    <span>Strict dual-standard comparison matrix</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
-                    <span>10 comparative regulatory dimensions</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Check className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
-                    <span>Key difference & relationship breakdowns</span>
-                  </li>
-                </ul>
+                <h3 className="text-lg font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                  Explore BIS Requirements
+                </h3>
+                <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
+                  Understand certification procedures and other relevant BIS services.
+                </p>
               </div>
 
-              <div className="pt-4 border-t border-slate-100 dark:border-slate-700/60">
+              <div className="pt-4 border-t border-[#EFECE6] dark:border-[#1C2E28]">
                 <Link
                   href="/auth/login"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1E3A8A] dark:text-blue-400 hover:text-[#1D4ED8] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:text-[#164B3A] transition-colors"
                 >
-                  <span>Compare 2 Standards</span>
+                  <span>Explore</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
@@ -517,224 +524,338 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 5. HOW BISAARTHI WORKS */}
-      <section id="how-it-works" className="py-16 sm:py-20 border-b border-slate-200/80 dark:border-slate-800/80 bg-white dark:bg-slate-900/40">
+      {/* 5. HOW BISAARTHI WORKS SECTION */}
+      <section id="how-it-works" className="py-16 sm:py-20 lg:py-24 border-b border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#12201A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/60 px-2.5 py-0.5 rounded-full border border-blue-200 dark:border-blue-900">
-              How BISaarthi Works
+          {/* Section Heading */}
+          <div className="text-center max-w-2xl mx-auto space-y-3">
+            <span className="text-xs font-black uppercase tracking-widest text-[#5B8272] dark:text-[#8FA89B]">
+              HOW BISAARTHI WORKS
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">
-              From product concept to compliance clarity in 4 steps
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#18211D] dark:text-white tracking-tight leading-tight">
+              From your product idea to the standards that matter.
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              A diagrammatic process designed to give manufacturers actionable guidance without technical ambiguity.
-            </p>
           </div>
 
+          {/* 4 Steps Horizontal Flow */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Step 1 */}
-            <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 space-y-3">
-              <div className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-950 text-[#1E3A8A] dark:text-blue-300 font-bold font-mono text-xs flex items-center justify-center">
-                01
+            {/* Step 01 */}
+            <div className="p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] text-center space-y-3 shadow-2xs">
+              <div className="flex items-center justify-center gap-2">
+                <span className="text-xs font-bold text-[#8B978F]">01</span>
+                <div className="w-8 h-8 rounded-full bg-[#E8EFEA] text-[#0D3328] flex items-center justify-center font-bold text-xs">
+                  <FileText className="w-4 h-4 text-[#5B8272]" />
+                </div>
               </div>
-              <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100">
-                Describe
-              </h3>
-              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Tell BISaarthi what product, technical rating, or standard requirement you are dealing with.
-              </p>
-            </div>
-
-            {/* Step 2 */}
-            <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 space-y-3">
-              <div className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-950 text-[#1E3A8A] dark:text-blue-300 font-bold font-mono text-xs flex items-center justify-center">
-                02
-              </div>
-              <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100">
-                Discover
-              </h3>
-              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                BISaarthi identifies potentially applicable base standards, particular requirements, and QCO status.
-              </p>
-            </div>
-
-            {/* Step 3 */}
-            <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 space-y-3">
-              <div className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-950 text-[#1E3A8A] dark:text-blue-300 font-bold font-mono text-xs flex items-center justify-center">
-                03
-              </div>
-              <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100">
+              <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
                 Understand
               </h3>
-              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Review applicability reasoning, mandatory test batteries, laboratory networks, and official citations.
+              <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed">
+                You describe your product or requirement in simple words.
               </p>
             </div>
 
-            {/* Step 4 */}
-            <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200/80 dark:border-slate-700 space-y-3">
-              <div className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-950 text-[#1E3A8A] dark:text-blue-300 font-bold font-mono text-xs flex items-center justify-center">
-                04
+            {/* Step 02 */}
+            <div className="p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] text-center space-y-3 shadow-2xs">
+              <div className="flex items-center justify-center gap-2">
+                <span className="text-xs font-bold text-[#8B978F]">02</span>
+                <div className="w-8 h-8 rounded-full bg-[#E8EFEA] text-[#0D3328] flex items-center justify-center font-bold text-xs">
+                  <Search className="w-4 h-4 text-[#5B8272]" />
+                </div>
               </div>
-              <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100">
-                Decide
+              <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                Identify
               </h3>
-              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Use referenced insights to configure factory testing equipment and prepare for official BIS licensing.
+              <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed">
+                AI analyzes and identifies potentially relevant Indian Standards.
+              </p>
+            </div>
+
+            {/* Step 03 */}
+            <div className="p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] text-center space-y-3 shadow-2xs">
+              <div className="flex items-center justify-center gap-2">
+                <span className="text-xs font-bold text-[#8B978F]">03</span>
+                <div className="w-8 h-8 rounded-full bg-[#FDF2EE] text-[#C86D51] flex items-center justify-center font-bold text-xs">
+                  <FileText className="w-4 h-4 text-[#C86D51]" />
+                </div>
+              </div>
+              <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                Explain
+              </h3>
+              <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed">
+                Get clear rationale on why each standard applies to your product.
+              </p>
+            </div>
+
+            {/* Step 04 */}
+            <div className="p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] text-center space-y-3 shadow-2xs">
+              <div className="flex items-center justify-center gap-2">
+                <span className="text-xs font-bold text-[#8B978F]">04</span>
+                <div className="w-8 h-8 rounded-full bg-[#E8EFEA] text-[#0D3328] flex items-center justify-center font-bold text-xs">
+                  <ShieldCheck className="w-4 h-4 text-[#5B8272]" />
+                </div>
+              </div>
+              <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                Verify
+              </h3>
+              <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed">
+                Explore requirement details and refer to the official BIS source.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. TRUST & SOURCE-BACKED INFORMATION */}
-      <section id="trust-sources" className="py-16 sm:py-20 border-b border-slate-200/80 dark:border-slate-800/80 bg-slate-50/60 dark:bg-[#0B0F17]">
+      {/* 6. WHY TRUST BISAARTHI SECTION */}
+      <section className="py-16 sm:py-20 lg:py-24 border-b border-[#D9DDD8] dark:border-[#253831] bg-[#F7F5EF] dark:bg-[#0E1815]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2.5 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800">
-              Trust & Source-Backed Intelligence
+          {/* Section Heading */}
+          <div className="space-y-3 text-left">
+            <span className="text-xs font-black uppercase tracking-widest text-[#5B8272] dark:text-[#8FA89B]">
+              WHY TRUST BISAARTHI
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight">
-              Designed around institutional standards and transparent citations
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#18211D] dark:text-white tracking-tight leading-tight">
+              AI-assisted. Source-backed. Explainable.
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              BISaarthi is built to provide regulatory guidance with clear source citations and transparent uncertainty notices.
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            {/* Left: 3 Trust Points */}
+            <div className="lg:col-span-7 space-y-4">
+              <div className="p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] flex items-start gap-4 shadow-2xs">
+                <div className="w-10 h-10 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] flex items-center justify-center shrink-0">
+                  <ShieldCheck className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                    Built on Indian Standards
+                  </h3>
+                  <p className="text-xs text-[#606E66] dark:text-[#8B978F] mt-1 leading-relaxed">
+                    Information referenced directly from authoritative BIS specifications and statutory Quality Control Orders.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] flex items-start gap-4 shadow-2xs">
+                <div className="w-10 h-10 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] flex items-center justify-center shrink-0">
+                  <Compass className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                    Explainable Results
+                  </h3>
+                  <p className="text-xs text-[#606E66] dark:text-[#8B978F] mt-1 leading-relaxed">
+                    Every recommendation comes with transparent contextual reasoning and applicable clause highlights.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] flex items-start gap-4 shadow-2xs">
+                <div className="w-10 h-10 rounded-full bg-[#FAF4EB] dark:bg-[#38240D] text-[#B88746] flex items-center justify-center shrink-0">
+                  <Sparkles className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                    Transparent & Reliable
+                  </h3>
+                  <p className="text-xs text-[#606E66] dark:text-[#8B978F] mt-1 leading-relaxed">
+                    We help you understand your compliance landscape while keeping you in complete decision control.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Realistic Leather Book Visual */}
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative w-72 h-96 rounded-2xl bg-[#091E18] text-[#F7F5EF] p-8 shadow-2xl border border-[#16382E] flex flex-col justify-between items-center text-center transform hover:scale-102 transition-transform duration-300">
+                <div className="space-y-2">
+                  <span className="text-[10px] tracking-widest uppercase font-bold text-[#8FA89B]">
+                    BIT MANAK ONLINE
+                  </span>
+                  <h4 className="text-lg font-black tracking-wider text-white">
+                    INDIAN STANDARDS
+                  </h4>
+                </div>
+
+                <div className="relative w-20 h-20 rounded-full overflow-hidden border border-[#5B8272]/40 shadow-inner">
+                  <Image
+                    src="/bisaarthi-logo.png"
+                    alt="BISaarthi Emblem"
+                    width={80}
+                    height={80}
+                    className="object-contain"
+                  />
+                </div>
+
+                <div className="space-y-1">
+                  <p className="text-[11px] text-[#A7B8AE] font-medium">
+                    Statutory & Technical Specifications
+                  </p>
+                  <p className="text-[9px] text-[#5B8272] tracking-wider uppercase font-bold">
+                    Official Reference Repository
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. FREQUENTLY ASKED QUESTIONS + DARK CTA CARD */}
+      <section id="faq" className="py-16 sm:py-20 lg:py-24 border-b border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#12201A]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+          <div className="text-left space-y-2">
+            <span className="text-xs font-black uppercase tracking-widest text-[#5B8272] dark:text-[#8FA89B]">
+              FREQUENTLY ASKED QUESTIONS
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            {/* Left FAQ Accordion (5 items) */}
+            <div className="lg:col-span-7 space-y-3">
+              {faqItems.map((item, idx) => {
+                const isOpen = openFaq === idx;
+                return (
+                  <div
+                    key={item.q}
+                    className="rounded-2xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] overflow-hidden transition-all shadow-2xs"
+                  >
+                    <button
+                      type="button"
+                      onClick={() => toggleFaq(idx)}
+                      className="w-full p-4.5 text-left flex items-center justify-between gap-4 font-bold text-xs sm:text-sm text-[#18211D] dark:text-[#F7F5EF] cursor-pointer hover:bg-[#F7F5EF]/60"
+                    >
+                      <span>{item.q}</span>
+                      <span className="p-1 rounded-full bg-[#F7F5EF] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#BAC5BF] shrink-0">
+                        {isOpen ? <Minus className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
+                      </span>
+                    </button>
+
+                    {isOpen && (
+                      <div className="px-4.5 pb-4 pt-1 text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed border-t border-[#EFECE6] dark:border-[#1C2E28]">
+                        {item.a}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Right Dark Forest Green Card */}
+            <div className="lg:col-span-5">
+              <div className="p-8 sm:p-10 rounded-3xl bg-[#0A1F18] text-white border border-[#16382E] shadow-xl space-y-6 flex flex-col justify-between relative overflow-hidden">
+                <div className="space-y-3 relative z-10">
+                  <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-white leading-tight">
+                    Find where your product stands.
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#A7B8AE] leading-relaxed">
+                    Ask BISAARTHI and get clarity on the standards that matter.
+                  </p>
+                </div>
+
+                <div className="pt-2 relative z-10">
+                  <Link href="/auth/login">
+                    <Button
+                      variant="secondary"
+                      size="md"
+                      icon={<ArrowRight className="w-4 h-4 text-[#0D3328]" />}
+                      className="bg-white text-[#0D3328] hover:bg-[#FAF9F5] font-bold text-xs tracking-wide px-6 py-3 border-none shadow-md"
+                    >
+                      Ask BISAARTHI
+                    </Button>
+                  </Link>
+                </div>
+
+                {/* Decorative Compass/Astrolabe graphic in corner */}
+                <div className="absolute right-4 bottom-4 w-32 h-32 rounded-full border border-[#5B8272]/20 flex items-center justify-center opacity-40 pointer-events-none">
+                  <Compass className="w-16 h-16 text-[#A7B8AE]" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. DEEP FOREST GREEN FOOTER */}
+      <footer id="contact" className="bg-[#0A1C16] text-[#FAF9F5] border-t border-[#16382E] pt-14 pb-10 px-4 sm:px-6 lg:px-8 text-xs space-y-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
+          {/* Logo & Mission (Left Column) */}
+          <div className="lg:col-span-4 space-y-3">
+            <Logo variant="light" size="md" linkHref="/" />
+            <p className="text-xs text-[#8FA89B] leading-relaxed max-w-sm">
+              Empowering India through accessible and understandable standards.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-5 rounded-2xl bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 space-y-2.5 shadow-2xs">
-              <div className="w-8 h-8 rounded-lg bg-emerald-50 dark:bg-emerald-950/70 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
-                <ShieldCheck className="w-4 h-4" />
-              </div>
-              <h3 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-slate-100">
-                Source-Backed Answers
-              </h3>
-              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Recommendations cite specific Indian Standards, Quality Control Orders, and BIS scheme rules.
-              </p>
+          {/* 4 Footer Columns */}
+          <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-6">
+            {/* Quick Links */}
+            <div className="space-y-3">
+              <span className="text-[11px] font-bold tracking-widest text-[#8FA89B] uppercase block">
+                QUICK LINKS
+              </span>
+              <ul className="space-y-2 text-xs text-[#BAC5BF]">
+                <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
+                <li><a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a></li>
+                <li><a href="#what-it-does" className="hover:text-white transition-colors">What It Can Do</a></li>
+                <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
+              </ul>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 space-y-2.5 shadow-2xs">
-              <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-950/70 text-[#1E3A8A] dark:text-blue-400 flex items-center justify-center">
-                <Compass className="w-4 h-4" />
-              </div>
-              <h3 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-slate-100">
-                Applicability Reasoning
-              </h3>
-              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Clear rationales explaining why a standard applies to a given product construction or voltage range.
-              </p>
+            {/* Resources */}
+            <div className="space-y-3">
+              <span className="text-[11px] font-bold tracking-widest text-[#8FA89B] uppercase block">
+                RESOURCES
+              </span>
+              <ul className="space-y-2 text-xs text-[#BAC5BF]">
+                <li><Link href="/find-standards" className="hover:text-white transition-colors">Indian Standards</Link></li>
+                <li><Link href="/chat" className="hover:text-white transition-colors">BIS Services</Link></li>
+                <li><Link href="/settings" className="hover:text-white transition-colors">Help Centre</Link></li>
+              </ul>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 space-y-2.5 shadow-2xs">
-              <div className="w-8 h-8 rounded-lg bg-amber-50 dark:bg-amber-950/70 text-amber-600 dark:text-amber-400 flex items-center justify-center">
-                <AlertTriangle className="w-4 h-4" />
-              </div>
-              <h3 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-slate-100">
-                Transparent Uncertainty
-              </h3>
-              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Highlights when clause-level verification or lab consultation is required before production.
-              </p>
+            {/* Legal */}
+            <div className="space-y-3">
+              <span className="text-[11px] font-bold tracking-widest text-[#8FA89B] uppercase block">
+                LEGAL
+              </span>
+              <ul className="space-y-2 text-xs text-[#BAC5BF]">
+                <li><span className="hover:text-white transition-colors cursor-pointer">Privacy Policy</span></li>
+                <li><span className="hover:text-white transition-colors cursor-pointer">Terms of Use</span></li>
+                <li><span className="hover:text-white transition-colors cursor-pointer">Disclaimer</span></li>
+              </ul>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 space-y-2.5 shadow-2xs">
-              <div className="w-8 h-8 rounded-lg bg-indigo-50 dark:bg-indigo-950/70 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
-                <Info className="w-4 h-4" />
+            {/* Connect */}
+            <div className="space-y-3">
+              <span className="text-[11px] font-bold tracking-widest text-[#8FA89B] uppercase block">
+                CONNECT
+              </span>
+              <div className="flex items-center gap-2 pt-1 text-[#BAC5BF]">
+                <span className="w-7 h-7 rounded-full bg-[#12332A] flex items-center justify-center hover:bg-[#164B3A] hover:text-white transition-colors cursor-pointer text-[10px] font-bold">
+                  IN
+                </span>
+                <span className="w-7 h-7 rounded-full bg-[#12332A] flex items-center justify-center hover:bg-[#164B3A] hover:text-white transition-colors cursor-pointer text-[10px] font-bold">
+                  X
+                </span>
+                <span className="w-7 h-7 rounded-full bg-[#12332A] flex items-center justify-center hover:bg-[#164B3A] hover:text-white transition-colors cursor-pointer text-[10px] font-bold">
+                  YT
+                </span>
+                <span className="w-7 h-7 rounded-full bg-[#12332A] flex items-center justify-center hover:bg-[#164B3A] hover:text-white transition-colors cursor-pointer text-[10px] font-bold">
+                  @
+                </span>
               </div>
-              <h3 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-slate-100">
-                Clear AI Role
-              </h3>
-              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Explicitly positioned as an AI guidance tool—not an official certification grantor or legal arbiter.
-              </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* 7. FINAL CTA SECTION */}
-      <section className="py-16 sm:py-20 bg-linear-to-r from-[#0F172A] via-[#1E3A8A] to-[#1E40AF] text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6">
-          <div className="w-12 h-12 rounded-2xl bg-blue-500/20 border border-blue-400/30 flex items-center justify-center mx-auto text-amber-400">
-            <Shield className="w-6 h-6" />
-          </div>
-
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight">
-            Ready to understand the standards that matter to you?
-          </h2>
-
-          <p className="text-sm sm:text-base text-blue-100/90 max-w-2xl mx-auto leading-relaxed">
-            Start with BISaarthi and turn complex standards information into clearer, actionable guidance.
-          </p>
-
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
-            <Link href="/auth/login">
-              <Button
-                variant="primary"
-                size="lg"
-                className="bg-white text-[#1E3A8A] hover:bg-slate-100 shadow-md font-semibold border-none"
-                icon={<ArrowRight className="w-4 h-4 text-[#1E3A8A]" />}
-              >
-                Ask BISaarthi
-              </Button>
-            </Link>
-            <Link href="/auth/signup">
-              <Button
-                variant="secondary"
-                size="lg"
-                className="bg-blue-900/50 text-white border-blue-400/40 hover:bg-blue-900/80"
-              >
-                Sign Up Free
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. PUBLIC FOOTER */}
-      <footer className="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-10 px-4 sm:px-6 lg:px-8 text-xs text-slate-500 dark:text-slate-400 space-y-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-2.5">
-            <div className="w-6 h-6 rounded-md bg-linear-to-br from-blue-600 to-[#1E3A8A] flex items-center justify-center text-white">
-              <Shield className="w-3.5 h-3.5 text-amber-400" />
-            </div>
-            <span className="font-bold text-sm text-slate-800 dark:text-slate-200">
-              BISaarthi
-            </span>
-            <span className="text-[10px] text-slate-400">
-              • AI-Powered Indian Standards Guide
-            </span>
-          </div>
-
-          <nav className="flex flex-wrap items-center gap-6 font-medium">
-            <a href="#features" className="hover:text-blue-600 transition-colors">
-              Features
-            </a>
-            <a href="#how-it-works" className="hover:text-blue-600 transition-colors">
-              How It Works
-            </a>
-            <a href="#trust-sources" className="hover:text-blue-600 transition-colors">
-              Trust & Sources
-            </a>
-            <Link href="/auth/login" className="hover:text-blue-600 transition-colors">
-              Login
-            </Link>
-            <Link href="/auth/signup" className="hover:text-blue-600 transition-colors">
-              Get Started
-            </Link>
-          </nav>
         </div>
 
         {/* Canonical Regulatory Disclaimer */}
-        <div className="max-w-4xl mx-auto pt-6 border-t border-slate-100 dark:border-slate-800 text-center space-y-2">
-          <p className="leading-relaxed">
-            <strong>Regulatory Disclaimer:</strong> BISaarthi is an AI guidance tool based on authoritative BIS and government sources. It does not replace official BIS certification, testing laboratories, or statutory legal determinations.
+        <div className="max-w-4xl mx-auto pt-6 border-t border-[#16382E] text-center space-y-2 text-[#8FA89B]">
+          <p className="leading-relaxed text-[11px]">
+            <strong className="text-white">Regulatory Disclaimer:</strong> BISaarthi is an AI guidance tool based on authoritative BIS and government sources. It does not replace official BIS certification, testing laboratories, or statutory legal determinations.
           </p>
-          <p className="text-[11px] text-slate-400">
-            © 2026 BISaarthi. Developed for SIH 2026. All Indian Standards identifiers remain the property of the Bureau of Indian Standards.
+          <p className="text-[10px] text-[#5B8272]">
+            © 2026 BISaarthi. All rights reserved.
           </p>
         </div>
       </footer>

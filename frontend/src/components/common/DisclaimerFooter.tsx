@@ -8,11 +8,11 @@ interface DisclaimerFooterProps {
 export const DisclaimerFooter: React.FC<DisclaimerFooterProps> = ({ className = '' }) => {
   return (
     <footer
-      className={`border-t border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 py-4 px-6 text-center text-xs text-slate-500 dark:text-slate-400 ${className}`}
+      className={`border-t border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5]/80 dark:bg-[#15221E]/60 py-4 px-6 text-center text-xs text-[#606E66] dark:text-[#BAC5BF] ${className}`}
     >
       <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2">
-        <div className="flex items-center gap-1.5 font-medium text-slate-600 dark:text-slate-300">
-          <Shield className="w-3.5 h-3.5 text-[#1E3A8A] dark:text-blue-400" />
+        <div className="flex items-center gap-1.5 font-semibold text-[#0D3328] dark:text-[#A7B8AE]">
+          <Shield className="w-3.5 h-3.5 text-[#5B8272] shrink-0" />
           <span>Regulatory Disclaimer:</span>
         </div>
         <p className="leading-normal">
