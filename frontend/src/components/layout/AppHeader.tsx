@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import { Menu, Sparkles, ChevronRight, ShieldCheck, Sun, Moon } from 'lucide-react';
-import { useTheme } from '@/context/ThemeContext';
+import { Menu, Sparkles, ChevronRight, ShieldCheck } from 'lucide-react';
+import { ThemeToggle } from '@/components/common/ThemeToggle';
 
 interface AppHeaderProps {
   onMobileMenuToggle?: () => void;
@@ -13,7 +13,6 @@ export const AppHeader: React.FC<AppHeaderProps> = ({ onMobileMenuToggle }) => {
   const pathname = usePathname();
   const router = useRouter();
   const [quickQuery, setQuickQuery] = useState('');
-  const { isDark, toggleTheme } = useTheme();
 
   const getPageTitle = () => {
     if (pathname === '/dashboard') return { title: 'Dashboard', category: 'Overview' };
@@ -88,20 +87,8 @@ export const AppHeader: React.FC<AppHeaderProps> = ({ onMobileMenuToggle }) => {
           <span>Authoritative Sources</span>
         </div>
 
-        {/* Dark / Light Mode Toggle Button */}
-        <button
-          type="button"
-          onClick={toggleTheme}
-          className="p-2 rounded-full border border-[#D9DDD8] dark:border-[#253831] bg-white dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] hover:bg-[#EFECE6] dark:hover:bg-[#20312B] transition-colors cursor-pointer shadow-2xs flex items-center justify-center"
-          title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
-          aria-label="Toggle Theme"
-        >
-          {isDark ? (
-            <Sun className="w-4 h-4 text-[#B88746] transition-transform rotate-0 hover:rotate-45" />
-          ) : (
-            <Moon className="w-4 h-4 text-[#5B8272] transition-transform rotate-0 hover:-rotate-12" />
-          )}
-        </button>
+        {/* Global Theme Toggle Button */}
+        <ThemeToggle />
 
         <div className="flex items-center gap-2 pl-2 border-l border-[#D9DDD8] dark:border-[#253831]">
           <div className="w-8 h-8 rounded-full bg-[#0D3328] text-white font-bold text-xs flex items-center justify-center border border-[#5B8272]/40">

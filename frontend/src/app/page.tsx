@@ -4,15 +4,10 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
-  Shield,
   ShieldCheck,
   Sparkles,
   ArrowRight,
   Search,
-  MessageSquare,
-  Scale,
-  CheckCircle2,
-  FileText,
   Building2,
   Compass,
   AlertTriangle,
@@ -21,13 +16,12 @@ import {
   Plus,
   Minus,
   Layers,
-  ChevronDown,
   BookOpen,
-  Check,
-  HelpCircle,
+  FileText,
 } from 'lucide-react';
 import { Button } from '@/components/common/Button';
 import { Logo } from '@/components/common/Logo';
+import { ThemeToggle } from '@/components/common/ThemeToggle';
 
 export default function LandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -61,9 +55,9 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F5EF] dark:bg-[#0E1815] text-[#18211D] dark:text-[#F7F5EF] selection:bg-[#E8EFEA] selection:text-[#0D3328]">
+    <div className="min-h-screen flex flex-col bg-[#F7F5EF] dark:bg-[#0E1815] text-[#18211D] dark:text-[#F7F5EF] selection:bg-[#E8EFEA] selection:text-[#0D3328] transition-colors duration-200">
       {/* 1. TOP NAVBAR */}
-      <header className="sticky top-0 z-50 bg-[#F7F5EF]/95 dark:bg-[#0E1815]/95 backdrop-blur-md border-b border-[#D9DDD8] dark:border-[#253831]">
+      <header className="sticky top-0 z-50 bg-[#F7F5EF]/95 dark:bg-[#0E1815]/95 backdrop-blur-md border-b border-[#D9DDD8] dark:border-[#253831] transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4">
           {/* Brand Logo */}
           <Logo size="md" linkHref="/" />
@@ -102,8 +96,11 @@ export default function LandingPage() {
             </a>
           </nav>
 
-          {/* Right Action Button */}
+          {/* Right Action: Theme Toggle & Ask BISAARTHI CTA */}
           <div className="hidden sm:flex items-center gap-3">
+            {/* Global Theme Toggle Button */}
+            <ThemeToggle />
+
             <Link href="/auth/login">
               <Button
                 variant="pill"
@@ -116,15 +113,19 @@ export default function LandingPage() {
             </Link>
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-xl text-[#606E66] dark:text-[#BAC5BF] hover:bg-[#EFECE6] dark:hover:bg-[#1B2B26] lg:hidden cursor-pointer"
-            aria-label="Toggle Menu"
-          >
-            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
+          {/* Mobile Actions (Theme Toggle + Menu Toggle) */}
+          <div className="flex sm:hidden items-center gap-2">
+            <ThemeToggle />
+
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 rounded-xl text-[#606E66] dark:text-[#BAC5BF] hover:bg-[#EFECE6] dark:hover:bg-[#1B2B26] cursor-pointer"
+              aria-label="Toggle Menu"
+            >
+              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Dropdown Menu */}
@@ -184,7 +185,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Hero Column */}
             <div className="lg:col-span-6 space-y-6 text-left">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#18211D] dark:text-white tracking-tight leading-[1.12]">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#18211D] dark:text-[#F7F5EF] tracking-tight leading-[1.12]">
                 Navigate Indian Standards with{' '}
                 <span className="text-[#3D6B58] dark:text-[#8FA89B] underline decoration-[#8FA89B]/50 decoration-wavy underline-offset-6">
                   confidence.
@@ -247,11 +248,11 @@ export default function LandingPage() {
             <div className="lg:col-span-6 relative">
               <div className="relative mx-auto max-w-lg rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] p-5 sm:p-6 shadow-xl space-y-4">
                 {/* Mock Window Title Bar */}
-                <div className="flex items-center justify-between border-b border-[#EFECE6] dark:border-[#1C2E28] pb-3">
+                <div className="flex items-center justify-between border-b border-[#EFECE6] dark:border-[#253831] pb-3">
                   <div className="flex items-center gap-2">
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#E5E2DC]" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#E5E2DC]" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#E5E2DC]" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-[#E5E2DC] dark:bg-[#253831]" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-[#E5E2DC] dark:bg-[#253831]" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-[#E5E2DC] dark:bg-[#253831]" />
                   </div>
                   <span className="text-[11px] font-bold text-[#606E66] dark:text-[#BAC5BF] tracking-wider uppercase">
                     BISAARTHI
@@ -261,7 +262,7 @@ export default function LandingPage() {
 
                 {/* Simulated Chat Message Bubble from User */}
                 <div className="flex justify-end">
-                  <div className="bg-[#0D3328] text-white rounded-2xl rounded-tr-xs px-4 py-2.5 text-xs font-medium max-w-[85%] shadow-2xs">
+                  <div className="bg-[#0D3328] dark:bg-[#164B3A] text-white rounded-2xl rounded-tr-xs px-4 py-2.5 text-xs font-medium max-w-[85%] shadow-2xs">
                     Which standards apply to my product?
                   </div>
                 </div>
@@ -269,7 +270,7 @@ export default function LandingPage() {
                 {/* Surfaced Standard Cards in Mockup */}
                 <div className="space-y-2 pt-1">
                   {/* Item 1 */}
-                  <div className="p-3 rounded-2xl bg-[#F7F5EF] dark:bg-[#1B2B26] border border-[#E5E2DC] dark:border-[#253831] flex items-center justify-between gap-3 text-xs">
+                  <div className="p-3 rounded-2xl bg-[#FAF9F5] dark:bg-[#1B2B26] border border-[#E5E2DC] dark:border-[#253831] flex items-center justify-between gap-3 text-xs">
                     <div className="flex items-center gap-2.5 min-w-0">
                       <div className="w-6 h-6 rounded-full bg-[#E8EFEA] dark:bg-[#15221E] flex items-center justify-center text-[#0D3328] dark:text-[#8FA89B] shrink-0 font-bold text-[10px]">
                         IS
@@ -278,18 +279,18 @@ export default function LandingPage() {
                         <span className="font-bold text-[#18211D] dark:text-[#F7F5EF] block">
                           IS 302 (Part 2/Sec 201)
                         </span>
-                        <span className="text-[10px] text-[#606E66] dark:text-[#8B978F] truncate block">
+                        <span className="text-[10px] text-[#606E66] dark:text-[#8FA89B] truncate block">
                           Immersion Water Heaters Safety
                         </span>
                       </div>
                     </div>
-                    <span className="text-[10px] font-bold text-[#1B5E39] bg-[#E8F4EC] px-2 py-0.5 rounded-full shrink-0">
+                    <span className="text-[10px] font-bold text-[#1B5E39] dark:text-[#A7F3D0] bg-[#E8F4EC] dark:bg-[#113624] px-2 py-0.5 rounded-full border border-[#C2E4CD] dark:border-[#1E5438] shrink-0">
                       Mandatory
                     </span>
                   </div>
 
                   {/* Item 2 */}
-                  <div className="p-3 rounded-2xl bg-[#F7F5EF] dark:bg-[#1B2B26] border border-[#E5E2DC] dark:border-[#253831] flex items-center justify-between gap-3 text-xs">
+                  <div className="p-3 rounded-2xl bg-[#FAF9F5] dark:bg-[#1B2B26] border border-[#E5E2DC] dark:border-[#253831] flex items-center justify-between gap-3 text-xs">
                     <div className="flex items-center gap-2.5 min-w-0">
                       <div className="w-6 h-6 rounded-full bg-[#E8EFEA] dark:bg-[#15221E] flex items-center justify-center text-[#0D3328] dark:text-[#8FA89B] shrink-0 font-bold text-[10px]">
                         IS
@@ -298,18 +299,18 @@ export default function LandingPage() {
                         <span className="font-bold text-[#18211D] dark:text-[#F7F5EF] block">
                           IS 1293:2019
                         </span>
-                        <span className="text-[10px] text-[#606E66] dark:text-[#8B978F] truncate block">
+                        <span className="text-[10px] text-[#606E66] dark:text-[#8FA89B] truncate block">
                           Plugs and Socket-Outlets (250V)
                         </span>
                       </div>
                     </div>
-                    <span className="text-[10px] font-bold text-[#1B5E39] bg-[#E8F4EC] px-2 py-0.5 rounded-full shrink-0">
+                    <span className="text-[10px] font-bold text-[#1B5E39] dark:text-[#A7F3D0] bg-[#E8F4EC] dark:bg-[#113624] px-2 py-0.5 rounded-full border border-[#C2E4CD] dark:border-[#1E5438] shrink-0">
                       Mandatory
                     </span>
                   </div>
 
                   {/* Item 3 */}
-                  <div className="p-3 rounded-2xl bg-[#F7F5EF] dark:bg-[#1B2B26] border border-[#E5E2DC] dark:border-[#253831] flex items-center justify-between gap-3 text-xs">
+                  <div className="p-3 rounded-2xl bg-[#FAF9F5] dark:bg-[#1B2B26] border border-[#E5E2DC] dark:border-[#253831] flex items-center justify-between gap-3 text-xs">
                     <div className="flex items-center gap-2.5 min-w-0">
                       <div className="w-6 h-6 rounded-full bg-[#E8EFEA] dark:bg-[#15221E] flex items-center justify-center text-[#0D3328] dark:text-[#8FA89B] shrink-0 font-bold text-[10px]">
                         IS
@@ -318,12 +319,12 @@ export default function LandingPage() {
                         <span className="font-bold text-[#18211D] dark:text-[#F7F5EF] block">
                           IS 16102 (Part 1)
                         </span>
-                        <span className="text-[10px] text-[#606E66] dark:text-[#8B978F] truncate block">
+                        <span className="text-[10px] text-[#606E66] dark:text-[#8FA89B] truncate block">
                           Self-Ballasted LED Lamps Safety
                         </span>
                       </div>
                     </div>
-                    <span className="text-[10px] font-bold text-[#0D3328] bg-[#E8EFEA] px-2 py-0.5 rounded-full shrink-0">
+                    <span className="text-[10px] font-bold text-[#0D3328] dark:text-[#A7B8AE] bg-[#E8EFEA] dark:bg-[#1B2B26] px-2 py-0.5 rounded-full border border-[#D9DDD8] dark:border-[#253831] shrink-0">
                       CRS Scheme
                     </span>
                   </div>
@@ -331,12 +332,12 @@ export default function LandingPage() {
 
                 {/* Floating pill indicators on mockup edges */}
                 <div className="pt-2 flex items-center justify-between text-[11px]">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8EFEA] text-[#0D3328] font-semibold text-xs border border-[#D9DDD8]">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#A7B8AE] font-semibold text-xs border border-[#D9DDD8] dark:border-[#253831]">
                     <ShieldCheck className="w-3.5 h-3.5 text-[#5B8272]" />
                     <span>Indian Standards</span>
                   </div>
 
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF4EB] text-[#8C6126] font-semibold text-xs border border-[#F2E4CD]">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF4EB] dark:bg-[#38240D] text-[#8C6126] dark:text-[#FDE68A] font-semibold text-xs border border-[#F2E4CD] dark:border-[#523A1B]">
                     <Building2 className="w-3.5 h-3.5 text-[#B88746]" />
                     <span>BIS Services</span>
                   </div>
@@ -348,7 +349,7 @@ export default function LandingPage() {
       </section>
 
       {/* 3. THE PROBLEM SECTION */}
-      <section className="py-16 sm:py-20 lg:py-24 border-b border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#12201A]">
+      <section className="py-16 sm:py-20 lg:py-24 border-b border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#12201A] transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           {/* Section Header */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -356,7 +357,7 @@ export default function LandingPage() {
               <span className="text-xs font-black uppercase tracking-widest text-[#5B8272] dark:text-[#8FA89B]">
                 THE PROBLEM
               </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#18211D] dark:text-white tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#18211D] dark:text-[#F7F5EF] tracking-tight leading-tight">
                 Indian Standards shouldn&apos;t be this difficult to navigate.
               </h2>
               <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
@@ -429,14 +430,14 @@ export default function LandingPage() {
       </section>
 
       {/* 4. WHAT BISAARTHI DOES SECTION */}
-      <section id="what-it-does" className="py-16 sm:py-20 lg:py-24 border-b border-[#D9DDD8] dark:border-[#253831] bg-[#F7F5EF] dark:bg-[#0E1815]">
+      <section id="what-it-does" className="py-16 sm:py-20 lg:py-24 border-b border-[#D9DDD8] dark:border-[#253831] bg-[#F7F5EF] dark:bg-[#0E1815] transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           {/* Section Heading */}
           <div className="text-left space-y-3 max-w-2xl">
             <span className="text-xs font-black uppercase tracking-widest text-[#5B8272] dark:text-[#8FA89B]">
               WHAT BISAARTHI DOES
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#18211D] dark:text-white tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#18211D] dark:text-[#F7F5EF] tracking-tight leading-tight">
               One assistant. Multiple compliance journeys.
             </h2>
             <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
@@ -449,7 +450,7 @@ export default function LandingPage() {
             {/* Card 1: Find Applicable Standards */}
             <div className="p-7 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-xs hover:border-[#5B8272] transition-all flex flex-col justify-between space-y-6">
               <div className="space-y-4">
-                <div className="w-11 h-11 rounded-full bg-[#0D3328] text-white flex items-center justify-center shadow-xs">
+                <div className="w-11 h-11 rounded-full bg-[#0D3328] dark:bg-[#164B3A] text-white flex items-center justify-center shadow-xs">
                   <Search className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg font-bold text-[#18211D] dark:text-[#F7F5EF]">
@@ -460,10 +461,10 @@ export default function LandingPage() {
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#EFECE6] dark:border-[#1C2E28]">
+              <div className="pt-4 border-t border-[#EFECE6] dark:border-[#253831]">
                 <Link
                   href="/auth/login"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:text-[#164B3A] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:text-[#164B3A] dark:hover:text-[#A7B8AE] transition-colors"
                 >
                   <span>Explore</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -485,10 +486,10 @@ export default function LandingPage() {
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#EFECE6] dark:border-[#1C2E28]">
+              <div className="pt-4 border-t border-[#EFECE6] dark:border-[#253831]">
                 <Link
                   href="/auth/login"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:text-[#164B3A] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:text-[#164B3A] dark:hover:text-[#A7B8AE] transition-colors"
                 >
                   <span>Explore</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -510,10 +511,10 @@ export default function LandingPage() {
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#EFECE6] dark:border-[#1C2E28]">
+              <div className="pt-4 border-t border-[#EFECE6] dark:border-[#253831]">
                 <Link
                   href="/auth/login"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:text-[#164B3A] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:text-[#164B3A] dark:hover:text-[#A7B8AE] transition-colors"
                 >
                   <span>Explore</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -525,14 +526,14 @@ export default function LandingPage() {
       </section>
 
       {/* 5. HOW BISAARTHI WORKS SECTION */}
-      <section id="how-it-works" className="py-16 sm:py-20 lg:py-24 border-b border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#12201A]">
+      <section id="how-it-works" className="py-16 sm:py-20 lg:py-24 border-b border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#12201A] transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           {/* Section Heading */}
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <span className="text-xs font-black uppercase tracking-widest text-[#5B8272] dark:text-[#8FA89B]">
               HOW BISAARTHI WORKS
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#18211D] dark:text-white tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#18211D] dark:text-[#F7F5EF] tracking-tight leading-tight">
               From your product idea to the standards that matter.
             </h2>
           </div>
@@ -543,7 +544,7 @@ export default function LandingPage() {
             <div className="p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] text-center space-y-3 shadow-2xs">
               <div className="flex items-center justify-center gap-2">
                 <span className="text-xs font-bold text-[#8B978F]">01</span>
-                <div className="w-8 h-8 rounded-full bg-[#E8EFEA] text-[#0D3328] flex items-center justify-center font-bold text-xs">
+                <div className="w-8 h-8 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] flex items-center justify-center font-bold text-xs">
                   <FileText className="w-4 h-4 text-[#5B8272]" />
                 </div>
               </div>
@@ -559,7 +560,7 @@ export default function LandingPage() {
             <div className="p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] text-center space-y-3 shadow-2xs">
               <div className="flex items-center justify-center gap-2">
                 <span className="text-xs font-bold text-[#8B978F]">02</span>
-                <div className="w-8 h-8 rounded-full bg-[#E8EFEA] text-[#0D3328] flex items-center justify-center font-bold text-xs">
+                <div className="w-8 h-8 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] flex items-center justify-center font-bold text-xs">
                   <Search className="w-4 h-4 text-[#5B8272]" />
                 </div>
               </div>
@@ -575,7 +576,7 @@ export default function LandingPage() {
             <div className="p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] text-center space-y-3 shadow-2xs">
               <div className="flex items-center justify-center gap-2">
                 <span className="text-xs font-bold text-[#8B978F]">03</span>
-                <div className="w-8 h-8 rounded-full bg-[#FDF2EE] text-[#C86D51] flex items-center justify-center font-bold text-xs">
+                <div className="w-8 h-8 rounded-full bg-[#FDF2EE] dark:bg-[#3E1A14] text-[#C86D51] flex items-center justify-center font-bold text-xs">
                   <FileText className="w-4 h-4 text-[#C86D51]" />
                 </div>
               </div>
@@ -591,7 +592,7 @@ export default function LandingPage() {
             <div className="p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] text-center space-y-3 shadow-2xs">
               <div className="flex items-center justify-center gap-2">
                 <span className="text-xs font-bold text-[#8B978F]">04</span>
-                <div className="w-8 h-8 rounded-full bg-[#E8EFEA] text-[#0D3328] flex items-center justify-center font-bold text-xs">
+                <div className="w-8 h-8 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] flex items-center justify-center font-bold text-xs">
                   <ShieldCheck className="w-4 h-4 text-[#5B8272]" />
                 </div>
               </div>
@@ -607,14 +608,14 @@ export default function LandingPage() {
       </section>
 
       {/* 6. WHY TRUST BISAARTHI SECTION */}
-      <section className="py-16 sm:py-20 lg:py-24 border-b border-[#D9DDD8] dark:border-[#253831] bg-[#F7F5EF] dark:bg-[#0E1815]">
+      <section className="py-16 sm:py-20 lg:py-24 border-b border-[#D9DDD8] dark:border-[#253831] bg-[#F7F5EF] dark:bg-[#0E1815] transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           {/* Section Heading */}
           <div className="space-y-3 text-left">
             <span className="text-xs font-black uppercase tracking-widest text-[#5B8272] dark:text-[#8FA89B]">
               WHY TRUST BISAARTHI
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#18211D] dark:text-white tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#18211D] dark:text-[#F7F5EF] tracking-tight leading-tight">
               AI-assisted. Source-backed. Explainable.
             </h2>
           </div>
@@ -702,7 +703,7 @@ export default function LandingPage() {
       </section>
 
       {/* 7. FREQUENTLY ASKED QUESTIONS + DARK CTA CARD */}
-      <section id="faq" className="py-16 sm:py-20 lg:py-24 border-b border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#12201A]">
+      <section id="faq" className="py-16 sm:py-20 lg:py-24 border-b border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#12201A] transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div className="text-left space-y-2">
             <span className="text-xs font-black uppercase tracking-widest text-[#5B8272] dark:text-[#8FA89B]">
@@ -723,7 +724,7 @@ export default function LandingPage() {
                     <button
                       type="button"
                       onClick={() => toggleFaq(idx)}
-                      className="w-full p-4.5 text-left flex items-center justify-between gap-4 font-bold text-xs sm:text-sm text-[#18211D] dark:text-[#F7F5EF] cursor-pointer hover:bg-[#F7F5EF]/60"
+                      className="w-full p-4.5 text-left flex items-center justify-between gap-4 font-bold text-xs sm:text-sm text-[#18211D] dark:text-[#F7F5EF] cursor-pointer hover:bg-[#F7F5EF]/60 dark:hover:bg-[#1B2B26]/60"
                     >
                       <span>{item.q}</span>
                       <span className="p-1 rounded-full bg-[#F7F5EF] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#BAC5BF] shrink-0">
@@ -732,7 +733,7 @@ export default function LandingPage() {
                     </button>
 
                     {isOpen && (
-                      <div className="px-4.5 pb-4 pt-1 text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed border-t border-[#EFECE6] dark:border-[#1C2E28]">
+                      <div className="px-4.5 pb-4 pt-1 text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed border-t border-[#EFECE6] dark:border-[#253831]">
                         {item.a}
                       </div>
                     )}
@@ -743,7 +744,7 @@ export default function LandingPage() {
 
             {/* Right Dark Forest Green Card */}
             <div className="lg:col-span-5">
-              <div className="p-8 sm:p-10 rounded-3xl bg-[#0A1F18] text-white border border-[#16382E] shadow-xl space-y-6 flex flex-col justify-between relative overflow-hidden">
+              <div className="p-8 sm:p-10 rounded-3xl bg-[#0A1F18] dark:bg-[#091E18] text-white border border-[#16382E] shadow-xl space-y-6 flex flex-col justify-between relative overflow-hidden">
                 <div className="space-y-3 relative z-10">
                   <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-white leading-tight">
                     Find where your product stands.
