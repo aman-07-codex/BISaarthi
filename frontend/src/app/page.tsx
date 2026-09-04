@@ -531,69 +531,85 @@ export default function LandingPage() {
             </h2>
           </div>
 
-          {/* 4 Steps Horizontal Flow */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* 5 Steps Horizontal Flow */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-4 xl:gap-5">
             {/* Step 01 */}
-            <div className="p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] text-center space-y-3 shadow-2xs">
+            <div className="p-5 sm:p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] text-center space-y-3 shadow-2xs hover:shadow-xs transition-all flex flex-col justify-start">
               <div className="flex items-center justify-center gap-2">
                 <span className="text-xs font-bold text-[#8B978F]">01</span>
                 <div className="w-8 h-8 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] flex items-center justify-center font-bold text-xs">
                   <FileText className="w-4 h-4 text-[#5B8272]" />
                 </div>
               </div>
-              <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
+              <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] break-words">
                 Understand
               </h3>
-              <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed">
-                You describe your product or requirement in simple words.
+              <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed break-words">
+                Understand the user&apos;s product, requirement, or question.
               </p>
             </div>
 
             {/* Step 02 */}
-            <div className="p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] text-center space-y-3 shadow-2xs">
+            <div className="p-5 sm:p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] text-center space-y-3 shadow-2xs hover:shadow-xs transition-all flex flex-col justify-start">
               <div className="flex items-center justify-center gap-2">
                 <span className="text-xs font-bold text-[#8B978F]">02</span>
                 <div className="w-8 h-8 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] flex items-center justify-center font-bold text-xs">
                   <Search className="w-4 h-4 text-[#5B8272]" />
                 </div>
               </div>
-              <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
-                Identify
+              <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] break-words">
+                Retrieve BIS Data
               </h3>
-              <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed">
-                AI analyzes and identifies potentially relevant Indian Standards.
+              <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed break-words">
+                Retrieve relevant information from BIS data sources.
               </p>
             </div>
 
             {/* Step 03 */}
-            <div className="p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] text-center space-y-3 shadow-2xs">
+            <div className="p-5 sm:p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] text-center space-y-3 shadow-2xs hover:shadow-xs transition-all flex flex-col justify-start">
               <div className="flex items-center justify-center gap-2">
                 <span className="text-xs font-bold text-[#8B978F]">03</span>
-                <div className="w-8 h-8 rounded-full bg-[#FDF2EE] dark:bg-[#3E1A14] text-[#C86D51] flex items-center justify-center font-bold text-xs">
-                  <FileText className="w-4 h-4 text-[#C86D51]" />
+                <div className="w-8 h-8 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] flex items-center justify-center font-bold text-xs">
+                  <Layers className="w-4 h-4 text-[#5B8272]" />
                 </div>
               </div>
-              <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
-                Explain
+              <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] break-words">
+                Identify Standards
               </h3>
-              <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed">
-                Get clear rationale on why each standard applies to your product.
+              <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed break-words">
+                Identify the Indian Standards relevant to the user&apos;s requirement.
               </p>
             </div>
 
             {/* Step 04 */}
-            <div className="p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] text-center space-y-3 shadow-2xs">
+            <div className="p-5 sm:p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] text-center space-y-3 shadow-2xs hover:shadow-xs transition-all flex flex-col justify-start">
               <div className="flex items-center justify-center gap-2">
                 <span className="text-xs font-bold text-[#8B978F]">04</span>
+                <div className="w-8 h-8 rounded-full bg-[#FDF2EE] dark:bg-[#3E1A14] text-[#C86D51] flex items-center justify-center font-bold text-xs">
+                  <FileText className="w-4 h-4 text-[#C86D51]" />
+                </div>
+              </div>
+              <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] break-words">
+                Explain + Evidence
+              </h3>
+              <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed break-words">
+                Explain why the standards apply and provide supporting evidence.
+              </p>
+            </div>
+
+            {/* Step 05 */}
+            <div className="p-5 sm:p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] text-center space-y-3 shadow-2xs hover:shadow-xs transition-all flex flex-col justify-start">
+              <div className="flex items-center justify-center gap-2">
+                <span className="text-xs font-bold text-[#8B978F]">05</span>
                 <div className="w-8 h-8 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] flex items-center justify-center font-bold text-xs">
                   <ShieldCheck className="w-4 h-4 text-[#5B8272]" />
                 </div>
               </div>
-              <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
-                Verify
+              <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] break-words">
+                Verify Official BIS Source
               </h3>
-              <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed">
-                Explore requirement details and refer to the official BIS source.
+              <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed break-words">
+                Connect the result back to the official BIS source for verification.
               </p>
             </div>
           </div>
