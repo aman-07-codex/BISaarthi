@@ -10,7 +10,6 @@ import { Button } from '@/components/common/Button';
 import { ComparisonTable } from '@/components/standards/ComparisonTable';
 import {
   SUGGESTED_SELECTABLE_STANDARDS,
-  SUGGESTED_COMPARISON_PAIRS,
   getStandardComparisonData,
 } from '@/data/mockCompareData';
 import { StandardDetailsData, StandardComparisonData } from '@/types';
@@ -28,7 +27,6 @@ import {
   AlertTriangle,
   Info,
   X,
-  Compass,
 } from 'lucide-react';
 
 export default function CompareStandardsPage() {
@@ -79,23 +77,6 @@ export default function CompareStandardsPage() {
       setComparisonResult(result);
       setIsComparing(false);
     }, 400);
-  };
-
-  const handleSelectPair = (standard1Is: string, standard2Is: string) => {
-    const found1 =
-      SUGGESTED_SELECTABLE_STANDARDS.find((s) => s.is_number === standard1Is) ||
-      SUGGESTED_SELECTABLE_STANDARDS[0];
-    const found2 =
-      SUGGESTED_SELECTABLE_STANDARDS.find((s) => s.is_number === standard2Is) ||
-      SUGGESTED_SELECTABLE_STANDARDS[1];
-
-    setStandard1(found1);
-    setStandard2(found2);
-    setSearch1('');
-    setSearch2('');
-    setIsDropdown1Open(false);
-    setIsDropdown2Open(false);
-    handleRunComparison(found1, found2);
   };
 
   const handleResetComparison = () => {
@@ -379,7 +360,7 @@ export default function CompareStandardsPage() {
               {!isDuplicate && (!standard1 || !standard2) && (
                 <p className="text-xs text-[#8B978F]">
                   {!standard1 && !standard2
-                    ? 'Select two standards above or pick a suggested pair below.'
+                    ? 'Select two standards above to compare.'
                     : !standard1
                     ? 'Select Standard 1 to proceed with comparison.'
                     : 'Select Standard 2 to proceed with comparison.'}
@@ -421,64 +402,6 @@ export default function CompareStandardsPage() {
               <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] max-w-sm mx-auto">
                 Aligning product scopes, testing matrices, statutory QCO notifications, and certification pathways.
               </p>
-            </div>
-          </div>
-        )}
-
-        {/* 2. EMPTY STATE (When no comparison is active) */}
-        {!comparisonResult && !isComparing && (
-          <div className="space-y-6">
-            <div className="bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] p-8 text-center space-y-4 shadow-xs">
-              <div className="w-12 h-12 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] border border-[#D9DDD8] dark:border-[#253831] flex items-center justify-center text-[#0D3328] dark:text-[#8FA89B] mx-auto">
-                <Compass className="w-6 h-6" />
-              </div>
-              <div className="space-y-1 max-w-lg mx-auto">
-                <h3 className="text-base font-bold text-[#18211D] dark:text-[#F7F5EF]">
-                  Compare two standards
-                </h3>
-                <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
-                  Select exactly two IS standards to see their scope, applicability, and key differences side by side.
-                </p>
-              </div>
-            </div>
-
-            {/* Suggested Comparison Pairs */}
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <h3 className="text-xs font-bold text-[#18211D] dark:text-[#F7F5EF] uppercase tracking-wider flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-[#B88746]" />
-                  <span>Suggested Comparison Pairs</span>
-                </h3>
-                <span className="text-[11px] text-[#8B978F]">Click to compare instantly</span>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {SUGGESTED_COMPARISON_PAIRS.map((pair) => (
-                  <button
-                    key={pair.id}
-                    type="button"
-                    onClick={() => handleSelectPair(pair.standard1_is, pair.standard2_is)}
-                    className="p-5 rounded-3xl border border-[#D9DDD8] dark:border-[#253831] bg-white dark:bg-[#15221E] hover:border-[#5B8272] hover:shadow-xs transition-all text-left space-y-3 group cursor-pointer flex flex-col justify-between"
-                  >
-                    <div className="space-y-2">
-                      <span className="text-[10px] font-bold text-[#0D3328] dark:text-[#A7B8AE] bg-[#E8EFEA] dark:bg-[#1B2B26] px-2.5 py-0.5 rounded-full border border-[#D9DDD8] dark:border-[#253831]">
-                        {pair.tag}
-                      </span>
-                      <h4 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] group-hover:text-[#0D3328] dark:group-hover:text-[#8FA89B] transition-colors">
-                        {pair.title}
-                      </h4>
-                      <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed line-clamp-2">
-                        {pair.description}
-                      </p>
-                    </div>
-
-                    <div className="pt-3 border-t border-[#EFECE6] dark:border-[#1C2E28] flex items-center justify-between text-xs font-mono font-bold text-[#0D3328] dark:text-[#8FA89B]">
-                      <span className="truncate">{pair.standard1_is} ↔ {pair.standard2_is}</span>
-                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform shrink-0" />
-                    </div>
-                  </button>
-                ))}
-              </div>
             </div>
           </div>
         )}
