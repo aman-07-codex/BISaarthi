@@ -10,7 +10,6 @@ import {
   Search,
   Building2,
   Compass,
-  AlertTriangle,
   Menu,
   X,
   Plus,
@@ -350,81 +349,75 @@ export default function LandingPage() {
 
       {/* 3. THE PROBLEM SECTION */}
       <section className="py-16 sm:py-20 lg:py-24 border-b border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#12201A] transition-colors">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           {/* Section Header */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            <div className="lg:col-span-5 space-y-3">
-              <span className="text-xs font-black uppercase tracking-widest text-[#5B8272] dark:text-[#8FA89B]">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            <div className="lg:col-span-5 space-y-4 sm:space-y-5">
+              <span className="text-xs sm:text-sm font-black uppercase tracking-widest text-[#5B8272] dark:text-[#8FA89B]">
                 THE PROBLEM
               </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#18211D] dark:text-[#F7F5EF] tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-black text-[#18211D] dark:text-[#F7F5EF] tracking-tight leading-[1.2] break-words">
                 Indian Standards shouldn&apos;t be this difficult to navigate.
               </h2>
-              <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
+              <p className="text-sm sm:text-base text-[#606E66] dark:text-[#BAC5BF] leading-relaxed break-words">
                 Thousands of standards, complex language, multiple procedures and scattered information make compliance confusing and time-consuming.
               </p>
             </div>
 
             {/* 4 Problem Cards */}
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               {/* Card 1 */}
-              <div className="p-5 rounded-2xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-2xs space-y-2">
-                <div className="w-8 h-8 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] flex items-center justify-center">
-                  <Layers className="w-4 h-4" />
+              <div className="p-6 sm:p-7 rounded-2xl sm:rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-2xs hover:shadow-xs hover:border-[#5B8272]/50 transition-all space-y-3 flex flex-col justify-start">
+                <div className="w-11 h-11 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] flex items-center justify-center shrink-0">
+                  <Layers className="w-5 h-5" />
                 </div>
-                <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                <h3 className="text-base sm:text-lg font-bold text-[#18211D] dark:text-[#F7F5EF] tracking-tight break-words">
                   Thousands of Standards
                 </h3>
-                <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#8B978F] leading-relaxed break-words">
                   Too many documents to search through manually without clarity.
                 </p>
               </div>
 
               {/* Card 2 */}
-              <div className="p-5 rounded-2xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-2xs space-y-2">
-                <div className="w-8 h-8 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] flex items-center justify-center">
-                  <BookOpen className="w-4 h-4" />
+              <div className="p-6 sm:p-7 rounded-2xl sm:rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-2xs hover:shadow-xs hover:border-[#5B8272]/50 transition-all space-y-3 flex flex-col justify-start">
+                <div className="w-11 h-11 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] flex items-center justify-center shrink-0">
+                  <BookOpen className="w-5 h-5" />
                 </div>
-                <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                <h3 className="text-base sm:text-lg font-bold text-[#18211D] dark:text-[#F7F5EF] tracking-tight break-words">
                   Complex Language
                 </h3>
-                <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#8B978F] leading-relaxed break-words">
                   Technical jargon is hard to interpret for engineers and MSMEs.
                 </p>
               </div>
 
               {/* Card 3 */}
-              <div className="p-5 rounded-2xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-2xs space-y-2">
-                <div className="w-8 h-8 rounded-full bg-[#FDF2EE] dark:bg-[#3E1A14] text-[#C86D51] flex items-center justify-center">
-                  <Building2 className="w-4 h-4" />
+              <div className="p-6 sm:p-7 rounded-2xl sm:rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-2xs hover:shadow-xs hover:border-[#C86D51]/50 transition-all space-y-3 flex flex-col justify-start">
+                <div className="w-11 h-11 rounded-full bg-[#FDF2EE] dark:bg-[#3E1A14] text-[#C86D51] flex items-center justify-center shrink-0">
+                  <Building2 className="w-5 h-5" />
                 </div>
-                <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                <h3 className="text-base sm:text-lg font-bold text-[#18211D] dark:text-[#F7F5EF] tracking-tight break-words">
                   Multiple Procedures
                 </h3>
-                <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#8B978F] leading-relaxed break-words">
                   Different conformity paths for domestic vs imported goods.
                 </p>
               </div>
 
               {/* Card 4 */}
-              <div className="p-5 rounded-2xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-2xs space-y-2">
-                <div className="w-8 h-8 rounded-full bg-[#FAF4EB] dark:bg-[#38240D] text-[#B88746] flex items-center justify-center">
-                  <Search className="w-4 h-4" />
+              <div className="p-6 sm:p-7 rounded-2xl sm:rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-2xs hover:shadow-xs hover:border-[#B88746]/50 transition-all space-y-3 flex flex-col justify-start">
+                <div className="w-11 h-11 rounded-full bg-[#FAF4EB] dark:bg-[#38240D] text-[#B88746] flex items-center justify-center shrink-0">
+                  <Search className="w-5 h-5" />
                 </div>
-                <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                <h3 className="text-base sm:text-lg font-bold text-[#18211D] dark:text-[#F7F5EF] tracking-tight break-words">
                   Difficult to Locate
                 </h3>
-                <p className="text-xs text-[#606E66] dark:text-[#8B978F] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#8B978F] leading-relaxed break-words">
                   Finding the right gazettes and laboratory rules is challenging.
                 </p>
               </div>
             </div>
-          </div>
-
-          {/* Bottom Alert Pill */}
-          <div className="max-w-2xl mx-auto p-3 rounded-full bg-[#FDF2EE] dark:bg-[#3E1A14] border border-[#FBE0D6] dark:border-[#52251D] text-center text-xs font-semibold text-[#9E3A20] dark:text-[#FECACA] flex items-center justify-center gap-2 shadow-2xs">
-            <AlertTriangle className="w-4 h-4 text-[#C86D51] shrink-0" />
-            <span>Compliance becomes costly, delayed and overwhelming</span>
           </div>
         </div>
       </section>
