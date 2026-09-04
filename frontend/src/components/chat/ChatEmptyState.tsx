@@ -3,12 +3,14 @@
 import React, { useState } from 'react';
 import { ShieldCheck, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/common/Button';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface ChatEmptyStateProps {
   onSelectPrompt: (prompt: string) => void;
 }
 
 export const ChatEmptyState: React.FC<ChatEmptyStateProps> = ({ onSelectPrompt }) => {
+  const { language, t } = useLanguage();
   const [customPrompt, setCustomPrompt] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -32,15 +34,19 @@ export const ChatEmptyState: React.FC<ChatEmptyStateProps> = ({ onSelectPrompt }
           <ShieldCheck className="w-6 h-6 text-[#A7B8AE]" />
         </div>
         <h2 className="text-2xl sm:text-3xl font-black text-[#18211D] dark:text-[#F7F5EF] tracking-tight">
-          BISaarthi AI Chatbot
+          {t('chat.title')}
         </h2>
         <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] max-w-xl mx-auto leading-relaxed">
-          Your conversational assistant for Bureau of Indian Standards guidance. Ask questions in simple language to identify standards, understand mandatory certification schemes, and review laboratory testing expectations.
+          {t('chat.emptyDesc')}
         </p>
 
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8F4EC] dark:bg-[#113624] border border-[#C2E4CD] dark:border-[#1E5438] text-[11px] font-semibold text-[#1B5E39] dark:text-[#A7F3D0]">
           <ShieldCheck className="w-3.5 h-3.5 text-[#2D9D5D]" />
-          <span>Referenced from Indian Standards & Quality Control Orders</span>
+          <span>
+            {language === 'HI'
+              ? 'भारतीय मानकों और गुणवत्ता नियंत्रण आदेशों (QCO) से संदर्भित'
+              : 'Referenced from Indian Standards & Quality Control Orders'}
+          </span>
         </div>
       </div>
 
@@ -51,14 +57,18 @@ export const ChatEmptyState: React.FC<ChatEmptyStateProps> = ({ onSelectPrompt }
             value={customPrompt}
             onChange={(e) => setCustomPrompt(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Ask about an Indian Standard, product, requirement, testing or certification..."
+            placeholder={
+              language === 'HI'
+                ? 'भारतीय मानक, उत्पाद, आवश्यकता, परीक्षण या प्रमाणन के बारे में पूछें...'
+                : 'Ask about an Indian Standard, product, requirement, testing or certification...'
+            }
             rows={3}
             className="w-full p-4 text-xs sm:text-sm rounded-2xl bg-[#FAF9F5] dark:bg-[#1B2B26] border border-[#D9DDD8] dark:border-[#253831] focus:outline-none focus:border-[#0D3328] focus:ring-2 focus:ring-[#5B8272]/20 text-[#18211D] dark:text-[#F7F5EF] placeholder-[#8B978F] resize-none transition-all leading-relaxed"
           />
 
           <div className="flex items-center justify-between pt-1">
             <span className="text-[11px] text-[#8B978F]">
-              Guidance referenced from Indian Standards
+              {language === 'HI' ? 'भारतीय मानकों से संदर्भित मार्गदर्शन' : 'Guidance referenced from Indian Standards'}
             </span>
             <Button
               type="submit"
@@ -67,7 +77,7 @@ export const ChatEmptyState: React.FC<ChatEmptyStateProps> = ({ onSelectPrompt }
               icon={<ArrowRight className="w-4 h-4" />}
               className="font-bold text-xs"
             >
-              Ask BISaarthi
+              {t('nav.ask')}
             </Button>
           </div>
         </form>

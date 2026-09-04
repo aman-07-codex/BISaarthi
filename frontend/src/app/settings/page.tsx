@@ -7,6 +7,7 @@ import { Button } from '@/components/common/Button';
 import { SourceReferenceTag } from '@/components/common/SourceReferenceTag';
 import { MOCK_SOURCES } from '@/data/mockChatData';
 import { useTheme } from '@/context/ThemeContext';
+import { useLanguage } from '@/context/LanguageContext';
 import {
   Settings,
   User,
@@ -34,7 +35,7 @@ export default function SettingsPage() {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [editForm, setEditForm] = useState({ ...profile });
 
-  const [language, setLanguage] = useState<'EN' | 'HI'>('EN');
+  const { language, setLanguage, t } = useLanguage();
   const { theme, setTheme } = useTheme();
   const [responseDetail, setResponseDetail] = useState<'concise' | 'balanced' | 'detailed'>('balanced');
   const [showSources, setShowSources] = useState<boolean>(true);
@@ -185,10 +186,10 @@ export default function SettingsPage() {
             </div>
             <div>
               <h2 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] uppercase tracking-wider">
-                Language Preference
+                {t('settings.langSection')}
               </h2>
               <p className="text-xs text-[#606E66] dark:text-[#8B978F]">
-                Choose the language used across the BISaarthi interface.
+                {t('settings.langDesc')}
               </p>
             </div>
           </div>
@@ -198,7 +199,7 @@ export default function SettingsPage() {
               type="button"
               onClick={() => {
                 setLanguage('EN');
-                showToast('Interface language set to English.');
+                showToast(language === 'HI' ? 'इंटरफ़ेस भाषा: English' : 'Interface language set to English.');
               }}
               className={`p-4 rounded-2xl border text-left flex items-center justify-between transition-all cursor-pointer ${
                 language === 'EN'
@@ -223,7 +224,7 @@ export default function SettingsPage() {
               type="button"
               onClick={() => {
                 setLanguage('HI');
-                showToast('भाषा प्राथमिकता: हिन्दी (Demo selection).');
+                showToast(language === 'EN' ? 'भाषा प्राथमिकता: हिन्दी सक्रिय' : 'भाषा प्राथमिकता: हिन्दी');
               }}
               className={`p-4 rounded-2xl border text-left flex items-center justify-between transition-all cursor-pointer ${
                 language === 'HI'

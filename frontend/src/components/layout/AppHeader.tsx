@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { Menu, Sparkles, ChevronRight, ShieldCheck } from 'lucide-react';
 import { ThemeToggle } from '@/components/common/ThemeToggle';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface AppHeaderProps {
   onMobileMenuToggle?: () => void;
@@ -12,18 +13,19 @@ interface AppHeaderProps {
 export const AppHeader: React.FC<AppHeaderProps> = ({ onMobileMenuToggle }) => {
   const pathname = usePathname();
   const router = useRouter();
+  const { t } = useLanguage();
   const [quickQuery, setQuickQuery] = useState('');
 
   const getPageTitle = () => {
-    if (pathname === '/dashboard') return { title: 'Dashboard', category: 'Overview' };
-    if (pathname.startsWith('/chat')) return { title: 'AI Chatbot', category: 'Guidance' };
-    if (pathname.startsWith('/find-standards')) return { title: 'Find Standards', category: 'Discovery' };
-    if (pathname.startsWith('/compare')) return { title: 'Compare Standards', category: 'Comparison' };
-    if (pathname.startsWith('/standards/')) return { title: 'Standard Details', category: 'Standards' };
-    if (pathname.startsWith('/saved-standards')) return { title: 'Saved Standards', category: 'Workspace' };
-    if (pathname.startsWith('/history')) return { title: 'Chat History', category: 'Workspace' };
-    if (pathname.startsWith('/settings')) return { title: 'Settings', category: 'Account' };
-    return { title: 'BISaarthi', category: 'Platform' };
+    if (pathname === '/dashboard') return { title: t('nav.dashboard'), category: t('cat.overview') };
+    if (pathname.startsWith('/chat')) return { title: t('nav.ask'), category: t('cat.guidance') };
+    if (pathname.startsWith('/find-standards')) return { title: t('nav.find'), category: t('cat.discovery') };
+    if (pathname.startsWith('/compare')) return { title: t('nav.compare'), category: t('cat.comparison') };
+    if (pathname.startsWith('/standards/')) return { title: t('cat.standards'), category: t('cat.standards') };
+    if (pathname.startsWith('/saved-standards')) return { title: t('nav.saved'), category: t('cat.workspace') };
+    if (pathname.startsWith('/history')) return { title: t('nav.history'), category: t('cat.workspace') };
+    if (pathname.startsWith('/settings')) return { title: t('nav.settings'), category: t('cat.account') };
+    return { title: 'BISaarthi', category: t('cat.platform') };
   };
 
   const { title, category } = getPageTitle();
@@ -67,14 +69,14 @@ export const AppHeader: React.FC<AppHeaderProps> = ({ onMobileMenuToggle }) => {
               type="text"
               value={quickQuery}
               onChange={(e) => setQuickQuery(e.target.value)}
-              placeholder="Ask BISaarthi about any Indian Standard or product..."
+              placeholder={t('nav.quickAskPlaceholder')}
               className="w-full pl-9 pr-16 py-1.5 text-xs rounded-full bg-[#FFFFFF] dark:bg-[#1B2B26] border border-[#D9DDD8] dark:border-[#253831] focus:outline-none focus:border-[#0D3328] focus:ring-2 focus:ring-[#5B8272]/20 text-[#18211D] dark:text-[#F7F5EF] placeholder-[#8B978F] transition-all"
             />
             <button
               type="submit"
               className="absolute right-1 px-3 py-1 text-[11px] font-semibold bg-[#0D3328] hover:bg-[#164B3A] text-white rounded-full transition-colors cursor-pointer"
             >
-              Ask
+              {t('nav.quickAskBtn')}
             </button>
           </div>
         </form>
@@ -84,7 +86,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({ onMobileMenuToggle }) => {
       <div className="flex items-center gap-3 shrink-0">
         <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8F4EC] dark:bg-[#113624] border border-[#C2E4CD] dark:border-[#1E5438] text-[11px] font-semibold text-[#1B5E39] dark:text-[#A7F3D0]">
           <ShieldCheck className="w-3.5 h-3.5 text-[#2D9D5D]" />
-          <span>Authoritative Sources</span>
+          <span>{t('nav.authoritative')}</span>
         </div>
 
         {/* Global Theme Toggle Button */}

@@ -13,6 +13,7 @@ import {
   getStandardComparisonData,
 } from '@/data/mockCompareData';
 import { StandardDetailsData, StandardComparisonData } from '@/types';
+import { useLanguage } from '@/context/LanguageContext';
 import {
   Scale,
   Search,
@@ -30,6 +31,7 @@ import {
 } from 'lucide-react';
 
 export default function CompareStandardsPage() {
+  const { language, t } = useLanguage();
   const [standard1, setStandard1] = useState<StandardDetailsData | null>(null);
   const [standard2, setStandard2] = useState<StandardDetailsData | null>(null);
 
@@ -99,18 +101,18 @@ export default function CompareStandardsPage() {
               href="/dashboard"
               className="text-[#606E66] dark:text-[#BAC5BF] hover:text-[#0D3328] dark:hover:text-white font-medium"
             >
-              Dashboard
+              {t('nav.dashboard')}
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-[#8B978F]" />
             <span className="font-bold text-[#18211D] dark:text-[#F7F5EF] truncate">
-              Compare Standards
+              {t('nav.compare')}
             </span>
           </div>
 
           <div className="flex items-center gap-2">
             <span className="text-[11px] font-bold text-[#0D3328] dark:text-[#A7B8AE] bg-[#E8EFEA] dark:bg-[#1B2B26] px-3 py-1 rounded-full border border-[#D9DDD8] dark:border-[#253831] flex items-center gap-1.5">
               <Scale className="w-3.5 h-3.5 text-[#5B8272]" />
-              <span>Compare 2 Standards</span>
+              <span>{language === 'HI' ? '2 मानकों की तुलना' : 'Compare 2 Standards'}</span>
             </span>
           </div>
         </div>
@@ -122,11 +124,11 @@ export default function CompareStandardsPage() {
           </div>
 
           <h1 className="text-2xl sm:text-3xl font-black text-[#0D3328] dark:text-[#8FA89B] tracking-tight leading-tight">
-            Compare Standards
+            {t('compare.title')}
           </h1>
 
           <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed font-normal max-w-3xl">
-            Compare two Indian Standards side by side to understand their scope, applicability, requirements, and key differences.
+            {t('compare.subtitle')}
           </p>
         </div>
 
@@ -135,10 +137,12 @@ export default function CompareStandardsPage() {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#EFECE6] dark:border-[#1C2E28] pb-4">
             <div>
               <h2 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] uppercase tracking-wider">
-                Select Standards to Compare
+                {language === 'HI' ? 'तुलना के लिए मानक चुनें' : 'Select Standards to Compare'}
               </h2>
               <p className="text-xs text-[#606E66] dark:text-[#8B978F] mt-0.5">
-                Select two standards to generate a side-by-side comparison.
+                {language === 'HI'
+                  ? 'साथ-साथ तुलना देखने के लिए दो मानक चुनें।'
+                  : 'Select two standards to generate a side-by-side comparison.'}
               </p>
             </div>
 
@@ -150,7 +154,7 @@ export default function CompareStandardsPage() {
                 icon={<RefreshCw className="w-3.5 h-3.5" />}
                 className="font-bold text-xs"
               >
-                Start New Comparison
+                {language === 'HI' ? 'नई तुलना शुरू करें' : 'Start New Comparison'}
               </Button>
             )}
           </div>

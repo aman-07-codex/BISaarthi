@@ -9,6 +9,7 @@ import { SourceReferenceTag } from '@/components/common/SourceReferenceTag';
 import { UncertaintyNotice } from '@/components/common/UncertaintyNotice';
 import { RelatedToolsNav } from '@/components/standards/RelatedToolsNav';
 import { getStandardDetailsBySlug } from '@/data/mockStandardDetails';
+import { useLanguage } from '@/context/LanguageContext';
 import {
   Bookmark,
   Check,
@@ -29,6 +30,7 @@ interface StandardDetailsPageProps {
 
 export default function StandardDetailsPage({ params }: StandardDetailsPageProps) {
   const { isNumber } = use(params);
+  const { t } = useLanguage();
   const standard = getStandardDetailsBySlug(isNumber);
   const [isSaved, setIsSaved] = useState(false);
 
@@ -47,10 +49,10 @@ export default function StandardDetailsPage({ params }: StandardDetailsPageProps
               className="inline-flex items-center gap-1 text-[#606E66] dark:text-[#BAC5BF] hover:text-[#0D3328] dark:hover:text-white font-medium"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Find Standards</span>
+              <span>{t('nav.find', 'Find Standards')}</span>
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-[#8B978F]" />
-            <span>Standard Details</span>
+            <span>{t('cat.standards', 'Standard Details')}</span>
             <ChevronRight className="w-3.5 h-3.5 text-[#8B978F]" />
             <span className="font-mono font-bold text-[#18211D] dark:text-[#F7F5EF] truncate">
               {standard.is_number}
@@ -100,12 +102,12 @@ export default function StandardDetailsPage({ params }: StandardDetailsPageProps
                 {isSaved ? (
                   <>
                     <Check className="w-4 h-4 text-[#1B5E39] dark:text-[#A7F3D0]" />
-                    <span>Saved to List</span>
+                    <span>{t('btn.saved', 'Saved')}</span>
                   </>
                 ) : (
                   <>
                     <Bookmark className="w-4 h-4 text-[#8B978F]" />
-                    <span>Save Standard</span>
+                    <span>{t('btn.save', 'Save Standard')}</span>
                   </>
                 )}
               </button>
@@ -212,7 +214,7 @@ export default function StandardDetailsPage({ params }: StandardDetailsPageProps
           <div className="flex items-center gap-2">
             <Info className="w-4 h-4 text-[#0D3328] dark:text-[#8FA89B]" />
             <h2 className="text-base font-bold text-[#18211D] dark:text-[#F7F5EF]">
-              Why This Standard Applies
+              {t('std.scopeTitle', 'Why This Standard Applies')}
             </h2>
           </div>
 
@@ -246,7 +248,7 @@ export default function StandardDetailsPage({ params }: StandardDetailsPageProps
             <div className="flex items-center gap-2">
               <FileText className="w-4 h-4 text-[#0D3328] dark:text-[#8FA89B]" />
               <h2 className="text-base font-bold text-[#18211D] dark:text-[#F7F5EF]">
-                Scope of the Standard
+                {t('std.scopeHeading', 'Scope of the Standard')}
               </h2>
             </div>
             <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed bg-[#FAF9F5] dark:bg-[#1B2B26]/50 p-4 rounded-2xl border border-[#EFECE6] dark:border-[#253831]">
@@ -258,7 +260,7 @@ export default function StandardDetailsPage({ params }: StandardDetailsPageProps
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <h3 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] uppercase tracking-wider">
-                Key Requirements by Category
+                {t('std.keyReqTitle', 'Technical Requirements')}
               </h3>
               <span className="text-[11px] text-[#8B978F]">
                 High-level engineering benchmarks

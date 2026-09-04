@@ -11,6 +11,7 @@ import {
   MOCK_FIND_STANDARDS_LED,
   MOCK_FIND_STANDARDS_BATTERY,
 } from '@/data/mockFindStandards';
+import { useLanguage } from '@/context/LanguageContext';
 import {
   Search,
   Sparkles,
@@ -27,6 +28,7 @@ import {
 type AnalysisStep = 'idle' | 'analyzing_input' | 'matching_categories' | 'ranking_standards' | 'completed';
 
 export default function FindStandardsPage() {
+  const { language, t } = useLanguage();
   const [productQuery, setProductQuery] = useState('');
   const [attachedFile, setAttachedFile] = useState<File | null>(null);
   const [analysisStep, setAnalysisStep] = useState<AnalysisStep>('idle');
@@ -36,20 +38,20 @@ export default function FindStandardsPage() {
 
   const examplePrompts = [
     {
-      title: 'Electric Heater',
-      text: 'I want to manufacture an electric heater. Which BIS standards apply?',
+      title: language === 'HI' ? 'इलेक्ट्रिक हीटर' : 'Electric Heater',
+      text: language === 'HI' ? 'मैं इलेक्ट्रिक हीटर बनाना चाहता हूँ। कौन से बीआईएस मानक लागू हैं?' : 'I want to manufacture an electric heater. Which BIS standards apply?',
     },
     {
-      title: 'LED Lamps',
-      text: 'I am manufacturing self-ballasted LED lamps for general lighting services.',
+      title: language === 'HI' ? 'एलईडी लैंप' : 'LED Lamps',
+      text: language === 'HI' ? 'मैं सामान्य प्रकाश व्यवस्था के लिए सेल्फ-बैलास्टेड एलईडी लैंप का निर्माण कर रहा हूँ।' : 'I am manufacturing self-ballasted LED lamps for general lighting services.',
     },
     {
-      title: 'Plugs & Sockets',
-      text: 'Which standards and mandatory testing apply to household 3-pin plugs and sockets?',
+      title: language === 'HI' ? 'प्लग और सॉकेट' : 'Plugs & Sockets',
+      text: language === 'HI' ? 'घरेलू 3-पिन प्लग और सॉकेट पर कौन से मानक और अनिवार्य परीक्षण लागू होते हैं?' : 'Which standards and mandatory testing apply to household 3-pin plugs and sockets?',
     },
     {
-      title: 'Lithium Battery Packs',
-      text: 'Standards and safety requirements for lithium-ion battery packs for portable devices.',
+      title: language === 'HI' ? 'लिथियम बैटरी पैक' : 'Lithium Battery Packs',
+      text: language === 'HI' ? 'पोर्टेबल उपकरणों के लिए लिथियम-आयन बैटरी पैक हेतु मानक और सुरक्षा आवश्यकताएं।' : 'Standards and safety requirements for lithium-ion battery packs for portable devices.',
     },
   ];
 
@@ -109,10 +111,10 @@ export default function FindStandardsPage() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-[#D9DDD8] dark:border-[#253831]">
           <div>
             <h1 className="text-2xl sm:text-3xl font-black text-[#18211D] dark:text-[#F7F5EF] tracking-tight">
-              Find Applicable Standards
+              {t('find.title')}
             </h1>
             <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] mt-1">
-              Describe your product, process, or requirement and BISaarthi will identify potentially applicable Indian Standards.
+              {t('find.subtitle')}
             </p>
           </div>
 
@@ -124,7 +126,7 @@ export default function FindStandardsPage() {
               onClick={handleReset}
               className="self-start sm:self-auto font-bold"
             >
-              New Search
+              {language === 'HI' ? 'नई खोज' : 'New Search'}
             </Button>
           )}
         </div>
@@ -136,17 +138,21 @@ export default function FindStandardsPage() {
             <div className="flex items-center justify-between">
               <label className="text-xs font-bold uppercase tracking-wider text-[#18211D] dark:text-[#F7F5EF] flex items-center gap-1.5">
                 <Search className="w-3.5 h-3.5 text-[#5B8272]" />
-                <span>Describe Your Product or Regulatory Need</span>
+                <span>{language === 'HI' ? 'अपने उत्पाद या आवश्यकता का विवरण दें' : 'Describe Your Product or Regulatory Need'}</span>
               </label>
               <span className="text-[11px] text-[#8B978F]">
-                Natural language description
+                {t('find.descTab')}
               </span>
             </div>
 
             <textarea
               value={productQuery}
               onChange={(e) => setProductQuery(e.target.value)}
-              placeholder="Example: I want to manufacture an electric immersion water heater for domestic use. What BIS standards apply to the heating element, body insulation, and power cord?"
+              placeholder={
+                language === 'HI'
+                  ? 'उदा. पोर्टेबल इलेक्ट्रिक इमर्शन वाटर हीटर, 1500W, 230V AC, 3-पिन प्लग और घरेलू उपयोग हेतु स्टेनलेस स्टील हीटिंग ट्यूब...'
+                  : 'Example: I want to manufacture an electric immersion water heater for domestic use. What BIS standards apply to the heating element, body insulation, and power cord?'
+              }
               rows={3}
               className="w-full p-4 text-xs sm:text-sm rounded-2xl bg-[#FAF9F5] dark:bg-[#1B2B26] border border-[#D9DDD8] dark:border-[#253831] focus:outline-none focus:border-[#0D3328] focus:ring-2 focus:ring-[#5B8272]/20 text-[#18211D] dark:text-[#F7F5EF] placeholder-[#8B978F] resize-none transition-all leading-relaxed"
             />
@@ -155,7 +161,7 @@ export default function FindStandardsPage() {
           {/* Example Prompt Chips */}
           <div className="flex flex-wrap items-center gap-2 pt-1">
             <span className="text-xs font-bold text-[#606E66] dark:text-[#BAC5BF] mr-1 flex items-center gap-1">
-              <Sparkles className="w-3.5 h-3.5 text-[#B88746]" /> Examples:
+              <Sparkles className="w-3.5 h-3.5 text-[#B88746]" /> {language === 'HI' ? 'उदाहरण:' : 'Examples:'}
             </span>
             {examplePrompts.map((p, idx) => (
               <button
@@ -178,7 +184,11 @@ export default function FindStandardsPage() {
           <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-[#EFECE6] dark:border-[#1C2E28]">
             <div className="flex items-center gap-2 text-xs text-[#606E66] dark:text-[#BAC5BF]">
               <ShieldCheck className="w-4 h-4 text-[#2D9D5D]" />
-              <span>Referenced from Indian Standards & Quality Control Orders</span>
+              <span>
+                {language === 'HI'
+                  ? 'भारतीय मानकों और गुणवत्ता नियंत्रण आदेशों (QCO) से संदर्भित'
+                  : 'Referenced from Indian Standards & Quality Control Orders'}
+              </span>
             </div>
 
             <div className="flex items-center gap-2 ml-auto">
@@ -188,7 +198,7 @@ export default function FindStandardsPage() {
                   onClick={handleReset}
                   className="px-3 py-2 text-xs font-bold text-[#8B978F] hover:text-[#18211D] dark:hover:text-white"
                 >
-                  Clear
+                  {t('btn.clear')}
                 </button>
               )}
               <Button
@@ -200,8 +210,8 @@ export default function FindStandardsPage() {
                 className="font-bold text-xs"
               >
                 {analysisStep !== 'idle' && analysisStep !== 'completed'
-                  ? 'Analyzing...'
-                  : 'Find Standards'}
+                  ? (language === 'HI' ? 'विश्लेषण हो रहा है...' : 'Analyzing...')
+                  : t('nav.find')}
               </Button>
             </div>
           </div>
@@ -215,7 +225,9 @@ export default function FindStandardsPage() {
                 <Sparkles className="w-3.5 h-3.5 animate-spin" />
               </div>
               <h2 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
-                BISaarthi is analyzing your product description...
+                {language === 'HI'
+                  ? 'बीआईएस सारथी आपके उत्पाद विवरण का विश्लेषण कर रहा है...'
+                  : 'BISaarthi is analyzing your product description...'}
               </h2>
             </div>
 
@@ -228,7 +240,7 @@ export default function FindStandardsPage() {
                 }`}
               >
                 <CheckCircle2 className="w-4 h-4 text-[#2D9D5D] shrink-0" />
-                <span>1. Understanding product specification</span>
+                <span>{language === 'HI' ? '1. उत्पाद विनिर्देश का विश्लेषण' : '1. Understanding product specification'}</span>
               </div>
 
               <div
@@ -243,7 +255,7 @@ export default function FindStandardsPage() {
                 ) : (
                   <Clock className="w-4 h-4 text-[#8B978F] shrink-0" />
                 )}
-                <span>2. Identifying standard categories</span>
+                <span>{language === 'HI' ? '2. मानक श्रेणियों की पहचान' : '2. Identifying standard categories'}</span>
               </div>
 
               <div
@@ -258,7 +270,7 @@ export default function FindStandardsPage() {
                 ) : (
                   <Clock className="w-4 h-4 text-[#8B978F] shrink-0" />
                 )}
-                <span>3. Ranking applicable standards</span>
+                <span>{language === 'HI' ? '3. लागू मानकों का क्रम निर्धारण' : '3. Ranking applicable standards'}</span>
               </div>
             </div>
           </div>
@@ -271,13 +283,15 @@ export default function FindStandardsPage() {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-5 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-2xs">
               <div>
                 <h2 className="text-base font-bold text-[#18211D] dark:text-[#F7F5EF] flex items-center gap-2">
-                  <span>Potentially Applicable Standards</span>
+                  <span>{language === 'HI' ? 'पहचाने गए लागू भारतीय मानक' : 'Potentially Applicable Standards'}</span>
                   <span className="text-xs px-2.5 py-0.5 rounded-full bg-[#E8EFEA] text-[#0D3328] dark:text-[#A7B8AE] font-mono font-bold">
-                    {filteredResults?.length} Found
+                    {filteredResults?.length} {language === 'HI' ? 'मिले' : 'Found'}
                   </span>
                 </h2>
                 <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] mt-0.5">
-                  Ranked by qualitative applicability based on product heating, electrical safety, and connection components.
+                  {language === 'HI'
+                    ? 'उत्पाद सुरक्षा, हीटिंग तत्व और कनेक्शन घटकों के आधार पर क्रमबद्ध।'
+                    : 'Ranked by qualitative applicability based on product heating, electrical safety, and connection components.'}
                 </p>
               </div>
 
@@ -285,7 +299,7 @@ export default function FindStandardsPage() {
               <div className="flex flex-wrap items-center gap-2.5">
                 <div className="flex items-center gap-1.5 text-xs text-[#606E66] dark:text-[#BAC5BF]">
                   <SlidersHorizontal className="w-3.5 h-3.5 text-[#8B978F]" />
-                  <span className="font-bold">Filter:</span>
+                  <span className="font-bold">{language === 'HI' ? 'फ़िल्टर:' : 'Filter:'}</span>
                 </div>
 
                 <select
@@ -293,10 +307,10 @@ export default function FindStandardsPage() {
                   onChange={(e) => setRelevanceFilter(e.target.value)}
                   className="px-3 py-1.5 text-xs rounded-full bg-[#FAF9F5] dark:bg-[#1B2B26] border border-[#D9DDD8] dark:border-[#253831] text-[#18211D] dark:text-[#F7F5EF] focus:outline-none focus:border-[#0D3328] cursor-pointer"
                 >
-                  <option value="all">All Relevance</option>
-                  <option value="highly_relevant">Highly Relevant</option>
-                  <option value="relevant">Relevant</option>
-                  <option value="possibly_relevant">Possibly Relevant</option>
+                  <option value="all">{language === 'HI' ? 'सभी प्रासंगिकता' : 'All Relevance'}</option>
+                  <option value="highly_relevant">{language === 'HI' ? 'अत्यधिक प्रासंगिक' : 'Highly Relevant'}</option>
+                  <option value="relevant">{language === 'HI' ? 'प्रासंगिक' : 'Relevant'}</option>
+                  <option value="possibly_relevant">{language === 'HI' ? 'संभावित प्रासंगिक' : 'Possibly Relevant'}</option>
                 </select>
 
                 <select
@@ -304,9 +318,9 @@ export default function FindStandardsPage() {
                   onChange={(e) => setStatusFilter(e.target.value)}
                   className="px-3 py-1.5 text-xs rounded-full bg-[#FAF9F5] dark:bg-[#1B2B26] border border-[#D9DDD8] dark:border-[#253831] text-[#18211D] dark:text-[#F7F5EF] focus:outline-none focus:border-[#0D3328] cursor-pointer"
                 >
-                  <option value="all">All Statuses</option>
-                  <option value="active">Active Only</option>
-                  <option value="under_revision">Under Revision</option>
+                  <option value="all">{language === 'HI' ? 'सभी स्थितियां' : 'All Statuses'}</option>
+                  <option value="active">{language === 'HI' ? 'केवल सक्रिय' : 'Active Only'}</option>
+                  <option value="under_revision">{language === 'HI' ? 'संशोधनाधीन' : 'Under Revision'}</option>
                 </select>
               </div>
             </div>
@@ -316,11 +330,11 @@ export default function FindStandardsPage() {
               <div className="flex items-center gap-2">
                 <Info className="w-4 h-4 text-[#0D3328] dark:text-[#8FA89B]" />
                 <h3 className="text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] uppercase tracking-wide">
-                  Why These Standards?
+                  {t('find.whyStandards')}
                 </h3>
               </div>
               <p className="text-xs text-[#18211D] dark:text-[#BAC5BF] leading-relaxed">
-                Based on your product description, BISaarthi identified electrical heating element design, household appliance general safety, and 3-pin plug cord set requirements as the primary regulatory domains under the <strong>Electrical Appliances Quality Control Order (QCO)</strong>.
+                {t('find.whyStandardsDesc')}
               </p>
             </div>
             {/* List of Ranked Standard Cards */}
@@ -331,7 +345,7 @@ export default function FindStandardsPage() {
                 ))
               ) : (
                 <div className="p-8 text-center bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] text-xs text-[#8B978F]">
-                  No standards match the selected filters. Try clearing your filter criteria.
+                  {t('find.noResults')}
                 </div>
               )}
             </div>
@@ -344,10 +358,12 @@ export default function FindStandardsPage() {
             <div>
               <h2 className="text-base font-bold text-[#18211D] dark:text-[#F7F5EF] flex items-center gap-2">
                 <BookOpen className="w-4 h-4 text-[#5B8272]" />
-                <span>How Find Standards Works</span>
+                <span>{t('find.howItWorks')}</span>
               </h2>
               <p className="text-xs text-[#606E66] dark:text-[#8B978F] mt-1">
-                A simple 3-step workflow designed to help manufacturers identify applicable standards.
+                {language === 'HI'
+                  ? 'निर्माताओं को लागू मानक पहचानने में मदद करने के लिए 3-चरणीय प्रक्रिया।'
+                  : 'A simple 3-step workflow designed to help manufacturers identify applicable standards.'}
               </p>
             </div>
 
@@ -357,10 +373,12 @@ export default function FindStandardsPage() {
                   1
                 </div>
                 <h3 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
-                  Describe Product
+                  {language === 'HI' ? 'उत्पाद विवरण' : 'Describe Product'}
                 </h3>
                 <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
-                  Enter your product type, target application, or attach an optional technical datasheet.
+                  {language === 'HI'
+                    ? 'अपने उत्पाद का प्रकार, इच्छित अनुप्रयोग दर्ज करें या तकनीकी डेटाशीट संलग्न करें।'
+                    : 'Enter your product type, target application, or attach an optional technical datasheet.'}
                 </p>
               </div>
 
@@ -369,10 +387,12 @@ export default function FindStandardsPage() {
                   2
                 </div>
                 <h3 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
-                  Standards Matching
+                  {language === 'HI' ? 'मानकों का मिलान' : 'Standards Matching'}
                 </h3>
                 <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
-                  BISaarthi searches indexed Indian Standards databases, gazettes, and Quality Control Orders (QCOs).
+                  {language === 'HI'
+                    ? 'बीआईएस सारथी अनुक्रमित भारतीय मानक डेटाबेस और गुणवत्ता नियंत्रण आदेशों (QCO) में खोज करता है।'
+                    : 'BISaarthi searches indexed Indian Standards databases, gazettes, and Quality Control Orders (QCOs).'}
                 </p>
               </div>
 
@@ -381,10 +401,12 @@ export default function FindStandardsPage() {
                   3
                 </div>
                 <h3 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
-                  Explore Requirements & Tests
+                  {language === 'HI' ? 'आवश्यकताएं और परीक्षण देखें' : 'Explore Requirements & Tests'}
                 </h3>
                 <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
-                  Review ranked standards, understand why they apply, and drill into specific testing and certification processes.
+                  {language === 'HI'
+                    ? 'पहचाने गए मानकों की समीक्षा करें, प्रयोज्यता का कारण समझें और विशिष्ट परीक्षण नियमों की जांच करें।'
+                    : 'Review ranked standards, understand why they apply, and drill into specific testing and certification processes.'}
                 </p>
               </div>
             </div>

@@ -6,6 +6,7 @@ import { AppLayout } from '@/components/layout/AppLayout';
 import { Button } from '@/components/common/Button';
 import { MOCK_CHAT_HISTORY_LIST } from '@/data/mockChatData';
 import { RecentConversation } from '@/types';
+import { useLanguage } from '@/context/LanguageContext';
 import {
   History,
   MessageSquare,
@@ -20,6 +21,7 @@ import {
 } from 'lucide-react';
 
 export default function HistoryPage() {
+  const { t } = useLanguage();
   const [conversations] = useState<RecentConversation[]>(MOCK_CHAT_HISTORY_LIST);
   const [searchQuery, setSearchQuery] = useState('');
   const [timeFilter, setTimeFilter] = useState<'all' | 'today' | 'this_week' | 'older'>('all');
@@ -53,18 +55,18 @@ export default function HistoryPage() {
               href="/dashboard"
               className="text-[#606E66] dark:text-[#BAC5BF] hover:text-[#0D3328] dark:hover:text-white font-medium"
             >
-              Dashboard
+              {t('nav.dashboard', 'Dashboard')}
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-[#8B978F]" />
             <span className="font-bold text-[#18211D] dark:text-[#F7F5EF] truncate">
-              History
+              {t('nav.history', 'History')}
             </span>
           </div>
 
           <div className="flex items-center gap-2">
             <span className="text-[11px] font-bold text-[#0D3328] dark:text-[#A7B8AE] bg-[#E8EFEA] dark:bg-[#1B2B26] px-3 py-1 rounded-full border border-[#D9DDD8] dark:border-[#253831] flex items-center gap-1.5">
               <History className="w-3.5 h-3.5 text-[#5B8272]" />
-              <span>{conversations.length} Conversations Logged</span>
+              <span>{conversations.length} {t('history.conversationsLogged', 'Conversations Logged')}</span>
             </span>
           </div>
         </div>
@@ -75,16 +77,16 @@ export default function HistoryPage() {
             <div className="space-y-2 max-w-3xl">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-[11px] font-bold text-[#606E66] dark:text-[#BAC5BF] bg-[#FAF9F5] dark:bg-[#1B2B26] px-2.5 py-0.5 rounded-full border border-[#D9DDD8] dark:border-[#253831]">
-                  {conversations.length} conversations
+                  {conversations.length} {t('history.conversations', 'conversations')}
                 </span>
               </div>
 
               <h1 className="text-2xl sm:text-3xl font-black text-[#0D3328] dark:text-[#8FA89B] tracking-tight leading-tight">
-                Chat History
+                {t('history.title', 'Chat History')}
               </h1>
 
               <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed font-normal">
-                Review and continue your previous BISaarthi conversations.
+                {t('history.subtitle', 'Review and continue your previous BISaarthi conversations.')}
               </p>
             </div>
 
@@ -92,7 +94,7 @@ export default function HistoryPage() {
             <div className="shrink-0">
               <Link href="/chat">
                 <Button variant="pill" size="sm" icon={<Plus className="w-4 h-4" />} className="font-bold text-xs">
-                  + New Chat
+                  {t('history.startNew', '+ New Chat')}
                 </Button>
               </Link>
             </div>
@@ -110,7 +112,7 @@ export default function HistoryPage() {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search conversations..."
+                  placeholder={t('history.searchPlaceholder', 'Search conversations...')}
                   className="w-full pl-10 pr-8 py-2.5 text-xs sm:text-sm rounded-full border border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] focus:outline-none focus:ring-2 focus:ring-[#5B8272]/20 focus:border-[#0D3328] transition-all"
                 />
                 {searchQuery && (
@@ -128,10 +130,10 @@ export default function HistoryPage() {
               <div className="flex items-center gap-1.5 shrink-0 overflow-x-auto pb-1 sm:pb-0">
                 {(
                   [
-                    { key: 'all', label: 'All' },
-                    { key: 'today', label: 'Today' },
-                    { key: 'this_week', label: 'This Week' },
-                    { key: 'older', label: 'Older' },
+                    { key: 'all', label: t('history.all', 'All') },
+                    { key: 'today', label: t('history.today', 'Today') },
+                    { key: 'this_week', label: t('history.thisWeek', 'This Week') },
+                    { key: 'older', label: t('history.older', 'Older') },
                   ] as const
                 ).map((tab) => (
                   <button
@@ -154,7 +156,7 @@ export default function HistoryPage() {
             {(searchQuery !== '' || timeFilter !== 'all') && (
               <div className="flex items-center justify-between text-xs text-[#606E66] dark:text-[#BAC5BF] pt-1 border-t border-[#EFECE6] dark:border-[#1C2E28] px-1">
                 <span>
-                  Showing {filteredConversations.length} of {conversations.length} conversations
+                  {t('history.showing', 'Showing')} {filteredConversations.length} {t('history.of', 'of')} {conversations.length} {t('history.conversations', 'conversations')}
                 </span>
                 <button
                   type="button"
@@ -162,7 +164,7 @@ export default function HistoryPage() {
                   className="text-[#0D3328] dark:text-[#8FA89B] hover:underline cursor-pointer flex items-center gap-1 font-bold"
                 >
                   <RefreshCw className="w-3 h-3" />
-                  <span>Clear Filters</span>
+                  <span>{t('history.clearFilters', 'Clear Filters')}</span>
                 </button>
               </div>
             )}
@@ -212,7 +214,7 @@ export default function HistoryPage() {
                       </div>
 
                       <div className="inline-flex items-center gap-1 font-bold text-[#0D3328] dark:text-[#8FA89B] group-hover:translate-x-0.5 transition-transform">
-                        <span>Continue</span>
+                        <span>{t('history.continue', 'Continue')}</span>
                         <ArrowRight className="w-3.5 h-3.5" />
                       </div>
                     </div>
@@ -225,13 +227,13 @@ export default function HistoryPage() {
             <div className="bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] p-8 sm:p-12 text-center space-y-3 shadow-xs">
               <Search className="w-8 h-8 text-[#8B978F] mx-auto" />
               <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
-                No conversations found
+                {t('history.noResults', 'No conversations found')}
               </h3>
               <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] max-w-md mx-auto">
-                Try a different search term or clear your filters.
+                {t('history.noResultsDesc', 'Try a different search term or clear your filters.')}
               </p>
               <Button variant="secondary" size="sm" onClick={handleClearFilters} className="font-bold text-xs">
-                Clear Filters
+                {t('history.clearFilters', 'Clear Filters')}
               </Button>
             </div>
           )
@@ -244,17 +246,17 @@ export default function HistoryPage() {
 
             <div className="space-y-1.5 max-w-md mx-auto">
               <h2 className="text-lg font-bold text-[#18211D] dark:text-[#F7F5EF]">
-                No chat history yet
+                {t('history.emptyHeading', 'No chat history yet')}
               </h2>
               <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
-                Start a conversation with BISaarthi to build your chat history.
+                {t('history.emptyDesc', 'Start a conversation with BISaarthi to build your chat history.')}
               </p>
             </div>
 
             <div className="pt-2">
               <Link href="/chat">
                 <Button variant="pill" size="md" icon={<Plus className="w-4 h-4" />} className="font-bold text-xs">
-                  Start New Chat
+                  {t('history.startNew', 'Start New Chat')}
                 </Button>
               </Link>
             </div>

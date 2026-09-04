@@ -7,6 +7,7 @@ import { StandardCard } from '@/components/standards/StandardCard';
 import { Button } from '@/components/common/Button';
 import { MOCK_INITIAL_SAVED_STANDARDS } from '@/data/mockSavedStandards';
 import { StandardCardData } from '@/types';
+import { useLanguage } from '@/context/LanguageContext';
 import {
   Bookmark,
   Search,
@@ -18,6 +19,7 @@ import {
 } from 'lucide-react';
 
 export default function SavedStandardsPage() {
+  const { language, t } = useLanguage();
   const [savedStandards, setSavedStandards] = useState<StandardCardData[]>(
     MOCK_INITIAL_SAVED_STANDARDS
   );
@@ -79,18 +81,22 @@ export default function SavedStandardsPage() {
               href="/dashboard"
               className="text-[#606E66] dark:text-[#BAC5BF] hover:text-[#0D3328] dark:hover:text-white font-medium"
             >
-              Dashboard
+              {t('nav.dashboard')}
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-[#8B978F]" />
             <span className="font-bold text-[#18211D] dark:text-[#F7F5EF] truncate">
-              Saved Standards
+              {t('nav.saved')}
             </span>
           </div>
 
           <div className="flex items-center gap-2">
             <span className="text-[11px] font-bold text-[#0D3328] dark:text-[#A7B8AE] bg-[#E8EFEA] dark:bg-[#1B2B26] px-3 py-1 rounded-full border border-[#D9DDD8] dark:border-[#253831] flex items-center gap-1.5">
               <Bookmark className="w-3.5 h-3.5 text-[#5B8272]" />
-              <span>{savedStandards.length} Standards Bookmarked</span>
+              <span>
+                {language === 'HI'
+                  ? `${savedStandards.length} मानक बुकमार्क किए गए`
+                  : `${savedStandards.length} Standards Bookmarked`}
+              </span>
             </span>
           </div>
         </div>
@@ -101,16 +107,18 @@ export default function SavedStandardsPage() {
             <div className="space-y-2 max-w-3xl">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-[11px] font-bold text-[#606E66] dark:text-[#BAC5BF] bg-[#FAF9F5] dark:bg-[#1B2B26] px-2.5 py-0.5 rounded-full border border-[#D9DDD8] dark:border-[#253831]">
-                  {savedStandards.length} saved standard{savedStandards.length === 1 ? '' : 's'}
+                  {language === 'HI'
+                    ? `${savedStandards.length} सहेजे गए मानक`
+                    : `${savedStandards.length} saved standard${savedStandards.length === 1 ? '' : 's'}`}
                 </span>
               </div>
 
               <h1 className="text-2xl sm:text-3xl font-black text-[#0D3328] dark:text-[#8FA89B] tracking-tight leading-tight">
-                Saved Standards
+                {t('saved.title')}
               </h1>
 
               <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed font-normal">
-                Keep frequently referenced standards in one place for quick access.
+                {t('saved.subtitle')}
               </p>
             </div>
 
@@ -118,7 +126,7 @@ export default function SavedStandardsPage() {
             <div className="shrink-0">
               <Link href="/find-standards">
                 <Button variant="pill" size="sm" icon={<Compass className="w-4 h-4" />} className="font-bold text-xs">
-                  Find More Standards
+                  {language === 'HI' ? 'अधिक मानक खोजें' : 'Find More Standards'}
                 </Button>
               </Link>
             </div>
@@ -136,7 +144,11 @@ export default function SavedStandardsPage() {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search saved standards by number or title..."
+                  placeholder={
+                    language === 'HI'
+                      ? 'IS संख्या या शीर्षक से सहेजे गए मानक खोजें...'
+                      : 'Search saved standards by number or title...'
+                  }
                   className="w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm rounded-full border border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] focus:outline-none focus:ring-2 focus:ring-[#5B8272]/20 focus:border-[#0D3328] transition-all"
                 />
                 {searchQuery && (
@@ -157,9 +169,9 @@ export default function SavedStandardsPage() {
                   onChange={(e) => setStatusFilter(e.target.value)}
                   className="w-full px-3.5 py-2.5 text-xs sm:text-sm rounded-full border border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] focus:outline-none focus:border-[#0D3328] transition-all cursor-pointer"
                 >
-                  <option value="all">All Statuses</option>
-                  <option value="active">Active Standards Only</option>
-                  <option value="under_revision">Under Revision</option>
+                  <option value="all">{language === 'HI' ? 'सभी स्थितियां' : 'All Statuses'}</option>
+                  <option value="active">{language === 'HI' ? 'केवल सक्रिय मानक' : 'Active Standards Only'}</option>
+                  <option value="under_revision">{language === 'HI' ? 'संशोधनाधीन' : 'Under Revision'}</option>
                 </select>
               </div>
 
@@ -170,9 +182,9 @@ export default function SavedStandardsPage() {
                   onChange={(e) => setSortBy(e.target.value as 'recent' | 'number' | 'relevance')}
                   className="w-full px-3.5 py-2.5 text-xs sm:text-sm rounded-full border border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] focus:outline-none focus:border-[#0D3328] transition-all cursor-pointer"
                 >
-                  <option value="recent">Recently Saved</option>
-                  <option value="number">Standard Number (A–Z)</option>
-                  <option value="relevance">Highest Relevance</option>
+                  <option value="recent">{language === 'HI' ? 'हाल ही में सहेजे गए' : 'Recently Saved'}</option>
+                  <option value="number">{language === 'HI' ? 'मानक संख्या (A–Z)' : 'Standard Number (A–Z)'}</option>
+                  <option value="relevance">{language === 'HI' ? 'उच्चतम प्रासंगिकता' : 'Highest Relevance'}</option>
                 </select>
               </div>
             </div>

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { useLanguage } from '@/context/LanguageContext';
 import { FlaskConical, Building2, ArrowRight } from 'lucide-react';
 
 interface RelatedToolsNavProps {
@@ -10,16 +11,17 @@ interface RelatedToolsNavProps {
 }
 
 export const RelatedToolsNav: React.FC<RelatedToolsNavProps> = ({ isNumber, className = '' }) => {
+  const { t } = useLanguage();
   const encoded = encodeURIComponent(isNumber);
 
   return (
     <div className={`space-y-3 ${className}`}>
       <div>
         <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] uppercase tracking-wider">
-          Related Compliance Tools
+          {t('std.scopeTitle', 'Related Compliance Tools')}
         </h3>
         <p className="text-xs text-[#606E66] dark:text-[#8B978F]">
-          Drill down into testing procedures and accredited laboratory networks for this standard
+          {t('chat.subtitle', 'Drill down into testing procedures and accredited laboratory networks for this standard')}
         </p>
       </div>
 
@@ -35,7 +37,7 @@ export const RelatedToolsNav: React.FC<RelatedToolsNavProps> = ({ isNumber, clas
             </div>
             <div className="min-w-0">
               <h4 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] group-hover:text-[#0D3328] dark:group-hover:text-[#8FA89B] transition-colors">
-                Tests & Certification
+                {t('std.testsTab', 'Tests & Certification')}
               </h4>
               <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] line-clamp-2 mt-0.5 leading-relaxed">
                 Explore mandatory/voluntary test routines, Scheme-I ISI Mark procedures, and compliance checklists.
@@ -59,7 +61,7 @@ export const RelatedToolsNav: React.FC<RelatedToolsNavProps> = ({ isNumber, clas
             </div>
             <div className="min-w-0">
               <h4 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] group-hover:text-[#0D3328] dark:group-hover:text-[#8FA89B] transition-colors">
-                Recognized Laboratories
+                {t('std.labsTab', 'Recognized Laboratories')}
               </h4>
               <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] line-clamp-2 mt-0.5 leading-relaxed">
                 Directory of BIS central, regional, and NABL-accredited third-party testing laboratories.

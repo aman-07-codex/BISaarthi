@@ -8,6 +8,7 @@ import { ChatComposer } from './ChatComposer';
 import { ChatEmptyState } from './ChatEmptyState';
 import { MOCK_DEFAULT_CONVERSATION, MOCK_STANDARDS_ELECTRIC_HEATER, MOCK_SOURCES, getChatConversationById } from '@/data/mockChatData';
 import { Plus, History, Sparkles, Loader2 } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface ChatViewProps {
   initialConversationId?: string;
@@ -18,6 +19,7 @@ export const ChatView: React.FC<ChatViewProps> = ({
   initialConversationId,
   initialPrompt,
 }) => {
+  const { language, t } = useLanguage();
   const [messages, setMessages] = useState<ChatMessageData[]>(() => {
     if (initialConversationId) {
       const conv = getChatConversationById(initialConversationId);
@@ -156,7 +158,7 @@ export const ChatView: React.FC<ChatViewProps> = ({
           <div className="w-2.5 h-2.5 rounded-full bg-[#2D9D5D] animate-pulse" />
           <div>
             <h2 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
-              BISaarthi Guidance Chat
+              {language === 'HI' ? 'बीआईएस सारथी मार्गदर्शन चैट' : 'BISaarthi Guidance Chat'}
             </h2>
           </div>
         </div>
@@ -165,10 +167,10 @@ export const ChatView: React.FC<ChatViewProps> = ({
           <Link
             href="/history"
             className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-[#606E66] dark:text-[#BAC5BF] hover:text-[#0D3328] dark:hover:text-[#F7F5EF] hover:bg-[#EFECE6] dark:hover:bg-[#20312B] rounded-full transition-colors"
-            title="View chat history"
+            title={t('nav.history')}
           >
             <History className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">History</span>
+            <span className="hidden sm:inline">{t('nav.history')}</span>
           </Link>
 
           <button
@@ -177,7 +179,7 @@ export const ChatView: React.FC<ChatViewProps> = ({
             className="inline-flex items-center gap-1 px-3 py-1 text-xs font-bold bg-[#FAF9F5] dark:bg-[#15221E] text-[#0D3328] dark:text-[#8FA89B] border border-[#D9DDD8] dark:border-[#253831] hover:bg-[#EFECE6] dark:hover:bg-[#20312B] rounded-full shadow-2xs transition-colors cursor-pointer"
           >
             <Plus className="w-3.5 h-3.5" />
-            <span>New Chat</span>
+            <span>{language === 'HI' ? 'नई चैट' : 'New Chat'}</span>
           </button>
         </div>
       </div>
@@ -202,7 +204,11 @@ export const ChatView: React.FC<ChatViewProps> = ({
                   <div className="bg-[#FAF9F5] dark:bg-[#1B2B26] rounded-2xl rounded-tl-xs border border-[#D9DDD8] dark:border-[#253831] p-4 shadow-xs">
                     <div className="flex items-center gap-2 text-xs font-semibold text-[#606E66] dark:text-[#BAC5BF]">
                       <Sparkles className="w-3.5 h-3.5 text-[#5B8272] animate-pulse" />
-                      <span>Searching Indian Standards and regulatory publications...</span>
+                      <span>
+                        {language === 'HI'
+                          ? 'भारतीय मानकों और विनियामक प्रकाशनों की खोज जारी है...'
+                          : 'Searching Indian Standards and regulatory publications...'}
+                      </span>
                     </div>
                   </div>
                 </div>

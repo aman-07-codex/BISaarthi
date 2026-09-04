@@ -10,6 +10,7 @@ import { UncertaintyNotice } from '@/components/common/UncertaintyNotice';
 import { Button } from '@/components/common/Button';
 import { getLaboratoriesDataBySlug } from '@/data/mockComplianceData';
 import { LaboratoryItem } from '@/types';
+import { useLanguage } from '@/context/LanguageContext';
 import {
   ArrowLeft,
   ChevronRight,
@@ -35,6 +36,7 @@ interface LaboratoriesPageProps {
 
 export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageProps) {
   const { isNumber } = use(params);
+  const { t } = useLanguage();
   const data = getLaboratoriesDataBySlug(isNumber);
   const encodedStandard = encodeURIComponent(data.is_number);
 
@@ -80,18 +82,18 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
               className="inline-flex items-center gap-1 text-[#606E66] dark:text-[#BAC5BF] hover:text-[#0D3328] dark:hover:text-white font-medium"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Find Standards</span>
+              <span>{t('nav.find', 'Find Standards')}</span>
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-[#8B978F]" />
             <Link
               href={`/standards/${encodedStandard}`}
               className="text-[#606E66] dark:text-[#BAC5BF] hover:text-[#0D3328] dark:hover:text-white font-medium truncate max-w-[140px] sm:max-w-none"
             >
-              Standard Details
+              {t('cat.standards', 'Standard Details')}
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-[#8B978F]" />
             <span className="font-bold text-[#18211D] dark:text-[#F7F5EF] truncate">
-              Recognized Laboratories
+              {t('std.labsTab', 'Recognized Laboratories')}
             </span>
           </div>
 

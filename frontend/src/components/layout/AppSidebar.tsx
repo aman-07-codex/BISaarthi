@@ -18,6 +18,7 @@ import {
   X,
 } from 'lucide-react';
 import { useTheme } from '@/context/ThemeContext';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface AppSidebarProps {
   isMobileOpen?: boolean;
@@ -29,22 +30,22 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
   onMobileClose,
 }) => {
   const pathname = usePathname();
-  const [lang, setLang] = useState<'EN' | 'HI'>('EN');
+  const { language, toggleLanguage, t } = useLanguage();
   const { isDark, toggleTheme } = useTheme();
 
   const mainNav = [
     {
-      name: 'AI Chatbot',
+      name: t('nav.ask'),
       href: '/chat',
       icon: MessageSquare,
     },
     {
-      name: 'Find Standards',
+      name: t('nav.find'),
       href: '/find-standards',
       icon: Search,
     },
     {
-      name: 'Compare Standards',
+      name: t('nav.compare'),
       href: '/compare',
       icon: Scale,
     },
@@ -52,12 +53,12 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
 
   const yourSpaceNav = [
     {
-      name: 'Saved Standards',
+      name: t('nav.saved'),
       href: '/saved-standards',
       icon: Bookmark,
     },
     {
-      name: 'History',
+      name: t('nav.history'),
       href: '/history',
       icon: History,
     },
@@ -65,7 +66,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
 
   const accountNav = [
     {
-      name: 'Settings',
+      name: t('nav.settings'),
       href: '/settings',
       icon: Settings,
     },
@@ -146,7 +147,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
                 <div className="w-5 h-5 flex items-center justify-center">
                   <span className={`w-2 h-2 rounded-full ${pathname === '/dashboard' ? 'bg-[#A7B8AE]' : 'bg-[#5B8272]'}`} />
                 </div>
-                <span>Dashboard Overview</span>
+                <span>{t('nav.dashboard')}</span>
               </Link>
             </div>
 
@@ -154,7 +155,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
             <div>
               <div className="px-3 mb-2">
                 <span className="text-[11px] font-bold tracking-wider text-[#8FA89B] uppercase">
-                  Main
+                  {t('nav.primary')}
                 </span>
               </div>
 
@@ -164,7 +165,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
                   const Icon = item.icon;
                   return (
                     <Link
-                      key={item.name}
+                      key={item.href}
                       href={item.href}
                       onClick={onMobileClose}
                       className={`group flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-medium transition-all ${
@@ -191,7 +192,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
             <div>
               <div className="px-3 mb-2">
                 <span className="text-[11px] font-bold tracking-wider text-[#8FA89B] uppercase">
-                  Your Space
+                  {t('nav.workspace')}
                 </span>
               </div>
 
@@ -201,7 +202,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
                   const Icon = item.icon;
                   return (
                     <Link
-                      key={item.name}
+                      key={item.href}
                       href={item.href}
                       onClick={onMobileClose}
                       className={`group flex items-center justify-between px-3 py-2 rounded-xl text-sm font-medium transition-all ${
@@ -228,7 +229,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
             <div>
               <div className="px-3 mb-2">
                 <span className="text-[11px] font-bold tracking-wider text-[#8FA89B] uppercase">
-                  Account
+                  {t('cat.account')}
                 </span>
               </div>
 
@@ -238,7 +239,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
                   const Icon = item.icon;
                   return (
                     <Link
-                      key={item.name}
+                      key={item.href}
                       href={item.href}
                       onClick={onMobileClose}
                       className={`group flex items-center justify-between px-3 py-2 rounded-xl text-sm font-medium transition-all ${
@@ -270,12 +271,12 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
             {/* Language Switch */}
             <button
               type="button"
-              onClick={() => setLang(lang === 'EN' ? 'HI' : 'EN')}
+              onClick={toggleLanguage}
               className="flex items-center gap-1.5 px-2 py-1 rounded-lg hover:bg-[#12332A] text-[#BAC5BF] hover:text-white transition-colors cursor-pointer"
-              title="Toggle language (English / Hindi)"
+              title={t('nav.toggleLang')}
             >
               <Globe className="w-3.5 h-3.5 text-[#5B8272]" />
-              <span className="font-semibold">{lang}</span>
+              <span className="font-semibold">{language}</span>
             </button>
 
             {/* Theme Switch */}
@@ -290,7 +291,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
               ) : (
                 <Moon className="w-3.5 h-3.5 text-[#A7B8AE]" />
               )}
-              <span>{isDark ? 'Light' : 'Dark'}</span>
+              <span>{isDark ? t('nav.light') : t('nav.dark')}</span>
             </button>
           </div>
 
@@ -305,7 +306,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
                   Aman Mishra
                 </p>
                 <p className="text-[10px] text-[#8FA89B] truncate">
-                  MSME Manufacturer
+                  {t('nav.userRole')}
                 </p>
               </div>
             </div>
@@ -313,7 +314,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
             <button
               type="button"
               className="p-1.5 rounded-lg text-[#8FA89B] hover:text-[#C86D51] hover:bg-[#12332A] transition-colors"
-              title="Sign Out"
+              title={t('nav.logout')}
             >
               <LogOut className="w-3.5 h-3.5" />
             </button>
