@@ -5,7 +5,6 @@ import { AppLayout } from '@/components/layout/AppLayout';
 import { Button } from '@/components/common/Button';
 import { StandardCard } from '@/components/standards/StandardCard';
 import { DocumentDropzone } from '@/components/standards/DocumentDropzone';
-import { UncertaintyNotice } from '@/components/common/UncertaintyNotice';
 import { StandardCardData } from '@/types';
 import {
   MOCK_FIND_STANDARDS_ELECTRIC_HEATER,
@@ -324,10 +323,6 @@ export default function FindStandardsPage() {
                 Based on your product description, BISaarthi identified electrical heating element design, household appliance general safety, and 3-pin plug cord set requirements as the primary regulatory domains under the <strong>Electrical Appliances Quality Control Order (QCO)</strong>.
               </p>
             </div>
-
-            {/* Uncertainty Notice */}
-            <UncertaintyNotice message="Results are guidance and do not constitute a formal certification determination. Specific test limits, earthing parameters, and laboratory test protocols must be verified with the official BIS standard clauses before starting mass production." />
-
             {/* List of Ranked Standard Cards */}
             <div className="space-y-4">
               {filteredResults && filteredResults.length > 0 ? (
