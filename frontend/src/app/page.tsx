@@ -10,6 +10,7 @@ import {
   Search,
   Building2,
   Compass,
+  ArrowLeftRight,
   Menu,
   X,
   Plus,
@@ -440,23 +441,23 @@ export default function LandingPage() {
 
           {/* 3 Capabilities Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Card 1: Find Applicable Standards */}
+            {/* Card 1: Ask BISaarthi */}
             <div className="p-7 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-xs hover:border-[#5B8272] transition-all flex flex-col justify-between space-y-6">
               <div className="space-y-4">
                 <div className="w-11 h-11 rounded-full bg-[#0D3328] dark:bg-[#164B3A] text-white flex items-center justify-center shadow-xs">
-                  <Search className="w-5 h-5" />
+                  <Sparkles className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg font-bold text-[#18211D] dark:text-[#F7F5EF]">
-                  Find Applicable Standards
+                  Ask BISaarthi
                 </h3>
-                <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
-                  Describe your product and discover relevant Indian Standards with rationale.
+                <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
+                  Ask questions about Indian Standards, BIS requirements, certification, testing, and related technical queries in natural language.
                 </p>
               </div>
 
               <div className="pt-4 border-t border-[#EFECE6] dark:border-[#253831]">
                 <Link
-                  href="/auth/login"
+                  href="/chat"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:text-[#164B3A] dark:hover:text-[#A7B8AE] transition-colors"
                 >
                   <span>Explore</span>
@@ -465,23 +466,23 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Card 2: Understand Why It Applies */}
+            {/* Card 2: Find Standards */}
             <div className="p-7 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-xs hover:border-[#5B8272] transition-all flex flex-col justify-between space-y-6">
               <div className="space-y-4">
                 <div className="w-11 h-11 rounded-full bg-[#FDF2EE] dark:bg-[#3E1A14] text-[#C86D51] flex items-center justify-center shadow-xs">
-                  <Compass className="w-5 h-5" />
+                  <Search className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg font-bold text-[#18211D] dark:text-[#F7F5EF]">
-                  Understand Why It Applies
+                  Find Standards
                 </h3>
-                <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
-                  Get clear explanations on why a standard may apply to your product.
+                <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
+                  Describe your product or requirement and BISaarthi helps identify the Indian Standards that may apply to it.
                 </p>
               </div>
 
               <div className="pt-4 border-t border-[#EFECE6] dark:border-[#253831]">
                 <Link
-                  href="/auth/login"
+                  href="/find-standards"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:text-[#164B3A] dark:hover:text-[#A7B8AE] transition-colors"
                 >
                   <span>Explore</span>
@@ -490,23 +491,23 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Card 3: Explore BIS Requirements */}
+            {/* Card 3: Compare Standards */}
             <div className="p-7 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-xs hover:border-[#5B8272] transition-all flex flex-col justify-between space-y-6">
               <div className="space-y-4">
                 <div className="w-11 h-11 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] flex items-center justify-center shadow-xs">
-                  <Building2 className="w-5 h-5" />
+                  <ArrowLeftRight className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg font-bold text-[#18211D] dark:text-[#F7F5EF]">
-                  Explore BIS Requirements
+                  Compare Standards
                 </h3>
-                <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
-                  Understand certification procedures and other relevant BIS services.
+                <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
+                  Compare two Indian Standards side by side to understand their scope, requirements, applicability, and key differences.
                 </p>
               </div>
 
               <div className="pt-4 border-t border-[#EFECE6] dark:border-[#253831]">
                 <Link
-                  href="/auth/login"
+                  href="/compare"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:text-[#164B3A] dark:hover:text-[#A7B8AE] transition-colors"
                 >
                   <span>Explore</span>
