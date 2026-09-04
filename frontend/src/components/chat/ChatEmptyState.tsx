@@ -17,6 +17,13 @@ export const ChatEmptyState: React.FC<ChatEmptyStateProps> = ({ onSelectPrompt }
     onSelectPrompt(customPrompt.trim());
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSubmit(e);
+    }
+  };
+
   return (
     <div className="max-w-3xl mx-auto py-6 sm:py-10 px-4 space-y-8 animate-in fade-in duration-200">
       {/* Intro Hero */}
@@ -43,6 +50,7 @@ export const ChatEmptyState: React.FC<ChatEmptyStateProps> = ({ onSelectPrompt }
           <textarea
             value={customPrompt}
             onChange={(e) => setCustomPrompt(e.target.value)}
+            onKeyDown={handleKeyDown}
             placeholder="Ask about an Indian Standard, product, requirement, testing or certification..."
             rows={3}
             className="w-full p-4 text-xs sm:text-sm rounded-2xl bg-[#FAF9F5] dark:bg-[#1B2B26] border border-[#D9DDD8] dark:border-[#253831] focus:outline-none focus:border-[#0D3328] focus:ring-2 focus:ring-[#5B8272]/20 text-[#18211D] dark:text-[#F7F5EF] placeholder-[#8B978F] resize-none transition-all leading-relaxed"

@@ -214,8 +214,10 @@ export const ChatView: React.FC<ChatViewProps> = ({
         )}
       </div>
 
-      {/* Fixed/Sticky Bottom Chat Composer */}
-      <ChatComposer onSendMessage={handleSendMessage} isLoading={isThinking} />
+      {/* Fixed/Sticky Bottom Chat Composer - Only displayed during an active conversation */}
+      {!isEmpty && (
+        <ChatComposer onSendMessage={handleSendMessage} isLoading={isThinking} />
+      )}
     </div>
   );
 };
