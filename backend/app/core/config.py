@@ -65,12 +65,20 @@ class Settings(BaseSettings):
         description="Configured LLM provider: 'gemini' or 'mock'",
     )
 
+    @field_validator("ALLOWED_ORIGINS", mode="before")
+    @classmethod
+    def parse_allowed_origins(cls, v):
+        if isinstance(v, str):
+            if not v.strip():
+                return None
+            return [origin.strip() for origin in v.split(",") if origin.strip()]
+        return v
+
     @field_validator("JWT_SECRET_KEY")
     @classmethod
     def validate_jwt_secret(cls, v: str, info) -> str:
         # If in production and default key is used, raise error
         return v
-
 
     @property
     def is_development(self) -> bool:
@@ -84,7 +92,7 @@ class Settings(BaseSettings):
             "http://127.0.0.1:3000",
         }
         if self.ALLOWED_ORIGINS:
-            origins.update(self.ALLOWED_ORIGINS)
+            origins.update([o.rstrip("/") for o in self.ALLOWED_ORIGINS])
         return list(origins)
 
 
