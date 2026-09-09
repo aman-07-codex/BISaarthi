@@ -70,18 +70,14 @@ def create_app() -> FastAPI:
         lifespan=lifespan,
     )
 
-    # CORS Middleware
-    cors_kwargs = {
-        "allow_credentials": True,
-        "allow_methods": ["*"],
-        "allow_headers": ["*"],
-    }
-    if "*" in settings.cors_origins:
-        cors_kwargs["allow_origin_regex"] = r"^https?://.*"
-    else:
-        cors_kwargs["allow_origins"] = settings.cors_origins
-
-    app.add_middleware(CORSMiddleware, **cors_kwargs)
+    # CORS Middleware - Supports Vercel deployments, localhost, and custom origins
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origin_regex=r"^https?://.*",
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
 
     # Request Logging Middleware
     app.add_middleware(RequestLoggingMiddleware)

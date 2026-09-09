@@ -88,6 +88,7 @@ class Settings(BaseSettings):
     def cors_origins(self) -> List[str]:
         origins = {
             self.FRONTEND_URL.rstrip("/"),
+            "https://bisaarthi-sigma.vercel.app",
             "http://localhost:3000",
             "http://127.0.0.1:3000",
         }
