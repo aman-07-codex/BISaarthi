@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 16369,
+      "standardEncId": "eyJpdiI6ImxvcllMd3FSR1ljeitqVjl6bE1ieGc9PSIsInZhbHVlIjoiSXhoQURQOFlDS3lXU1A4WHY5c3V3Zz09IiwibWFjIjoiMzA0OThiMGRhOTNmNWQ0ODczNDQ5M2ZlYzk3MTA0MGJiZmI5NTU5NzQ2OTFiYWMyY2Q5NzE4ODU5M2UzZWIzNyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 9103:1999  Concrete Admixtures -Specification (First Revision)",
+      "standardNumber": "IS 9103:1999",
+      "standardName": " Concrete Admixtures -Specification (First Revision)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 02 - Cement And Concrete",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "1999-04-30",
+      "publishedOnFormatted": "30 Apr 1999"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

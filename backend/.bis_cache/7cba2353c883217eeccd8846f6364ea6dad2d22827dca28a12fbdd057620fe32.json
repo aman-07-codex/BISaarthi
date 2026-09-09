@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 10661,
+      "standardEncId": "eyJpdiI6IkIwRWZYb0RkeW01ZVNTTll0eVdKNFE9PSIsInZhbHVlIjoicDJXT1ZiZmprUWYwOG91TU4vWGtXZz09IiwibWFjIjoiZjEyMjM1YjQwZGEzMGY4Y2YxZTQzMjA3MDhiM2JhOTdjMjE5MWZhMGE1YTYxNzVmOGE1M2MxMDFmZDhmZTQwYyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 4031 (Part 1):1996 Methods of Physical Tests for Hydraulic Cement: Part 1 Determination of Fineness by Dry Sieving (Second Revision)",
+      "standardNumber": "IS 4031 (Part 1):1996",
+      "standardName": "Methods of Physical Tests for Hydraulic Cement: Part 1 Determination of Fineness by Dry Sieving (Second Revision)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 02 - Cement And Concrete",
+      "typeOfStandardName": "Methods of Tests",
+      "publishedOn": "1996-05-31",
+      "publishedOnFormatted": "31 May 1996"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

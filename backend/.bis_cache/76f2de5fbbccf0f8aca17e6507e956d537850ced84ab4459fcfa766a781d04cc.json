@@ -1,0 +1,22 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Standard details fetched successfully",
+  "data": [
+    {
+      "standardId": 25779,
+      "pk_is_id": 25898,
+      "standardEncId": "eyJpdiI6Ii8xYUpmRVQ4SGw3Yzk5RVppdkd3ZWc9PSIsInZhbHVlIjoiVkxUVy9Cb1JGODdzK3V6SHRNY3F5UT09IiwibWFjIjoiMmU5YzYyMGViMWI2NmZiNTIxNmM2NDQ1MzcyZjc1Y2ZiZTA4NzFlYTUwMjdkOGMxNmJjM2I3MzhmNWQ0MmM1ZCIsInRhZyI6IiJ9",
+      "standardEncIId": "eyJpdiI6IjBKeHd4ZGduUnRDSTlNbFJaSXd5dFE9PSIsInZhbHVlIjoiYXEyRDAyaXlHUmhZT0lIeXEvZ0ZkZz09IiwibWFjIjoiMDdiZjZkODhmZmM1Nzc3YTkxYTNhYTk1ZTBhODk3NDQ3ZmNlODE5YmIzNjI3N2NjNjU1YTNjZjlmNzAxZjQxNyIsInRhZyI6IiJ9",
+      "standardNumber": "IS 4985:2021",
+      "standardName": "Unplasticized PVC Pipes for Potable Water Supplies - Specification (Fourth Revision)",
+      "departmentId": 63,
+      "departmentEncId": "eyJpdiI6IkVkZjNrcU11RG42VGpLV3ZuNEsyOGc9PSIsInZhbHVlIjoibTBrOXR6clpUY3hkM1RYV0tNblFqUT09IiwibWFjIjoiN2ViZTMzY2U5ZTEzOTIyNjllZDU3ODE0OWMyMjY3NGEzOWMwNzQzMDc5NDJmNDBkMWI3NTM4NDljYzFiMTUyMCIsInRhZyI6IiJ9",
+      "committeeId": 217,
+      "committeeEncId": "eyJpdiI6Ik13TTVCUERHYXRLekxlcHZTV1pBaFE9PSIsInZhbHVlIjoiSHNIeUl3bkdlMm1SQ3laZnZZOXozUT09IiwibWFjIjoiMDA1NTM3MzRkZWY4NTE2NjBhOGE0MGU3YzA0YzZlY2U1N2I0OGM0YjI4NGU3NjQ5MmJmNzMwNTI4MDExMzRjYyIsInRhZyI6IiJ9",
+      "deptPreparedName": "Civil Engineering Department(CED)",
+      "secCommitteePreparedName": "CED 50 - Plastic Piping System",
+      "reviewId": "eyJpdiI6ImZTOVBzZm40RnVaTER5UFJpQjJwM2c9PSIsInZhbHVlIjoiSEpBdmc1dFZRb1lsM1Z0Q3JpYlcxZz09IiwibWFjIjoiOTAxOWU4YWY4ZTI1MTdkZThhZDZkN2EwMmZlZjdkNDM4ODM0ZjU0Nzg0Zjc1M2I4YjRkMDY2MTVkMjAwYTMxMyIsInRhZyI6IiJ9"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 12323,
+      "standardEncId": "eyJpdiI6Ikc4UklqM05JL0ZvT0NmaU92L05MdVE9PSIsInZhbHVlIjoiVG8wNFE1VmxUQ3Z3Z3FXM0RKeEpmZz09IiwibWFjIjoiNmQ5ZjI4MTNiNmQ4NDNkNWZlZDZiOGI3ZmIyNDc2ZjZjNmMyMDc2MGJlMWRiMTIwMTAzMWY1OTU2MWViMDRlYiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 555:1979 Specification for electric table type fans and regulators (Third Revision)",
+      "standardNumber": "IS 555:1979",
+      "standardName": "Specification for electric table type fans and regulators (Third Revision)",
+      "departmentName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "sectionalCommitteeName": "ETD 32 - Electrical Appliances",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "1980-06-30",
+      "publishedOnFormatted": "30 Jun 1980"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

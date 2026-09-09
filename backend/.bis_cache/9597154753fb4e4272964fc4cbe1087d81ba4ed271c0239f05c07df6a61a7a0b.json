@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 923,
+      "standardEncId": "eyJpdiI6Im5QR1B5TTRiZm5nMkZraHo1ZUNCeXc9PSIsInZhbHVlIjoidWNiWW96SWVaQTl6NkU0NTRXdnFTQT09IiwibWFjIjoiYjIwY2Q5MzAxODJkZDVjNjUxNDkwMGNjYWMyOGZlM2Y3NDlkN2E0OTMzMWVlODI2YTA5NDM4YzM1MGQ3Yzg0YiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 10146:1982 Specification for polyethylene for its safe use in contact with foodstuffs, pharmaceuticals and drinking water",
+      "standardNumber": "IS 10146:1982",
+      "standardName": "Specification for polyethylene for its safe use in contact with foodstuffs, pharmaceuticals and drinking water ",
+      "departmentName": "PETROLEUM, COAL AND RELATED PRODUCTS DEPARTMENT (PCD)",
+      "sectionalCommitteeName": "PCD 12 - Plastics",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "1982-06-30",
+      "publishedOnFormatted": "30 Jun 1982"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

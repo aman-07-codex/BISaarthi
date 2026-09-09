@@ -1,0 +1,37 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Standard details fetched successfully",
+  "data": [
+    {
+      "standardId": 5724,
+      "pk_is_id": 5724,
+      "standardEncId": "eyJpdiI6ImRHVitmOTc3VHJlSzNjc0I2c0w5K1E9PSIsInZhbHVlIjoiMitudTVrSkFHUWJNNnhkcFNuR3ZBZz09IiwibWFjIjoiMmEyYzc0ZWEwNGYxYzFiMzc2ZmNjYmUyYjlkZjJhZWVmN2ExYzk2ZDQzOTlkYTBjYWNlZWM0MTE1ZjY1MDc1ZiIsInRhZyI6IiJ9",
+      "standardEncIId": "eyJpdiI6ImtFaTI1djRXRlJxaUZFc1dPTEp3U1E9PSIsInZhbHVlIjoiTGkrVGhhUk5WanZxOWQ0clY4eDVSUT09IiwibWFjIjoiOWZlZjA0OTlmODM1ZDM3YjdiZDNmYjNiYmNmODM2M2E5MmIxZTc1NDk0MDA1ZjM4MThhN2FiYzE3M2E2NjQ2ZSIsInRhZyI6IiJ9",
+      "standardNumber": "IS 13920:2016",
+      "standardName": "Ductile Design and Detailing of Reinforced Concrete Structures Subjected to Seismic Forces - Code of Practice (First Revision) ",
+      "departmentId": 63,
+      "departmentEncId": "eyJpdiI6IkFza0xBQmZNL1hWT3RnZ2ZIdzkzRlE9PSIsInZhbHVlIjoiandYMDBPZUdET1I4SVFwbUlyVTVsZz09IiwibWFjIjoiOWEzMDVkZjNmOGNiMDM3Y2Y4NzJiNzAyNDQxMGFmOGJmNTQ4ZDBiYTExNzY0ZWQ1OTE1ZDMxNjZlNGIzZjFlNiIsInRhZyI6IiJ9",
+      "committeeId": 210,
+      "committeeEncId": "eyJpdiI6IitrQ1AyRVBKK29tYkliWWoxR29uWmc9PSIsInZhbHVlIjoieWp5NGxGYkovZWR5TGl0bEk3OWdyUT09IiwibWFjIjoiNWFiOWJjNzJhN2QzNDRhMzY0NjAzNDYwY2UwYmE4Yjg2Yjk3NGRlOTYxODMwZDY1YjI0YzliZmI4MmFhNWVhZCIsInRhZyI6IiJ9",
+      "deptPreparedName": "Civil Engineering Department(CED)",
+      "secCommitteePreparedName": "CED 39 - Earthquake Engineering",
+      "reviewId": "eyJpdiI6Ilp2V0taMlBrNU4zSEpzYkVpZW1Hbmc9PSIsInZhbHVlIjoiUkpoeTBlZTdaeGIvRGFlNXAwZkVNQT09IiwibWFjIjoiZjNhOGY5Yzk2NjQxYzE0ZjIxZjFiYjIxOGIxNTZhMWZjYWQ3YjE3MzQ5ODIzMDBjMzUxZDJmZmIzMjc0ZGY5OSIsInRhZyI6IiJ9"
+    },
+    {
+      "standardId": 5724,
+      "pk_is_id": 5724,
+      "standardEncId": "eyJpdiI6Im1xRW5KOWRVYnJ4ZFZZKzRCeUdIcVE9PSIsInZhbHVlIjoiS0JzNFkzNUpYNWIveXdLb1drNnFYZz09IiwibWFjIjoiNTY4NDk1MWQ3YWMwMWJiYTdmNGVkMzc1NzdkMTYyOTlkOTMzMmI2MjIxZjMwZTZhMTBiZTViNDA4ZDkxYzk3YyIsInRhZyI6IiJ9",
+      "standardEncIId": "eyJpdiI6IjUrSitNY3p4NElYaFVMb3N0RERtNkE9PSIsInZhbHVlIjoib2FxaHNFLzc1TU41SlhzN2FZSTB4UT09IiwibWFjIjoiYmM3OWFiNGRiOTZjZDk2M2JmMzEyYjYwOTI5N2IzMDc3OTRhNTEwMTVhMTk5MTZjNTFlOWM5M2I0N2RhOTBhYiIsInRhZyI6IiJ9",
+      "standardNumber": "IS 13920:2016",
+      "standardName": "Ductile Design and Detailing of Reinforced Concrete Structures Subjected to Seismic Forces - Code of Practice (First Revision) ",
+      "departmentId": 63,
+      "departmentEncId": "eyJpdiI6IlBTMVpWOFh0N0FHNDYrc3hrNkE1QWc9PSIsInZhbHVlIjoiSTNMaC9RQlVnQVJZWXlOa01ZSC9hQT09IiwibWFjIjoiODY5OTE2NDI0Y2UyN2RkM2QyODZhZjNkMTZhNDVlNWJiNmJiYmM3NmFkNGFiNDgxNGZjYzRkOTQ5YzEwMzg3YSIsInRhZyI6IiJ9",
+      "committeeId": 210,
+      "committeeEncId": "eyJpdiI6IkhFRVpjZXJnQ2JKNmxTdVZteG16YkE9PSIsInZhbHVlIjoiN3hyQ2lSenhIaVZMNGpZZzdUV1hrdz09IiwibWFjIjoiOTBhMTI0N2YwMjQyYzMzZmFkNTU0MDc2MDIyOGU2NTkyNTk0ZDQ5ODI5OGZiMjE0Y2MwMTcyZTc0ZjQwY2FiNSIsInRhZyI6IiJ9",
+      "deptPreparedName": "Civil Engineering Department(CED)",
+      "secCommitteePreparedName": "CED 39 - Earthquake Engineering",
+      "reviewId": "eyJpdiI6Ik9ub3JBUFJuUFVYemhsWGF3dyt4NlE9PSIsInZhbHVlIjoiQjBPTFpLbzBWb2wrZU4wRUNkM1c4dz09IiwibWFjIjoiN2Q3OGQzNDc0MjA0MDE2NjA3MTBiODExZjI2NmRhYzk3ZWUwNzJiNDczZTE0MjgyZGQ5OWFiNTA3MTA1YmM5MSIsInRhZyI6IiJ9"
+    }
+  ]
+}

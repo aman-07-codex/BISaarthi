@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 30371,
+      "standardEncId": "eyJpdiI6Im9lUUNJMDJMY3FuVVlreFZnR2tzRHc9PSIsInZhbHVlIjoic0haVWF1ZXEyRmFwbVhtYWVBQXVuZz09IiwibWFjIjoiNjFhNDIzMWY0MWQxZGM3YTlhZmI2YTJhNTdmOTczYWM1YzQxNWEyNDQ3YWNiYTYyMmMwOTNmMWIxNDY4Mjk4NiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 14246:2024 CONTINUOUSLY PRE-PAINTED GALVANIZED STEEL SHEETS AND STRIPS - SPECIFICATION  (Second Revision) Amendment - 1",
+      "standardNumber": "IS 14246:2024",
+      "standardName": "CONTINUOUSLY PRE-PAINTED GALVANIZED STEEL SHEETS AND STRIPS - SPECIFICATION  (Second Revision) Amendment - 1",
+      "departmentName": "METALLURGICAL ENGINEERING DEPARTMENT (MTD)",
+      "sectionalCommitteeName": "MTD 04 - Wrought Steel Products Sectional Committee",
+      "typeOfStandardName": "—",
+      "publishedOn": "2024-02-22",
+      "publishedOnFormatted": "22 Feb 2024"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

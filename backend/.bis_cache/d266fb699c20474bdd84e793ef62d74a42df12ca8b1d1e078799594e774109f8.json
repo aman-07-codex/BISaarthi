@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 13171,
+      "standardEncId": "eyJpdiI6ImxKWG5oZE9jbi81NHNMS09CTnA1Nnc9PSIsInZhbHVlIjoiWHo5UHFQZVZlOFd5bjFyRkg2NlFiZz09IiwibWFjIjoiZmQ5YzM5ODU3ZDQ5NjM3ZmZhNTA3ZWZhODZhOTQ3ZTJjZTk4NTFlYjM2OTI3MzJlZTYwMjE4NjRhMzkxODMzNCIsInRhZyI6IiJ9",
+      "standardLabel": "IS 6312:1994 Polyethylene containers for the transport of materials - Specification (Second Revision)",
+      "standardNumber": "IS 6312:1994",
+      "standardName": "Polyethylene containers for the transport of materials - Specification (Second Revision)",
+      "departmentName": "PETROLEUM, COAL AND RELATED PRODUCTS DEPARTMENT (PCD)",
+      "sectionalCommitteeName": "PCD 21 - Plastics Packaging",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "1994-06-30",
+      "publishedOnFormatted": "30 Jun 1994"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

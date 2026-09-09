@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 10424,
+      "standardEncId": "eyJpdiI6IjhhNDhLZDRYQWxXMUxQZ0RnY24vQ2c9PSIsInZhbHVlIjoiR25kcUphbEhtQ3ZQb1BNbnhQUmZIQT09IiwibWFjIjoiMDY3Y2YzNWZkODUwYzFhOGVkYzg5NDBiZGI3YzdhODhjY2JhODA2MTk1MTU4OTUwNDRjMzFlYTBkNGQwMmYwMSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 383:2016 Coarse and Fine Aggregate for Concrete - Specification (Third Revision)",
+      "standardNumber": "IS 383:2016",
+      "standardName": "Coarse and Fine Aggregate for Concrete - Specification (Third Revision) ",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 02 - Cement And Concrete",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": null,
+      "publishedOnFormatted": "—"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

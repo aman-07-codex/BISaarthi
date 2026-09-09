@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 21219,
+      "standardEncId": "eyJpdiI6IlAxdm90ZWhaKzhUMjZaQXc5bkNYRFE9PSIsInZhbHVlIjoibWVxOHRLYmRwY0FUampGSDNKd1djZz09IiwibWFjIjoiNjIzZGM3MzAyMmY0YTE1NzFlNTZkZTdlNDZiMDJhZWJjY2UxOGI0MGY3Zjc2NTIzYWEwNWNkNTk4NWU0YWU3YSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 15885 (Part 1):2011 Safety of lamp controlgear: Part 1 general requirements",
+      "standardNumber": "IS 15885 (Part 1):2011",
+      "standardName": "Safety of lamp controlgear: Part 1 general requirements",
+      "departmentName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "sectionalCommitteeName": "ETD 23 - Lamps And Related Equipments",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2011-05-31",
+      "publishedOnFormatted": "31 May 2011"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

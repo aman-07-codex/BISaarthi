@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 2740,
+      "standardEncId": "eyJpdiI6IlJOOXp6TVVXa3h2NGNYQTdvcmJUdFE9PSIsInZhbHVlIjoicjIzV0F2L2wrTC9uelYwc1VWMGxuQT09IiwibWFjIjoiY2M5NjY3ZGNkZmE5NWRiNjcwZTY1ZGJkYTc3YWU3YTQ4ODNkYWE2YjBjNDg4ZDg3YmFmODQ0ZDEyMGM4MzMyNSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1161:2014 Steel tubes for structural purposes - Specification (Fifth Revision)",
+      "standardNumber": "IS 1161:2014",
+      "standardName": "Steel tubes for structural purposes - Specification (Fifth Revision)",
+      "departmentName": "METALLURGICAL ENGINEERING DEPARTMENT (MTD)",
+      "sectionalCommitteeName": "MTD 19 - Steel Tubes, Pipes And Fittings Sectional Committee",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2014-09-30",
+      "publishedOnFormatted": "30 Sep 2014"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

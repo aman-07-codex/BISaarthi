@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 21091,
+      "standardEncId": "eyJpdiI6IlBrVEhoLytIVFBESGlCb3VzYVA4UXc9PSIsInZhbHVlIjoiT0ZrN0FQOStpMTUvRm8xWnNOSXhnQT09IiwibWFjIjoiOWYwYjliY2NjNDZiNTFiNzMyZWU2MzI0ZGUwODdkNzVkMjRmYjZlOGEzZjg1MTgzZWRiNjA1OWM1Zjg5NjI4YSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1708 (Part 1):1986 Determination of moisture content (See IS 1708: PARTS 1 TO 18)",
+      "standardNumber": "IS 1708 (Part 1):1986",
+      "standardName": "Determination of moisture content (See IS 1708: PARTS 1 TO 18)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 09 - Timber And Timber Stores",
+      "typeOfStandardName": "Methods of Tests",
+      "publishedOn": null,
+      "publishedOnFormatted": "—"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

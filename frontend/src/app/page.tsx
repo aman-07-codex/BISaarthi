@@ -24,11 +24,18 @@ import { Logo } from '@/components/common/Logo';
 import { ThemeToggle } from '@/components/common/ThemeToggle';
 import { LanguageToggle } from '@/components/common/LanguageToggle';
 import { useLanguage } from '@/context/LanguageContext';
+import { useAuth } from '@/context/AuthContext';
 
 export default function LandingPage() {
   const { t, language } = useLanguage();
+  const { isAuthenticated } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  const askLink = isAuthenticated ? '/chat' : '/auth/login?redirect=/chat';
+  const findLink = isAuthenticated ? '/find-standards' : '/auth/login?redirect=/find-standards';
+  const compareLink = isAuthenticated ? '/compare' : '/auth/login?redirect=/compare';
+  const settingsLink = isAuthenticated ? '/settings' : '/auth/login?redirect=/settings';
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -117,7 +124,7 @@ export default function LandingPage() {
             {/* Global Theme Toggle Button */}
             <ThemeToggle />
 
-            <Link href="/auth/login">
+            <Link href={askLink}>
               <Button
                 variant="pill"
                 size="md"
@@ -186,7 +193,7 @@ export default function LandingPage() {
               </a>
             </nav>
             <div className="pt-2 border-t border-[#D9DDD8] dark:border-[#253831] flex flex-col gap-2">
-              <Link href="/auth/login" className="w-full">
+              <Link href={askLink} className="w-full">
                 <Button variant="pill" size="md" className="w-full justify-center">
                   {t('landing.ctaAsk', 'Ask BISAARTHI')}
                 </Button>
@@ -215,7 +222,7 @@ export default function LandingPage() {
 
               {/* Main Hero CTA Button */}
               <div className="pt-2">
-                <Link href="/auth/login">
+                <Link href={askLink}>
                   <Button
                     variant="pill"
                     size="lg"
@@ -459,12 +466,15 @@ export default function LandingPage() {
           {/* 3 Capabilities Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Card 1: Ask BISaarthi */}
-            <div className="p-7 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-xs hover:border-[#5B8272] transition-all flex flex-col justify-between space-y-6">
+            <Link
+              href={askLink}
+              className="group p-7 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-xs hover:border-[#5B8272] transition-all flex flex-col justify-between space-y-6 cursor-pointer"
+            >
               <div className="space-y-4">
-                <div className="w-11 h-11 rounded-full bg-[#0D3328] dark:bg-[#164B3A] text-white flex items-center justify-center shadow-xs">
+                <div className="w-11 h-11 rounded-full bg-[#0D3328] dark:bg-[#164B3A] text-white flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform">
                   <Sparkles className="w-5 h-5" />
                 </div>
-                <h3 className="text-lg font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                <h3 className="text-lg font-bold text-[#18211D] dark:text-[#F7F5EF] group-hover:text-[#0D3328] dark:group-hover:text-[#A7B8AE] transition-colors">
                   Ask BISaarthi
                 </h3>
                 <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
@@ -473,23 +483,23 @@ export default function LandingPage() {
               </div>
 
               <div className="pt-4 border-t border-[#EFECE6] dark:border-[#253831]">
-                <Link
-                  href="/chat"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:text-[#164B3A] dark:hover:text-[#A7B8AE] transition-colors"
-                >
+                <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] group-hover:text-[#164B3A] dark:group-hover:text-[#A7B8AE] transition-colors">
                   <span>{t('btn.explore', 'Explore')}</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
               </div>
-            </div>
+            </Link>
 
             {/* Card 2: Find Standards */}
-            <div className="p-7 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-xs hover:border-[#5B8272] transition-all flex flex-col justify-between space-y-6">
+            <Link
+              href={findLink}
+              className="group p-7 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-xs hover:border-[#5B8272] transition-all flex flex-col justify-between space-y-6 cursor-pointer"
+            >
               <div className="space-y-4">
-                <div className="w-11 h-11 rounded-full bg-[#FDF2EE] dark:bg-[#3E1A14] text-[#C86D51] flex items-center justify-center shadow-xs">
+                <div className="w-11 h-11 rounded-full bg-[#FDF2EE] dark:bg-[#3E1A14] text-[#C86D51] flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform">
                   <Search className="w-5 h-5" />
                 </div>
-                <h3 className="text-lg font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                <h3 className="text-lg font-bold text-[#18211D] dark:text-[#F7F5EF] group-hover:text-[#0D3328] dark:group-hover:text-[#A7B8AE] transition-colors">
                   Find Standards
                 </h3>
                 <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
@@ -498,23 +508,23 @@ export default function LandingPage() {
               </div>
 
               <div className="pt-4 border-t border-[#EFECE6] dark:border-[#253831]">
-                <Link
-                  href="/find-standards"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:text-[#164B3A] dark:hover:text-[#A7B8AE] transition-colors"
-                >
+                <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] group-hover:text-[#164B3A] dark:group-hover:text-[#A7B8AE] transition-colors">
                   <span>{t('btn.explore', 'Explore')}</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
               </div>
-            </div>
+            </Link>
 
             {/* Card 3: Compare Standards */}
-            <div className="p-7 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-xs hover:border-[#5B8272] transition-all flex flex-col justify-between space-y-6">
+            <Link
+              href={compareLink}
+              className="group p-7 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-xs hover:border-[#5B8272] transition-all flex flex-col justify-between space-y-6 cursor-pointer"
+            >
               <div className="space-y-4">
-                <div className="w-11 h-11 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] flex items-center justify-center shadow-xs">
+                <div className="w-11 h-11 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform">
                   <ArrowLeftRight className="w-5 h-5" />
                 </div>
-                <h3 className="text-lg font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                <h3 className="text-lg font-bold text-[#18211D] dark:text-[#F7F5EF] group-hover:text-[#0D3328] dark:group-hover:text-[#A7B8AE] transition-colors">
                   Compare Standards
                 </h3>
                 <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
@@ -523,15 +533,12 @@ export default function LandingPage() {
               </div>
 
               <div className="pt-4 border-t border-[#EFECE6] dark:border-[#253831]">
-                <Link
-                  href="/compare"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:text-[#164B3A] dark:hover:text-[#A7B8AE] transition-colors"
-                >
+                <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] group-hover:text-[#164B3A] dark:group-hover:text-[#A7B8AE] transition-colors">
                   <span>{t('btn.explore', 'Explore')}</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -782,7 +789,7 @@ export default function LandingPage() {
                 </div>
 
                 <div className="pt-2 relative z-10">
-                  <Link href="/auth/login">
+                  <Link href={askLink}>
                     <Button
                       variant="secondary"
                       size="md"
@@ -836,9 +843,9 @@ export default function LandingPage() {
                 {t('landing.footerResources', 'RESOURCES')}
               </span>
               <ul className="space-y-2 text-xs text-[#BAC5BF]">
-                <li><Link href="/find-standards" className="hover:text-white transition-colors">{t('landing.footerIndianStd', 'Indian Standards')}</Link></li>
-                <li><Link href="/chat" className="hover:text-white transition-colors">{t('landing.footerBisServ', 'BIS Services')}</Link></li>
-                <li><Link href="/settings" className="hover:text-white transition-colors">{t('landing.footerHelp', 'Help Centre')}</Link></li>
+                <li><Link href={findLink} className="hover:text-white transition-colors">{t('landing.footerIndianStd', 'Indian Standards')}</Link></li>
+                <li><Link href={askLink} className="hover:text-white transition-colors">{t('landing.footerBisServ', 'BIS Services')}</Link></li>
+                <li><Link href={settingsLink} className="hover:text-white transition-colors">{t('landing.footerHelp', 'Help Centre')}</Link></li>
               </ul>
             </div>
 

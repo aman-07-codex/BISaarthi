@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 9328,
+      "standardEncId": "eyJpdiI6InBKZjhJd3poY1Bmd3pjT3Z3NHY3RGc9PSIsInZhbHVlIjoieW5QTzRyS1ZLcmpveEZ2aGovUm9qQT09IiwibWFjIjoiNzAwYjgyNTZhNGE5Y2I1ODVjZTg5Yzc1ZjhlZTkwNDdmZDAxY2FkMjc4NzYxMDlmNzIxZDg1NDIzYWRlM2E3MiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 2798:1998 Methods of test for plastics containers (First Revision)",
+      "standardNumber": "IS 2798:1998",
+      "standardName": "Methods of test for plastics containers (First Revision)",
+      "departmentName": "PETROLEUM, COAL AND RELATED PRODUCTS DEPARTMENT (PCD)",
+      "sectionalCommitteeName": "PCD 21 - Plastics Packaging",
+      "typeOfStandardName": "Methods of Tests",
+      "publishedOn": "1998-05-31",
+      "publishedOnFormatted": "31 May 1998"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

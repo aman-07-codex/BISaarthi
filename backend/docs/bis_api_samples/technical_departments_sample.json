@@ -1,0 +1,127 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Technical departments fetched successfully.",
+  "data": [
+    {
+      "departmentId": 109,
+      "deptName": "AYUSH DEPARTMENT",
+      "deptAliasName": "AYD",
+      "preparedName": "AYUSH DEPARTMENT (AYD)",
+      "encryptedDepartmentId": "eyJpdiI6IjIyb1lwNzlrQ2JlVWp4TkxHYmlSOWc9PSIsInZhbHVlIjoiYkdXRlRtY0IwdGlUL1FScmliUVk2UT09IiwibWFjIjoiYmY2MzM3MWU2ZTQyOWJjNjJjZDBjYTU5NjI4MWYyMWRkNmUzMzliMWJjNDRhMWQ1ZTg2NmI4MDhlNmE5NDg4ZSIsInRhZyI6IiJ9"
+    },
+    {
+      "departmentId": 62,
+      "deptName": "CHEMICAL DEPARTMENT",
+      "deptAliasName": "CHD",
+      "preparedName": "CHEMICAL DEPARTMENT (CHD)",
+      "encryptedDepartmentId": "eyJpdiI6IkZyTmFHUkJENnNoTW9mZUsvYmh6aEE9PSIsInZhbHVlIjoiQUZ1ZnNFUEZxQmdrdmsxclpSSkloQT09IiwibWFjIjoiYmQ1ZmY1ZWM2YzcxMDA1ZGMzODM0MzA3Y2NjNmM5NjMyMTM5NzViZmI3MTgzNmE0ODRlMTBkY2VkNzA1YTFhMyIsInRhZyI6IiJ9"
+    },
+    {
+      "departmentId": 63,
+      "deptName": "CIVIL ENGINEERING DEPARTMENT",
+      "deptAliasName": "CED",
+      "preparedName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "encryptedDepartmentId": "eyJpdiI6IjM1VHJ1U2lUZExzYmxnNkF0dmMvaXc9PSIsInZhbHVlIjoicFRwWCs5WWdmUWhMV1RvVjY4RDhmZz09IiwibWFjIjoiYTE2MTBjZmIzMGIyMmJjYTk2Y2JjZjNhMzc1YzRlZjk3OGNmMWNjOTExZGUyM2FhNTBiZjdjZGM2NWFiZGU4YyIsInRhZyI6IiJ9"
+    },
+    {
+      "departmentId": 66,
+      "deptName": "ELECTRONICS AND INFORMATION TECHNOLOGY DEPARTMENT",
+      "deptAliasName": "LITD",
+      "preparedName": "ELECTRONICS AND INFORMATION TECHNOLOGY DEPARTMENT (LITD)",
+      "encryptedDepartmentId": "eyJpdiI6IjFoRmpPYURvTjAxY3ZqOGNQbDRKMkE9PSIsInZhbHVlIjoiaG42VHNzWEV2RDRnZnFlN1dhMUJnUT09IiwibWFjIjoiNTM3OGI1NmNmNjlkMWY3MWZhOGM5YzFmYmNiYjc3ZTE5YzdhNTE4OTM4M2E3MzI2ODEwMTU3MWZlZDY5YTYxOSIsInRhZyI6IiJ9"
+    },
+    {
+      "departmentId": 65,
+      "deptName": "ELECTROTECHNICAL DEPARTMENT",
+      "deptAliasName": "ETD",
+      "preparedName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "encryptedDepartmentId": "eyJpdiI6InpVNnRWL2JWVWJEN3ZaM0xDaWdWSHc9PSIsInZhbHVlIjoiMThnSENoZUdNM3UvMHNQVDcvaktaUT09IiwibWFjIjoiZTI1NDkyMTYwYjVjMmFjYmRjNWE3OWIwNjFhNGFhNDdlNWE3MjcxMjBkZGM5NTVlMTIzZmYwZTAxNjJiZDZiNCIsInRhZyI6IiJ9"
+    },
+    {
+      "departmentId": 110,
+      "deptName": "ENVIRONMENT AND ECOLOGY DEPARTMENT",
+      "deptAliasName": "EED",
+      "preparedName": "ENVIRONMENT AND ECOLOGY DEPARTMENT (EED)",
+      "encryptedDepartmentId": "eyJpdiI6IjI3NU1tV1BNQjJERlpnUVczU0RhR1E9PSIsInZhbHVlIjoiV2pSNU42SHQzZ2lZVjZmSkdhUytadz09IiwibWFjIjoiNDg4YTY0MjdiNjQwODEzNmYxMDg4MTRhOTk1YzY1OTdmNDRkNTY4MTQ5NmVhMjkyZmYyMDBhNTA0NGRkNGFkOSIsInRhZyI6IiJ9"
+    },
+    {
+      "departmentId": 61,
+      "deptName": "FOOD AND AGRICULTURE DEPARTMENT",
+      "deptAliasName": "FAD",
+      "preparedName": "FOOD AND AGRICULTURE DEPARTMENT (FAD)",
+      "encryptedDepartmentId": "eyJpdiI6Ilc3Q09zaGRQRWVkRGFFL0lNSXV5ZlE9PSIsInZhbHVlIjoiWTl0dlN5cXM5MUNkTVdPQVBvNzNmZz09IiwibWFjIjoiNmNiYzM2YmIzYjE2YmM4OGIwMmQ5NzVlODgxOTcxMWQyZDYzMWQ3ZGE4ZjE3MjljZDcwZGY4YzBmZTM3M2U0YSIsInRhZyI6IiJ9"
+    },
+    {
+      "departmentId": 21,
+      "deptName": "MANAGEMENT SYSTEM DEPARTMENT",
+      "deptAliasName": "MSD",
+      "preparedName": "MANAGEMENT SYSTEM DEPARTMENT (MSD)",
+      "encryptedDepartmentId": "eyJpdiI6IkR0OHlsbWd1VWNrT2p3a2JxVG9ZQWc9PSIsInZhbHVlIjoiUGY4QVZvcERqaXB4VFpsYm80NTMrZz09IiwibWFjIjoiYWE0YTIxZGY1MGU5MGYzM2U2NGNhZjhhM2MyYTE0YzI1Y2M1NzdkZmIwZGJjOGU3Njg3YmJmZTE2MGJhMmMxZCIsInRhZyI6IiJ9"
+    },
+    {
+      "departmentId": 68,
+      "deptName": "MECHANICAL ENGINEERING DEPARTMENT",
+      "deptAliasName": "MED",
+      "preparedName": "MECHANICAL ENGINEERING DEPARTMENT (MED)",
+      "encryptedDepartmentId": "eyJpdiI6Ik9LWE9RYnVtK0NESE5lZFJCTmFvZEE9PSIsInZhbHVlIjoiWllOaFRRaUQ0a0ZMaUgzamIyVkxqQT09IiwibWFjIjoiODAxYmVkYmM2MWE3OTgyMWRmOWEwOTZiOTc3ZTdlNTA3MzM3Zjk3MTMzMDY0OWViNjkwY2Y1NmEyMmE0MTRkNyIsInRhZyI6IiJ9"
+    },
+    {
+      "departmentId": 64,
+      "deptName": "MEDICAL EQUIPMENT AND HOSPITAL PLANNING DEPARTMENT",
+      "deptAliasName": "MHD",
+      "preparedName": "MEDICAL EQUIPMENT AND HOSPITAL PLANNING DEPARTMENT (MHD)",
+      "encryptedDepartmentId": "eyJpdiI6Im1CTEc3aDRzOWEvWk9iY2l1eGpZU0E9PSIsInZhbHVlIjoib20wOVFvQ3lFOEpCdDk1bDFtRXYzUT09IiwibWFjIjoiOGJkZTNlYzQ5NGMxYjVjZjM0OTY3ODM2OWZhYmFiMGJiYzgzYzUwOTliYTY3ZmE4MmZiMWIxN2I1MjAxNzZkYyIsInRhZyI6IiJ9"
+    },
+    {
+      "departmentId": 70,
+      "deptName": "METALLURGICAL ENGINEERING DEPARTMENT",
+      "deptAliasName": "MTD",
+      "preparedName": "METALLURGICAL ENGINEERING DEPARTMENT (MTD)",
+      "encryptedDepartmentId": "eyJpdiI6IldQWHJhTGhWSTlpd2NEVUNqTk83MlE9PSIsInZhbHVlIjoieEZJa29MVXBGdTdNaGNheVJDNEFkQT09IiwibWFjIjoiZmRlZGFkNmM5YmZlNDRiY2EyNjYyMTAzNjM3ZDlhMjBkYWRiMWViNDI4Yzk3NzUyYWI3ZWMzMjA2ODY5ZjA3YSIsInRhZyI6IiJ9"
+    },
+    {
+      "departmentId": 69,
+      "deptName": "PETROLEUM, COAL AND RELATED PRODUCTS DEPARTMENT",
+      "deptAliasName": "PCD",
+      "preparedName": "PETROLEUM, COAL AND RELATED PRODUCTS DEPARTMENT (PCD)",
+      "encryptedDepartmentId": "eyJpdiI6IlNvZ1ZWUWliMGswUW1WcGlOUEpIOUE9PSIsInZhbHVlIjoiYTVXNXE2UWd5WGRrNXdEUTBhTWIwUT09IiwibWFjIjoiOWVkNWQ2OGJmYzcwMzllYTFkNDlhMjI4ZGZmZjBhOWFmN2QxY2I5OTM1YWIzYmU0NDlhZmFkYjI0NzVjMTU4NyIsInRhZyI6IiJ9"
+    },
+    {
+      "departmentId": 74,
+      "deptName": "PRODUCTION AND GENERAL ENGINEERING DEPARTMENT",
+      "deptAliasName": "PGD",
+      "preparedName": "PRODUCTION AND GENERAL ENGINEERING DEPARTMENT (PGD)",
+      "encryptedDepartmentId": "eyJpdiI6Ii9rNEdablB2dEhnd1d0WDRidVcwTnc9PSIsInZhbHVlIjoiTHRheHpaWXp3clJFMWp4Rmg0aTgyUT09IiwibWFjIjoiYmVmYTk0YmY4OGY0N2RmZDI1N2MxZWEwZmZkYTNkZjE2YTlhNDQ4OWVjMjYwODQ3ZTFkZTA5ZGZmMmMyNjA4NiIsInRhZyI6IiJ9"
+    },
+    {
+      "departmentId": 107,
+      "deptName": "SERVICE SECTOR DEPARTMENT",
+      "deptAliasName": "SSD",
+      "preparedName": "SERVICE SECTOR DEPARTMENT (SSD)",
+      "encryptedDepartmentId": "eyJpdiI6IjlvU0U5bm1lN2IrTlBTRlZvd3Zrc2c9PSIsInZhbHVlIjoiSTBNOUVrcGNnYTdqT2laWUF4RjJ5dz09IiwibWFjIjoiYTY5YWM5Mzk3ZDI4YjI5NGY0ZWQxNzFiNmYxM2ViODdlMmIzZGNkNWY5ZTQxMTE4Y2UxYTQ2ZmM4MzVkMmZkYyIsInRhZyI6IiJ9"
+    },
+    {
+      "departmentId": 71,
+      "deptName": "TEXTILE DEPARTMENT",
+      "deptAliasName": "TXD",
+      "preparedName": "TEXTILE DEPARTMENT (TXD)",
+      "encryptedDepartmentId": "eyJpdiI6Ijd1eUtIUWxmaW82V1hLUnJhNnJLTUE9PSIsInZhbHVlIjoia3Z6cGNzbUF3Nk4zUkNxMHFyNHpndz09IiwibWFjIjoiZTkxNzRiYTllYTIzODlmNTU3YjBkNmIxOGQ3MjViYjJkYzAxMjI1ZDRjMTQ4ZmQ2NmI5OGZkNjVmNDJjZWM2OSIsInRhZyI6IiJ9"
+    },
+    {
+      "departmentId": 67,
+      "deptName": "TRANSPORT ENGINEERING DEPARTMENT",
+      "deptAliasName": "TED",
+      "preparedName": "TRANSPORT ENGINEERING DEPARTMENT (TED)",
+      "encryptedDepartmentId": "eyJpdiI6IkRZclJqeUx0ekt3VnFYZEFTMVdJZlE9PSIsInZhbHVlIjoiQ0FWYks1UXVxQ3ZiVzJZbFltSjlCdz09IiwibWFjIjoiOWMyMjBjZmU5YzU3NjNjNTk1NTk4MzFmNjYzMDU4ZGZkNmM0YWI2YjQ3NTY1N2YxNDI5NmEwOTliZWE1N2E3MyIsInRhZyI6IiJ9"
+    },
+    {
+      "departmentId": 72,
+      "deptName": "WATER RESOURCES DEPARTMENT",
+      "deptAliasName": "WRD",
+      "preparedName": "WATER RESOURCES DEPARTMENT (WRD)",
+      "encryptedDepartmentId": "eyJpdiI6Imw0VjhhRzVod0RXSEk5VHZIeDB6OHc9PSIsInZhbHVlIjoiSEtkV0pnSC9oeU9hV0pIdldtZ3U2UT09IiwibWFjIjoiMmExNDVmZWE1YTA2NzEzY2VkMGE5MGRjNTljZmMzNGE2NmRiYTY3OTA3NjE1NmZjZmY4NTJhMmZmNGM5NzZlZSIsInRhZyI6IiJ9"
+    }
+  ],
+  "total": 17
+}

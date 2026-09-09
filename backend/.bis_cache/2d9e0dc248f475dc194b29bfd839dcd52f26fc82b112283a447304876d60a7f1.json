@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 67129,
+      "standardEncId": "eyJpdiI6ImYxUnlZTm4yaTEzZTYwTHRGZmJUUkE9PSIsInZhbHVlIjoiN3FKVkR0dkk3alRpR1NuWUl6UWh5dz09IiwibWFjIjoiOTU4ZTNhMGMzZDdiYTQwMDMxZmFmYjRlZWMxMjkyNWEwOTIwNGVlNmQ4OWY5NTE2MTE0ZGY4NzBmNTBhYzdmYiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 302 (Part 2/Sec 36):2026 Household and Similar Electrical  Appliances — Safety  Part 2 Particular Requirements Section 36 Commercial Electric Cooking Ranges, Ovens, Hobs and Hob Elements",
+      "standardNumber": "IS 302 (Part 2/Sec 36):2026",
+      "standardName": "Household and Similar Electrical  Appliances — Safety  Part 2 Particular Requirements Section 36 Commercial Electric Cooking Ranges, Ovens, Hobs and Hob Elements",
+      "departmentName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "sectionalCommitteeName": "ETD 32 - Electrical Appliances",
+      "typeOfStandardName": "Safety Standard",
+      "publishedOn": "2026-07-24",
+      "publishedOnFormatted": "24 Jul 2026"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

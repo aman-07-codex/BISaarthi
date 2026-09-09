@@ -1,0 +1,37 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Standard details fetched successfully",
+  "data": [
+    {
+      "standardId": 1333,
+      "pk_is_id": 1333,
+      "standardEncId": "eyJpdiI6ImRjOXBmbFVKbDQvdzlLR0dFNVY2c1E9PSIsInZhbHVlIjoieUlKQysyNU0xSmNIdWx4WFo0SkEvQT09IiwibWFjIjoiYjU0NjNmZmM4ZWFlY2M0NzYyYzFjMTg5ZTlmNzRmNTI4OTJlYzJkM2ZhYTRhOWZhMDIxNDA4M2Y4N2IwNDg0MyIsInRhZyI6IiJ9",
+      "standardEncIId": "eyJpdiI6ImVITzZ6MEZjT2NIK1diVWZZMkRnVHc9PSIsInZhbHVlIjoiNlBML3ZUcnBYbysydElUYjBSSktuQT09IiwibWFjIjoiNGU1NDZlNzlmYzdkNjBhMWNkNzk4NDhmNTc3MjljMjFkYzAwNzg4YTAyMTdkMGY5NmI0MmMzMzhiMThiNDdiMSIsInRhZyI6IiJ9",
+      "standardNumber": "IS 10500:2012",
+      "standardName": "Drinking Water - Specification (Second Revision)",
+      "departmentId": 61,
+      "departmentEncId": "eyJpdiI6Imw3SDUrU2pqOTd5UFdsc3JQODVLT3c9PSIsInZhbHVlIjoiSjJjSXZnRWNXSEU0ZHEyd0hPbm5OUT09IiwibWFjIjoiMDhhZjU3MWZmNTJlMWU4ZmJkZjgwY2U2NGI3Y2Q3ZTQ2MzI4NGZkOThjMDMzZDk3MzdjMWI5MWY5ZTE5NjlkNCIsInRhZyI6IiJ9",
+      "committeeId": 281,
+      "committeeEncId": "eyJpdiI6IjFwQXBwTWJhRmFOS1VIckNXM05oQ0E9PSIsInZhbHVlIjoiQXpkcFI5dloxclpVTVcybDZMczZEZz09IiwibWFjIjoiNDMzMDc3ZDY4N2NmYTZkYmMwYWU1ZTQyNWEzOWUyNjA3NjJiYzJmNmQ1N2FmODI3Y2EwZmJmYjZlNmUyMWYwOSIsInRhZyI6IiJ9",
+      "deptPreparedName": "Food And Agriculture Department(FAD)",
+      "secCommitteePreparedName": "FAD 14 - Drinking Water And Carbonated Beverages",
+      "reviewId": "eyJpdiI6IlNhNnBsdWtqa1lERFlQckU2dmZ0YVE9PSIsInZhbHVlIjoiakhXL3M0M24rZnJsaitzL1pGMzczUT09IiwibWFjIjoiMmFhMDliNDg1YWRhZjk1MTlkMGM5Mzg0ZWVhMGVlYWY4NDMwZjVmZjE5YjExODEyNGE0MDRiMTYzMGI5Y2Y4NiIsInRhZyI6IiJ9"
+    },
+    {
+      "standardId": 1333,
+      "pk_is_id": 1333,
+      "standardEncId": "eyJpdiI6IllEWXhya2d6MmxmTU5wY2FCdlhOK2c9PSIsInZhbHVlIjoiTjhiMTNQcGJqaGh0cjBrL3BLLzZSUT09IiwibWFjIjoiYWRiOTdmNjcyOTc2YjY2MWY0NTVlYjgwYzliMTEzMTg5NDczODJiYzc5YzQ2NWU3ZGRjMjcxNjYyZGZhNzBjZSIsInRhZyI6IiJ9",
+      "standardEncIId": "eyJpdiI6ImdTNEZjMVRtUVdpaHhOalp0VDFMWEE9PSIsInZhbHVlIjoibStPZnpJNmx2WlVodGdJTU5jeGJmUT09IiwibWFjIjoiN2ViNWFkNWJiODY5MjllMmNiNzY4ZTc1YmE4YmRmMmU0YzQwNDUyNWNmZGUxODA5Yjg3YWNhZmM2N2YwMjY5MSIsInRhZyI6IiJ9",
+      "standardNumber": "IS 10500:2012",
+      "standardName": "Drinking Water - Specification (Second Revision)",
+      "departmentId": 61,
+      "departmentEncId": "eyJpdiI6ImMrSU4zOERlaDFjdGZoTElNMFppd0E9PSIsInZhbHVlIjoickJDNzV0dHhwaUpmaVhOOVhCYkNhZz09IiwibWFjIjoiMDgwYjNmMzJkMWYxZmQxOTBjMTFkYmFkZmZhMTBlMTQ1ZTU5YWQxMTUyM2E4NThkZWMwNThkZDZiMTM4ZjgxNyIsInRhZyI6IiJ9",
+      "committeeId": 281,
+      "committeeEncId": "eyJpdiI6ImFENEFhcHo4YmVwRUVpbEw2NGNCVkE9PSIsInZhbHVlIjoiMUI3bFkxdnNTcVMvWWcyYUtiOXlFUT09IiwibWFjIjoiZDljMTI0ZWZkMzhiZjc5MjQzMDYyOTA3NjdjYWQxMjcyYjVlMDdjMmM2ZjM3ZWM2ZmQ1MTQzOGEzYjY4OTM3ZCIsInRhZyI6IiJ9",
+      "deptPreparedName": "Food And Agriculture Department(FAD)",
+      "secCommitteePreparedName": "FAD 14 - Drinking Water And Carbonated Beverages",
+      "reviewId": "eyJpdiI6IjhUdzd3aWZ5Q0NsWHVMT2F2dXNSblE9PSIsInZhbHVlIjoiSmQ1T003eTRVczdlajFZMHVMLzRNZz09IiwibWFjIjoiZjZjOTEzOWZlNzM1YjNjYmM0OGNlZjAzMmQxZWU5MjE0MGI0OWRlZDI5ZjVjOTllMzliOTI4ZTYyNzA3YmM0MCIsInRhZyI6IiJ9"
+    }
+  ]
+}

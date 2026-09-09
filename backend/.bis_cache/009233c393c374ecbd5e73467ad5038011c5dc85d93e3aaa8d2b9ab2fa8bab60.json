@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 26864,
+      "standardEncId": "eyJpdiI6IlBsemVyZldzejhBakpneWY3cElZS1E9PSIsInZhbHVlIjoiNFVnOEdSWDMvcXp5QTNHVEpCUUlVUT09IiwibWFjIjoiOThlYjU2YzAyMzMzNTZmZDkyOGZjNDIxZWYzMGEyYzM1MDAyZjBiOWJhNzc0YzQ1ZTg2NjY5ODE5ZTRkYTljMCIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1608 (Part 1):2022 Metallic materials - Tensile testing - Part 1 : Method of test at room temperature ( Fifth Revision)",
+      "standardNumber": "IS 1608 (Part 1):2022",
+      "standardName": "Metallic materials - Tensile testing - Part 1 : Method of test at room temperature ( Fifth Revision)",
+      "departmentName": "METALLURGICAL ENGINEERING DEPARTMENT (MTD)",
+      "sectionalCommitteeName": "MTD 03 - Mechanical Testing Of Metals Sectional Committee",
+      "typeOfStandardName": "Methods of Tests",
+      "publishedOn": "2022-01-31",
+      "publishedOnFormatted": "31 Jan 2022"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 33408,
+      "standardEncId": "eyJpdiI6Ik9wK3dBYlFUWmwxa2lVOCtXd3FCQmc9PSIsInZhbHVlIjoiRGVhN0J0SzdwNkJaWmg4RDRlV01EQT09IiwibWFjIjoiYzI0YTA4ZWUwODRiNmNmNmVjZmNlMWNkNzUzOGVhODY4Yjk4NmNiMmNiOGNiYWMxMmQ5YzI0Mjg0NzQ0YWQxZSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 19068:2025 Continuous hot-dip galvanized steel bars for concrete reinforcement - Specification",
+      "standardNumber": "IS 19068:2025",
+      "standardName": "Continuous hot-dip galvanized steel bars for concrete reinforcement - Specification",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 54 - Concrete Reinforcement",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2025-05-29",
+      "publishedOnFormatted": "29 May 2025"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

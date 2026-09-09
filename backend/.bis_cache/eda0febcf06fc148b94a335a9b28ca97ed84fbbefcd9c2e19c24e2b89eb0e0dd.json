@@ -1,0 +1,56 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "totalAmendments": 6,
+  "data": [
+    {
+      "standardId": 11248,
+      "standardNumber": "IS 456:2000",
+      "noOfAmendment": 1,
+      "amendmentYear": "2001",
+      "is_documents": "BisProd/bisProd/oldStandards/S16/S16V01/456A1.pdf",
+      "amendmentLabel": "First Amendment"
+    },
+    {
+      "standardId": 11248,
+      "standardNumber": "IS 456:2000",
+      "noOfAmendment": 1,
+      "amendmentYear": "2005",
+      "is_documents": "BisProd/bisProd/oldStandards/S16/S16V01/456A2.pdf",
+      "amendmentLabel": "Second Amendment"
+    },
+    {
+      "standardId": 11248,
+      "standardNumber": "IS 456:2000",
+      "noOfAmendment": 2,
+      "amendmentYear": "2007",
+      "is_documents": "BisProd/bisProd/oldStandards/S16/S16V01/456A3.pdf",
+      "amendmentLabel": "Third Amendment"
+    },
+    {
+      "standardId": 11248,
+      "standardNumber": "IS 456:2000",
+      "noOfAmendment": 3,
+      "amendmentYear": "2013",
+      "is_documents": "BisProd/bisProd/oldStandards/S16/S16V01/456A4.pdf",
+      "amendmentLabel": "Fourth Amendment"
+    },
+    {
+      "standardId": 11248,
+      "standardNumber": "IS 456:2000",
+      "noOfAmendment": 4,
+      "amendmentYear": "2019",
+      "is_documents": "BisProd/bisProd/oldStandards/S16/S16V01/456A5.pdf",
+      "amendmentLabel": "Fifth Amendment"
+    },
+    {
+      "standardId": 11248,
+      "standardNumber": "IS 456:2000",
+      "noOfAmendment": 5,
+      "amendmentYear": "2024",
+      "is_documents": "BisProd/bisProd/oldStandards/S16/S16V01/456A6.pdf",
+      "amendmentLabel": "Sixth Amendment"
+    }
+  ]
+}

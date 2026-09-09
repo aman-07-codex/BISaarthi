@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 30791,
+      "standardEncId": "eyJpdiI6InRmQjh6WjdYSDlEeENPUmxsT1pDd1E9PSIsInZhbHVlIjoiK1h0NWUxa1h3czN6bmVMUXdha3lFZz09IiwibWFjIjoiZjEwMmYyNzNhMzVlM2RiOTY2NzU1NjgyMjg2YTZlN2QxOTdhNjE0MTI0ZWFkZTNhNWE0NDUzMzNhODA0OGJlOSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 303:2024 IS 303: 2024 Plywood for General Purposes - Specification (fourth revision)  ( Draft Second Amendment of IS 303:2024)  ( ICS 79.060.10)",
+      "standardNumber": "IS 303:2024",
+      "standardName": "IS 303: 2024 Plywood for General Purposes - Specification (fourth revision)  ( Draft Second Amendment of IS 303:2024)  ( ICS 79.060.10)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 20 - Wood And Other Lignocellulosic Products",
+      "typeOfStandardName": "—",
+      "publishedOn": "2024-05-17",
+      "publishedOnFormatted": "17 May 2024"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

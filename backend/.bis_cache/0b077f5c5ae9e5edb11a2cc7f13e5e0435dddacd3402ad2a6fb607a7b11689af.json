@@ -1,0 +1,37 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Standard details fetched successfully",
+  "data": [
+    {
+      "standardId": 11693,
+      "pk_is_id": 11694,
+      "standardEncId": "eyJpdiI6IlRlWkd1ZXVTVnczNGdpZWtUNWhVS3c9PSIsInZhbHVlIjoibHVVSkZtd1ZJUFdOWmtxY1o4WUJjZz09IiwibWFjIjoiZGMyMzNlMzMxZDY4ZjQ3ZTAyN2U1YmUxNjM2Zjc1YjlhNDA3YzNlMGFjZGEzMTJiYjg1ZTQwNTE1NjFhMzUxZCIsInRhZyI6IiJ9",
+      "standardEncIId": "eyJpdiI6ImF4L2o4a0hHSENLSnBpRllxNis2OVE9PSIsInZhbHVlIjoiNHJyd1FTTVUvSENmMFhwQkpLaXBudz09IiwibWFjIjoiNzYyZjRhZTZlMTE4ZmMzODc1OTM4ZjliNjBhODAxNDk5NGQ0NDU0ZGY2MGExODg0NzQ1MTE5MzJkOTEwYTQxYiIsInRhZyI6IiJ9",
+      "standardNumber": "IS 4984:2016",
+      "standardName": "Polyethylene Pipes for Water Supply - Specification (Fifth Revision)",
+      "departmentId": 63,
+      "departmentEncId": "eyJpdiI6IkJLbXAzbThoVEtCd1k4TmVQVFd5Q2c9PSIsInZhbHVlIjoiQlZVbFo3TXhqemxYM1Z2ZGtvZTZqQT09IiwibWFjIjoiMDE1ZTI3NTg0NzJhMGM0ZTkyOTFhYjVkZjA0NjQ0MWRkYWQ4MmYzN2FiMzlmNjg5YjliNDBkYmE0ZmI2MTMwNSIsInRhZyI6IiJ9",
+      "committeeId": 217,
+      "committeeEncId": "eyJpdiI6Ino3dEZNejdDcXpiYmhWbENJb0s4Q0E9PSIsInZhbHVlIjoiTWFRL1UySzB0ZFhyTjZreW1lei9QZz09IiwibWFjIjoiMTFiMzg3MWYyNzcyMGQ1ZTg2NjAzOGQ5ZGQ0NjNmM2E0OGJlZTQwYTZkYTUzYzViNTU1ZmE5MjdmMjkxYTBhZSIsInRhZyI6IiJ9",
+      "deptPreparedName": "Civil Engineering Department(CED)",
+      "secCommitteePreparedName": "CED 50 - Plastic Piping System",
+      "reviewId": "eyJpdiI6IjRubVduTjlwUTZQUFlOOFV2cU1XcWc9PSIsInZhbHVlIjoickdadlc2YUZ4YjhnTFpiUmx1dlAxZz09IiwibWFjIjoiNTA5ZGZkOWQ4N2I0ZGEzNzZkMTY5ZTUzZDNhNmI1YjkwY2E0ZWU5ZmU4ZmEyM2YxZWFkNjQ4MjhhZjkyZmU0OSIsInRhZyI6IiJ9"
+    },
+    {
+      "standardId": 11693,
+      "pk_is_id": 11694,
+      "standardEncId": "eyJpdiI6ImdmbUhmZE4vK2NBMjU3T0tEbnZmSnc9PSIsInZhbHVlIjoiS28yR1pOU2lBNFZzVlU5ZFpTKyt0Zz09IiwibWFjIjoiYzFhODYxZWY0NjdmY2UxZjhmMTUzYTUzMWJlMzE5MDY1MzY1ZTA3MDU3OWM4MjA2ZGEwY2QwM2FiZTlhZGQ5YiIsInRhZyI6IiJ9",
+      "standardEncIId": "eyJpdiI6ImxiM1kvRW8wZlJCVW1aWkVjMXlGUWc9PSIsInZhbHVlIjoiUnpOdkFTV2JtRm1DUHg3ZFlleUQzdz09IiwibWFjIjoiZmE3ZjQ3ODkyNmE3MjQ2Mzc5MTE3MmE5ZmI5NGEyMGMyYjhiZWVlZjY5NGZhY2RhZWQ3NzA0NDU0NTZjOWQyZCIsInRhZyI6IiJ9",
+      "standardNumber": "IS 4984:2016",
+      "standardName": "Polyethylene Pipes for Water Supply - Specification (Fifth Revision)",
+      "departmentId": 63,
+      "departmentEncId": "eyJpdiI6IjZoMnBhZktNbTBUbjZpeVZHUEhjMVE9PSIsInZhbHVlIjoiVU9UMGRVNmVmaG9XeDVEQVNrNUdkUT09IiwibWFjIjoiODViN2E4MDE0YmExNjQ2Y2JhZTBkMGQ0OWNkMmY4Njg1NTUwZmZhZWNjMzNjYjAwMzZhNzlmNDQ3YmMwNDMxNSIsInRhZyI6IiJ9",
+      "committeeId": 217,
+      "committeeEncId": "eyJpdiI6InhQWU9yeFlab0l3YjhONkh3cE51WWc9PSIsInZhbHVlIjoiSXc5ekVHK25aTnZlb2wvUVB5ZkxwQT09IiwibWFjIjoiNzdlYzQyNGYxZmJkYjE0NDcwMzRmNzQzYTIyZjQ3ZjEwNmZhOTlkNzM0NzdkYzNjZDhkOTZmYmVhNWEyMGM1MSIsInRhZyI6IiJ9",
+      "deptPreparedName": "Civil Engineering Department(CED)",
+      "secCommitteePreparedName": "CED 50 - Plastic Piping System",
+      "reviewId": "eyJpdiI6Ii9rb25TT0pITkRMWXV2THZ1UGNXVFE9PSIsInZhbHVlIjoiQzJSUnJhVTVwRkhUL2tlQnNQdGZmQT09IiwibWFjIjoiNTQ4NWUyZGI0OTMxMDc2ZmFmNjU1YjYxYzg5MzY4ODE1YmU4MTcwZTAwM2MyNWUyNmMxOTg1MTMxNjJkODkzZiIsInRhZyI6IiJ9"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 33264,
+      "standardEncId": "eyJpdiI6Ik1vdnE1RUxXOFdad0h4WmdrRU5SeEE9PSIsInZhbHVlIjoicEo2eHF0VmxDVUQ1am1rVHpHWS9ndz09IiwibWFjIjoiZjcwNWM0YzJhZTI2MDI1MWM0NzU1ZGUxYzliZDAwZmNiNGRlZDNlOGZkODE2OTkxNzc0NTFlMzkyNzE2ZWVhMSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1501 (Part 1):2025 Metallic materials  Vickers hardness test Part 1: Test method (Sixth Revision)",
+      "standardNumber": "IS 1501 (Part 1):2025",
+      "standardName": "Metallic materials  Vickers hardness test Part 1: Test method (Sixth Revision)",
+      "departmentName": "METALLURGICAL ENGINEERING DEPARTMENT (MTD)",
+      "sectionalCommitteeName": "MTD 03 - Mechanical Testing Of Metals Sectional Committee",
+      "typeOfStandardName": "Methods of Tests",
+      "publishedOn": "2025-05-06",
+      "publishedOnFormatted": "06 May 2025"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

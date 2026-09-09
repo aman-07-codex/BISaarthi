@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 6876,
+      "standardEncId": "eyJpdiI6ImhxZVZBSFVKTEl0bXhVVkI1TWZIaEE9PSIsInZhbHVlIjoiZjltdTQzWFRoSnlTWG5id2c5eUdpQT09IiwibWFjIjoiMDUyZDI5NDExMDU0ZTIwMmY5Y2NhZDIyNjJkYmRlNGQzZjEyYTIyYzZhNTc0YTcyZjViMThkYjQ3YzI4MWNmMyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1489 (Part 2):2015 Portland  Pozzolana Cement - Specification: Part 2 Calcined Clay Based (Fourth Revision)",
+      "standardNumber": "IS 1489 (Part 2):2015",
+      "standardName": "Portland  Pozzolana Cement - Specification: Part 2 Calcined Clay Based (Fourth Revision)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 02 - Cement And Concrete",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2015-10-31",
+      "publishedOnFormatted": "31 Oct 2015"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

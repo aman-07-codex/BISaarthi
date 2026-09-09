@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 11248,
+      "standardEncId": "eyJpdiI6Ii8xa0FKSzhBcG9DZFVGeUFqTXQwOWc9PSIsInZhbHVlIjoiNlFLbXB2ZEp1QmNmZ0NIaStEL1Mxdz09IiwibWFjIjoiZTNlYjIyZjQ0MDQ2ZjY0OThkYjUyY2I5YThiZmRlNzI2OTc3MmVkODIyYzJhMzBkMDAwNTVlYjEwNDYwZWY2NyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 456:2000 Plain and reinforced concrete - Code of practice (Fourth Revision)",
+      "standardNumber": "IS 456:2000",
+      "standardName": "Plain and reinforced concrete - Code of practice (Fourth Revision)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 02 - Cement And Concrete",
+      "typeOfStandardName": "Code of Practice",
+      "publishedOn": "2000-07-31",
+      "publishedOnFormatted": "31 Jul 2000"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

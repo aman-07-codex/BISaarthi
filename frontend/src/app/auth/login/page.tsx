@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import {
   Shield,
   ShieldCheck,
@@ -18,9 +18,14 @@ import {
   Info,
 } from 'lucide-react';
 import { Logo } from '@/components/common/Logo';
+import { useAuth } from '@/context/AuthContext';
+import { APIError } from '@/lib/api';
 
-export default function LoginPage() {
+function LoginForm() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const redirectUrl = searchParams.get('redirect') || '/dashboard';
+  const { login } = useAuth();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -36,7 +41,7 @@ export default function LoginPage() {
     }, 3000);
   };
 
-  const handleLoginSubmit = (e: React.FormEvent) => {
+  const handleLoginSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage(null);
 
@@ -50,13 +55,17 @@ export default function LoginPage() {
       return;
     }
 
-    // Simulate mock authentication loading
     setIsLoading(true);
 
-    setTimeout(() => {
+    try {
+      await login(email.trim(), password);
+      router.push(redirectUrl);
+    } catch (err) {
+      const msg = err instanceof APIError ? err.message : 'Invalid email or password. Please try again.';
+      setErrorMessage(msg);
+    } finally {
       setIsLoading(false);
-      router.push('/dashboard');
-    }, 600);
+    }
   };
 
   const handleGoogleLogin = () => {
@@ -299,7 +308,7 @@ export default function LoginPage() {
               <div className="pt-6 text-center text-xs text-[#606E66] dark:text-[#BAC5BF]">
                 <span>Don&apos;t have an account? </span>
                 <Link
-                  href="/auth/signup"
+                  href={redirectUrl !== '/dashboard' ? `/auth/signup?redirect=${encodeURIComponent(redirectUrl)}` : '/auth/signup'}
                   className="text-[#0D3328] dark:text-[#A7B8AE] font-black hover:underline"
                 >
                   Sign up
@@ -322,5 +331,17 @@ export default function LoginPage() {
         </p>
       </footer>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-[#F7F5EF] dark:bg-[#0E1815]">
+        <Loader2 className="w-8 h-8 text-[#0D3328] dark:text-[#A7B8AE] animate-spin" />
+      </div>
+    }>
+      <LoginForm />
+    </Suspense>
   );
 }

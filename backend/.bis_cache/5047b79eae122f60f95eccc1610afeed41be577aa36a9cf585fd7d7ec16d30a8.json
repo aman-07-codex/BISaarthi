@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 7757,
+      "standardEncId": "eyJpdiI6ImhlaEhMQjN0OWhOeGxtaVcreWErMVE9PSIsInZhbHVlIjoiRHZMMmo2UC9IWVFJWEcvOFpnbnppdz09IiwibWFjIjoiZjZkZDFlMDRjZTQxZGMyMzVhNDZmNDRiYjUzNzU2YzkzZjgxZmFlNzgwNTRjNmQ2NTJiMzA5OGUwYjViYzBlOSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 15609:2005 Polyethylene flexible pouches for the packing of natural mineral water and packaged drinking water - Specification",
+      "standardNumber": "IS 15609:2005",
+      "standardName": "Polyethylene flexible pouches for the packing of natural mineral water and packaged drinking water - Specification",
+      "departmentName": "PETROLEUM, COAL AND RELATED PRODUCTS DEPARTMENT (PCD)",
+      "sectionalCommitteeName": "PCD 21 - Plastics Packaging",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2005-08-31",
+      "publishedOnFormatted": "31 Aug 2005"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

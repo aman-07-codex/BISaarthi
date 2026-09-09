@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 27283,
+      "standardEncId": "eyJpdiI6Ikx0d3MvTmVlTjdXV21mOEZwQkJXMkE9PSIsInZhbHVlIjoiMlBJejBXbkhIK2RlOUsxdk5JcUt6QT09IiwibWFjIjoiYjM0ZGI0YTY0NDk5ZGNiYjU2ZGMxYWI3Zjc0ZWFmYTAxOWU5NGJkODgyODVkOTFhNGI3NWRiMTRhODhhYWVkMSIsInRhZyI6IiJ9",
+      "standardLabel": "Is 1656:2022 MILK-CEREAL BASED COMPLEMENTARY FOODS  SPECIFICATION  (Fifth Revision of IS 1656)  Amendment - 1",
+      "standardNumber": "Is 1656:2022",
+      "standardName": "MILK-CEREAL BASED COMPLEMENTARY FOODS  SPECIFICATION  (Fifth Revision of IS 1656)  Amendment - 1",
+      "departmentName": "FOOD AND AGRICULTURE DEPARTMENT (FAD)",
+      "sectionalCommitteeName": "FAD 19 - Dairy Products",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2022-04-30",
+      "publishedOnFormatted": "30 Apr 2022"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

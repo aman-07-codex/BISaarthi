@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 18707,
+      "standardEncId": "eyJpdiI6ImdVK3ZLQUhZVFNWdGdGRnV0N01BM1E9PSIsInZhbHVlIjoibHRZdmxRK3FWWnBmb0xzN25LL09mZz09IiwibWFjIjoiYzI2Yzg5YjdiNWRmNmFjYWMwNWQwZWViOTZjZjY1YjNkN2JkNTRlZmFlYTE1ODUzOTYzZmE0OGI5ZWFiNGM0MSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 2082:2018 Stationary storage type electric water heaters - Specification (Fifth Revision)",
+      "standardNumber": "IS 2082:2018",
+      "standardName": "Stationary storage type electric water heaters - Specification (Fifth Revision)",
+      "departmentName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "sectionalCommitteeName": "ETD 32 - Electrical Appliances",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2018-04-30",
+      "publishedOnFormatted": "30 Apr 2018"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

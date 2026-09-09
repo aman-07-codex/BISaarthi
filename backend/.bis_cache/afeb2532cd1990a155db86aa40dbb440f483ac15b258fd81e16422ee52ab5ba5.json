@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 27202,
+      "standardEncId": "eyJpdiI6Iko1bUFqSkpnOUFIVmRNaUo2cVdvYVE9PSIsInZhbHVlIjoiMUJWNVViVmRMYWxVVUxqenZTK0F4UT09IiwibWFjIjoiNGY3MjY4N2Q3M2IxZjYzMWJlYjg0MGJiZDE5MTg2ZjFjMGExZWExOWFhYmM4YWVlOWFmYWY0MmQ4YzU2MTU1MyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1166:2022 SWEETENED CONDENSED MILK, SWEETENED CONDENSED PARTLY SKIMMED MILK, SWEETENED CONDENSED SKIMMED MILK  AND SWEETENED CONDENSD HIGH FAT MILK- SPECIFICATION (Third Revision of IS 1166) Amendment - 1",
+      "standardNumber": "IS 1166:2022",
+      "standardName": "SWEETENED CONDENSED MILK, SWEETENED CONDENSED PARTLY SKIMMED MILK, SWEETENED CONDENSED SKIMMED MILK  AND SWEETENED CONDENSD HIGH FAT MILK- SPECIFICATION (Third Revision of IS 1166) Amendment - 1",
+      "departmentName": "FOOD AND AGRICULTURE DEPARTMENT (FAD)",
+      "sectionalCommitteeName": "FAD 19 - Dairy Products",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2022-04-30",
+      "publishedOnFormatted": "30 Apr 2022"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

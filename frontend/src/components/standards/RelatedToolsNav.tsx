@@ -21,7 +21,7 @@ export const RelatedToolsNav: React.FC<RelatedToolsNavProps> = ({ isNumber, clas
           {t('std.scopeTitle', 'Related Compliance Tools')}
         </h3>
         <p className="text-xs text-[#606E66] dark:text-[#8B978F]">
-          {t('chat.subtitle', 'Drill down into testing procedures and accredited laboratory networks for this standard')}
+          Compliance pathways and laboratory directory modules for this standard
         </p>
       </div>
 
@@ -36,11 +36,16 @@ export const RelatedToolsNav: React.FC<RelatedToolsNavProps> = ({ isNumber, clas
               <FlaskConical className="w-5 h-5" />
             </div>
             <div className="min-w-0">
-              <h4 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] group-hover:text-[#0D3328] dark:group-hover:text-[#8FA89B] transition-colors">
-                {t('std.testsTab', 'Tests & Certification')}
-              </h4>
-              <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] line-clamp-2 mt-0.5 leading-relaxed">
-                Explore mandatory/voluntary test routines, Scheme-I ISI Mark procedures, and compliance checklists.
+              <div className="flex items-center gap-2">
+                <h4 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] group-hover:text-[#0D3328] dark:group-hover:text-[#8FA89B] transition-colors">
+                  {t('std.testsTab', 'Tests & Certification')}
+                </h4>
+                <span className="text-[10px] font-bold text-[#8C6126] dark:text-[#FDE68A] bg-[#FAF4EB] dark:bg-[#38240D] px-2 py-0.5 rounded-full border border-[#F2E4CD] dark:border-[#523A1B]">
+                  Pending Official Data
+                </span>
+              </div>
+              <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] line-clamp-2 mt-1 leading-relaxed">
+                Testing routines and conformity schemes require verified BIS document acquisition.
               </p>
             </div>
           </div>
@@ -60,11 +65,16 @@ export const RelatedToolsNav: React.FC<RelatedToolsNavProps> = ({ isNumber, clas
               <Building2 className="w-5 h-5" />
             </div>
             <div className="min-w-0">
-              <h4 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] group-hover:text-[#0D3328] dark:group-hover:text-[#8FA89B] transition-colors">
-                {t('std.labsTab', 'Recognized Laboratories')}
-              </h4>
-              <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] line-clamp-2 mt-0.5 leading-relaxed">
-                Directory of BIS central, regional, and NABL-accredited third-party testing laboratories.
+              <div className="flex items-center gap-2">
+                <h4 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] group-hover:text-[#0D3328] dark:group-hover:text-[#8FA89B] transition-colors">
+                  {t('std.labsTab', 'Recognized Laboratories')}
+                </h4>
+                <span className="text-[10px] font-bold text-[#8C6126] dark:text-[#FDE68A] bg-[#FAF4EB] dark:bg-[#38240D] px-2 py-0.5 rounded-full border border-[#F2E4CD] dark:border-[#523A1B]">
+                  Pending Official Data
+                </span>
+              </div>
+              <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] line-clamp-2 mt-1 leading-relaxed">
+                Standard-specific laboratory capability directory requires authoritative LIMS mapping.
               </p>
             </div>
           </div>

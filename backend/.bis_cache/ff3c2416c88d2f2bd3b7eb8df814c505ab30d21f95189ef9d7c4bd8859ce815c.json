@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 21445,
+      "standardEncId": "eyJpdiI6IlNXbEg4QVFMeElPcUcwK2tOYlcwU1E9PSIsInZhbHVlIjoicVBPK3BTRE53dmwwaFVSQU4xS3E4UT09IiwibWFjIjoiNDZiYmQ1ZmYzMjJjYjJkNTA4Yjk0NDk4MjlkYWIyNmU1NzJhYmIxODlmNDFkMzRjMGVmNTIxODExY2M3NjMwMCIsInRhZyI6IiJ9",
+      "standardLabel": "IS 15885 (Part 2/Sec 13):2012 Safety of lamp controlgear: Part 2 particular requirements: Sec 13 d.c. or a.c. supplied electronic controlgear for led modules",
+      "standardNumber": "IS 15885 (Part 2/Sec 13):2012",
+      "standardName": "Safety of lamp controlgear: Part 2 particular requirements: Sec 13 d.c. or a.c. supplied electronic controlgear for led modules",
+      "departmentName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "sectionalCommitteeName": "ETD 23 - Lamps And Related Equipments",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2012-02-28",
+      "publishedOnFormatted": "28 Feb 2012"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

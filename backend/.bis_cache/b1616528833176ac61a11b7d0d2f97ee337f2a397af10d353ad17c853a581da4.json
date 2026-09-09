@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 7434,
+      "standardEncId": "eyJpdiI6ImZES1B4NncxYkgyL2ZLa1I3cCtxUnc9PSIsInZhbHVlIjoia0x5djlLNjN2SjdwY0p5NXl3NC8wZz09IiwibWFjIjoiOGQ1Y2ZmYjBiMmE2ZGUyYTU3N2EwOGE3MTkwZjcxN2ExOTUxZGM3ZWQ4YmNjYTkwZDViYmU4YTk5OGUxODNhMiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 15351:2015 Agro textiles – Laminated high density polyethylene (HDPE) woven geomembrane for water proof lining – Specification (second revision)",
+      "standardNumber": "IS 15351:2015",
+      "standardName": "Agro textiles – Laminated high density polyethylene (HDPE) woven geomembrane for water proof lining – Specification (second revision)",
+      "departmentName": "TEXTILE DEPARTMENT (TXD)",
+      "sectionalCommitteeName": "TXD 35 - Technical Textiles For  Agrotech Applications",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2015-12-31",
+      "publishedOnFormatted": "31 Dec 2015"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

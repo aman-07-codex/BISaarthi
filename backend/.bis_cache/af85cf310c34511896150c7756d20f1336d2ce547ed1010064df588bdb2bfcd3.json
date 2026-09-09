@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 11646,
+      "standardEncId": "eyJpdiI6IldKVWRLdFhMcXdtYndqQWkxcWpYZ1E9PSIsInZhbHVlIjoiczJKL0ZhK2F2L0NXUk91eHNsMW8wdz09IiwibWFjIjoiZjJiZjU4Y2VjOTU4ODkzMzE3Njk0MTc5MzVhMWJhNTBmZTMzMjVkMWU1NjZmYWMyMDJhNDU0YzE5ZDQ4MjU2YyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 4926:2003 Ready - Mixed Concrete - Code of Practice (Second Revision)",
+      "standardNumber": "IS 4926:2003",
+      "standardName": "Ready - Mixed Concrete - Code of Practice (Second Revision)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 02 - Cement And Concrete",
+      "typeOfStandardName": "Code of Practice",
+      "publishedOn": "2003-05-31",
+      "publishedOnFormatted": "31 May 2003"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

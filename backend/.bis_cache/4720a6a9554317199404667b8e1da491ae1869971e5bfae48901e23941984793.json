@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 31276,
+      "standardEncId": "eyJpdiI6IjRVUmRtOVpnSWxZVTJEYlhscFJjVlE9PSIsInZhbHVlIjoiWjU3TzZ0NnJVRVgyYXlyeFpCSWd0UT09IiwibWFjIjoiNTlmMjgzYmJmODNkZTg4ZDczNzI1NGUxMjNmMTM2ZDA4YmQ3YWQ1MTk1YzI1YTMxOTc5ODk0MDRhYzQ0OTdhMiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 12640 (Part 1):2024 Residual current operated circuitBreakers without integral overcurrent protection for household and similar uses Rccbs: Part 1 general rules (Third Revision)",
+      "standardNumber": "IS 12640 (Part 1):2024",
+      "standardName": "Residual current operated circuitBreakers without integral overcurrent protection for household and similar uses Rccbs: Part 1 general rules (Third Revision)",
+      "departmentName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "sectionalCommitteeName": "ETD 07 - Low Voltage Switchgear And Controlgear",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2024-08-01",
+      "publishedOnFormatted": "01 Aug 2024"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

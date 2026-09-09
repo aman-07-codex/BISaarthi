@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 65763,
+      "standardEncId": "eyJpdiI6IkM0Z3NoMlZIU0lHSkQ5N1VMT0ZjS3c9PSIsInZhbHVlIjoiSjQvbWJuOExxSFowaVVNWkNCa200QT09IiwibWFjIjoiNGI5NjA1NzJlMDE3N2E2OWQ1ZDg5ZWVjNDk4MmQzZTcwYTExY2VkNDA3MmFmZDE3ZTg0YTkyODUyMDdiNmU0NyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 2062 (Part 1):2025 Structural Steel - Part 1 - Hot Rolled Medium and High tensile  Steel",
+      "standardNumber": "IS 2062 (Part 1):2025",
+      "standardName": "Structural Steel - Part 1 - Hot Rolled Medium and High tensile  Steel",
+      "departmentName": "METALLURGICAL ENGINEERING DEPARTMENT (MTD)",
+      "sectionalCommitteeName": "MTD 04 - Wrought Steel Products Sectional Committee",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2025-12-29",
+      "publishedOnFormatted": "29 Dec 2025"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

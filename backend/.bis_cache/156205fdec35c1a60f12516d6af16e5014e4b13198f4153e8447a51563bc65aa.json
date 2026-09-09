@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 161,
+      "standardEncId": "eyJpdiI6ImcxdHd5T3BBVmJNTzFJallyS2Rpcnc9PSIsInZhbHVlIjoiUG1sV0luU3E1Y0p1ZWtEaFhDTlQrZz09IiwibWFjIjoiNTYwNzcxMjM5NmVmZTFhZWQ3MzU2ZDFkMTRmMTBhY2ZiYzEyZmZmNmUyOWYxMTliNGEzYTkwOTc3Y2EwMzZhMyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 13592:2013 Unplasticized Polyvinyl Chloride (PVC-U) Pipes for Soil and Waste Discharge System Inside and Outside Buildings Including Ventilation and Rain Water System - Specification (First Revision)",
+      "standardNumber": "IS 13592:2013",
+      "standardName": "Unplasticized Polyvinyl Chloride (PVC-U) Pipes for Soil and Waste Discharge System Inside and Outside Buildings Including Ventilation and Rain Water System - Specification (First Revision)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 50 - Plastic Piping System",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2013-05-31",
+      "publishedOnFormatted": "31 May 2013"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

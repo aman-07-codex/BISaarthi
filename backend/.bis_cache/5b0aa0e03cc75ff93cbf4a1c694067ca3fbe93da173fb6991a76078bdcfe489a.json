@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 66431,
+      "standardEncId": "eyJpdiI6InljRVArZjZ0UHcyOXdqU21ZdnIxcHc9PSIsInZhbHVlIjoiT1B3NVExeW9KRXJOVnd0WE9qeEE0QT09IiwibWFjIjoiMTg5ZjI2YWY5YjI3MTJiNDdkOTBiZGMwODkzNmE2OGEyYjc1MWRkZjEyMTYyZjZmNjE3YjE2NGU2OTYyMDY4NSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 2265:2026 Specification for galvanized steel wire strand for signaling purposes (First Revision)",
+      "standardNumber": "IS 2265:2026",
+      "standardName": "Specification for galvanized steel wire strand for signaling purposes (First Revision)",
+      "departmentName": "MECHANICAL ENGINEERING DEPARTMENT (MED)",
+      "sectionalCommitteeName": "MED 10 - Wire Ropes And Wire Products",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2026-03-10",
+      "publishedOnFormatted": "10 Mar 2026"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

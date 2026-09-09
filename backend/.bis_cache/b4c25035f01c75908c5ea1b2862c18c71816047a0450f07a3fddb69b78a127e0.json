@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 67135,
+      "standardEncId": "eyJpdiI6IlR2V1dFbi9FQ2tjMDNPR2ZQK3I3UHc9PSIsInZhbHVlIjoiQU5RczRpbWZrY3VJSFRPb20vR01WQT09IiwibWFjIjoiZmZhMzFmNGI5NzdhZmIwZGMwZDEyOGZiNjJmY2E2MGYyODU3YzNmNzNkOWJmMTI5NDNkN2YwZWM3YzY4ZWMyNCIsInRhZyI6IiJ9",
+      "standardLabel": "IS 302 (Part 2/Sec 26):2026 Household and Similar Electrical  Appliances —— Safety  Part 2 Particular Requirements Section 26 Clocks  (Second Revision)",
+      "standardNumber": "IS 302 (Part 2/Sec 26):2026",
+      "standardName": "Household and Similar Electrical  Appliances —— Safety  Part 2 Particular Requirements Section 26 Clocks  (Second Revision)",
+      "departmentName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "sectionalCommitteeName": "ETD 32 - Electrical Appliances",
+      "typeOfStandardName": "Safety Standard",
+      "publishedOn": "2026-07-24",
+      "publishedOnFormatted": "24 Jul 2026"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

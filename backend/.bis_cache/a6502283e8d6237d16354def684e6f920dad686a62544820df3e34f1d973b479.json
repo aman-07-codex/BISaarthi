@@ -1,0 +1,35 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 20944,
+      "standardEncId": "eyJpdiI6IjRKYnZaTWY0d1hLcU45V285aVYyQ2c9PSIsInZhbHVlIjoibkFyZ1VWRE1HenVBRENhL1lCY3BwQT09IiwibWFjIjoiODU5MmZiYTgwYmM3NDMzYzQ4YWUwMmU3ZTE0ODNiZDA0Yzk2ZmQ1MTNkM2E3MTFhMjJlODQ3ZDRjM2VkNWYxNCIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1239 (Part 1):2004 Steel Tubes, Tubulars and Other Wrought Steel Fittings   : Part 1  Steel Tubes (BI-LINGUAL)",
+      "standardNumber": "IS 1239 (Part 1):2004",
+      "standardName": "Steel Tubes, Tubulars and Other Wrought Steel Fittings   : Part 1  Steel Tubes (BI-LINGUAL)",
+      "departmentName": "METALLURGICAL ENGINEERING DEPARTMENT (MTD)",
+      "sectionalCommitteeName": "MTD 19 - Steel Tubes, Pipes And Fittings Sectional Committee",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2018-07-31",
+      "publishedOnFormatted": "31 Jul 2018"
+    },
+    {
+      "standardId": 3713,
+      "standardEncId": "eyJpdiI6IlRkR2JWNzJpMEtmV1A4RzVrRUdRRnc9PSIsInZhbHVlIjoiQllVRjJZMWFObGM0dVl6Z3Ric3JpUT09IiwibWFjIjoiZmY0YWJiMWM3OWM2NDU1N2ZmNjZjMTBlZTRmZmZkOTIyMjVjNjhmMTU4MGI0ZjEzZWRkOGVjNmQ5YTk3NjA1ZiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1239 (Part 1):2004 Steel tubes, tubulars and other wrought steel fittings - Specification: Part 1 steel tubes (Sixth Revision)",
+      "standardNumber": "IS 1239 (Part 1):2004",
+      "standardName": "Steel tubes, tubulars and other wrought steel fittings - Specification: Part 1 steel tubes (Sixth Revision)",
+      "departmentName": "METALLURGICAL ENGINEERING DEPARTMENT (MTD)",
+      "sectionalCommitteeName": "MTD 19 - Steel Tubes, Pipes And Fittings Sectional Committee",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2004-07-31",
+      "publishedOnFormatted": "31 Jul 2004"
+    }
+  ],
+  "totalRecord": 2,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

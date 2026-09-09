@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 27286,
+      "standardEncId": "eyJpdiI6InNLbUlMTnhqcTZ0UEZ0RElQQUF3UlE9PSIsInZhbHVlIjoiSi9LWDZnYmk4RWFDclNYaXRrRWJJZz09IiwibWFjIjoiYmI0MzQyNzZhMTY2NDMyYTZmZmQ5MGNmNDJkYTY2ODQ2MDdlNzhmZDIyMzYzYmJkYjI1NTY5NTgzYzJkNjNjYyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 15757:2022 FOLLOW-UP FORMULA-COMPLEMENTARY FOODS - SPECIFICATION (First Revision of IS 15757) Amendment - 1",
+      "standardNumber": "IS 15757:2022",
+      "standardName": "FOLLOW-UP FORMULA-COMPLEMENTARY FOODS - SPECIFICATION (First Revision of IS 15757) Amendment - 1",
+      "departmentName": "FOOD AND AGRICULTURE DEPARTMENT (FAD)",
+      "sectionalCommitteeName": "FAD 19 - Dairy Products",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2022-04-30",
+      "publishedOnFormatted": "30 Apr 2022"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

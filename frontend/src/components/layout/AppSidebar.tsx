@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import {
   MessageSquare,
@@ -15,10 +15,12 @@ import {
   Moon,
   Globe,
   LogOut,
+  LogIn,
   X,
 } from 'lucide-react';
 import { useTheme } from '@/context/ThemeContext';
 import { useLanguage } from '@/context/LanguageContext';
+import { useAuth } from '@/context/AuthContext';
 
 interface AppSidebarProps {
   isMobileOpen?: boolean;
@@ -30,8 +32,20 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
   onMobileClose,
 }) => {
   const pathname = usePathname();
+  const router = useRouter();
   const { language, toggleLanguage, t } = useLanguage();
   const { isDark, toggleTheme } = useTheme();
+  const { user, isAuthenticated, logout } = useAuth();
+
+  const getInitials = (name?: string, email?: string) => {
+    if (name && name.trim()) {
+      const parts = name.trim().split(/\s+/);
+      if (parts.length >= 2) return `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase();
+      return name.substring(0, 2).toUpperCase();
+    }
+    if (email && email.trim()) return email.substring(0, 2).toUpperCase();
+    return 'GE';
+  };
 
   const mainNav = [
     {
@@ -299,25 +313,39 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({
           <div className="flex items-center justify-between p-2 rounded-xl bg-[#091E18] border border-[#16382E]">
             <div className="flex items-center gap-2.5 min-w-0">
               <div className="w-7 h-7 rounded-full bg-[#164B3A] text-white font-semibold text-xs flex items-center justify-center shrink-0 border border-[#5B8272]/40">
-                AM
+                {getInitials(user?.name, user?.email)}
               </div>
               <div className="min-w-0">
                 <p className="text-xs font-semibold text-white truncate">
-                  Aman Mishra
+                  {user?.name || (isAuthenticated ? user?.email : 'Guest Explorer')}
                 </p>
                 <p className="text-[10px] text-[#8FA89B] truncate">
-                  {t('nav.userRole')}
+                  {isAuthenticated ? (user?.email || t('nav.userRole')) : 'Guest Session'}
                 </p>
               </div>
             </div>
 
-            <button
-              type="button"
-              className="p-1.5 rounded-lg text-[#8FA89B] hover:text-[#C86D51] hover:bg-[#12332A] transition-colors"
-              title={t('nav.logout')}
-            >
-              <LogOut className="w-3.5 h-3.5" />
-            </button>
+            {isAuthenticated ? (
+              <button
+                type="button"
+                onClick={() => {
+                  logout();
+                  router.push('/auth/login');
+                }}
+                className="p-1.5 rounded-lg text-[#8FA89B] hover:text-[#C86D51] hover:bg-[#12332A] transition-colors cursor-pointer"
+                title={t('nav.logout')}
+              >
+                <LogOut className="w-3.5 h-3.5" />
+              </button>
+            ) : (
+              <Link
+                href="/auth/login"
+                className="p-1.5 rounded-lg text-[#8FA89B] hover:text-[#A7B8AE] hover:bg-[#12332A] transition-colors cursor-pointer"
+                title="Sign In"
+              >
+                <LogIn className="w-3.5 h-3.5" />
+              </Link>
+            )}
           </div>
         </div>
       </aside>

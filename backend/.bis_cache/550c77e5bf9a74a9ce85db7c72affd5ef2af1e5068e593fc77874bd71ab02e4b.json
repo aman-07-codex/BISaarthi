@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 27203,
+      "standardEncId": "eyJpdiI6IjRqem5lYVNIR3I3M1h4Ymo3TXlSSmc9PSIsInZhbHVlIjoiek5sVWNwWkEvSU51enNzSUtrekNidz09IiwibWFjIjoiNzhiMmRhMDgyOWEyNDVlZjM5NmVkMTA5NmE5Yzk0NjkzZjBlOGI5MGI2MGUyYmQxNjQ0MGNmNGRhZWNmYWUxNiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1165:2022 Whole Milk Powder — Specification ( Sixth Revision )",
+      "standardNumber": "IS 1165:2022",
+      "standardName": "Whole Milk Powder — Specification ( Sixth Revision ) ",
+      "departmentName": "FOOD AND AGRICULTURE DEPARTMENT (FAD)",
+      "sectionalCommitteeName": "FAD 19 - Dairy Products",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2022-04-30",
+      "publishedOnFormatted": "30 Apr 2022"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

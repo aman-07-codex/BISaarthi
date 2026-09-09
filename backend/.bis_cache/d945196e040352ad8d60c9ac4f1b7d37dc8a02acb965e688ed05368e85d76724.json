@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 20354,
+      "standardEncId": "eyJpdiI6ImlvZjVLV1RTSVlkckJURStrb3RpUWc9PSIsInZhbHVlIjoiRnR4am81d2NmWlFLTlRCcUxCTkNkZz09IiwibWFjIjoiZDc5YzI2MTM0MjUzYmRhNGMxODkyZGMwZDZhYzMwNTJjZDg0ODQxMzU1MjE3NDNkZjk0OTdmNTBhNjhjNmIwMiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 7803 (Part 1):1975 Specification for plastic containers for pharmaceutical use - Part 1 : other than parenteral and ophthalmic preparations",
+      "standardNumber": "IS 7803 (Part 1):1975",
+      "standardName": "Specification for plastic containers for pharmaceutical use - Part 1 : other than parenteral and ophthalmic preparations",
+      "departmentName": "PETROLEUM, COAL AND RELATED PRODUCTS DEPARTMENT (PCD)",
+      "sectionalCommitteeName": "PCD 21 - Plastics Packaging",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "1976-01-31",
+      "publishedOnFormatted": "31 Jan 1976"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

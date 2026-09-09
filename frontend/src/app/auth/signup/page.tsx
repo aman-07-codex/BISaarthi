@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import {
   Shield,
   ShieldCheck,
@@ -19,9 +19,14 @@ import {
   Info,
 } from 'lucide-react';
 import { Logo } from '@/components/common/Logo';
+import { useAuth } from '@/context/AuthContext';
+import { APIError } from '@/lib/api';
 
-export default function SignupPage() {
+function SignupForm() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const redirectUrl = searchParams.get('redirect') || '/dashboard';
+  const { register } = useAuth();
 
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
@@ -66,6 +71,8 @@ export default function SignupPage() {
 
     if (!password) {
       errors.password = 'Password cannot be empty.';
+    } else if (password.length < 6) {
+      errors.password = 'Password must be at least 6 characters.';
     }
 
     if (!confirmPassword) {
@@ -77,7 +84,7 @@ export default function SignupPage() {
     return errors;
   };
 
-  const handleSignupSubmit = (e: React.FormEvent) => {
+  const handleSignupSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage(null);
 
@@ -97,14 +104,17 @@ export default function SignupPage() {
     }
 
     setFieldErrors({});
-
-    // Frontend-only simulated account creation
     setIsLoading(true);
 
-    setTimeout(() => {
+    try {
+      await register(email.trim(), password, fullName.trim());
+      router.push(redirectUrl);
+    } catch (err) {
+      const msg = err instanceof APIError ? err.message : 'Unable to create account. Please try again.';
+      setErrorMessage(msg);
+    } finally {
       setIsLoading(false);
-      router.push('/dashboard');
-    }, 600);
+    }
   };
 
   const handleGoogleSignup = () => {
@@ -428,7 +438,7 @@ export default function SignupPage() {
               <div className="pt-5 text-center text-xs text-[#606E66] dark:text-[#BAC5BF]">
                 <span>Already have an account? </span>
                 <Link
-                  href="/auth/login"
+                  href={redirectUrl !== '/dashboard' ? `/auth/login?redirect=${encodeURIComponent(redirectUrl)}` : '/auth/login'}
                   className="text-[#0D3328] dark:text-[#A7B8AE] font-black hover:underline"
                 >
                   Sign in
@@ -451,5 +461,17 @@ export default function SignupPage() {
         </p>
       </footer>
     </div>
+  );
+}
+
+export default function SignupPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-[#F7F5EF] dark:bg-[#0E1815]">
+        <Loader2 className="w-8 h-8 text-[#0D3328] dark:text-[#A7B8AE] animate-spin" />
+      </div>
+    }>
+      <SignupForm />
+    </Suspense>
   );
 }

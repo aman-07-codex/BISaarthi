@@ -1,0 +1,22 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Standard details fetched successfully",
+  "data": [
+    {
+      "standardId": 11248,
+      "pk_is_id": 11249,
+      "standardEncId": "eyJpdiI6InFPTFh0NlBGZVk4QW5YZUE1VThXRVE9PSIsInZhbHVlIjoiaVNuSWZGNGlVQmp4ek1jc3F1bGRUUT09IiwibWFjIjoiMDhiOTVhMzg2ODlkOTRjMDEwMWMxZjFlMGYxNTFkZDYxZGJkYWI0OWMwZDNjODQ2M2UyOWFhNjY5MDViMTQzNyIsInRhZyI6IiJ9",
+      "standardEncIId": "eyJpdiI6IjI3NUgvTEpmaXA1aitGNURRVUxFbGc9PSIsInZhbHVlIjoiRGtFRkxHS0tlbXEzS0lZZldsei90UT09IiwibWFjIjoiZmM3MWEzMGJiZGU3NGQwZDEwNjU3MzhkYTdhYWUyN2Q0NzM5ZjRiZDkzNzkwYjdlZDljNTMyMzA2NWIzNzQyYiIsInRhZyI6IiJ9",
+      "standardNumber": "IS 456:2000",
+      "standardName": "Plain and reinforced concrete - Code of practice (Fourth Revision)",
+      "departmentId": 63,
+      "departmentEncId": "eyJpdiI6Im9LOGZCTTkyb0ZFallUeDFtL3p3Smc9PSIsInZhbHVlIjoiQ2hNb3RHTUtKY3IwTWNFSkdNOFo0Zz09IiwibWFjIjoiODVlZDU2Y2IyNzE5Nzc0ZWRkNjUwYjNiNjQ5YWQ4YjMxMDRlYjE3YmQ4OTJmOGQyOTA4YTQ3N2RiZGFlZmJkZiIsInRhZyI6IiJ9",
+      "committeeId": 190,
+      "committeeEncId": "eyJpdiI6IlpyQzFYa3paMnFGei9SMlJqMkcwMlE9PSIsInZhbHVlIjoiclIvT3pTNmpZbUdsdmgxRnNPa3Vvdz09IiwibWFjIjoiMTQ3NzQyOWU5M2Q4NjZiY2Q2NzkwNTljMDM4YzExMDQ3ZmMzOTE1MTUxYWZhNzZjZGFkNjAzYTJlYWM5OTgyMCIsInRhZyI6IiJ9",
+      "deptPreparedName": "Civil Engineering Department(CED)",
+      "secCommitteePreparedName": "CED 02 - Cement And Concrete",
+      "reviewId": "eyJpdiI6IlJOcDJLS2hpOHpUUUlQZ3dLWU80akE9PSIsInZhbHVlIjoidG1LV0RNcHhLMDNnVEk1alE0UzI1Zz09IiwibWFjIjoiZDY5NTIzMjJjNzM4Y2MyZWUyODcxMmQwZDk1NDZlMTEyYjBlZmEwNTRhYTM4NDVkYTBlZTQxY2M0YmM2M2Y1OSIsInRhZyI6IiJ9"
+    }
+  ]
+}

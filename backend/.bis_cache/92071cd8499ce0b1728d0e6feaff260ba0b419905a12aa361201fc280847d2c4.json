@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 24475,
+      "standardEncId": "eyJpdiI6IkUwSmoyRGYxV0xkL1c2NHZxK1Y0UGc9PSIsInZhbHVlIjoiS1Mrbkh6TGRwR3RqNFBnQ0ZzLzhEQT09IiwibWFjIjoiYWEwMmUyMWUzNzEzZWY4ODZjNjk3MDdmNTdiNTAwZDc3NDVjMmQ5NjRlZWQ4YzUxNDM1MzJkY2U3NTYzZDJjZiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 3495 (Part 1):2019 Burnt Clay Building Bricks â€” Methods of Tests Part 1 Determination of Compressive Strength ( Fourth Revision )",
+      "standardNumber": "IS 3495 (Part 1):2019",
+      "standardName": "Burnt Clay Building Bricks â€” Methods of Tests Part 1 Determination of Compressive Strength ( Fourth Revision ) ",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 30 - Clay And Stabilized Soil Products For Construction",
+      "typeOfStandardName": "Methods of Tests",
+      "publishedOn": "2019-10-31",
+      "publishedOnFormatted": "31 Oct 2019"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 31712,
+      "standardEncId": "eyJpdiI6IlloVUEydjAzMktCWm9SZ3BIRW5xZmc9PSIsInZhbHVlIjoiY0pFazUrd1lBbjZEV29iZXpSZVhVUT09IiwibWFjIjoiZmNlN2NhZjM1ZjA0Nzk3OWU4NTRkOWY3YjE1MDQ4OTc5ZTVjOGM3NTBjNGVmZDk3MDE1OTBjODY2M2M3MDhhZiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 302 (Part 1):2024 Household and Similar Electrical Appliances â€”  Safety  Part 1 General Requirements (Seventh Revision)",
+      "standardNumber": "IS 302 (Part 1):2024",
+      "standardName": "Household and Similar Electrical Appliances â€”  Safety  Part 1 General Requirements (Seventh Revision)",
+      "departmentName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "sectionalCommitteeName": "ETD 32 - Electrical Appliances",
+      "typeOfStandardName": "Safety Standard",
+      "publishedOn": "2024-09-05",
+      "publishedOnFormatted": "05 Sep 2024"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

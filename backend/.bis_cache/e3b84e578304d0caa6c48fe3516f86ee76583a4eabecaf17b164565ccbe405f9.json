@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 8195,
+      "standardEncId": "eyJpdiI6InBBSlZvV1lub3N2ZmorMU4rcnUwdlE9PSIsInZhbHVlIjoicndCb0N0czA0eXA1dEJ2MFRBRmFqdz09IiwibWFjIjoiZDI3OTZhMjgwMWFiNzE5NmQ4ZjZmZDIxMmE5YjI4M2IyMGEwMWE1NTA2NGM4MjgyYmVhZmY5YjJlN2I3NDA2MyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1786:2008 High Strength Deformed Steel Bars and Wires for Concrete Reinforcement - Specification (Fourth Revision)",
+      "standardNumber": "IS 1786:2008",
+      "standardName": "High Strength Deformed Steel Bars and Wires for Concrete Reinforcement - Specification (Fourth Revision) ",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 54 - Concrete Reinforcement",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2008-05-31",
+      "publishedOnFormatted": "31 May 2008"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

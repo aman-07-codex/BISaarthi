@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 13826,
+      "standardEncId": "eyJpdiI6ImNPK0RKYS9ONVNIR0U3V3BCYm1VNUE9PSIsInZhbHVlIjoiMStRTklqZnBKRFpnMjkrT2M4WWxudz09IiwibWFjIjoiNDFmYzE0ZmE3MjhmN2QwZDllZTJmNGIyZWU2N2ZmMDA5MWEzNTg4ZDM4YjFiYmI3MjgzZThlZmQ0MTA1NDJhMiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 694:2010 Polyvinyl chloride insulated unsheathed and sheathed cables/cords with rigid and flexible conductor for rated voltages up to and including 1 100 V (Fourth Revision)",
+      "standardNumber": "IS 694:2010",
+      "standardName": "Polyvinyl chloride insulated unsheathed and sheathed cables/cords with rigid and flexible conductor for rated voltages up to and including 1 100 V (Fourth Revision)",
+      "departmentName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "sectionalCommitteeName": "ETD 09 - Power Cables",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2011-05-31",
+      "publishedOnFormatted": "31 May 2011"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

@@ -1,10 +1,9 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { AppLayout } from '@/components/layout/AppLayout';
 import { Button } from '@/components/common/Button';
-import { MOCK_CHAT_HISTORY_LIST } from '@/data/mockChatData';
 import { RecentConversation } from '@/types';
 import { useLanguage } from '@/context/LanguageContext';
 import {
@@ -22,9 +21,31 @@ import {
 
 export default function HistoryPage() {
   const { t } = useLanguage();
-  const [conversations] = useState<RecentConversation[]>(MOCK_CHAT_HISTORY_LIST);
+  const [conversations, setConversations] = useState<RecentConversation[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [timeFilter, setTimeFilter] = useState<'all' | 'today' | 'this_week' | 'older'>('all');
+
+  useEffect(() => {
+    let isMounted = true;
+    Promise.resolve().then(() => {
+      if (!isMounted) return;
+      try {
+        const stored = localStorage.getItem('bisaarthi_chat_history');
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (Array.isArray(parsed)) {
+            setConversations(parsed);
+          }
+        }
+      } catch {
+        setConversations([]);
+      }
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   const filteredConversations = useMemo(() => {
     return conversations.filter((conv) => {
@@ -178,7 +199,7 @@ export default function HistoryPage() {
               {filteredConversations.map((conv) => (
                 <Link
                   key={conv.id}
-                  href={`/chat/${encodeURIComponent(conv.id)}`}
+                  href={`/chat?prompt=${encodeURIComponent(conv.title)}`}
                   className="group block p-5 rounded-3xl border border-[#D9DDD8] dark:border-[#253831] bg-white dark:bg-[#15221E] hover:border-[#5B8272] hover:shadow-xs transition-all cursor-pointer"
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">

@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 31713,
+      "standardEncId": "eyJpdiI6Indacmpsby9xSW15L3ZseU1zVEFRWXc9PSIsInZhbHVlIjoib2pBaDFIcDBSMzVsWjk5eXpKSG5tUT09IiwibWFjIjoiYzQ5NWQ3ZGRjYWJkZDViNWE1ZmVkYWJlODZmNGJiNzIyNTA2YjUzOGI4OWEzY2Q0ZGI0ZjBmODM3M2I1OGVkYyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 302 (Part 2/Sec 3):2024 Household and Similar Electrical Appliances â€”Safety  Part 2 Particular Requirements  Section 3 Electric Irons  (Second Revision)",
+      "standardNumber": "IS 302 (Part 2/Sec 3):2024",
+      "standardName": "Household and Similar Electrical Appliances â€”Safety  Part 2 Particular Requirements  Section 3 Electric Irons  (Second Revision)",
+      "departmentName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "sectionalCommitteeName": "ETD 32 - Electrical Appliances",
+      "typeOfStandardName": "Safety Standard",
+      "publishedOn": "2024-09-05",
+      "publishedOnFormatted": "05 Sep 2024"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

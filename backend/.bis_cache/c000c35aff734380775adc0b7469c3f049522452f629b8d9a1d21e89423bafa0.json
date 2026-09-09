@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 10186,
+      "standardEncId": "eyJpdiI6InpGeHB1S1VxR1dTWHFuSEVTczE2YVE9PSIsInZhbHVlIjoiZFoxc2d0K1pzc2ZsTStJbUt6bmFNZz09IiwibWFjIjoiNjQxMDJhZmQxNGNmOTgyOThiMjBmZDIxY2MyNmRjYzE1ZWNkZDEzN2FlNzJhMWQzZDU4MTA4ZDQxZWNjZThiNyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 3601:2006 Steel tubes for mechanical and general engineering purposes - Specification (Second Revision)",
+      "standardNumber": "IS 3601:2006",
+      "standardName": "Steel tubes for mechanical and general engineering purposes - Specification (Second Revision)",
+      "departmentName": "METALLURGICAL ENGINEERING DEPARTMENT (MTD)",
+      "sectionalCommitteeName": "MTD 19 - Steel Tubes, Pipes And Fittings Sectional Committee",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2006-02-28",
+      "publishedOnFormatted": "28 Feb 2006"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 3714,
+      "standardEncId": "eyJpdiI6IktJTUpuMGU5VWtHc1M0SjR5WHRCK0E9PSIsInZhbHVlIjoiK1F5QklxaW1COVA2NFdPejNHa0JiZz09IiwibWFjIjoiYmNiYmE5NGE5ZDlkODZmZWI5MzlmMGE0OTZiY2QxMjAwYzE0YjIzOWMzMzFjODM1ODMyNWEwZDJjY2MxZDc5NSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1239 (Part 2):2011 Steel tubes, tubulars and other steel fittings - Specification: Part 2 steel pipe fittings (Fifth Revision)",
+      "standardNumber": "IS 1239 (Part 2):2011",
+      "standardName": "Steel tubes, tubulars and other steel fittings - Specification: Part 2 steel pipe fittings (Fifth Revision)",
+      "departmentName": "METALLURGICAL ENGINEERING DEPARTMENT (MTD)",
+      "sectionalCommitteeName": "MTD 19 - Steel Tubes, Pipes And Fittings Sectional Committee",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2011-09-30",
+      "publishedOnFormatted": "30 Sep 2011"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

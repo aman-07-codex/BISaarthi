@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 25779,
+      "standardEncId": "eyJpdiI6Ik5JTmorV2xBY240RTZZdDFkUFdVUVE9PSIsInZhbHVlIjoiNmRHa2x6a2hqVUFuRjV1Q2V0SjhtUT09IiwibWFjIjoiZjQ1ZTE0YzhhNmVkNGJkNTZhNjRkNGE5YzcxN2NmYWVkZDVhM2EzZmVhNzI1Mjg2NmM1MWUyMDVkOTM1ZjI1OSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 4985:2021 Unplasticized PVC Pipes for Potable Water Supplies - Specification (Fourth Revision)",
+      "standardNumber": "IS 4985:2021",
+      "standardName": "Unplasticized PVC Pipes for Potable Water Supplies - Specification (Fourth Revision)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 50 - Plastic Piping System",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2021-06-30",
+      "publishedOnFormatted": "30 Jun 2021"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

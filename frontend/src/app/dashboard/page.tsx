@@ -1,40 +1,104 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { AppLayout } from '@/components/layout/AppLayout';
 import { Button } from '@/components/common/Button';
 import { StatusBadge } from '@/components/common/StatusBadge';
 import {
-  MessageSquare,
-  Search,
-  Scale,
   Sparkles,
   ArrowRight,
   Bookmark,
   History,
   ShieldCheck,
   Clock,
+  MessageSquarePlus,
+  Compass,
 } from 'lucide-react';
-import { RecentConversation } from '@/types';
-import { MOCK_CHAT_HISTORY_LIST } from '@/data/mockChatData';
-import { MOCK_INITIAL_SAVED_STANDARDS } from '@/data/mockSavedStandards';
+import { RecentConversation, StandardCardData } from '@/types';
 import { useLanguage } from '@/context/LanguageContext';
-
-const MOCK_RECENT_CONVERSATIONS: RecentConversation[] = MOCK_CHAT_HISTORY_LIST.slice(0, 3);
-const MOCK_SAVED_STANDARDS = MOCK_INITIAL_SAVED_STANDARDS.slice(0, 3);
+import { useAuth } from '@/context/AuthContext';
+import { getSavedStandards } from '@/lib/api';
+import { DashboardFeatureCards } from '@/components/dashboard/DashboardFeatureCards';
 
 export default function DashboardPage() {
   const router = useRouter();
   const { language, t } = useLanguage();
+  const { user, token } = useAuth();
   const [promptText, setPromptText] = useState('');
+
+  const [recentConversations, setRecentConversations] = useState<RecentConversation[]>([]);
+  const [savedStandards, setSavedStandards] = useState<StandardCardData[]>([]);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    Promise.resolve().then(() => {
+      if (!isMounted) return;
+
+      // 1. Load real recent conversations from local storage
+      try {
+        const storedChats = localStorage.getItem('bisaarthi_chat_history');
+        if (storedChats) {
+          const parsed = JSON.parse(storedChats);
+          if (Array.isArray(parsed)) {
+            setRecentConversations(parsed.slice(0, 3));
+          }
+        }
+      } catch {
+        setRecentConversations([]);
+      }
+
+      // 2. Load real saved standards from backend or local bookmarks
+      if (token) {
+        getSavedStandards(token, 1, 3)
+          .then((res) => {
+            if (!isMounted) return;
+            const mapped: StandardCardData[] = (res.items || []).map((item) => ({
+              is_number: item.standard_is_number,
+              title: item.standard?.title || item.standard_is_number,
+              status: item.standard?.status?.toLowerCase().includes('active') ? 'active' : 'unknown',
+              is_saved: true,
+            }));
+            setSavedStandards(mapped);
+          })
+          .catch(() => {
+            loadLocalSavedStandards();
+          });
+      } else {
+        loadLocalSavedStandards();
+      }
+
+      function loadLocalSavedStandards() {
+        try {
+          const stored = localStorage.getItem('bisaarthi_saved_standards');
+          if (stored) {
+            const parsed = JSON.parse(stored);
+            if (Array.isArray(parsed)) {
+              setSavedStandards(parsed.slice(0, 3));
+            }
+          }
+        } catch {
+          setSavedStandards([]);
+        }
+      }
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, [token]);
 
   const handleAskSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!promptText.trim()) return;
     router.push(`/chat?prompt=${encodeURIComponent(promptText.trim())}`);
   };
+
+  const userGreeting = user?.name
+    ? (language === 'HI' ? `नमस्ते, ${user.name}` : `Welcome back, ${user.name}`)
+    : (language === 'HI' ? 'बीआईएस सारथी में आपका स्वागत है' : 'Welcome to BISaarthi');
 
   return (
     <AppLayout>
@@ -48,7 +112,7 @@ export default function DashboardPage() {
             </div>
 
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-white leading-tight">
-              {language === 'HI' ? 'बीआईएस सारथी में आपका स्वागत है' : 'Welcome to BISaarthi'}
+              {userGreeting}
             </h1>
 
             <p className="text-sm sm:text-base text-[#BAC5BF] leading-relaxed font-normal">
@@ -144,95 +208,7 @@ export default function DashboardPage() {
         </section>
 
         {/* Feature Capabilities Grid */}
-        <section className="space-y-4">
-          <div>
-            <h2 className="text-lg font-black text-[#18211D] dark:text-[#F7F5EF]">
-              {language === 'HI' ? 'बीआईएस सारथी आपकी क्या सहायता कर सकता है?' : 'What can BISaarthi help you with?'}
-            </h2>
-            <p className="text-xs text-[#606E66] dark:text-[#8B978F]">
-              {language === 'HI'
-                ? 'भारतीय मानकों और अनुपालन प्रक्रियाओं के लिए प्रमुख साधन'
-                : 'Key tools to navigate Indian Standards and compliance workflows'}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {/* Feature 1: Ask BISaarthi */}
-            <div className="group relative bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] p-6 shadow-2xs hover:shadow-md hover:border-[#5B8272] transition-all flex flex-col justify-between">
-              <div className="space-y-3">
-                <div className="w-10 h-10 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] border border-[#D9DDD8] dark:border-[#253831] flex items-center justify-center text-[#0D3328] dark:text-[#8FA89B] group-hover:scale-105 transition-transform">
-                  <MessageSquare className="w-5 h-5" />
-                </div>
-                <h3 className="text-base font-bold text-[#18211D] dark:text-[#F7F5EF]">
-                  {t('nav.ask')}
-                </h3>
-                <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
-                  {t('dash.askDesc')}
-                </p>
-              </div>
-
-              <div className="pt-5 mt-4 border-t border-[#EFECE6] dark:border-[#1C2E28]">
-                <Link
-                  href="/chat"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:text-[#164B3A] transition-colors"
-                >
-                  <span>{language === 'HI' ? 'संवाद शुरू करें' : 'Start Conversation'}</span>
-                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </div>
-
-            {/* Feature 2: Find Standards */}
-            <div className="group relative bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] p-6 shadow-2xs hover:shadow-md hover:border-[#5B8272] transition-all flex flex-col justify-between">
-              <div className="space-y-3">
-                <div className="w-10 h-10 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] border border-[#D9DDD8] dark:border-[#253831] flex items-center justify-center text-[#0D3328] dark:text-[#8FA89B] group-hover:scale-105 transition-transform">
-                  <Search className="w-5 h-5" />
-                </div>
-                <h3 className="text-base font-bold text-[#18211D] dark:text-[#F7F5EF]">
-                  {t('nav.find')}
-                </h3>
-                <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
-                  {t('dash.findDesc')}
-                </p>
-              </div>
-
-              <div className="pt-5 mt-4 border-t border-[#EFECE6] dark:border-[#1C2E28]">
-                <Link
-                  href="/find-standards"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:text-[#164B3A] transition-colors"
-                >
-                  <span>{language === 'HI' ? 'मानक खोजें' : 'Discover Standards'}</span>
-                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </div>
-
-            {/* Feature 3: Compare Standards */}
-            <div className="group relative bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] p-6 shadow-2xs hover:shadow-md hover:border-[#5B8272] transition-all flex flex-col justify-between">
-              <div className="space-y-3">
-                <div className="w-10 h-10 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] border border-[#D9DDD8] dark:border-[#253831] flex items-center justify-center text-[#0D3328] dark:text-[#8FA89B] group-hover:scale-105 transition-transform">
-                  <Scale className="w-5 h-5" />
-                </div>
-                <h3 className="text-base font-bold text-[#18211D] dark:text-[#F7F5EF]">
-                  {t('nav.compare')}
-                </h3>
-                <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
-                  {t('dash.compareDesc')}
-                </p>
-              </div>
-
-              <div className="pt-5 mt-4 border-t border-[#EFECE6] dark:border-[#1C2E28]">
-                <Link
-                  href="/compare"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:text-[#164B3A] transition-colors"
-                >
-                  <span>{t('nav.compare')}</span>
-                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        <DashboardFeatureCards />
 
         {/* Recent Activity Section */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -246,37 +222,56 @@ export default function DashboardPage() {
                     {language === 'HI' ? 'हाल की चैट बातचीत' : 'Recent Chat Conversations'}
                   </h3>
                 </div>
-                <Link
-                  href="/history"
-                  className="text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:underline flex items-center gap-1"
-                >
-                  <span>{language === 'HI' ? 'सभी देखें' : 'View All'}</span>
-                  <ArrowRight className="w-3 h-3" />
-                </Link>
+                {recentConversations.length > 0 && (
+                  <Link
+                    href="/history"
+                    className="text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:underline flex items-center gap-1"
+                  >
+                    <span>{language === 'HI' ? 'सभी देखें' : 'View All'}</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </Link>
+                )}
               </div>
 
-              <div className="space-y-2.5">
-                {MOCK_RECENT_CONVERSATIONS.map((conv) => (
+              {recentConversations.length > 0 ? (
+                <div className="space-y-2.5">
+                  {recentConversations.map((conv) => (
+                    <Link
+                      key={conv.id}
+                      href={`/chat?prompt=${encodeURIComponent(conv.title)}`}
+                      className="block p-3.5 rounded-2xl border border-[#EFECE6] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#1B2B26]/60 hover:border-[#5B8272] transition-all group"
+                    >
+                      <div className="flex items-start justify-between gap-2 mb-1">
+                        <h4 className="text-xs font-bold text-[#18211D] dark:text-[#F7F5EF] group-hover:text-[#0D3328] dark:group-hover:text-[#8FA89B] line-clamp-1">
+                          {conv.title}
+                        </h4>
+                        <span className="text-[10px] text-[#8B978F] whitespace-nowrap flex items-center gap-1">
+                          <Clock className="w-3 h-3" />
+                          {conv.updated_at}
+                        </span>
+                      </div>
+                      <p className="text-[11px] text-[#606E66] dark:text-[#BAC5BF] line-clamp-1">
+                        {conv.preview}
+                      </p>
+                    </Link>
+                  ))}
+                </div>
+              ) : (
+                <div className="p-6 text-center space-y-2 rounded-2xl bg-[#FAF9F5] dark:bg-[#1B2B26]/40 border border-[#EFECE6] dark:border-[#253831]">
+                  <p className="text-xs text-[#606E66] dark:text-[#BAC5BF]">
+                    {language === 'HI'
+                      ? 'अभी तक कोई हालिया चैट बातचीत उपलब्ध नहीं है।'
+                      : 'No recent chat conversations available yet.'}
+                  </p>
                   <Link
-                    key={conv.id}
-                    href={`/chat/${encodeURIComponent(conv.id)}`}
-                    className="block p-3.5 rounded-2xl border border-[#EFECE6] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#1B2B26]/60 hover:border-[#5B8272] transition-all group"
+                    href="/chat"
+                    className="inline-flex items-center gap-1 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:underline"
                   >
-                    <div className="flex items-start justify-between gap-2 mb-1">
-                      <h4 className="text-xs font-bold text-[#18211D] dark:text-[#F7F5EF] group-hover:text-[#0D3328] dark:group-hover:text-[#8FA89B] line-clamp-1">
-                        {conv.title}
-                      </h4>
-                      <span className="text-[10px] text-[#8B978F] whitespace-nowrap flex items-center gap-1">
-                        <Clock className="w-3 h-3" />
-                        {conv.updated_at}
-                      </span>
-                    </div>
-                    <p className="text-[11px] text-[#606E66] dark:text-[#BAC5BF] line-clamp-1">
-                      {conv.preview}
-                    </p>
+                    <MessageSquarePlus className="w-3.5 h-3.5" />
+                    <span>{language === 'HI' ? 'चैट शुरू करें' : 'Start a chat query'}</span>
                   </Link>
-                ))}
-              </div>
+                </div>
+              )}
             </div>
 
             <div className="pt-4 mt-3 border-t border-[#EFECE6] dark:border-[#1C2E28] text-right">
@@ -299,43 +294,62 @@ export default function DashboardPage() {
                     {t('nav.saved')}
                   </h3>
                 </div>
-                <Link
-                  href="/saved-standards"
-                  className="text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:underline flex items-center gap-1"
-                >
-                  <span>{language === 'HI' ? 'सभी देखें' : 'View All'}</span>
-                  <ArrowRight className="w-3 h-3" />
-                </Link>
-              </div>
-
-              <div className="space-y-2.5">
-                {MOCK_SAVED_STANDARDS.map((std) => (
-                  <div
-                    key={std.is_number}
-                    className="p-3.5 rounded-2xl border border-[#EFECE6] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#1B2B26]/60 flex items-center justify-between gap-3 hover:border-[#5B8272] transition-colors"
+                {savedStandards.length > 0 && (
+                  <Link
+                    href="/saved-standards"
+                    className="text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:underline flex items-center gap-1"
                   >
-                    <div className="min-w-0 flex-1">
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="font-mono text-xs font-black text-[#0D3328] dark:text-[#8FA89B]">
-                          {std.is_number}
-                        </span>
-                        <StatusBadge status={std.status} />
-                      </div>
-                      <p className="text-[11px] text-[#606E66] dark:text-[#BAC5BF] line-clamp-1">
-                        {std.title}
-                      </p>
-                    </div>
-
-                    <Link
-                      href={`/standards/${encodeURIComponent(std.is_number)}`}
-                      className="p-1.5 rounded-full hover:bg-[#EFECE6] dark:hover:bg-[#20312B] text-[#606E66] dark:text-[#BAC5BF] shrink-0"
-                      title={t('btn.viewDetails')}
-                    >
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
-                ))}
+                    <span>{language === 'HI' ? 'सभी देखें' : 'View All'}</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </Link>
+                )}
               </div>
+
+              {savedStandards.length > 0 ? (
+                <div className="space-y-2.5">
+                  {savedStandards.map((std) => (
+                    <div
+                      key={std.is_number}
+                      className="p-3.5 rounded-2xl border border-[#EFECE6] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#1B2B26]/60 flex items-center justify-between gap-3 hover:border-[#5B8272] transition-colors"
+                    >
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="font-mono text-xs font-black text-[#0D3328] dark:text-[#8FA89B]">
+                            {std.is_number}
+                          </span>
+                          <StatusBadge status={std.status} />
+                        </div>
+                        <p className="text-[11px] text-[#606E66] dark:text-[#BAC5BF] line-clamp-1">
+                          {std.title}
+                        </p>
+                      </div>
+
+                      <Link
+                        href={`/standards/${encodeURIComponent(std.is_number)}`}
+                        className="p-1.5 rounded-full hover:bg-[#EFECE6] dark:hover:bg-[#20312B] text-[#606E66] dark:text-[#BAC5BF] shrink-0"
+                        title={t('btn.viewDetails')}
+                      >
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="p-6 text-center space-y-2 rounded-2xl bg-[#FAF9F5] dark:bg-[#1B2B26]/40 border border-[#EFECE6] dark:border-[#253831]">
+                  <p className="text-xs text-[#606E66] dark:text-[#BAC5BF]">
+                    {language === 'HI'
+                      ? 'अभी तक कोई मानक बुकमार्क नहीं किया गया है।'
+                      : 'No standards bookmarked yet.'}
+                  </p>
+                  <Link
+                    href="/find-standards"
+                    className="inline-flex items-center gap-1 text-xs font-bold text-[#0D3328] dark:text-[#8FA89B] hover:underline"
+                  >
+                    <Compass className="w-3.5 h-3.5" />
+                    <span>{language === 'HI' ? 'मानक खोजें' : 'Find Standards to Bookmark'}</span>
+                  </Link>
+                </div>
+              )}
             </div>
 
             <div className="pt-4 mt-3 border-t border-[#EFECE6] dark:border-[#1C2E28] text-right">

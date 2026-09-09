@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 65893,
+      "standardEncId": "eyJpdiI6ImJXbHNWVU1oVm9XNGk1dkY4cFUyMWc9PSIsInZhbHVlIjoiMWV2Vk43ZitTT0h1WkV0K1BBa21jQT09IiwibWFjIjoiN2Y1YzBmMzEyZWJjODkwOGQ2MGZhNzU2ODRiYTI1ZDc2MDAyM2Q4ZDQxM2ZkZTg4NDE4OTU0YjhlOTIwNjUyMCIsInRhZyI6IiJ9",
+      "standardLabel": "IS 16102 (Part 1):2026 Self-Ballasted LED Lamps for General Lighting Services Part 1 Safety Requirements (First Revision)",
+      "standardNumber": "IS 16102 (Part 1):2026",
+      "standardName": "Self-Ballasted LED Lamps for General Lighting Services Part 1 Safety Requirements (First Revision)",
+      "departmentName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "sectionalCommitteeName": "ETD 23 - Lamps And Related Equipments",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2026-02-02",
+      "publishedOnFormatted": "02 Feb 2026"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

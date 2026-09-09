@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useSyncExternalStore } from 'react';
 
 export type Language = 'EN' | 'HI';
 
@@ -77,24 +77,39 @@ const translations: Record<Language, Record<string, string>> = {
     'dash.statLabs': 'Recognized Labs',
     'dash.statQco': 'Mandatory QCOs',
     'dash.statConfidence': 'Guidance Reliability',
-    'dash.askDesc': 'Two-way conversational guidance. Ask multi-turn regulatory questions, verify mandatory schemes, and inspect testing clauses.',
-    'dash.findDesc': 'Natural language product standard identification. Match product parameters and electrical ratings to applicable IS standards.',
-    'dash.compareDesc': 'Side-by-side comparative analysis of two Indian Standards. Inspect scope overlap, testing parameters, and certification limits.',
+    'dash.askDesc': 'Get answers to your questions about Indian Standards, BIS services, certification and more — in natural language.',
+    'dash.findDesc': 'Discover applicable Indian Standards based on your product, industry or requirement.',
+    'dash.compareDesc': 'Compare two or more standards side-by-side to understand requirements, differences and applicability.',
 
     // Chat
     'chat.title': 'AI Regulatory Chatbot',
     'chat.subtitle': 'Ask questions about Indian Standards, QCO applicability, certification schemes, and laboratory test protocols.',
+    'chat.assistantBadge': 'Official BIS Guide',
+    'chat.modeGrounded': 'Grounded in BIS Standard Text',
+    'chat.modeMetadata': 'Curated Corpus Metadata',
+    'chat.modeInsufficient': 'Insufficient Corpus Context',
+    'chat.sourcesHeading': 'Sources / BISaarthi Evidence',
+    'chat.corpusMetadataTag': 'Authoritative 100-Standard Corpus Metadata',
+    'chat.evidenceNoticeTitle': 'Evidence Status & Limitation',
+    'chat.evidenceNoticeDesc': "Based on BISaarthi's curated 100-standard corpus metadata. Exact technical requirements, test procedures, certification conditions, and legal applicability require verified official BIS documentation.",
+    'chat.insufficientContextDesc': 'BISaarthi currently does not have enough verified BIS evidence in its available corpus to answer this question reliably.',
+    'chat.loadingText': 'Retrieving & synthesizing BISaarthi guidance...',
     'chat.emptyHeading': 'How can BISaarthi assist your compliance journey?',
-    'chat.emptyDesc': 'Your conversational assistant for Bureau of Indian Standards guidance. Ask questions in simple language to identify standards, understand mandatory certification schemes, and review laboratory testing expectations.',
-    'chat.inputPlaceholder': 'Ask BISaarthi about Indian Standards, QCOs, testing limits, or certification steps...',
+    'chat.emptyDesc': 'Your conversational assistant for Bureau of Indian Standards guidance. Ask questions in natural language to identify standards, understand mandatory certification schemes, and review laboratory testing expectations.',
+    'chat.inputPlaceholder': 'Ask about an Indian Standard, product, testing rules or certification...',
+    'chat.composerSubtext': 'Press Enter ↵ to send, Shift+Enter for new line',
+    'chat.composerTrust': 'Strict anti-hallucination guardrails active',
     'chat.disclaimer': 'BISaarthi provides AI regulatory guidance based on indexed BIS publications. Verify critical limits with authoritative BIS documents.',
-    'chat.suggested': 'Suggested Inquiries',
-    'chat.suggested1': 'What is the mandatory IS standard for electric water heaters?',
-    'chat.suggested2': 'Explain Scheme-I vs Scheme-II certification under BIS',
-    'chat.suggested3': 'What tests are mandatory under IS 302-2-201 for immersion heaters?',
-    'chat.suggested4': 'Which laboratory tests are required for LED drivers under IS 15885?',
-    'chat.clearSession': 'Clear Session',
+    'chat.suggested': 'Suggested Compliance Inquiries',
+    'chat.suggested1': 'I want to manufacture a 15-litre electric geyser. Which BIS standards should I know about?',
+    'chat.suggested2': 'What are the general safety requirements under IS 302 (Part 1) for household appliances?',
+    'chat.suggested3': 'Which standard applies to CPVC pipes for potable hot and cold water distribution?',
+    'chat.suggested4': 'What is the primary product specification for electric room heaters?',
+    'chat.clearSession': 'New Consultation',
     'chat.downloadTranscript': 'Download Transcript',
+    'chat.copySuccess': 'Copied to clipboard',
+    'chat.copyBtn': 'Copy',
+    'chat.clickToInspect': 'Click standard card for full details',
 
     // Find Standards
     'find.title': 'Find Applicable Standards',
@@ -362,24 +377,39 @@ const translations: Record<Language, Record<string, string>> = {
     'dash.statLabs': 'मान्यता प्राप्त लैब्स',
     'dash.statQco': 'अनिवार्य QCO आदेश',
     'dash.statConfidence': 'विश्वसनीयता',
-    'dash.askDesc': 'द्विपक्षीय संवादात्मक मार्गदर्शन। अनुपालन से जुड़े प्रश्न पूछें, अनिवार्य योजनाओं को समझें और परीक्षण नियमों की समीक्षा करें।',
-    'dash.findDesc': 'सरल भाषा में उत्पाद मानक खोजें। अपने उत्पाद के विवरण और तकनीकी मानकों के अनुसार लागू IS मानक खोजें।',
-    'dash.compareDesc': 'दो भारतीय मानकों की साथ-साथ तुलना करें। कार्यक्षेत्र, परीक्षण आवश्यकताएं और प्रमाणन प्रक्रियाओं का अंतर देखें।',
+    'dash.askDesc': 'भारतीय मानकों, बीआईएस सेवाओं, प्रमाणन और अन्य विषयों पर अपने प्रश्नों के उत्तर प्राकृतिक भाषा में प्राप्त करें।',
+    'dash.findDesc': 'अपने उत्पाद, उद्योग या आवश्यकता के आधार पर लागू भारतीय मानकों को खोजें।',
+    'dash.compareDesc': 'आवश्यकताओं, अंतरों और प्रयोज्यता को समझने के लिए दो या अधिक मानकों की साथ-साथ तुलना करें।',
 
     // Chat
     'chat.title': 'एआई नियामक चैटबॉट',
     'chat.subtitle': 'भारतीय मानकों, QCO, प्रमाणन प्रक्रियाओं और लैब परीक्षण से जुड़े प्रश्न पूछें।',
+    'chat.assistantBadge': 'आधिकारिक बीआईएस गाइड',
+    'chat.modeGrounded': 'मानक पाठ्य सामग्री से प्रमाणित',
+    'chat.modeMetadata': 'क्यूरेटेड कॉर्पस मेटाडेटा',
+    'chat.modeInsufficient': 'अपर्याप्त साक्ष्य',
+    'chat.sourcesHeading': 'स्रोत / बीआईएस सारथी साक्ष्य',
+    'chat.corpusMetadataTag': 'प्रामाणिक 100-मानक कॉर्पस मेटाडेटा',
+    'chat.evidenceNoticeTitle': 'साक्ष्य स्थिति एवं सीमा',
+    'chat.evidenceNoticeDesc': 'यह अनुशंसा बीआईएस सारथी के 100-मानक क्यूरेटेड कॉर्पस मेटाडेटा पर आधारित है। सटीक तकनीकी विनिर्देशों, परीक्षण प्रक्रियाओं, प्रमाणन शर्तों और वैधानिक कानूनी प्रयोज्यता के लिए आधिकारिक बीआईएस दस्तावेजों का सत्यापन आवश्यक है।',
+    'chat.insufficientContextDesc': 'बीआईएस सारथी के पास इस प्रश्न का उत्तर देने के लिए वर्तमान कॉर्पस में पर्याप्त सत्यापित साक्ष्य उपलब्ध नहीं हैं।',
+    'chat.loadingText': 'बीआईएस सारथी मार्गदर्शन तैयार किया जा रहा है...',
     'chat.emptyHeading': 'बीआईएस सारथी आपकी कैसे सहायता कर सकता है?',
     'chat.emptyDesc': 'भारतीय मानक ब्यूरो (BIS) से जुड़े नियमों और प्रक्रियाओं के लिए आपका एआई सहायक। सरल भाषा में प्रश्न पूछकर लागू मानक, अनिवार्य प्रमाणन और लैब टेस्टिंग की जानकारी प्राप्त करें।',
-    'chat.inputPlaceholder': 'भारतीय मानकों, QCO, परीक्षण नियमों या प्रमाणन के बारे में पूछें...',
+    'chat.inputPlaceholder': 'भारतीय मानक, उत्पाद, आवश्यकता, परीक्षण या प्रमाणन के बारे में पूछें...',
+    'chat.composerSubtext': 'भेजने के लिए Enter दबाएं, नई पंक्ति के लिए Shift+Enter',
+    'chat.composerTrust': 'सख्त एंटी-मतिभ्रम सुरक्षा सक्रिय',
     'chat.disclaimer': 'बीआईएस सारथी आधिकारिक बीआईएस प्रकाशनों पर आधारित मार्गदर्शन प्रदान करता है। महत्वपूर्ण आवश्यकताओं की पुष्टि आधिकारिक बीआईएस दस्तावेजों से करें।',
-    'chat.suggested': 'सुझाए गए प्रश्न',
-    'chat.suggested1': 'इलेक्ट्रिक वाटर हीटर के लिए अनिवार्य IS मानक क्या है?',
-    'chat.suggested2': 'बीआईएस के तहत Scheme-I और Scheme-II प्रमाणन में क्या अंतर है?',
-    'chat.suggested3': 'इमर्शन हीटर के लिए IS 302-2-201 के तहत कौन से परीक्षण अनिवार्य हैं?',
-    'chat.suggested4': 'IS 15885 के तहत LED ड्राइवर्स के लिए कौन से लैब टेस्ट आवश्यक हैं?',
-    'chat.clearSession': 'चैट साफ़ करें',
+    'chat.suggested': 'सुझाए गए अनुपालन प्रश्न',
+    'chat.suggested1': 'मैं 15 लीटर का इलेक्ट्रिक गीजर बनाना चाहता हूँ। मुझे किन BIS मानकों के बारे में पता होना चाहिए?',
+    'chat.suggested2': 'घरेलू उपकरणों के लिए IS 302 (Part 1) के तहत सामान्य सुरक्षा आवश्यकताएं क्या हैं?',
+    'chat.suggested3': 'पीने योग्य गर्म और ठंडे पानी के वितरण हेतु CPVC पाइपों पर कौन सा मानक लागू होता है?',
+    'chat.suggested4': 'इलेक्ट्रिक रूम हीटर के लिए प्राथमिक उत्पाद मानक क्या है?',
+    'chat.clearSession': 'नई परामर्श चर्चा',
     'chat.downloadTranscript': 'ट्रांसक्रिप्ट डाउनलोड करें',
+    'chat.copySuccess': 'क्लिपबोर्ड पर कॉपी किया गया',
+    'chat.copyBtn': 'कॉपी करें',
+    'chat.clickToInspect': 'पूर्ण विवरण देखने के लिए क्लिक करें',
 
     // Find Standards
     'find.title': 'लागू भारतीय मानक खोजें',
@@ -588,27 +618,59 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 const LANGUAGE_STORAGE_KEY = 'bisaarthi-language';
 
-export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguageState] = useState<Language>('EN');
+let listeners: Array<() => void> = [];
 
-  useEffect(() => {
-    try {
-      const saved = localStorage.getItem(LANGUAGE_STORAGE_KEY) as Language | null;
-      if (saved === 'EN' || saved === 'HI') {
-        setLanguageState(saved);
-      }
-    } catch {
-      // Fallback to default EN if localStorage is unavailable
+function emitLanguageChange() {
+  for (const listener of listeners) {
+    listener();
+  }
+}
+
+function subscribeLanguage(callback: () => void) {
+  listeners.push(callback);
+  const onStorage = (e: StorageEvent) => {
+    if (e.key === LANGUAGE_STORAGE_KEY) {
+      callback();
     }
-  }, []);
+  };
+  window.addEventListener('storage', onStorage);
+  return () => {
+    listeners = listeners.filter((l) => l !== callback);
+    window.removeEventListener('storage', onStorage);
+  };
+}
+
+function getLanguageSnapshot(): Language {
+  if (typeof window === 'undefined') return 'EN';
+  try {
+    const saved = localStorage.getItem(LANGUAGE_STORAGE_KEY) as Language | null;
+    if (saved === 'EN' || saved === 'HI') {
+      return saved;
+    }
+  } catch {
+    // Fallback to default EN if localStorage is unavailable
+  }
+  return 'EN';
+}
+
+function getServerLanguageSnapshot(): Language {
+  return 'EN';
+}
+
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const language = useSyncExternalStore(
+    subscribeLanguage,
+    getLanguageSnapshot,
+    getServerLanguageSnapshot
+  );
 
   const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
     try {
       localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
     } catch {
       // Ignore localStorage write error
     }
+    emitLanguageChange();
   };
 
   const toggleLanguage = () => {

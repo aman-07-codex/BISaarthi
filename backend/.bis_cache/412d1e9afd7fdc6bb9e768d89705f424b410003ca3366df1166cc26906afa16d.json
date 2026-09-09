@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 66102,
+      "standardEncId": "eyJpdiI6IlQ4OXJpYVBNVG5GWk11czl1MmNLSVE9PSIsInZhbHVlIjoiQkppbTlLZndWcmdGWkgyWmEyOTZ0QT09IiwibWFjIjoiMTQzMWNhMWZjZmM0YzVjODYzZGU4MTQ1OWQxMjE2MzY1YzZlNTY5NzA2ZTRiNGYwMjk0YzU1ZWRiZTdjZTkyOSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 2062 (Part 2):2026 Structural Steel - Part 2 - Hot Rolled Quenched and Tempered Steel Plates, Sheets, Strips and Wide Flats",
+      "standardNumber": "IS 2062 (Part 2):2026",
+      "standardName": "Structural Steel - Part 2 - Hot Rolled Quenched and Tempered Steel Plates, Sheets, Strips and Wide Flats",
+      "departmentName": "METALLURGICAL ENGINEERING DEPARTMENT (MTD)",
+      "sectionalCommitteeName": "MTD 04 - Wrought Steel Products Sectional Committee",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2026-02-18",
+      "publishedOnFormatted": "18 Feb 2026"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

@@ -1,0 +1,2525 @@
+{
+  "version": "1.0",
+  "source_type": "ai_derived_metadata",
+  "total_standards": 100,
+  "standards": {
+    "IS 2082:2018": {
+      "is_number": "IS 2082:2018",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "geyser",
+        "electric geyser",
+        "water heater",
+        "storage water heater",
+        "stationary storage electric water heater"
+      ],
+      "query_terms": [
+        "manufacture geyser",
+        "make geyser",
+        "electric water heater manufacturing",
+        "water heater compliance"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing electric storage water heaters and domestic geysers"
+      ],
+      "application_domains": [
+        "domestic water heating",
+        "electrical appliances"
+      ],
+      "relevance_description": "Specification for stationary storage type electric water heaters.",
+      "derived_at": "2026-09-09T15:44:29.997395+00:00"
+    },
+    "IS 302 (Part 1):2024": {
+      "is_number": "IS 302 (Part 1):2024",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "household electrical appliances",
+        "similar electrical appliances",
+        "general safety appliances"
+      ],
+      "query_terms": [
+        "appliance safety standard",
+        "insulation testing",
+        "leakage current verification",
+        "household appliance general requirements"
+      ],
+      "manufacturing_use_cases": [
+        "general safety compliance, insulation testing, and leakage current verification for all domestic electrical appliances"
+      ],
+      "application_domains": [
+        "household electrical appliances",
+        "electrical safety"
+      ],
+      "relevance_description": "General safety requirements for household and similar electrical appliances.",
+      "derived_at": "2026-09-09T15:44:29.997477+00:00"
+    },
+    "IS 302 (Part 2/Sec 3):2024": {
+      "is_number": "IS 302 (Part 2/Sec 3):2024",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "electric iron",
+        "dry iron",
+        "steam iron",
+        "household electric iron"
+      ],
+      "query_terms": [
+        "manufacture electric iron",
+        "electric iron safety test",
+        "thermal cutoff testing",
+        "thermostat safety for irons"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing and testing electric irons for thermal cutoff, thermostat safety, and cord flexure"
+      ],
+      "application_domains": [
+        "domestic heating appliances",
+        "household electrical appliances"
+      ],
+      "relevance_description": "Particular safety requirements for electric irons.",
+      "derived_at": "2026-09-09T15:44:29.997508+00:00"
+    },
+    "IS 302 (Part 2/Sec 16):2026": {
+      "is_number": "IS 302 (Part 2/Sec 16):2026",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "food waste disposer",
+        "kitchen waste unit",
+        "food waste processor"
+      ],
+      "query_terms": [
+        "food waste disposer manufacturing",
+        "motorized kitchen waste unit safety",
+        "disposer safety standard"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing and safety verification of domestic motorized kitchen waste units"
+      ],
+      "application_domains": [
+        "kitchen appliances",
+        "household electrical appliances"
+      ],
+      "relevance_description": "Particular safety requirements for food waste disposers.",
+      "derived_at": "2026-09-09T15:44:29.997531+00:00"
+    },
+    "IS 302 (Part 2/Sec 26):2026": {
+      "is_number": "IS 302 (Part 2/Sec 26):2026",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "electric clock",
+        "household clock appliance"
+      ],
+      "query_terms": [
+        "electric cooking appliances manufacturing",
+        "surface temperature verification",
+        "element insulation testing",
+        "clock safety standard"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing electric cooking appliances and verifying surface temperature and element insulation"
+      ],
+      "application_domains": [
+        "household electrical appliances",
+        "cooking and timekeeping appliances"
+      ],
+      "relevance_description": "Particular safety requirements for clocks and similar appliances.",
+      "derived_at": "2026-09-09T15:44:29.997550+00:00"
+    },
+    "IS 302 (Part 2/Sec 36):2026": {
+      "is_number": "IS 302 (Part 2/Sec 36):2026",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "commercial electric cooking range",
+        "commercial oven",
+        "commercial hob",
+        "hob element"
+      ],
+      "query_terms": [
+        "commercial kitchen appliance safety",
+        "cooking range certification",
+        "thermal isolation compliance",
+        "commercial hob manufacturing"
+      ],
+      "manufacturing_use_cases": [
+        "commercial kitchen appliance safety certification and high-power thermal isolation compliance"
+      ],
+      "application_domains": [
+        "commercial kitchen appliances",
+        "industrial cooking equipment"
+      ],
+      "relevance_description": "Particular safety requirements for commercial electric cooking ranges, ovens, hobs, and hob elements.",
+      "derived_at": "2026-09-09T15:44:29.997578+00:00"
+    },
+    "IS 369:2019": {
+      "is_number": "IS 369:2019",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "room heater",
+        "direct acting room heater",
+        "radiant heater",
+        "convector heater",
+        "fan heater"
+      ],
+      "query_terms": [
+        "manufacture room heater",
+        "electric room heater performance",
+        "radiant heater testing",
+        "room heater compliance"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing and performance testing of domestic electric room heaters"
+      ],
+      "application_domains": [
+        "domestic heating",
+        "electrical appliances"
+      ],
+      "relevance_description": "Performance requirements for household electric direct-acting room heaters.",
+      "derived_at": "2026-09-09T15:44:29.997601+00:00"
+    },
+    "IS 374:2019": {
+      "is_number": "IS 374:2019",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "ceiling fan",
+        "electric ceiling fan",
+        "fan regulator"
+      ],
+      "query_terms": [
+        "manufacture ceiling fan",
+        "ceiling fan air delivery test",
+        "fan energy efficiency",
+        "BEE star labelling fan"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing ceiling fans, measuring air delivery, service value, and energy efficiency"
+      ],
+      "application_domains": [
+        "domestic cooling",
+        "electrical appliances"
+      ],
+      "relevance_description": "Specification for electric ceiling type fans and regulators.",
+      "derived_at": "2026-09-09T15:44:29.997624+00:00"
+    },
+    "IS 555:1979": {
+      "is_number": "IS 555:1979",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "table fan",
+        "pedestal fan",
+        "cabin fan",
+        "electric table fan"
+      ],
+      "query_terms": [
+        "manufacture table fan",
+        "pedestal fan safety",
+        "finger guard safety test",
+        "portable fan specification"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing portable and pedestal domestic fans and verifying finger-guard safety"
+      ],
+      "application_domains": [
+        "domestic cooling",
+        "electrical appliances"
+      ],
+      "relevance_description": "Specification for electric table type fans and regulators.",
+      "derived_at": "2026-09-09T15:44:29.997643+00:00"
+    },
+    "IS 2312:1967": {
+      "is_number": "IS 2312:1967",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "exhaust fan",
+        "ventilating fan",
+        "propeller fan",
+        "ac ventilating fan"
+      ],
+      "query_terms": [
+        "manufacture exhaust fan",
+        "ventilating fan airflow extraction",
+        "propeller fan specification"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing exhaust fans and measuring volumetric airflow extraction rates"
+      ],
+      "application_domains": [
+        "ventilation systems",
+        "domestic and industrial ventilation"
+      ],
+      "relevance_description": "Specification for propeller type AC ventilating fans.",
+      "derived_at": "2026-09-09T15:44:29.997661+00:00"
+    },
+    "IS 694:2010": {
+      "is_number": "IS 694:2010",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "pvc insulated cable",
+        "sheathed cable",
+        "unsheathed cable",
+        "flexible cord",
+        "building wire"
+      ],
+      "query_terms": [
+        "manufacture pvc cable",
+        "flexible cord compliance",
+        "building wiring cable specification",
+        "insulation resistance test cable"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing building wiring cables, flexible cords, and verifying insulation resistance"
+      ],
+      "application_domains": [
+        "electrical wiring",
+        "power distribution"
+      ],
+      "relevance_description": "Specification for PVC insulated unsheathed and sheathed cables/cords with rigid and flexible conductor for rated voltages up to and including 1100 V.",
+      "derived_at": "2026-09-09T15:44:29.997679+00:00"
+    },
+    "IS 1293:2019": {
+      "is_number": "IS 1293:2019",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "electrical plug",
+        "socket outlet",
+        "wall socket",
+        "power strip",
+        "adaptor"
+      ],
+      "query_terms": [
+        "manufacture electrical plug",
+        "socket outlet specification",
+        "3 pin plug compliance",
+        "household socket standard"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing electrical plugs, wall sockets, power distribution strips, and appliance cords"
+      ],
+      "application_domains": [
+        "electrical wiring accessories",
+        "household electrical installations"
+      ],
+      "relevance_description": "Specification for plugs and socket-outlets for household and similar purposes of rated voltage up to and including 250 V and rated current up to and including 16 A.",
+      "derived_at": "2026-09-09T15:44:29.997702+00:00"
+    },
+    "IS 3854:2023": {
+      "is_number": "IS 3854:2023",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "domestic switch",
+        "modular switch",
+        "wall switch",
+        "push button"
+      ],
+      "query_terms": [
+        "manufacture modular switches",
+        "switch endurance cycle test",
+        "dielectric strength switch",
+        "electrical wall switch specification"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing modular switches, testing endurance cycles, and dielectric strength"
+      ],
+      "application_domains": [
+        "electrical wiring accessories",
+        "switchgear"
+      ],
+      "relevance_description": "Specification for switches for domestic and similar purposes.",
+      "derived_at": "2026-09-09T15:44:29.997721+00:00"
+    },
+    "IS 12640 (Part 1):2024": {
+      "is_number": "IS 12640 (Part 1):2024",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "rccb",
+        "residual current circuit breaker",
+        "earth leakage circuit breaker"
+      ],
+      "query_terms": [
+        "manufacture rccb",
+        "residual current circuit breaker testing",
+        "earth fault protection device",
+        "rccb general rules"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing and testing RCCB devices for residential and commercial electrical distribution boards"
+      ],
+      "application_domains": [
+        "electrical safety",
+        "low voltage switchgear"
+      ],
+      "relevance_description": "General rules for residual current operated circuit breakers without integral overcurrent protection for household and similar uses (RCCBs).",
+      "derived_at": "2026-09-09T15:44:29.997739+00:00"
+    },
+    "IS/IEC 60898 (Part 1):2015": {
+      "is_number": "IS/IEC 60898 (Part 1):2015",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "mcb",
+        "miniature circuit breaker",
+        "circuit breaker"
+      ],
+      "query_terms": [
+        "manufacture mcb",
+        "miniature circuit breaker testing",
+        "mcb tripping characteristics",
+        "short circuit protection device"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing and testing MCBs for tripping characteristics and breaking capacity"
+      ],
+      "application_domains": [
+        "electrical protection",
+        "low voltage switchgear"
+      ],
+      "relevance_description": "Circuit-breakers for overcurrent protection for household and similar installations (a.c. operation).",
+      "derived_at": "2026-09-09T15:44:29.997762+00:00"
+    },
+    "IS 1554 (Part 1):1988": {
+      "is_number": "IS 1554 (Part 1):1988",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "pvc insulated power cable",
+        "armoured cable",
+        "heavy duty cable",
+        "industrial power cable"
+      ],
+      "query_terms": [
+        "manufacture armoured cable",
+        "pvc heavy duty cable specification",
+        "underground power cable testing",
+        "tensile sheath strength test"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing armoured/unarmoured industrial power cables and testing tensile sheath strength"
+      ],
+      "application_domains": [
+        "industrial power distribution",
+        "underground cabling"
+      ],
+      "relevance_description": "Specification for PVC insulated (heavy duty) electric cables for working voltages up to and including 1100 V.",
+      "derived_at": "2026-09-09T15:44:29.997785+00:00"
+    },
+    "IS 16102 (Part 1):2026": {
+      "is_number": "IS 16102 (Part 1):2026",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "led bulb",
+        "self ballasted led lamp",
+        "retrofit led lamp"
+      ],
+      "query_terms": [
+        "manufacture led bulb",
+        "led lamp safety standard",
+        "bis crs registration led",
+        "general lighting led safety"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing consumer LED bulbs and obtaining mandatory BIS CRS registration"
+      ],
+      "application_domains": [
+        "general lighting",
+        "lighting equipment"
+      ],
+      "relevance_description": "Safety requirements for self-ballasted LED lamps for general lighting services.",
+      "derived_at": "2026-09-09T15:44:29.997809+00:00"
+    },
+    "IS 15885 (Part 1):2011": {
+      "is_number": "IS 15885 (Part 1):2011",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "lamp controlgear",
+        "electronic ballast",
+        "led driver",
+        "lighting power supply"
+      ],
+      "query_terms": [
+        "manufacture electronic ballast",
+        "led driver safety",
+        "lamp controlgear general requirements",
+        "lighting thermal safety test"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing electronic ballasts, LED drivers, and ensuring thermal and electrical safety"
+      ],
+      "application_domains": [
+        "lighting controlgear",
+        "electrical lighting"
+      ],
+      "relevance_description": "General safety requirements for lamp controlgear.",
+      "derived_at": "2026-09-09T15:44:29.997828+00:00"
+    },
+    "IS 15885 (Part 2/Sec 13):2012": {
+      "is_number": "IS 15885 (Part 2/Sec 13):2012",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "led module controlgear",
+        "ac dc electronic controlgear",
+        "led driver unit"
+      ],
+      "query_terms": [
+        "test led driver",
+        "electronic controlgear for led",
+        "dc supplied led controlgear",
+        "lighting fixture driver certification"
+      ],
+      "manufacturing_use_cases": [
+        "testing and certifying LED drivers for lighting fixtures and consumer lamps"
+      ],
+      "application_domains": [
+        "led lighting",
+        "controlgear"
+      ],
+      "relevance_description": "Particular safety requirements for DC or AC supplied electronic controlgear for LED modules.",
+      "derived_at": "2026-09-09T15:44:29.997846+00:00"
+    },
+    "IS 13252 (Part 22):2019": {
+      "is_number": "IS 13252 (Part 22):2019",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "it equipment",
+        "outdoor it equipment",
+        "telecom equipment",
+        "outdoor information technology equipment"
+      ],
+      "query_terms": [
+        "outdoor it equipment safety",
+        "telecom infrastructure safety standard",
+        "outdoor information technology compliance"
+      ],
+      "manufacturing_use_cases": [
+        "safety verification for telecom and outdoor IT consumer infrastructure"
+      ],
+      "application_domains": [
+        "information technology equipment",
+        "outdoor telecommunications"
+      ],
+      "relevance_description": "Safety requirements for information technology equipment to be installed outdoors.",
+      "derived_at": "2026-09-09T15:44:29.997869+00:00"
+    },
+    "IS 398 (Part 2):2025": {
+      "is_number": "IS 398 (Part 2):2025",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "acsr conductor",
+        "aluminium conductor",
+        "galvanized steel reinforced conductor",
+        "overhead transmission conductor"
+      ],
+      "query_terms": [
+        "manufacture acsr conductor",
+        "overhead power transmission cable",
+        "aluminium conductor steel reinforced specification",
+        "transmission line conductor"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing overhead power transmission cables and conductors"
+      ],
+      "application_domains": [
+        "power transmission",
+        "overhead electrical lines"
+      ],
+      "relevance_description": "Specification for aluminium conductors for overhead transmission purposes (Aluminium Conductors Galvanized Steel Reinforced).",
+      "derived_at": "2026-09-09T15:44:29.997887+00:00"
+    },
+    "IS 269:2015": {
+      "is_number": "IS 269:2015",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "ordinary portland cement",
+        "opc cement",
+        "portland cement",
+        "33 grade cement",
+        "43 grade cement",
+        "53 grade cement"
+      ],
+      "query_terms": [
+        "manufacture ordinary portland cement",
+        "opc cement specification",
+        "portland cement quality control",
+        "cement compressive strength testing"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing OPC cement, physical/chemical quality control, and testing compressive strength."
+      ],
+      "application_domains": [
+        "construction",
+        "cement and concrete"
+      ],
+      "relevance_description": "Specification for Ordinary Portland Cement across 33, 43, and 53 grades.",
+      "derived_at": "2026-09-09T15:44:48.486012+00:00"
+    },
+    "IS 1489 (Part 1)  : 2015": {
+      "is_number": "IS 1489 (Part 1)  : 2015",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "portland pozzolana cement",
+        "ppc cement",
+        "fly ash based cement",
+        "blended cement"
+      ],
+      "query_terms": [
+        "manufacture portland pozzolana cement",
+        "fly ash cement specification",
+        "ppc cement production",
+        "sustainable cement manufacturing"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing fly-ash blended cement for general building construction and sustainability."
+      ],
+      "application_domains": [
+        "construction",
+        "cement and concrete"
+      ],
+      "relevance_description": "Specification for fly ash based Portland Pozzolana Cement.",
+      "derived_at": "2026-09-09T15:44:48.486044+00:00"
+    },
+    "IS 1489 (Part 2):2015": {
+      "is_number": "IS 1489 (Part 2):2015",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "portland pozzolana cement",
+        "ppc cement",
+        "calcined clay based cement",
+        "clay pozzolana cement"
+      ],
+      "query_terms": [
+        "manufacture calcined clay cement",
+        "ppc calcined clay specification",
+        "clay based pozzolana cement production"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing calcined clay PPC cement in regions with clay pozzolana resources."
+      ],
+      "application_domains": [
+        "construction",
+        "cement and concrete"
+      ],
+      "relevance_description": "Specification for calcined clay based Portland Pozzolana Cement.",
+      "derived_at": "2026-09-09T15:44:48.486053+00:00"
+    },
+    "IS 455:2015": {
+      "is_number": "IS 455:2015",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "portland slag cement",
+        "psc cement",
+        "slag cement",
+        "blast furnace slag cement"
+      ],
+      "query_terms": [
+        "manufacture portland slag cement",
+        "psc cement specification",
+        "slag cement for marine structures",
+        "granulated blast furnace slag cement"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing slag cement for marine structures, water treatment plants, and coastal concrete."
+      ],
+      "application_domains": [
+        "construction",
+        "cement and concrete",
+        "marine construction"
+      ],
+      "relevance_description": "Specification for Portland Slag Cement manufactured by blending granulated blast furnace slag.",
+      "derived_at": "2026-09-09T15:44:48.486060+00:00"
+    },
+    "IS 456:2000": {
+      "is_number": "IS 456:2000",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "plain concrete",
+        "reinforced concrete",
+        "rc code",
+        "concrete structural code"
+      ],
+      "query_terms": [
+        "plain and reinforced concrete code",
+        "concrete mix grade selection",
+        "structural concrete design",
+        "concrete durability requirements"
+      ],
+      "manufacturing_use_cases": [
+        "civil engineering structural calculations, concrete mix grade selection, and durability requirements."
+      ],
+      "application_domains": [
+        "construction",
+        "civil engineering structures"
+      ],
+      "relevance_description": "Cornerstone national code of practice for structural plain and reinforced concrete design.",
+      "derived_at": "2026-09-09T15:44:48.486067+00:00"
+    },
+    "IS 10262:2019": {
+      "is_number": "IS 10262:2019",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "concrete mix proportioning",
+        "mix design guidelines",
+        "ready mix concrete design",
+        "self-compacting concrete design"
+      ],
+      "query_terms": [
+        "concrete mix proportioning guidelines",
+        "mix design for normal and high strength concrete",
+        "ready mix plant concrete design"
+      ],
+      "manufacturing_use_cases": [
+        "proportioning concrete ingredients for ready-mix and site plants."
+      ],
+      "application_domains": [
+        "construction",
+        "concrete production"
+      ],
+      "relevance_description": "National guidelines for designing concrete mixes for normal, high-strength, and self-compacting concrete.",
+      "derived_at": "2026-09-09T15:44:48.486075+00:00"
+    },
+    "IS 383:2016": {
+      "is_number": "IS 383:2016",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "coarse aggregate",
+        "fine aggregate",
+        "concrete aggregate",
+        "crushed stone aggregate"
+      ],
+      "query_terms": [
+        "aggregate for concrete specification",
+        "coarse and fine aggregate testing",
+        "sourcing concrete aggregates",
+        "aggregate grading and flakiness"
+      ],
+      "manufacturing_use_cases": [
+        "sourcing, grading, and testing aggregate size, silt content, flakiness, and crushing value."
+      ],
+      "application_domains": [
+        "construction",
+        "aggregate supply"
+      ],
+      "relevance_description": "Specification for natural, crushed, and manufactured coarse and fine aggregates for concrete.",
+      "derived_at": "2026-09-09T15:44:48.486081+00:00"
+    },
+    "IS 516 (Part 1/Sec 1):2021": {
+      "is_number": "IS 516 (Part 1/Sec 1):2021",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "hardened concrete test",
+        "compressive strength test",
+        "flexural strength test",
+        "split tensile strength test"
+      ],
+      "query_terms": [
+        "testing strength of hardened concrete",
+        "concrete compressive strength testing method",
+        "concrete cube test",
+        "split tensile strength of concrete"
+      ],
+      "manufacturing_use_cases": [
+        "quality control testing of 7-day and 28-day concrete cube specimens on construction sites."
+      ],
+      "application_domains": [
+        "construction",
+        "material testing"
+      ],
+      "relevance_description": "Primary test method for determining compressive strength of hardened concrete cubes and cylinders.",
+      "derived_at": "2026-09-09T15:44:48.486090+00:00"
+    },
+    "IS 1199 (Part 2):2018": {
+      "is_number": "IS 1199 (Part 2):2018",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "fresh concrete",
+        "fresh concrete consistency",
+        "concrete workability",
+        "slump test"
+      ],
+      "query_terms": [
+        "fresh concrete consistency testing",
+        "slump cone test method",
+        "determination of workability of fresh concrete",
+        "fresh concrete sampling"
+      ],
+      "manufacturing_use_cases": [
+        "performing on-site slump cone tests and verifying workability before concrete placement."
+      ],
+      "application_domains": [
+        "construction",
+        "concrete quality control"
+      ],
+      "relevance_description": "Standard methods of sampling and testing consistency and workability of fresh concrete.",
+      "derived_at": "2026-09-09T15:44:48.486097+00:00"
+    },
+    "IS 1786:2008": {
+      "is_number": "IS 1786:2008",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "tmt bar",
+        "deformed steel bar",
+        "reinforcement steel",
+        "fe 500 rebar",
+        "fe 550 rebar"
+      ],
+      "query_terms": [
+        "manufacture tmt bars",
+        "high strength deformed steel bars",
+        "reinforcement steel specification",
+        "fe 500 rebar manufacturing"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing Fe 415, Fe 500, Fe 550, and Fe 600 TMT rebars and verifying tensile/bend properties."
+      ],
+      "application_domains": [
+        "construction",
+        "steel manufacturing",
+        "concrete reinforcement"
+      ],
+      "relevance_description": "Benchmark specification for high strength deformed steel bars and wires for concrete reinforcement.",
+      "derived_at": "2026-09-09T15:44:48.486106+00:00"
+    },
+    "IS 1077:2025": {
+      "is_number": "IS 1077:2025",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "burnt clay brick",
+        "clay building brick",
+        "masonry brick",
+        "red brick"
+      ],
+      "query_terms": [
+        "manufacture burnt clay bricks",
+        "clay building bricks specification",
+        "red brick manufacturing quality",
+        "masonry brick standards"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing and quality control of clay bricks for wall masonry."
+      ],
+      "application_domains": [
+        "construction",
+        "masonry materials"
+      ],
+      "relevance_description": "Standard specification for burnt clay building bricks for masonry construction.",
+      "derived_at": "2026-09-09T15:44:48.486115+00:00"
+    },
+    "IS 2185 (Part 1):2005": {
+      "is_number": "IS 2185 (Part 1):2005",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "concrete masonry unit",
+        "hollow concrete block",
+        "solid concrete block",
+        "cement block"
+      ],
+      "query_terms": [
+        "manufacture concrete blocks",
+        "hollow and solid concrete blocks specification",
+        "precast concrete block testing",
+        "load bearing concrete blocks"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing precast concrete blocks and testing block compressive strength and density."
+      ],
+      "application_domains": [
+        "construction",
+        "precast concrete products"
+      ],
+      "relevance_description": "Specification for hollow and solid concrete masonry blocks for load-bearing and non-load-bearing walls.",
+      "derived_at": "2026-09-09T15:44:48.486124+00:00"
+    },
+    "IS 2185 (Part 3):1984": {
+      "is_number": "IS 2185 (Part 3):1984",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "aac block",
+        "autoclaved aerated concrete block",
+        "lightweight concrete block",
+        "cellular concrete block"
+      ],
+      "query_terms": [
+        "manufacture aac blocks",
+        "autoclaved cellular aerated concrete blocks specification",
+        "lightweight block manufacturing"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing and structural testing of AAC blocks for modern building envelopes."
+      ],
+      "application_domains": [
+        "construction",
+        "lightweight building materials"
+      ],
+      "relevance_description": "Specification for lightweight autoclaved cellular aerated concrete blocks.",
+      "derived_at": "2026-09-09T15:44:48.486131+00:00"
+    },
+    "IS 4926:2003": {
+      "is_number": "IS 4926:2003",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "ready mixed concrete",
+        "rmc",
+        "ready mix concrete",
+        "central batching plant concrete"
+      ],
+      "query_terms": [
+        "ready mixed concrete code of practice",
+        "rmc plant operation",
+        "transit mixer concrete delivery",
+        "batching plant quality assurance"
+      ],
+      "manufacturing_use_cases": [
+        "operating commercial RMC batching plants, transit mixer monitoring, and delivery quality assurance."
+      ],
+      "application_domains": [
+        "construction",
+        "ready-mixed concrete industry"
+      ],
+      "relevance_description": "Code of practice governing the production, batching, testing, and delivery of Ready-Mixed Concrete.",
+      "derived_at": "2026-09-09T15:44:48.486137+00:00"
+    },
+    "IS 3495 (Part 1):2019": {
+      "is_number": "IS 3495 (Part 1):2019",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "brick compressive strength test",
+        "clay brick test",
+        "brick strength testing method"
+      ],
+      "query_terms": [
+        "determination of compressive strength of bricks",
+        "burnt clay bricks test method",
+        "brick strength lab testing"
+      ],
+      "manufacturing_use_cases": [
+        "testing brick compressive strength in geotechnical and material testing laboratories."
+      ],
+      "application_domains": [
+        "construction",
+        "material testing"
+      ],
+      "relevance_description": "Standard laboratory test method for determining compressive strength of burnt clay building bricks.",
+      "derived_at": "2026-09-09T15:44:48.486143+00:00"
+    },
+    "IS 9103:1999": {
+      "is_number": "IS 9103:1999",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "concrete admixture",
+        "superplasticizer",
+        "retarder",
+        "accelerator",
+        "chemical admixture"
+      ],
+      "query_terms": [
+        "concrete admixtures specification",
+        "formulate concrete plasticizers",
+        "chemical and mineral admixtures for concrete",
+        "set accelerating admixtures"
+      ],
+      "manufacturing_use_cases": [
+        "formulating and testing admixtures to improve concrete workability and set acceleration."
+      ],
+      "application_domains": [
+        "construction chemicals",
+        "concrete production"
+      ],
+      "relevance_description": "Specification for chemical and mineral admixtures like superplasticizers, retarders, and accelerators for concrete.",
+      "derived_at": "2026-09-09T15:44:48.486150+00:00"
+    },
+    "IS 1237:2012": {
+      "is_number": "IS 1237:2012",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "cement flooring tile",
+        "terrazzo tile",
+        "concrete flooring tile",
+        "precast tile"
+      ],
+      "query_terms": [
+        "manufacture cement flooring tiles",
+        "terrazzo tile specification",
+        "abrasion resistance of concrete tiles",
+        "precast cement tiles"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing and testing abrasion resistance and water absorption of cement flooring tiles."
+      ],
+      "application_domains": [
+        "construction",
+        "flooring and finishes"
+      ],
+      "relevance_description": "Specification for precast plain and terrazzo cement concrete flooring tiles.",
+      "derived_at": "2026-09-09T15:44:48.486158+00:00"
+    },
+    "Is 15658:2021": {
+      "is_number": "Is 15658:2021",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "concrete paver block",
+        "interlocking paver",
+        "paving block",
+        "precast paver"
+      ],
+      "query_terms": [
+        "manufacture concrete paving blocks",
+        "interlocking concrete pavers specification",
+        "paver block compressive strength test",
+        "highway paving blocks"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing concrete paver blocks and measuring compressive strength and breaking load."
+      ],
+      "application_domains": [
+        "construction",
+        "road and pathway infrastructure"
+      ],
+      "relevance_description": "Specification for precast solid interlocking concrete paving blocks for walkways, highways, and ports.",
+      "derived_at": "2026-09-09T15:44:48.486165+00:00"
+    },
+    "IS 2542 (Part 1/Sec 1):2023": {
+      "is_number": "IS 2542 (Part 1/Sec 1):2023",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "gypsum plaster",
+        "building gypsum",
+        "gypsum concrete product",
+        "gypsum consistency test"
+      ],
+      "query_terms": [
+        "gypsum plaster test methods",
+        "determination of normal consistency of gypsum plaster",
+        "gypsum wall lining testing"
+      ],
+      "manufacturing_use_cases": [
+        "laboratory testing of building gypsum materials for plastering and wall linings."
+      ],
+      "application_domains": [
+        "construction",
+        "interior finishes and gypsum products"
+      ],
+      "relevance_description": "Methods of test for gypsum plaster, concrete, and products covering normal consistency.",
+      "derived_at": "2026-09-09T15:44:48.486171+00:00"
+    },
+    "IS 4031 (Part 1):1996": {
+      "is_number": "IS 4031 (Part 1):1996",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "hydraulic cement test",
+        "cement fineness test",
+        "dry sieving test",
+        "blaine air permeability test"
+      ],
+      "query_terms": [
+        "physical tests for hydraulic cement",
+        "determination of fineness by dry sieving",
+        "cement plant quality control test"
+      ],
+      "manufacturing_use_cases": [
+        "mandatory quality control test for all cement manufacturing plants."
+      ],
+      "application_domains": [
+        "construction",
+        "cement manufacturing quality control"
+      ],
+      "relevance_description": "Standard test method for determining the fineness of hydraulic cement by dry sieving and Blaine air permeability.",
+      "derived_at": "2026-09-09T15:44:48.486178+00:00"
+    },
+    "IS 13920:2016": {
+      "is_number": "IS 13920:2016",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "ductile concrete structure",
+        "seismic resistant concrete",
+        "earthquake resistant detailing",
+        "seismic detailing code"
+      ],
+      "query_terms": [
+        "ductile design and detailing of reinforced concrete",
+        "seismic forces concrete structures code",
+        "earthquake resistant beam column detailing"
+      ],
+      "manufacturing_use_cases": [
+        "earthquake resistant detailing of beams, columns, joints, and shear walls in building projects."
+      ],
+      "application_domains": [
+        "construction",
+        "structural and earthquake engineering"
+      ],
+      "relevance_description": "National code of practice for ductile design and detailing of reinforced concrete structures subjected to seismic forces.",
+      "derived_at": "2026-09-09T15:44:48.486184+00:00"
+    },
+    "IS 14543:2024": {
+      "is_number": "IS 14543:2024",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "packaged drinking water",
+        "bottled water",
+        "drinking water",
+        "processed drinking water"
+      ],
+      "query_terms": [
+        "manufacture packaged drinking water",
+        "bottled water specification",
+        "drinking water compliance",
+        "water processing plant standard"
+      ],
+      "manufacturing_use_cases": [
+        "setting up water processing plants, reverse osmosis, mineral dosing, and microbiological testing"
+      ],
+      "application_domains": [
+        "commercial drinking water",
+        "food and beverage processing"
+      ],
+      "relevance_description": "Specification for Packaged Drinking Water other than Packaged Natural Mineral Water.",
+      "derived_at": "2026-09-09T15:45:28.943680+00:00"
+    },
+    "IS 13428:2024": {
+      "is_number": "IS 13428:2024",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "packaged natural mineral water",
+        "natural mineral water",
+        "mineral water",
+        "bottled mineral water"
+      ],
+      "query_terms": [
+        "manufacture natural mineral water",
+        "mineral water bottling",
+        "natural mineral water standard",
+        "subterranean water compliance"
+      ],
+      "manufacturing_use_cases": [
+        "bottling natural mineral water, source protection compliance, and chemical/bacteriological testing"
+      ],
+      "application_domains": [
+        "natural mineral water packaging",
+        "beverage industry"
+      ],
+      "relevance_description": "Specification for Packaged Natural Mineral Water obtained directly from natural subterranean or spring sources.",
+      "derived_at": "2026-09-09T15:45:28.943711+00:00"
+    },
+    "IS 10500:2012": {
+      "is_number": "IS 10500:2012",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "drinking water",
+        "potable water",
+        "municipal water",
+        "tap water"
+      ],
+      "query_terms": [
+        "drinking water specification",
+        "potable water quality",
+        "water quality parameters",
+        "municipal water testing"
+      ],
+      "manufacturing_use_cases": [
+        "quality assurance of municipal tap water, industrial potable supply, and water source screening"
+      ],
+      "application_domains": [
+        "potable water supply",
+        "public health and sanitation"
+      ],
+      "relevance_description": "Specification for drinking water outlining acceptable and permissible limits for physical and chemical parameters.",
+      "derived_at": "2026-09-09T15:45:28.943720+00:00"
+    },
+    "IS 15410:2025": {
+      "is_number": "IS 15410:2025",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "plastic bottles",
+        "plastic containers",
+        "pet bottles",
+        "water bottles"
+      ],
+      "query_terms": [
+        "manufacture plastic water bottles",
+        "pet bottle specification",
+        "mineral water bottle compliance",
+        "plastic container testing"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing plastic water bottles, preforms, and testing overall migration and drop impact"
+      ],
+      "application_domains": [
+        "packaging for mineral water and packaged drinking water",
+        "plastic packaging"
+      ],
+      "relevance_description": "Specification for plastic bottles and containers for packaging natural mineral water and packaged drinking water.",
+      "derived_at": "2026-09-09T15:45:28.943729+00:00"
+    },
+    "IS 10146:1982": {
+      "is_number": "IS 10146:1982",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "polyethylene",
+        "pe",
+        "polyethylene for food contact",
+        "ldpe lldpe hdpe"
+      ],
+      "query_terms": [
+        "polyethylene food contact",
+        "safe polyethylene specification",
+        "food grade polyethylene",
+        "polyethylene for pharmaceuticals"
+      ],
+      "manufacturing_use_cases": [
+        "qualifying virgin LDPE, LLDPE, and HDPE resins for manufacturing food packaging pouches and containers"
+      ],
+      "application_domains": [
+        "food packaging",
+        "pharmaceutical packaging",
+        "drinking water contact materials"
+      ],
+      "relevance_description": "Specification for polyethylene for safe use in contact with foodstuffs, pharmaceuticals, and drinking water.",
+      "derived_at": "2026-09-09T15:45:28.943736+00:00"
+    },
+    "IS 10151:2019": {
+      "is_number": "IS 10151:2019",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "polyvinyl chloride",
+        "pvc",
+        "pvc copolymers",
+        "food grade pvc"
+      ],
+      "query_terms": [
+        "pvc food contact specification",
+        "safe pvc for pharmaceuticals",
+        "pvc drinking water contact",
+        "polyvinyl chloride standard"
+      ],
+      "manufacturing_use_cases": [
+        "evaluating vinyl chloride monomer limits and plasticizers in food cling films and food containers"
+      ],
+      "application_domains": [
+        "food contact materials",
+        "pharmaceutical packaging",
+        "drinking water infrastructure"
+      ],
+      "relevance_description": "Specification for Polyvinyl Chloride (PVC) and its copolymers for safe use in contact with foodstuffs, pharmaceuticals, and drinking water.",
+      "derived_at": "2026-09-09T15:45:28.943743+00:00"
+    },
+    "IS 10910:1984": {
+      "is_number": "IS 10910:1984",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "polypropylene",
+        "pp",
+        "polypropylene copolymers",
+        "food grade polypropylene"
+      ],
+      "query_terms": [
+        "polypropylene food contact",
+        "safe polypropylene specification",
+        "pp for pharmaceuticals",
+        "polypropylene drinking water contact"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing microwave-safe food containers, tiffin boxes, and food-grade injection moulded packaging"
+      ],
+      "application_domains": [
+        "food packaging",
+        "pharmaceutical containers",
+        "drinking water applications"
+      ],
+      "relevance_description": "Specification for polypropylene and its copolymers for safe use in contact with foodstuffs, pharmaceuticals, and drinking water.",
+      "derived_at": "2026-09-09T15:45:28.943750+00:00"
+    },
+    "IS 12252:2017": {
+      "is_number": "IS 12252:2017",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "polyalkylene terephthalates",
+        "pet",
+        "pbt",
+        "pet and pbt polymers"
+      ],
+      "query_terms": [
+        "pet food contact standard",
+        "pbt safe use specification",
+        "polyalkylene terephthalates packaging",
+        "food grade pet specification"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing beverage bottles, edible oil containers, and testing overall migration limits"
+      ],
+      "application_domains": [
+        "food packaging",
+        "pharmaceutical packaging",
+        "beverage containers"
+      ],
+      "relevance_description": "Specification for polyalkylene terephthalates (PET and PBT), their copolymers, and raw material constituents for safe food and pharmaceutical contact.",
+      "derived_at": "2026-09-09T15:45:28.943758+00:00"
+    },
+    "IS 15609:2005": {
+      "is_number": "IS 15609:2005",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "polyethylene flexible pouches",
+        "water pouches",
+        "plastic pouches for water",
+        "pe pouches"
+      ],
+      "query_terms": [
+        "manufacture water pouches",
+        "polyethylene pouch specification",
+        "drinking water flexible pouches",
+        "pouch drop test standard"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing pouch film, dart impact testing, pouch drop test, and leak integrity for drinking water"
+      ],
+      "application_domains": [
+        "flexible packaging",
+        "packaged drinking water distribution"
+      ],
+      "relevance_description": "Specification for polyethylene flexible pouches for packing natural mineral water and packaged drinking water.",
+      "derived_at": "2026-09-09T15:45:28.943768+00:00"
+    },
+    "IS 1158:1973": {
+      "is_number": "IS 1158:1973",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "corn flakes",
+        "breakfast corn flakes",
+        "ready to eat corn flakes"
+      ],
+      "query_terms": [
+        "manufacture corn flakes",
+        "corn flakes specification",
+        "breakfast cereal standard",
+        "corn flakes quality control"
+      ],
+      "manufacturing_use_cases": [
+        "commercial manufacturing of ready-to-eat breakfast cereals and quality control"
+      ],
+      "application_domains": [
+        "food processing",
+        "ready-to-eat breakfast foods"
+      ],
+      "relevance_description": "Specification for corn flakes covering moisture, total ash, and hygienic processing conditions.",
+      "derived_at": "2026-09-09T15:45:28.943775+00:00"
+    },
+    "IS 1165:2022": {
+      "is_number": "IS 1165:2022",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "whole milk powder",
+        "milk powder",
+        "dried whole milk"
+      ],
+      "query_terms": [
+        "manufacture whole milk powder",
+        "milk powder specification",
+        "dairy powder quality standard",
+        "spray dried milk powder"
+      ],
+      "manufacturing_use_cases": [
+        "dairy plant spray-drying operations, milk powder testing, and export certification"
+      ],
+      "application_domains": [
+        "dairy products",
+        "food manufacturing"
+      ],
+      "relevance_description": "Quality standard for whole milk powder specifying fat content, moisture, solubility index, and microbial limits.",
+      "derived_at": "2026-09-09T15:45:28.943782+00:00"
+    },
+    "IS 1166:2022": {
+      "is_number": "IS 1166:2022",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "sweetened condensed milk",
+        "condensed milk",
+        "sweetened condensed skimmed milk",
+        "condensed partly skimmed milk"
+      ],
+      "query_terms": [
+        "manufacture condensed milk",
+        "sweetened condensed milk specification",
+        "dairy canning standard",
+        "condensed high fat milk"
+      ],
+      "manufacturing_use_cases": [
+        "dairy canning and processing of condensed milk for confectionery and consumer consumption"
+      ],
+      "application_domains": [
+        "dairy processing",
+        "confectionery and food ingredients"
+      ],
+      "relevance_description": "Specification for sweetened condensed milk, sweetened condensed partly skimmed milk, skimmed milk, and high fat milk.",
+      "derived_at": "2026-09-09T15:45:28.943790+00:00"
+    },
+    "IS 13688:2020": {
+      "is_number": "IS 13688:2020",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "packaged pasteurized milk",
+        "pasteurized milk",
+        "liquid milk in pouches",
+        "market milk"
+      ],
+      "query_terms": [
+        "packaged pasteurized milk specification",
+        "pasteurized milk standard",
+        "liquid milk processing",
+        "milk pouch packaging"
+      ],
+      "manufacturing_use_cases": [
+        "dairy processing, pasteurization verification, and pouch packaging"
+      ],
+      "application_domains": [
+        "dairy industry",
+        "liquid milk distribution"
+      ],
+      "relevance_description": "Standard for liquid packaged pasteurized milk distributed in consumer markets.",
+      "derived_at": "2026-09-09T15:45:28.943798+00:00"
+    },
+    "Is 1656:2022": {
+      "is_number": "Is 1656:2022",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "milk cereal based complementary foods",
+        "infant cereal",
+        "baby food",
+        "complementary baby food"
+      ],
+      "query_terms": [
+        "manufacture baby cereal",
+        "milk cereal complementary food specification",
+        "infant food standard",
+        "weaning food compliance"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing fortified infant cereals and testing protein quality, vitamins, and pathogen absence"
+      ],
+      "application_domains": [
+        "infant nutrition",
+        "baby food manufacturing"
+      ],
+      "relevance_description": "Nutritional and microbiological safety standard for milk-cereal based complementary weaning foods.",
+      "derived_at": "2026-09-09T15:45:28.943805+00:00"
+    },
+    "IS 15757:2022": {
+      "is_number": "IS 15757:2022",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "follow up formula",
+        "complementary foods formula",
+        "infant follow up formula",
+        "baby milk formula"
+      ],
+      "query_terms": [
+        "follow up formula specification",
+        "infant nutritional formula standard",
+        "complementary foods for infants",
+        "baby formula compliance"
+      ],
+      "manufacturing_use_cases": [
+        "formulating infant nutritional formulas and complying with strict standards"
+      ],
+      "application_domains": [
+        "infant nutrition",
+        "specialized dietary foods"
+      ],
+      "relevance_description": "Standard for follow-up nutritional formula foods for infants older than six months.",
+      "derived_at": "2026-09-09T15:45:28.943812+00:00"
+    },
+    "IS 10325:2026": {
+      "is_number": "IS 10325:2026",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "square tins",
+        "metal tins",
+        "15 kg tin",
+        "15 litre tin",
+        "edible oil tin"
+      ],
+      "query_terms": [
+        "manufacture square metal tins",
+        "15kg oil tin specification",
+        "ghee tin container standard",
+        "vanaspati metal container"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing tinplate containers and testing seam tightness and leakage for food oils"
+      ],
+      "application_domains": [
+        "metal packaging",
+        "edible oil and ghee packaging"
+      ],
+      "relevance_description": "Specification for square tins of 15 kg or 15 litre capacity for ghee, vanaspati, edible oils, and bakery shortenings.",
+      "derived_at": "2026-09-09T15:45:28.943819+00:00"
+    },
+    "IS 5887 (Part 8/Sec 1):2023": {
+      "is_number": "IS 5887 (Part 8/Sec 1):2023",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "baird parker agar medium method",
+        "staphylococcus aureus test method",
+        "coagulase positive staphylococci enumeration",
+        "food poisoning bacteria detection"
+      ],
+      "query_terms": [
+        "detect staphylococcus aureus in food",
+        "coagulase positive staphylococci test",
+        "baird parker agar method",
+        "food microbiology testing"
+      ],
+      "manufacturing_use_cases": [
+        "food testing laboratory verification of pathogens"
+      ],
+      "application_domains": [
+        "food microbiology testing",
+        "food safety and quality control laboratories"
+      ],
+      "relevance_description": "Horizontal method for the enumeration of coagulase-positive staphylococci using Baird-Parker agar medium for food poisoning bacteria detection.",
+      "derived_at": "2026-09-09T15:45:28.943826+00:00"
+    },
+    "IS 16068:2013": {
+      "is_number": "IS 16068:2013",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "lactic acid bacteria enumeration",
+        "mesophilic lactic acid bacteria test",
+        "colony count technique for bacteria",
+        "feed microbiology test"
+      ],
+      "query_terms": [
+        "enumeration of lactic acid bacteria",
+        "mesophilic bacteria colony count",
+        "food microbiology testing method",
+        "animal feed micro test"
+      ],
+      "manufacturing_use_cases": [
+        "microbiology testing for shelf-life assessment and food hygiene compliance"
+      ],
+      "application_domains": [
+        "food microbiology",
+        "animal feed analysis"
+      ],
+      "relevance_description": "Horizontal method for the enumeration of mesophilic lactic acid bacteria using colony count technique at 30 degrees Celsius for food and animal feeding stuffs.",
+      "derived_at": "2026-09-09T15:45:28.943833+00:00"
+    },
+    "IS 10142:2025": {
+      "is_number": "IS 10142:2025",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "polystyrene",
+        "crystal polystyrene",
+        "high impact polystyrene",
+        "hips",
+        "food grade polystyrene"
+      ],
+      "query_terms": [
+        "polystyrene food contact specification",
+        "crystal and high impact polystyrene standard",
+        "safe polystyrene for pharmaceuticals",
+        "polystyrene drinking water contact"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing disposable food cups, cutlery, and dairy dessert containers"
+      ],
+      "application_domains": [
+        "disposable food packaging",
+        "pharmaceutical containers",
+        "food contact materials"
+      ],
+      "relevance_description": "Specification for polystyrene (crystal and high impact) for safe use in contact with foodstuffs, pharmaceuticals, and drinking water.",
+      "derived_at": "2026-09-09T15:45:28.943839+00:00"
+    },
+    "IS 15888:2010": {
+      "is_number": "IS 15888:2010",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "recombinant dna plants food safety",
+        "gmo food safety assessment guideline",
+        "r dna food assessment"
+      ],
+      "query_terms": [
+        "food safety assessment gmo foods",
+        "recombinant dna plants food safety guideline",
+        "gmo food evaluation standard"
+      ],
+      "manufacturing_use_cases": [
+        "regulatory food safety assessment and compliance evaluation"
+      ],
+      "application_domains": [
+        "biotechnology in agriculture",
+        "food safety regulation"
+      ],
+      "relevance_description": "Guidelines for the conduct of food safety assessment of foods derived from recombinant-DNA plants.",
+      "derived_at": "2026-09-09T15:45:28.943848+00:00"
+    },
+    "IS 2062 (Part 1):2025": {
+      "is_number": "IS 2062 (Part 1):2025",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "structural steel",
+        "hot rolled steel",
+        "medium tensile steel",
+        "high tensile steel",
+        "structural steel plates",
+        "structural steel beams"
+      ],
+      "query_terms": [
+        "manufacture structural steel",
+        "hot rolled steel plates",
+        "high tensile steel beams",
+        "structural steel channels",
+        "steel for bridge girders"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing structural steel for bridge girders, commercial high-rises, transmission towers, and heavy engineering"
+      ],
+      "application_domains": [
+        "structural engineering",
+        "construction",
+        "heavy engineering"
+      ],
+      "relevance_description": "The premier national standard for hot rolled medium and high tensile structural steel plates, beams, channels, and angles.",
+      "derived_at": "2026-09-09T15:45:42.459367+00:00"
+    },
+    "IS 2062 (Part 2):2026": {
+      "is_number": "IS 2062 (Part 2):2026",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "quenched and tempered steel",
+        "high strength structural steel",
+        "steel plates",
+        "steel sheets",
+        "steel strips",
+        "wide flats"
+      ],
+      "query_terms": [
+        "quenched and tempered steel plates",
+        "high strength structural steel sheets",
+        "manufacture mining machinery steel",
+        "crane boom steel plates"
+      ],
+      "manufacturing_use_cases": [
+        "fabricating heavy mining machinery, crane booms, and high-stress steel components"
+      ],
+      "application_domains": [
+        "heavy construction",
+        "mining machinery",
+        "crane manufacturing"
+      ],
+      "relevance_description": "Specification for quenched and tempered high-strength structural steel plates for heavy construction.",
+      "derived_at": "2026-09-09T15:45:42.459405+00:00"
+    },
+    "IS 1239 (Part 1):2004": {
+      "is_number": "IS 1239 (Part 1):2004",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "steel tubes",
+        "tubulars",
+        "wrought steel fittings",
+        "steel pipes",
+        "ERW steel tubes",
+        "seamless mild steel tubes"
+      ],
+      "query_terms": [
+        "manufacture steel tubes",
+        "mild steel pipes for water",
+        "gas pipes manufacturing",
+        "ERW steel tubes specification"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing steel plumbing and industrial fluid transport pipes"
+      ],
+      "application_domains": [
+        "plumbing",
+        "fluid transport",
+        "industrial piping"
+      ],
+      "relevance_description": "The standard specification for welded (ERW) and seamless mild steel tubes for water, gas, air, and steam lines.",
+      "derived_at": "2026-09-09T15:45:42.459416+00:00"
+    },
+    "IS 1239 (Part 2):2011": {
+      "is_number": "IS 1239 (Part 2):2011",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "steel pipe fittings",
+        "steel elbows",
+        "steel tees",
+        "steel sockets",
+        "steel unions",
+        "tubular fittings"
+      ],
+      "query_terms": [
+        "manufacture steel pipe fittings",
+        "steel elbows and tees",
+        "pipe sockets and unions",
+        "steel fittings specification"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing and pressure testing pipe fittings for commercial piping installations"
+      ],
+      "application_domains": [
+        "commercial piping",
+        "plumbing installations"
+      ],
+      "relevance_description": "Specification for steel pipe fittings (elbows, tees, sockets, unions) used with IS 1239 steel tubes.",
+      "derived_at": "2026-09-09T15:45:42.459427+00:00"
+    },
+    "IS 1161:2014": {
+      "is_number": "IS 1161:2014",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "structural steel tubes",
+        "hollow structural sections",
+        "circular steel tubes",
+        "square steel tubes",
+        "rectangular steel tubes"
+      ],
+      "query_terms": [
+        "manufacture hollow structural tubes",
+        "structural steel sections",
+        "airport terminal steel tubes",
+        "square steel tubing"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing hollow structural steel tubes for airport terminals, sports stadiums, and space frames"
+      ],
+      "application_domains": [
+        "architectural structures",
+        "stadium construction",
+        "space frames"
+      ],
+      "relevance_description": "Standard for hollow circular, square, and rectangular steel structural sections.",
+      "derived_at": "2026-09-09T15:45:42.459436+00:00"
+    },
+    "IS 3601:2006": {
+      "is_number": "IS 3601:2006",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "mechanical steel tubes",
+        "general engineering steel tubes",
+        "automotive tubing",
+        "mechanical tubing"
+      ],
+      "query_terms": [
+        "manufacture mechanical steel tubes",
+        "automotive chassis tubing",
+        "shock absorber steel tubes",
+        "general engineering steel pipes"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing mechanical tubing for automotive chassis, shock absorbers, and agricultural machinery"
+      ],
+      "application_domains": [
+        "automotive manufacturing",
+        "agricultural machinery",
+        "general engineering"
+      ],
+      "relevance_description": "Specification for steel tubes for mechanical and general engineering purposes (automotive shafts, frames).",
+      "derived_at": "2026-09-09T15:45:42.459446+00:00"
+    },
+    "IS 1079:2017": {
+      "is_number": "IS 1079:2017",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "hot rolled carbon steel sheet",
+        "hot rolled steel plate",
+        "hot rolled steel strip",
+        "carbon steel sheet"
+      ],
+      "query_terms": [
+        "manufacture hot rolled carbon steel sheet",
+        "hot rolled steel plate specification",
+        "automotive bracket steel",
+        "engineering stampings steel"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing stamped automotive brackets, chassis components, and engineering stampings"
+      ],
+      "application_domains": [
+        "automotive stamping",
+        "sheet metal fabrication",
+        "engineering components"
+      ],
+      "relevance_description": "Specification for commercial and drawing quality hot rolled carbon steel sheet and strip.",
+      "derived_at": "2026-09-09T15:45:42.459460+00:00"
+    },
+    "IS 513 (Part 1):2016": {
+      "is_number": "IS 513 (Part 1):2016",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "cold reduced carbon steel sheet",
+        "cold reduced steel strip",
+        "CRCA sheet",
+        "cold forming steel",
+        "drawing quality steel sheet"
+      ],
+      "query_terms": [
+        "manufacture CRCA sheets",
+        "cold reduced steel strip",
+        "deep drawing steel panels",
+        "appliance body panel steel"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing appliance outer body panels, automotive body pressings, and electrical enclosures"
+      ],
+      "application_domains": [
+        "appliance manufacturing",
+        "automotive pressings",
+        "electrical enclosures"
+      ],
+      "relevance_description": "The benchmark specification for cold reduced (CRCA) carbon steel sheets and strips for deep drawing and cold forming.",
+      "derived_at": "2026-09-09T15:45:42.459469+00:00"
+    },
+    "IS 14246:2024": {
+      "is_number": "IS 14246:2024",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "pre-painted galvanized steel sheets",
+        "pre-painted steel strips",
+        "colour-coated metal roofing sheets",
+        "galvalume steel sheets"
+      ],
+      "query_terms": [
+        "manufacture pre-painted galvanized steel",
+        "colour coated roofing sheets",
+        "steel wall cladding",
+        "prepainted steel strip"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing pre-painted colour-coated metal roofing sheets and building wall cladding"
+      ],
+      "application_domains": [
+        "building construction",
+        "roofing",
+        "wall cladding"
+      ],
+      "relevance_description": "Specification for continuously pre-painted galvanized and galvalume steel sheets and strips for roofing and siding.",
+      "derived_at": "2026-09-09T15:45:42.459482+00:00"
+    },
+    "IS 2265:2026": {
+      "is_number": "IS 2265:2026",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "galvanized steel wire strand",
+        "steel wire strand",
+        "signalling wire strand",
+        "stay wire",
+        "guy wire"
+      ],
+      "query_terms": [
+        "manufacture galvanized steel wire strand",
+        "railway signalling wire",
+        "stay wire manufacturing",
+        "structural guy wire"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing high-tensile galvanized steel strands for utility poles and railway signals"
+      ],
+      "application_domains": [
+        "railway signalling",
+        "utility infrastructure",
+        "structural rigging"
+      ],
+      "relevance_description": "Specification for galvanized steel wire strand used for railway signalling, stay wires, and structural guy wires.",
+      "derived_at": "2026-09-09T15:45:42.459491+00:00"
+    },
+    "IS 19068:2025": {
+      "is_number": "IS 19068:2025",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "hot-dip galvanized steel bars",
+        "galvanized rebar",
+        "galvanized steel reinforcement bars",
+        "corrosion-resistant rebar"
+      ],
+      "query_terms": [
+        "manufacture galvanized rebar",
+        "hot dip galvanized steel reinforcement",
+        "marine concrete rebar",
+        "corrosion resistant steel bars"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing galvanized rebar for bridges, ports, and marine concrete durability"
+      ],
+      "application_domains": [
+        "marine construction",
+        "bridge building",
+        "concrete reinforcement"
+      ],
+      "relevance_description": "Specification for continuous hot-dip galvanized steel reinforcement bars for corrosion-resistant concrete construction.",
+      "derived_at": "2026-09-09T15:45:42.459500+00:00"
+    },
+    "IS 733:2025": {
+      "is_number": "IS 733:2025",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "wrought aluminium bars",
+        "aluminium alloy rods",
+        "aluminium sections",
+        "extruded aluminium tube",
+        "aluminium profiles"
+      ],
+      "query_terms": [
+        "manufacture aluminium extrusions",
+        "wrought aluminium bars",
+        "aluminium architectural frames",
+        "aluminium alloy profiles"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing aluminium extrusions, window architectural frames, and structural components"
+      ],
+      "application_domains": [
+        "architectural framing",
+        "structural engineering",
+        "aluminium fabrication"
+      ],
+      "relevance_description": "Standard for wrought aluminium and aluminium alloy bars, rods, and extruded architectural/structural sections.",
+      "derived_at": "2026-09-09T15:45:42.459509+00:00"
+    },
+    "IS 410:1977": {
+      "is_number": "IS 410:1977",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "cold rolled brass sheet",
+        "brass strip",
+        "brass foil"
+      ],
+      "query_terms": [
+        "manufacture cold rolled brass sheet",
+        "brass strip specification",
+        "electrical switch terminals brass",
+        "brass foil for radiators"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing electrical switch terminals, connectors, and automotive radiator parts"
+      ],
+      "application_domains": [
+        "electrical components",
+        "automotive parts",
+        "precision stamping"
+      ],
+      "relevance_description": "Specification for cold rolled brass sheet, strip, and foil used in electrical contacts, terminals, and precision stamping.",
+      "derived_at": "2026-09-09T15:45:42.459518+00:00"
+    },
+    "IS 1608 (Part 1):2022": {
+      "is_number": "IS 1608 (Part 1):2022",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "metallic materials tensile testing",
+        "tensile test method",
+        "room temperature tensile test",
+        "metal tensile testing"
+      ],
+      "query_terms": [
+        "metallic materials tensile testing",
+        "room temperature tensile test method",
+        "steel yield strength test",
+        "metal elongation testing"
+      ],
+      "manufacturing_use_cases": [
+        "mandatory mechanical testing of steel plates, rebars, wires, and castings in metallurgical laboratories"
+      ],
+      "application_domains": [
+        "metallurgical laboratory testing",
+        "quality control",
+        "material characterization"
+      ],
+      "relevance_description": "Universal metallic materials tensile testing method at room temperature determining yield strength and elongation.",
+      "derived_at": "2026-09-09T15:45:42.459527+00:00"
+    },
+    "IS 1501 (Part 1):2025": {
+      "is_number": "IS 1501 (Part 1):2025",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "Vickers hardness test",
+        "metallic materials hardness test",
+        "Vickers hardness test method"
+      ],
+      "query_terms": [
+        "Vickers hardness test method",
+        "measure surface hardness metals",
+        "case depth testing",
+        "weld hardness testing"
+      ],
+      "manufacturing_use_cases": [
+        "measuring surface hardness, case depth, and weld hardness in engineering materials"
+      ],
+      "application_domains": [
+        "metallurgical testing",
+        "quality assurance",
+        "material inspection"
+      ],
+      "relevance_description": "Standard test method for Vickers hardness testing of metallic materials across micro and macro hardness ranges.",
+      "derived_at": "2026-09-09T15:45:42.459538+00:00"
+    },
+    "IS 1757 (Part 1):2020": {
+      "is_number": "IS 1757 (Part 1):2020",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "Charpy pendulum impact test",
+        "impact test method",
+        "notch toughness test",
+        "metallic materials impact test"
+      ],
+      "query_terms": [
+        "Charpy pendulum impact test",
+        "notch toughness testing",
+        "ductile to brittle transition test",
+        "sub-zero metal impact test"
+      ],
+      "manufacturing_use_cases": [
+        "testing ductile-to-brittle transition and low-temperature impact energy for structural and boiler steels"
+      ],
+      "application_domains": [
+        "metallurgical testing",
+        "structural steel evaluation",
+        "pressure vessel testing"
+      ],
+      "relevance_description": "Standard Charpy pendulum impact test for determining notch toughness of structural metals at ambient/sub-zero temperatures.",
+      "derived_at": "2026-09-09T15:45:42.459547+00:00"
+    },
+    "IS 3748:2022": {
+      "is_number": "IS 3748:2022",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "tool steels",
+        "alloy tool steels",
+        "die steel",
+        "mould steel"
+      ],
+      "query_terms": [
+        "manufacture tool steels",
+        "alloy tool steel specification",
+        "forging die steel",
+        "plastic injection mould steel"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing forging dies, plastic injection moulds, and machining cutting tools"
+      ],
+      "application_domains": [
+        "tool and die making",
+        "machining",
+        "mold manufacturing"
+      ],
+      "relevance_description": "Specification for high-grade alloy tool steels used in cutting tools, dies, punches, and moulds.",
+      "derived_at": "2026-09-09T15:45:42.459556+00:00"
+    },
+    "IS 14894:2023": {
+      "is_number": "IS 14894:2023",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "hexagon head bolts",
+        "product grade B bolts",
+        "reduced shank bolts",
+        "industrial steel fasteners",
+        "steel bolts"
+      ],
+      "query_terms": [
+        "manufacture hexagon head bolts",
+        "reduced shank bolts specification",
+        "grade B fasteners",
+        "engineering steel bolts"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing precision bolts and structural fasteners for engineering construction"
+      ],
+      "application_domains": [
+        "fastener manufacturing",
+        "mechanical assemblies",
+        "engineering construction"
+      ],
+      "relevance_description": "Standard for hexagon head industrial steel fasteners and bolts used in mechanical assemblies.",
+      "derived_at": "2026-09-09T15:45:42.459565+00:00"
+    },
+    "IS 3745:2024": {
+      "is_number": "IS 3745:2024",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "yoke type medical cylinder valve",
+        "medical cylinder valve",
+        "pin index connection valve",
+        "gas cylinder valve"
+      ],
+      "query_terms": [
+        "manufacture medical cylinder valves",
+        "yoke type cylinder valve",
+        "pin index connection",
+        "high pressure medical valve"
+      ],
+      "manufacturing_use_cases": [
+        "manufacturing high-pressure medical gas cylinder valves and safety testing"
+      ],
+      "application_domains": [
+        "medical gas systems",
+        "gas cylinder manufacturing",
+        "healthcare equipment"
+      ],
+      "relevance_description": "Specification for yoke type medical cylinder valves with pin index safety system.",
+      "derived_at": "2026-09-09T15:45:42.459573+00:00"
+    },
+    "IS 4984:2016": {
+      "is_number": "IS 4984:2016",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "polyethylene pipes",
+        "hdpe pipes",
+        "water supply pipes",
+        "plastic pipes"
+      ],
+      "query_terms": [
+        "manufacture polyethylene pipes",
+        "hdpe pipes for water supply",
+        "plastic piping system specification",
+        "water supply pipe compliance"
+      ],
+      "manufacturing_use_cases": [
+        "Manufacturing HDPE pressure pipes for municipal water distribution grids, smart cities, and drip irrigation."
+      ],
+      "application_domains": [
+        "Plastics, Packaging & Consumer Materials",
+        "Water Supply Systems"
+      ],
+      "relevance_description": "The premier national specification for High Density Polyethylene (HDPE) pipes for potable water supply networks (PE 63, PE 80, PE 100).",
+      "derived_at": "2026-09-09T15:46:07.593607+00:00"
+    },
+    "IS 4985:2021": {
+      "is_number": "IS 4985:2021",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "unplasticized pvc pipes",
+        "upvc pipes",
+        "pvc pipes for potable water",
+        "rigid upvc pressure pipes"
+      ],
+      "query_terms": [
+        "manufacture upvc pipes",
+        "unplasticized pvc pipes specification",
+        "potable water plastic pipes",
+        "pvc pipe hydrostatic pressure test"
+      ],
+      "manufacturing_use_cases": [
+        "Manufacturing rigid UPVC pressure pipes, verifying hydrostatic burst pressure, and resistance to dichloromethane."
+      ],
+      "application_domains": [
+        "Plastics, Packaging & Consumer Materials",
+        "Potable Water Supplies"
+      ],
+      "relevance_description": "The benchmark national standard for Unplasticized PVC (UPVC) pipes for potable water supplies and agricultural distribution.",
+      "derived_at": "2026-09-09T15:46:07.593641+00:00"
+    },
+    "IS 12701:1996": {
+      "is_number": "IS 12701:1996",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "rotational moulded polyethylene water storage tanks",
+        "polyethylene water tanks",
+        "rotomoulded water tanks",
+        "plastic water tanks"
+      ],
+      "query_terms": [
+        "manufacture rotomoulded water tanks",
+        "polyethylene water storage tanks specification",
+        "plastic tank migration test",
+        "overhead water tanks compliance"
+      ],
+      "manufacturing_use_cases": [
+        "Manufacturing rotomoulded water tanks, testing overall polymer migration, wall thickness, and drop impact."
+      ],
+      "application_domains": [
+        "Plastics, Packaging & Consumer Materials",
+        "Water Storage"
+      ],
+      "relevance_description": "National standard for rotational moulded polyethylene water storage tanks (500 L to 10,000 L) for domestic and commercial overhead installations.",
+      "derived_at": "2026-09-09T15:46:07.593651+00:00"
+    },
+    "IS 2798:1998": {
+      "is_number": "IS 2798:1998",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "plastic containers",
+        "plastic bottles",
+        "jerrycans",
+        "carboys"
+      ],
+      "query_terms": [
+        "test plastic containers",
+        "plastic packaging drop test",
+        "plastic bottle leakage test",
+        "methods of test for plastics containers"
+      ],
+      "manufacturing_use_cases": [
+        "Quality assurance and BIS conformity testing for plastic bottles, jerrycans, and carboys."
+      ],
+      "application_domains": [
+        "Plastics, Packaging & Consumer Materials",
+        "Packaging Quality Testing"
+      ],
+      "relevance_description": "Standard test methods for plastic containers covering drop test, stack load test, leakage test, and handle pull test.",
+      "derived_at": "2026-09-09T15:46:07.593661+00:00"
+    },
+    "IS 6312:1994": {
+      "is_number": "IS 6312:1994",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "polyethylene containers",
+        "blow-moulded plastic bottles",
+        "plastic containers for transport"
+      ],
+      "query_terms": [
+        "manufacture polyethylene containers",
+        "blow moulded plastic bottles specification",
+        "chemical packaging containers",
+        "polyethylene containers for transport"
+      ],
+      "manufacturing_use_cases": [
+        "Manufacturing blow-moulded plastic bottles and containers for lubricants, cleaning chemicals, and detergents."
+      ],
+      "application_domains": [
+        "Plastics, Packaging & Consumer Materials",
+        "Chemical Packaging"
+      ],
+      "relevance_description": "Specification for blow-moulded polyethylene containers for general packaging of chemical and commercial liquids up to 5 litres.",
+      "derived_at": "2026-09-09T15:46:07.593672+00:00"
+    },
+    "IS 7803 (Part 1):1975": {
+      "is_number": "IS 7803 (Part 1):1975",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "plastic containers for pharmaceutical use",
+        "pharmaceutical plastic bottles",
+        "medical packaging containers"
+      ],
+      "query_terms": [
+        "design pharmaceutical plastic bottles",
+        "plastic containers for pharmaceutical use",
+        "medical packaging specification",
+        "tamper evident plastic bottles"
+      ],
+      "manufacturing_use_cases": [
+        "Designing and evaluating tamper-evident plastic pharmaceutical bottles and blister packs."
+      ],
+      "application_domains": [
+        "Plastics, Packaging & Consumer Materials",
+        "Pharmaceutical Packaging"
+      ],
+      "relevance_description": "Code of practice for plastic containers for pharmaceutical and delicate medical packaging.",
+      "derived_at": "2026-09-09T15:46:07.593680+00:00"
+    },
+    "IS 2771 (Part 1):2022": {
+      "is_number": "IS 2771 (Part 1):2022",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "corrugated fibreboard boxes",
+        "shipping cartons",
+        "fibreboard boxes",
+        "cardboard boxes"
+      ],
+      "query_terms": [
+        "manufacture corrugated fibreboard boxes",
+        "shipping carton specification",
+        "edge crush test fibreboard",
+        "box compression test compliance"
+      ],
+      "manufacturing_use_cases": [
+        "Manufacturing shipping cartons, measuring bursting strength, edge crush test (ECT), and box compression test (BCT)."
+      ],
+      "application_domains": [
+        "Plastics, Packaging & Consumer Materials",
+        "Industrial Packaging"
+      ],
+      "relevance_description": "Standard specification for 3-ply, 5-ply, and 7-ply corrugated fibreboard boxes used for packaging domestic and industrial products.",
+      "derived_at": "2026-09-09T15:46:07.593691+00:00"
+    },
+    "IS 15351:2015": {
+      "is_number": "IS 15351:2015",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "agro textiles",
+        "laminated hdpe woven geomembrane",
+        "water proof lining",
+        "hdpe woven geomembrane"
+      ],
+      "query_terms": [
+        "manufacture agro textiles geomembrane",
+        "laminated hdpe woven geomembrane specification",
+        "water proof lining for agriculture",
+        "agro textiles specification"
+      ],
+      "manufacturing_use_cases": [
+        "Manufacturing weather-resistant laminated bags for agricultural produce and moisture-sensitive chemicals."
+      ],
+      "application_domains": [
+        "Plastics, Packaging & Consumer Materials",
+        "Agro Textiles"
+      ],
+      "relevance_description": "Specification for laminated high-density polyethylene (HDPE) woven sacks for agro textiles and bulk storage.",
+      "derived_at": "2026-09-09T15:46:07.593698+00:00"
+    },
+    "IS 12818:2010": {
+      "is_number": "IS 12818:2010",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "unplasticized polyvinyl chloride screen and casing pipes",
+        "pvc-u screen and casing pipes",
+        "borewell pipes",
+        "tubewell pipes"
+      ],
+      "query_terms": [
+        "manufacture borewell casing pipes",
+        "pvc-u screen and casing pipes specification",
+        "tubewell slotted pipes",
+        "groundwater extraction pipes"
+      ],
+      "manufacturing_use_cases": [
+        "Manufacturing ribbed casing pipes and slotted screens for agricultural groundwater extraction."
+      ],
+      "application_domains": [
+        "Plastics, Packaging & Consumer Materials",
+        "Groundwater Extraction"
+      ],
+      "relevance_description": "Specification for Unplasticized Polyvinyl Chloride (PVC-U) screen and casing pipes for borewells and tubewells.",
+      "derived_at": "2026-09-09T15:46:07.593705+00:00"
+    },
+    "IS 13592:2013": {
+      "is_number": "IS 13592:2013",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "pvc-u pipes for soil and waste discharge",
+        "swr pipes",
+        "drainage pipes",
+        "rainwater system pipes"
+      ],
+      "query_terms": [
+        "manufacture swr pipes",
+        "pvc-u soil and waste discharge pipes",
+        "building drainage pipe specification",
+        "rainwater system plastic pipes"
+      ],
+      "manufacturing_use_cases": [
+        "Manufacturing residential building drainage, rainwater drainage, and sewage disposal pipes."
+      ],
+      "application_domains": [
+        "Plastics, Packaging & Consumer Materials",
+        "Building Drainage"
+      ],
+      "relevance_description": "Specification for UPVC pipes for soil and waste discharge systems (SWR pipes) inside buildings.",
+      "derived_at": "2026-09-09T15:46:07.593715+00:00"
+    },
+    "IS 15778:2007": {
+      "is_number": "IS 15778:2007",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "chlorinated polyvinyl chloride pipes",
+        "cpvc pipes",
+        "hot and cold water pipes",
+        "potable water plumbing pipes"
+      ],
+      "query_terms": [
+        "manufacture cpvc pipes",
+        "chlorinated polyvinyl chloride pipes specification",
+        "hot and cold water distribution pipes",
+        "cpvc plumbing pipes compliance"
+      ],
+      "manufacturing_use_cases": [
+        "Manufacturing domestic hot-water plumbing pipes, solar water heater connections, and heating loops."
+      ],
+      "application_domains": [
+        "Plastics, Packaging & Consumer Materials",
+        "Plumbing Systems"
+      ],
+      "relevance_description": "Benchmark specification for Chlorinated Polyvinyl Chloride (CPVC) pipes for potable hot and cold water distribution.",
+      "derived_at": "2026-09-09T15:46:07.593722+00:00"
+    },
+    "IS 14887:2014": {
+      "is_number": "IS 14887:2014",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "hdpe woven sacks",
+        "pp woven sacks",
+        "food grain bags",
+        "polypropylene woven sacks"
+      ],
+      "query_terms": [
+        "manufacture hdpe woven sacks",
+        "pp woven sacks for food grains",
+        "50 kg food grain packaging specification",
+        "polypropylene woven sacks compliance"
+      ],
+      "manufacturing_use_cases": [
+        "Manufacturing heavy-duty foodgrain sacks for the Food Corporation of India (FCI) and agricultural mandis."
+      ],
+      "application_domains": [
+        "Plastics, Packaging & Consumer Materials",
+        "Agricultural Packaging"
+      ],
+      "relevance_description": "Specification for high-density polyethylene (HDPE) and polypropylene (PP) woven sacks for packaging 50 kg foodgrains.",
+      "derived_at": "2026-09-09T15:46:07.593732+00:00"
+    },
+    "IS 1708 (Part 1):1986": {
+      "is_number": "IS 1708 (Part 1):1986",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "timber moisture content test",
+        "wood moisture content determination",
+        "timber test specimens"
+      ],
+      "query_terms": [
+        "test moisture content in timber",
+        "determination of moisture content wood",
+        "timber seasoning test",
+        "wood moisture specification"
+      ],
+      "manufacturing_use_cases": [
+        "Testing moisture content and seasoning quality of commercial wood and timber."
+      ],
+      "application_domains": [
+        "Timber Testing",
+        "Wood Products"
+      ],
+      "relevance_description": "Standard test methods for determination of moisture content in small clear specimens of timber.",
+      "derived_at": "2026-09-09T15:46:07.593739+00:00"
+    },
+    "IS 303:2024": {
+      "is_number": "IS 303:2024",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "plywood for general purposes",
+        "mr plywood",
+        "bwr plywood",
+        "architectural plywood"
+      ],
+      "query_terms": [
+        "manufacture general purpose plywood",
+        "mr and bwr plywood specification",
+        "commercial plywood compliance",
+        "plywood ply adhesion test"
+      ],
+      "manufacturing_use_cases": [
+        "Manufacturing commercial and architectural plywood, testing adhesion of plies, and moisture resistance."
+      ],
+      "application_domains": [
+        "Wood And Other Lignocellulosic Products",
+        "Construction Materials"
+      ],
+      "relevance_description": "The benchmark national specification for Moisture Resistant (MR) and Boiling Water Resistant (BWR) plywood for general purposes.",
+      "derived_at": "2026-09-09T15:46:07.593746+00:00"
+    },
+    "IS 16654:2017": {
+      "is_number": "IS 16654:2017",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "polypropylene multifilament woven geobags",
+        "geosynthetic geobags",
+        "woven geobags",
+        "coastal protection bags"
+      ],
+      "query_terms": [
+        "manufacture woven geobags",
+        "polypropylene multifilament geobags specification",
+        "coastal and waterways protection geobags",
+        "geosynthetics compliance"
+      ],
+      "manufacturing_use_cases": [
+        "Manufacturing geosynthetic bags for civil coastal and river erosion control engineering."
+      ],
+      "application_domains": [
+        "Geosynthetics",
+        "Civil Engineering"
+      ],
+      "relevance_description": "Specification for polypropylene multifilament woven geobags for riverbank and flood protection works.",
+      "derived_at": "2026-09-09T15:46:07.593755+00:00"
+    },
+    "IS 5557 (Part 1):2024": {
+      "is_number": "IS 5557 (Part 1):2024",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "all rubber gum boots",
+        "ankle boots",
+        "safety boots",
+        "protective rubber boots"
+      ],
+      "query_terms": [
+        "manufacture rubber gum boots",
+        "safety and protective ankle boots specification",
+        "industrial rubber footwear",
+        "gum boots puncture resistance test"
+      ],
+      "manufacturing_use_cases": [
+        "Manufacturing industrial safety footwear and testing flex crack and puncture resistance."
+      ],
+      "application_domains": [
+        "Footwear",
+        "Industrial Safety Equipment"
+      ],
+      "relevance_description": "Specification for industrial rubber gum boots and ankle boots providing safety and chemical protection.",
+      "derived_at": "2026-09-09T15:46:07.593763+00:00"
+    },
+    "IS 6944:2026": {
+      "is_number": "IS 6944:2026",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "medical laboratory glassware",
+        "bijou bacteriological bottle",
+        "bacteriological bottle",
+        "glass culture container"
+      ],
+      "query_terms": [
+        "manufacture medical laboratory glassware",
+        "bijou bacteriological bottle specification",
+        "medical testing glass vessels",
+        "bacteriological bottle compliance"
+      ],
+      "manufacturing_use_cases": [
+        "Manufacturing glass culture containers and medical testing vessels."
+      ],
+      "application_domains": [
+        "Medical Laboratory Instruments",
+        "Healthcare Equipment"
+      ],
+      "relevance_description": "Specification for medical laboratory glassware and bijou bacteriological bottles.",
+      "derived_at": "2026-09-09T15:46:07.593772+00:00"
+    },
+    "IS 12933 (Part 2):2025": {
+      "is_number": "IS 12933 (Part 2):2025",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "solar flat plate collector",
+        "solar thermal collector components",
+        "solar water heating collector"
+      ],
+      "query_terms": [
+        "manufacture solar flat plate collector",
+        "solar water heating components specification",
+        "solar thermal collector casing glazing",
+        "renewable energy collector compliance"
+      ],
+      "manufacturing_use_cases": [
+        "Manufacturing domestic and commercial solar water heating systems."
+      ],
+      "application_domains": [
+        "Renewable Energy Sources",
+        "Solar Thermal Systems"
+      ],
+      "relevance_description": "Specification for solar flat plate thermal collectors (casing, glazing, and insulation).",
+      "derived_at": "2026-09-09T15:46:07.593779+00:00"
+    },
+    "IS 17862:2026": {
+      "is_number": "IS 17862:2026",
+      "source_type": "ai_derived_metadata",
+      "product_aliases": [
+        "e-waste management guidelines",
+        "electronic waste recycling guidelines",
+        "e-waste dismantling guidelines"
+      ],
+      "query_terms": [
+        "e-waste management guidelines",
+        "electronic waste recycling facility compliance",
+        "e-waste dismantling standards",
+        "plastic and e-waste recycling guidelines"
+      ],
+      "manufacturing_use_cases": [
+        "Operating compliant e-waste dismantling and polymer recycling facilities."
+      ],
+      "application_domains": [
+        "Waste Management",
+        "Environmental Compliance"
+      ],
+      "relevance_description": "National guidelines for storage, collection, dismantling, and recycling of e-waste and plastics.",
+      "derived_at": "2026-09-09T15:46:07.593788+00:00"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 65611,
+      "standardEncId": "eyJpdiI6IkV1WnU5bUYyMk9ZY25uUGhiQjdmTlE9PSIsInZhbHVlIjoidlJBQWp5dlNrT2tHWGJPQjhmTVhLUT09IiwibWFjIjoiMzdjOGZmYzcxNjIxMTRhNjE2YzViNzE4YmRmNzgwOGFmOTg4ZTcwMjA5MzgyMDA3OGRkYzk2YjM4MGQ0ZDZlMCIsInRhZyI6IiJ9",
+      "standardLabel": "IS 12933 (Part 2):2025 Solar Flat Plate Collector - Specification Part 2 Components (Third Revision)",
+      "standardNumber": "IS 12933 (Part 2):2025",
+      "standardName": "Solar Flat Plate Collector - Specification Part 2 Components (Third Revision)",
+      "departmentName": "MECHANICAL ENGINEERING DEPARTMENT (MED)",
+      "sectionalCommitteeName": "MED 04 - Renewable Energy Sources",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2025-11-12",
+      "publishedOnFormatted": "12 Nov 2025"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

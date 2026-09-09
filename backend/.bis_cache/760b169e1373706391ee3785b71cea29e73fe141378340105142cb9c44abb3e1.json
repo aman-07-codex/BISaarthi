@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 20830,
+      "standardEncId": "eyJpdiI6ImZpS2NaTGQ5QWY0aHc0WDU3cU1HclE9PSIsInZhbHVlIjoiVE8xaVRrM0VQcGRNekU5eWRSQS91Zz09IiwibWFjIjoiNzc1Zjk2ZWEyZjI5Y2Q1YWE0NWJmMGNmNDMzYzBmYTk3MGJiYjcwMGRhNjkyNzIyZDcyNjdmODFkMWY5MjU4YyIsInRhZyI6IiJ9",
+      "standardLabel": "IS/IEC 60898 (Part 1):2015 Electrical accessories - Circuit - Breakers for overcurrent protection for household and similar installations: Part 1 circuit - Breakers for a.c. operation (First Revision)",
+      "standardNumber": "IS/IEC 60898 (Part 1):2015",
+      "standardName": "Electrical accessories - Circuit - Breakers for overcurrent protection for household and similar installations: Part 1 circuit - Breakers for a.c. operation (First Revision)",
+      "departmentName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "sectionalCommitteeName": "ETD 07 - Low Voltage Switchgear And Controlgear",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2018-05-31",
+      "publishedOnFormatted": "31 May 2018"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

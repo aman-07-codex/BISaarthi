@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 31420,
+      "standardEncId": "eyJpdiI6Imh2dEVVVElGMzc5bjN3THhFblFDV0E9PSIsInZhbHVlIjoiSGlZWTI0YWd5Wm5aY0luVklmQjBXdz09IiwibWFjIjoiNzQ4MzBhZTU4N2ZlNjBjYjI4YjI5YWMwYjE0ZWQ5ZDk1ZTNiNjdjNGFlNmE1YmQ5MTNhYTc4OTA2ZTBlMDQyNyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 5557 (Part 1):2024 All Rubber Gum Boots and Ankle Boots   Part 1 Safety and Protective    (Fifth Revision)",
+      "standardNumber": "IS 5557 (Part 1):2024",
+      "standardName": "All Rubber Gum Boots and Ankle Boots   Part 1 Safety and Protective    (Fifth Revision)",
+      "departmentName": "CHEMICAL DEPARTMENT (CHD)",
+      "sectionalCommitteeName": "CHD 19 - Footwear",
+      "typeOfStandardName": "Safety Standard",
+      "publishedOn": "2024-08-07",
+      "publishedOnFormatted": "07 Aug 2024"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

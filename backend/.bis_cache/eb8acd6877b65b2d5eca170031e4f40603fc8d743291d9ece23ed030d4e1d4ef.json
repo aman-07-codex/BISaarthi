@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 67169,
+      "standardEncId": "eyJpdiI6Ijl2aHY5QjltaGg1Qzloc25FaUJGU0E9PSIsInZhbHVlIjoidkhBY1pkbE5Yak5BdXh0YXFORHpDZz09IiwibWFjIjoiYmJhZmQzNjAxYzgzOTgxNWM5MWE4MjJkZGI1MTM0Mjg0NjgxNjllYTllZTI0YmU5ZDU5ODEwOTAyNjg1YjRhYyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 10325:2026 Square tins of 15 kg or 15 litre capacity for ghee, vanaspati, edible oils and bakery shortenings — Specification (third revision)",
+      "standardNumber": "IS 10325:2026",
+      "standardName": "Square tins of 15 kg or 15 litre capacity for ghee, vanaspati, edible oils and bakery shortenings — Specification (third revision)",
+      "departmentName": "PRODUCTION AND GENERAL ENGINEERING DEPARTMENT (PGD)",
+      "sectionalCommitteeName": "PGD 38 - Metal Containers",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2026-08-04",
+      "publishedOnFormatted": "04 Aug 2026"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 928,
+      "standardEncId": "eyJpdiI6ImI3d1lBa3hvQ3Bab3VsRTVsT2VUQVE9PSIsInZhbHVlIjoiVjJLRHhRbk1CWGc5Q0FEajhJeGVpUT09IiwibWFjIjoiN2UyNjg2NWQ1N2ZjYjBjMTFiNGJjNGRlNmRjZmNjNmU4NGRiMDBlNGE1ZTdiOGU5YzFkOTAxOWYzYzJkNDU2ZiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 10151:2019 Polyvinyl chloride (pvc) and its copolymers for its safe use in contact with foodstuffs, pharmaceuticals and drinking water - Specification (First Revision)",
+      "standardNumber": "IS 10151:2019",
+      "standardName": "Polyvinyl chloride (pvc) and its copolymers for its safe use in contact with foodstuffs, pharmaceuticals and drinking water - Specification (First Revision)",
+      "departmentName": "PETROLEUM, COAL AND RELATED PRODUCTS DEPARTMENT (PCD)",
+      "sectionalCommitteeName": "PCD 12 - Plastics",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2019-03-31",
+      "publishedOnFormatted": "31 Mar 2019"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

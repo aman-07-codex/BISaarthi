@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 67128,
+      "standardEncId": "eyJpdiI6Ik9ib1V4OHVtSWgrajl1OWdwTERNTHc9PSIsInZhbHVlIjoibG1GZEZBNTBYdUlIMkdUYWdrUWh3dz09IiwibWFjIjoiOWViYzhkMjI3MzhhZjIyZjVlYThlMGI5ZDYzODVhM2YxYzY1ZDVjNzRiZjM3NmI1YzgyNzVjMDk3MmIyNDFjMCIsInRhZyI6IiJ9",
+      "standardLabel": "IS 302 (Part 2/Sec 16):2026 Household and Similar Electrical  Appliances - Safety  Part 2 Particular Requirements Section 16 Food Waste Disposers",
+      "standardNumber": "IS 302 (Part 2/Sec 16):2026",
+      "standardName": "Household and Similar Electrical  Appliances - Safety  Part 2 Particular Requirements Section 16 Food Waste Disposers",
+      "departmentName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "sectionalCommitteeName": "ETD 32 - Electrical Appliances",
+      "typeOfStandardName": "Safety Standard",
+      "publishedOn": "2026-07-24",
+      "publishedOnFormatted": "24 Jul 2026"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

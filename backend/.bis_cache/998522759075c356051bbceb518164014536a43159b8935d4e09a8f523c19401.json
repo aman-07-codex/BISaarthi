@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 26994,
+      "standardEncId": "eyJpdiI6InRlVDZWbVJvM1BNeXRMdFBsaittMmc9PSIsInZhbHVlIjoiV09PN25xZUZxNDhTaGRCRDhFeTBQZz09IiwibWFjIjoiNTkxYmJjZTdiODM2ODc0NzVjOTc1MDYzZDc2ZTAyN2M4MWIzMjFmZDdiZDZlMDE1OGMzMzk4MTdiMDA5NTM2MSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 2771 (Part 1):2022    CORRUGATED FIBREBOARD BOXES- SPECIFICATION PART 1 GENERAL REQUIREMENTS  Amendment - 1",
+      "standardNumber": "IS 2771 (Part 1):2022",
+      "standardName": "   CORRUGATED FIBREBOARD BOXES- SPECIFICATION PART 1 GENERAL REQUIREMENTS  Amendment - 1",
+      "departmentName": "CHEMICAL DEPARTMENT (CHD)",
+      "sectionalCommitteeName": "CHD 16 - Paper Based Packaging Materials",
+      "typeOfStandardName": "—",
+      "publishedOn": "2022-02-28",
+      "publishedOnFormatted": "28 Feb 2022"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

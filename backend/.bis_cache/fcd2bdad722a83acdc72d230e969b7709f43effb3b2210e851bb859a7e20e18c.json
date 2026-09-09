@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 11693,
+      "standardEncId": "eyJpdiI6IkhQOEZyUXMzSWNpa0NsWjU1cFI4NEE9PSIsInZhbHVlIjoibHVPeWVzMGY3M2NGdnJqYmFNL3pOUT09IiwibWFjIjoiMTlmMzRjMzU0ODI1ZGI3YmI2YTcxYjQxNWYwZjFjNWJhNDg2MTNjMDc5ZDEyOWMyY2IzOGU3NGEyMTY5MTRkMyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 4984:2016 Polyethylene Pipes for Water Supply - Specification (Fifth Revision)",
+      "standardNumber": "IS 4984:2016",
+      "standardName": "Polyethylene Pipes for Water Supply - Specification (Fifth Revision)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 50 - Plastic Piping System",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2016-07-31",
+      "publishedOnFormatted": "31 Jul 2016"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

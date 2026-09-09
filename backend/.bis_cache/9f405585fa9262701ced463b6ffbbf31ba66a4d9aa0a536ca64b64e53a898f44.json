@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 10731,
+      "standardEncId": "eyJpdiI6InpjWGk0Z3lKbmc0MnVFY2hDWTFIdkE9PSIsInZhbHVlIjoiUlRTMFVtVUR5Q2tKNkZGbk1mUERPQT09IiwibWFjIjoiYTE0YWY0NDY3ZjhlYzE1MGFjNmJkNWRjMDBkZjRjZWMxZTA2M2IxOGFmM2I4ZjQ2NDZiMzlkZjEyMDRmMDYxNiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 410:1977 Specification for cold rolled brass sheet, strip and foil (Third Revision)",
+      "standardNumber": "IS 410:1977",
+      "standardName": "Specification for cold rolled brass sheet, strip and foil (Third Revision)",
+      "departmentName": "METALLURGICAL ENGINEERING DEPARTMENT (MTD)",
+      "sectionalCommitteeName": "MTD 08 - Ores And Feed Stock For Copper Industry, Its Metals/ Alloys And Products Sectional Committee",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "1978-03-31",
+      "publishedOnFormatted": "31 Mar 1978"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

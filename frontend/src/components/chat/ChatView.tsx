@@ -2,12 +2,12 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { ChatMessageData } from '@/types';
+import { ChatMessageData, SourceRef } from '@/types';
 import { ChatMessage } from './ChatMessage';
 import { ChatComposer } from './ChatComposer';
 import { ChatEmptyState } from './ChatEmptyState';
-import { MOCK_DEFAULT_CONVERSATION, MOCK_STANDARDS_ELECTRIC_HEATER, MOCK_SOURCES, getChatConversationById } from '@/data/mockChatData';
-import { Plus, History, Sparkles, Loader2 } from 'lucide-react';
+import { sendChatMessage, APIError } from '@/lib/api';
+import { Plus, History, ShieldCheck, Loader2 } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 interface ChatViewProps {
@@ -16,42 +16,22 @@ interface ChatViewProps {
 }
 
 export const ChatView: React.FC<ChatViewProps> = ({
-  initialConversationId,
   initialPrompt,
 }) => {
   const { language, t } = useLanguage();
-  const [messages, setMessages] = useState<ChatMessageData[]>(() => {
-    if (initialConversationId) {
-      const conv = getChatConversationById(initialConversationId);
-      return conv.messages;
-    }
-    if (initialPrompt) {
-      return MOCK_DEFAULT_CONVERSATION.messages;
-    }
-    return [];
-  });
-
+  const [messages, setMessages] = useState<ChatMessageData[]>([]);
   const [isThinking, setIsThinking] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (initialPrompt && messages.length === 0) {
-      handleSendMessage(initialPrompt);
-    }
-  }, [initialPrompt]);
-
-  useEffect(() => {
-    if (messages.length > 0) {
-      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [messages, isThinking]);
+  const initialPromptSentRef = useRef<boolean>(false);
 
   const handleResetChat = () => {
     setMessages([]);
     setIsThinking(false);
   };
 
-  const handleSendMessage = (content: string) => {
+  const handleSendMessage = React.useCallback(async (content: string) => {
+    if (!content.trim()) return;
+
     const userMsg: ChatMessageData = {
       id: `user-${Date.now()}`,
       role: 'user',
@@ -62,168 +42,188 @@ export const ChatView: React.FC<ChatViewProps> = ({
     setMessages((prev) => [...prev, userMsg]);
     setIsThinking(true);
 
-    setTimeout(() => {
-      let assistantMsg: ChatMessageData;
+    try {
+      const langCode = language.toLowerCase() === 'hi' ? 'hi' : 'en';
+      const response = await sendChatMessage({
+        message: content,
+        language: langCode,
+        top_k: 5,
+      });
 
-      if (
-        content.toLowerCase().includes('heater') ||
-        content.toLowerCase().includes('immersion') ||
-        content.toLowerCase().includes('is 302')
-      ) {
-        assistantMsg = {
-          id: `ai-${Date.now()}`,
-          role: 'assistant',
-          content: `For manufacturing electric immersion water heaters in India, compliance with the **IS 302 series** is mandatory under the Electrical Appliances (Quality Control) Order.
+      const sources: SourceRef[] = (response.citations || []).map((c) => ({
+        source_id: c.chunk_id,
+        title: c.formatted_citation,
+        reference_url: 'https://standards.bis.gov.in',
+        reliability_tier: 'primary',
+        source_type: 'bis_standard',
+      }));
 
-### Recommended Compliance Pathway:
-1. **Primary Safety Standard:** Comply with **IS 302 (Part 2/Sec 201)** in conjunction with **IS 302 (Part 1)**.
-2. **Certification Scheme:** Standard Mark (ISI) under BIS Scheme-I is compulsory before commercial distribution.
-3. **Molded Plugs:** The attached supply cord must independently conform to **IS 1293**.`,
-          standard_cards: MOCK_STANDARDS_ELECTRIC_HEATER,
-          source_refs: [MOCK_SOURCES.bisIS302, MOCK_SOURCES.dpiitQco],
-          uncertainty_notice: 'Ensure heating element sheath material meets corrosion resistance criteria for the specific regional water hardness tier targeted.',
-          created_at: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        };
-      } else if (content.toLowerCase().includes('led') || content.toLowerCase().includes('lamp') || content.toLowerCase().includes('16102')) {
-        assistantMsg = {
-          id: `ai-${Date.now()}`,
-          role: 'assistant',
-          content: `Self-ballasted LED lamps for general lighting services are governed by **IS 16102 (Part 1)** for safety and **IS 16102 (Part 2)** for performance requirements.
+      const rawMode = response.execution_metadata?.response_mode;
+      const responseMode: 'rag' | 'metadata_fallback' | 'insufficient_context' =
+        rawMode === 'metadata_fallback' || rawMode === 'rag' || rawMode === 'insufficient_context'
+          ? rawMode
+          : response.grounding_status === 'insufficient_context'
+          ? 'insufficient_context'
+          : response.grounding_status === 'partially_grounded'
+          ? 'metadata_fallback'
+          : 'rag';
 
-### Key BIS Requirements for LED Lamps:
-- **Compulsory Registration Scheme (CRS):** Covered under MeitY / BIS Compulsory Registration Order (CRO).
-- **Mandatory Safety Tests:** Insulation resistance, electrical strength, mechanical strength of lamp caps, and resistance to heat and fire.`,
-          standard_cards: [
-            {
-              is_number: 'IS 16102 (Part 1): 2012',
-              title: 'Self-Ballasted LED Lamps for General Lighting Services — Part 1: Safety Requirements',
-              relevance: 'highly_relevant',
-              status: 'active',
-              why_applicable: 'Mandatory standard under MeitY Compulsory Registration Scheme (CRS) for all self-ballasted LED lamps.',
-              source_refs: [MOCK_SOURCES.bisScheme1],
-              is_saved: false,
-            },
-            {
-              is_number: 'IS 16102 (Part 2): 2012',
-              title: 'Self-Ballasted LED Lamps for General Lighting Services — Part 2: Performance Requirements',
-              relevance: 'relevant',
-              status: 'active',
-              why_applicable: 'Prescribes lumen maintenance, power factor (>= 0.9), efficacy, and color temperature tolerances.',
-              source_refs: [MOCK_SOURCES.bisScheme1],
-              is_saved: false,
-            },
-          ],
-          source_refs: [MOCK_SOURCES.bisScheme1],
-          uncertainty_notice: 'Check specific BEE (Bureau of Energy Efficiency) star rating mandates in addition to BIS safety certification.',
-          created_at: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        };
-      } else {
-        assistantMsg = {
-          id: `ai-${Date.now()}`,
-          role: 'assistant',
-          content: `Based on your inquiry: "${content}", BISaarthi has retrieved relevant Indian Standards and regulatory procedures from the authoritative BIS knowledge repository.
+      const uncertaintyNotice =
+        response.grounding_status === 'insufficient_context'
+          ? (langCode === 'hi'
+              ? 'सूचना: बीआईएस सारथी के वर्तमान संदर्भ डेटाबेस में 0 पूर्ण-पाठ खंड उपलब्ध हैं। यह उत्तर आधिकारिक बीआईएस मानकों के आधार पर सीमित है।'
+              : 'Notice: Current production retrieval index contains 0 production chunks. BISaarthi provides grounded responses solely when verified standard text is retrieved.')
+          : (response.warnings && response.warnings.length > 0 ? response.warnings.join(' • ') : undefined);
 
-### Summary Guidance:
-- Indian Standards (IS) establish the statutory benchmarks for product safety, dimensional specifications, and quality control.
-- To obtain the ISI mark or CRS registration, testing must be completed at a BIS-recognized or NABL-accredited laboratory.`,
-          standard_cards: [
-            {
-              is_number: 'IS 302 (Part 1): 2024',
-              title: 'Safety of Household and Similar Electrical Appliances — General Requirements',
-              relevance: 'relevant',
-              status: 'active',
-              why_applicable: 'General reference safety standard for electrical equipment and components.',
-              source_refs: [MOCK_SOURCES.bisIS302],
-              is_saved: false,
-            },
-          ],
-          source_refs: [MOCK_SOURCES.bisIS302],
-          uncertainty_notice: 'Some requirements may depend on the exact product specification. Verify applicable requirements against the latest BIS source before certification or testing.',
-          created_at: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        };
-      }
+      const assistantMsg: ChatMessageData = {
+        id: `ai-${Date.now()}`,
+        role: 'assistant',
+        content: response.answer,
+        response_mode: responseMode,
+        grounding_status: response.grounding_status,
+        grounded: response.grounded,
+        citations: response.citations,
+        source_refs: sources.length > 0 ? sources : undefined,
+        uncertainty_notice: uncertaintyNotice,
+        execution_metadata: response.execution_metadata,
+        created_at: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      };
 
       setMessages((prev) => [...prev, assistantMsg]);
       setIsThinking(false);
-    }, 700);
-  };
 
-  const isEmpty = messages.length === 0;
+      // Persist real conversation summary to local storage for Dashboard and History pages
+      try {
+        const storedHistoryStr = localStorage.getItem('bisaarthi_chat_history');
+        const existingHistory = storedHistoryStr ? JSON.parse(storedHistoryStr) : [];
+        const newEntry = {
+          id: `conv-${Date.now()}`,
+          title: content.slice(0, 60) + (content.length > 60 ? '...' : ''),
+          preview: response.answer.slice(0, 100) + (response.answer.length > 100 ? '...' : ''),
+          updated_at: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+          timestamp: Date.now(),
+          time_bucket: 'today',
+        };
+        const updated = [newEntry, ...existingHistory.filter((item: { title: string }) => item.title !== newEntry.title)].slice(0, 20);
+        localStorage.setItem('bisaarthi_chat_history', JSON.stringify(updated));
+      } catch {
+        // Local storage write fails silently in restricted private modes
+      }
+    } catch (err) {
+      setIsThinking(false);
+      const msg = err instanceof APIError ? err.message : 'Unable to reach BISaarthi API.';
+      const isHindi = language.toLowerCase() === 'hi';
+      const errorMsg: ChatMessageData = {
+        id: `err-${Date.now()}`,
+        role: 'assistant',
+        content: isHindi
+          ? `⚠️ **कनेक्शन त्रुटि:** ${msg}\n\nकृपया सुनिश्चित करें कि बीआईएस सारथी FastAPI बैकएंड सेवा \`http://localhost:8000/api\` पर सक्रिय है।`
+          : `⚠️ **Connection Error:** ${msg}\n\nPlease ensure the BISaarthi FastAPI backend is running at \`http://localhost:8000/api\`.`,
+        created_at: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      };
+      setMessages((prev) => [...prev, errorMsg]);
+    }
+  }, [language]);
+
+  useEffect(() => {
+    if (initialPrompt && !initialPromptSentRef.current) {
+      initialPromptSentRef.current = true;
+      const timer = setTimeout(() => {
+        void handleSendMessage(initialPrompt);
+      }, 0);
+      return () => clearTimeout(timer);
+    }
+  }, [initialPrompt, handleSendMessage]);
+
+  useEffect(() => {
+    if (messages.length > 0) {
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages, isThinking]);
 
   return (
-    <div className="flex flex-col h-[calc(100vh-140px)] min-h-[580px] bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] shadow-xs overflow-hidden">
-      {/* Chat Conversation Sub-Header */}
-      <div className="h-14 px-4 sm:px-6 bg-[#FAF9F5] dark:bg-[#1B2B26]/80 border-b border-[#D9DDD8] dark:border-[#253831] flex items-center justify-between shrink-0">
-        <div className="flex items-center gap-2.5">
+    <div className="flex flex-col h-[calc(100vh-8.5rem)] max-w-5xl mx-auto">
+      {/* Top Controls Header */}
+      <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#D9DDD8] dark:border-[#253831] shrink-0">
+        <div className="flex items-center gap-2">
           <div className="w-2.5 h-2.5 rounded-full bg-[#2D9D5D] animate-pulse" />
-          <div>
-            <h2 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
-              {language === 'HI' ? 'बीआईएस सारथी मार्गदर्शन चैट' : 'BISaarthi Guidance Chat'}
-            </h2>
-          </div>
+          <h1 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] flex items-center gap-1.5">
+            <span>{language === 'HI' ? 'बीआईएस अनुपालन सहायक' : 'BIS Compliance Assistant'}</span>
+            <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] text-[#0D3328] dark:text-[#8FA89B] border border-[#D9DDD8] dark:border-[#253831]">
+              RAG Engine
+            </span>
+          </h1>
         </div>
 
         <div className="flex items-center gap-2">
+          {messages.length > 0 && (
+            <button
+              type="button"
+              onClick={handleResetChat}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-[#606E66] dark:text-[#BAC5BF] hover:text-[#0D3328] dark:hover:text-white bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] hover:bg-[#FAF9F5] transition-all cursor-pointer shadow-2xs"
+            >
+              <Plus className="w-3.5 h-3.5" />
+              <span>{t('btn.newChat')}</span>
+            </button>
+          )}
           <Link
             href="/history"
-            className="inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-[#606E66] dark:text-[#BAC5BF] hover:text-[#0D3328] dark:hover:text-[#F7F5EF] hover:bg-[#EFECE6] dark:hover:bg-[#20312B] rounded-full transition-colors"
-            title={t('nav.history')}
+            className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-bold text-[#606E66] dark:text-[#BAC5BF] hover:text-[#0D3328] dark:hover:text-white bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] hover:bg-[#FAF9F5] transition-all cursor-pointer shadow-2xs"
           >
             <History className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">{t('nav.history')}</span>
           </Link>
-
-          <button
-            type="button"
-            onClick={handleResetChat}
-            className="inline-flex items-center gap-1 px-3 py-1 text-xs font-bold bg-[#FAF9F5] dark:bg-[#15221E] text-[#0D3328] dark:text-[#8FA89B] border border-[#D9DDD8] dark:border-[#253831] hover:bg-[#EFECE6] dark:hover:bg-[#20312B] rounded-full shadow-2xs transition-colors cursor-pointer"
-          >
-            <Plus className="w-3.5 h-3.5" />
-            <span>{language === 'HI' ? 'नई चैट' : 'New Chat'}</span>
-          </button>
         </div>
       </div>
 
-      {/* Main Conversation Stream / Empty State */}
-      <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4">
-        {isEmpty ? (
+      {/* Message Feed Area */}
+      <div className="flex-1 overflow-y-auto pr-1 sm:pr-2 space-y-4 min-h-0">
+        {messages.length === 0 ? (
           <ChatEmptyState onSelectPrompt={handleSendMessage} />
         ) : (
-          <div className="max-w-3xl mx-auto space-y-6">
+          <div className="space-y-4 pt-2">
             {messages.map((msg) => (
               <ChatMessage key={msg.id} message={msg} />
             ))}
 
-            {/* AI Thinking/Loading Indicator */}
             {isThinking && (
               <div className="flex justify-start mb-6 animate-in fade-in duration-150">
-                <div className="w-full max-w-xl flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-[#0D3328] text-white flex items-center justify-center shrink-0 shadow-xs mt-1">
-                    <Loader2 className="w-4 h-4 animate-spin text-[#A7B8AE]" />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="w-8 h-8 rounded-full bg-[#0D3328] dark:bg-[#1E3B30] text-white flex items-center justify-center shrink-0 shadow-xs mt-0.5 border border-[#5B8272]/40">
+                    <ShieldCheck className="w-4 h-4 text-[#A7B8AE]" />
                   </div>
-                  <div className="bg-[#FAF9F5] dark:bg-[#1B2B26] rounded-2xl rounded-tl-xs border border-[#D9DDD8] dark:border-[#253831] p-4 shadow-xs">
-                    <div className="flex items-center gap-2 text-xs font-semibold text-[#606E66] dark:text-[#BAC5BF]">
-                      <Sparkles className="w-3.5 h-3.5 text-[#5B8272] animate-pulse" />
-                      <span>
-                        {language === 'HI'
-                          ? 'भारतीय मानकों और विनियामक प्रकाशनों की खोज जारी है...'
-                          : 'Searching Indian Standards and regulatory publications...'}
-                      </span>
-                    </div>
+                  <div className="flex items-center gap-2 p-4 rounded-2xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-2xs">
+                    <Loader2 className="w-4 h-4 text-[#5B8272] animate-spin" />
+                    <span className="text-xs text-[#606E66] dark:text-[#BAC5BF] font-medium">
+                      {t('chat.loadingText')}
+                    </span>
                   </div>
                 </div>
               </div>
             )}
-
             <div ref={messagesEndRef} />
           </div>
         )}
       </div>
 
-      {/* Fixed/Sticky Bottom Chat Composer - Only displayed during an active conversation */}
-      {!isEmpty && (
+      {/* Persistent Bottom Composer Area */}
+      <div className="pt-3 border-t border-[#D9DDD8] dark:border-[#253831] shrink-0">
         <ChatComposer onSendMessage={handleSendMessage} isLoading={isThinking} />
-      )}
+        <div className="flex items-center justify-between text-[11px] text-[#8B978F] pt-2 px-1">
+          <span className="flex items-center gap-1 truncate">
+            <ShieldCheck className="w-3.5 h-3.5 text-[#2D9D5D] shrink-0" />
+            <span>
+              {language === 'HI'
+                ? 'संदर्भ-आधारित आरएजी इंजन: असत्यापित दावों से सुरक्षित'
+                : 'Context-Grounded Engine: Strict anti-hallucination guardrails active'}
+            </span>
+          </span>
+          <span className="hidden sm:inline font-mono">
+            {language === 'HI' ? 'भाषा: हिंदी' : 'Language: English'}
+          </span>
+        </div>
+      </div>
     </div>
   );
 };
+

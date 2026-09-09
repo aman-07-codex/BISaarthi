@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 10283,
+      "standardEncId": "eyJpdiI6ImN5V0FETWJZenNKZjRrMEFQU3NNM1E9PSIsInZhbHVlIjoid1dMVkE3UTNOeE9DaXp1YXIrUUxuUT09IiwibWFjIjoiOTI3OTc2NjBhNzQ2M2IzYzY0MWUyYzcyNDdiZmUxNGJjM2ZhMjY4NmFmMGQ3NzIzYjRmZjQ5ZmU5YTVhYTU1OCIsInRhZyI6IiJ9",
+      "standardLabel": "IS 369:2019 Household electric direct - Acting room heaters - Performance requirements (Fourth Revision)",
+      "standardNumber": "IS 369:2019",
+      "standardName": "Household electric direct - Acting room heaters - Performance requirements (Fourth Revision)",
+      "departmentName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "sectionalCommitteeName": "ETD 32 - Electrical Appliances",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2019-03-31",
+      "publishedOnFormatted": "31 Mar 2019"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

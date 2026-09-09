@@ -1,0 +1,22 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Standard details fetched successfully",
+  "data": [
+    {
+      "standardId": 31713,
+      "pk_is_id": 31902,
+      "standardEncId": "eyJpdiI6IjZ6VEdNV3NnSnBkbEtvVDlJYjNBTlE9PSIsInZhbHVlIjoiK2x6TVpteUh4L2ROaGJqUVhGN04yUT09IiwibWFjIjoiNTNiMmM1MmI4NDM1MmQ1ODNmMjQxNzE1YWQ4NDUyNzdmN2QzZTIwODIyNzZiYTZkNThiODJkYWUzMTVmZGZmYSIsInRhZyI6IiJ9",
+      "standardEncIId": "eyJpdiI6IlIveTIxL3Fnb0FRc0I3cjN1d3dVTlE9PSIsInZhbHVlIjoiajR1Q2R6OEg0aHlEb05vUzF6T29Ndz09IiwibWFjIjoiYzkwMzcyNDZjM2MxODU4ODgwZTAzY2E5MTQ0OTA5N2ZiNmI3ZTY5YzkzMGRkMjJiY2FhYjdlMDQ1M2Q1MGUyYyIsInRhZyI6IiJ9",
+      "standardNumber": "IS 302 (Part 2/Sec 3):2024",
+      "standardName": "Household and Similar Electrical Appliances â€”Safety  Part 2 Particular Requirements  Section 3 Electric Irons  (Second Revision)",
+      "departmentId": 65,
+      "departmentEncId": "eyJpdiI6IjB2OGQxM3hFT2tZSmozdkR4ekZRM0E9PSIsInZhbHVlIjoiWUhNTXJFdzdWR0xLc2REdnVQR0VyZz09IiwibWFjIjoiMjc1OTQzNWRlYWI0YzY1ZjVjYmZhYWM2ZmY0ZTNlNDllYTljOWQ3YmNjZTY4MTRiZmY2MmUzOWJhODczZmRiYyIsInRhZyI6IiJ9",
+      "committeeId": 265,
+      "committeeEncId": "eyJpdiI6IlVvSGVoNGdGbkJaTGZNRCtUaTFveFE9PSIsInZhbHVlIjoiNldHSmZseXBvaFRCTmdWSkNzWVdjQT09IiwibWFjIjoiNWYzODAyZDE2MjYxMmE0NjA2MjNkZTdmZGMyMjA0MzQ5Y2RkYmY4YjBmN2UyZTk1YWJkNTZiMzg4MTZkMDMxYiIsInRhZyI6IiJ9",
+      "deptPreparedName": "Electrotechnical Department(ETD)",
+      "secCommitteePreparedName": "ETD 32 - Electrical Appliances",
+      "reviewId": "eyJpdiI6Ik5WMlNEVnRWandvalM2WEp3V1Rsanc9PSIsInZhbHVlIjoiK3IzSVdJV252UmJFYUFoOG9lckVkZz09IiwibWFjIjoiNzc3MDQwOWVkNjlhNTk1ZDczZTM5ZTBlYjBiNTZiZWMyODBmZmRlMGNiMjY4OGM2YjFiNTlhMDcxMDQzNjdiYSIsInRhZyI6IiJ9"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Standard details fetched successfully",
+  "data": [
+    {
+      "standardId": 6875,
+      "pk_is_id": 6875,
+      "standardEncId": "eyJpdiI6ImdxTXJtUmlkU3hYVWR0L1h0RmFMZlE9PSIsInZhbHVlIjoiejVycERBRE81eFlWazBURWd5N1V0Zz09IiwibWFjIjoiNDk3M2U5NTAzMGU5YTIyZWEyYWNmZjJjNGRkOTE2OTBiZTZkYzZjMjRiZmNkMGQ1MzhiNmYxNmM4ODcwODc2YyIsInRhZyI6IiJ9",
+      "standardEncIId": "eyJpdiI6IkNVUlc2Uy9SUVZUeXFGWmM2UUJMSXc9PSIsInZhbHVlIjoiWit4aTF4cDgyeVdyclhMdTlXYmNlZz09IiwibWFjIjoiZjg4MjIxMzE5YTQ0YzRjZDFhZDI3MjkwZjVkMjIwMmM2MDZkNmFlNDU1OWVhZTg4NTJlZmU2YWVmMmVmODhhYSIsInRhZyI6IiJ9",
+      "standardNumber": "IS 1489 (Part 1)  : 2015",
+      "standardName": "Portland Pozzolana Cement - Specification: Part 1 fly Ash Based (Fourth Revision)",
+      "departmentId": 63,
+      "departmentEncId": "eyJpdiI6IkVRL05JQnNVRlBuL0xCT1RmcDFra2c9PSIsInZhbHVlIjoiUnFCRWdRZ0Z2UDJUcGtxc1ZVTzg0QT09IiwibWFjIjoiMTZjZjI5YTY1M2Q0ZDVlZWMzMDM5MTliNDYwYmJiZGJjMGZmOTcyOWNmZTdkMDFjMTk1ZGE0NmI0NzU0M2E1NSIsInRhZyI6IiJ9",
+      "committeeId": 190,
+      "committeeEncId": "eyJpdiI6IldHY2dheFJFcGI3ZVZsNVFaY2lMUnc9PSIsInZhbHVlIjoiZGlYRXNad0U0NHhMd21GWlI0MXhpdz09IiwibWFjIjoiYmZjZDRlZjdkZGNhODJkMzJhMzhmZmRhODJiMDcyNjYzZjE5MjY5ODlkYjFkNmY5ZWVkOWE4YzkwODE1NGU0NyIsInRhZyI6IiJ9",
+      "deptPreparedName": "Civil Engineering Department(CED)",
+      "secCommitteePreparedName": "CED 02 - Cement And Concrete",
+      "reviewId": "eyJpdiI6IkVVYUR2T05KL2Z3ams2MER6eTQ5TkE9PSIsInZhbHVlIjoib2FaQTVpZ3dpWXVnZjFIYjRxRTNHUT09IiwibWFjIjoiMzAyY2Q1ZDA2OTIxYTdkNmM2NzFjY2Y4MmUyNGI4MDBmZDdmYjQ3MmNiZjIwYWIwNDUxNTIxNDA2OWFhMTE3MCIsInRhZyI6IiJ9"
+    }
+  ]
+}

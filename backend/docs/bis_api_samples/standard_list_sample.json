@@ -1,0 +1,71 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 67169,
+      "standardEncId": "eyJpdiI6IjlQalp1dldrazIzZ1hBVWhBMkc5QkE9PSIsInZhbHVlIjoiRmdwcm44Q21QYXBwY2V1QWcwWGVPQT09IiwibWFjIjoiNzRjOTlkMWI3NjI4MzM4YzY1NTIyMDcxYTQ2N2I4ODc4NWQ5ZmJlODkwM2Y2YjQ4M2M5N2ZjZTcxNzBiMmU1YiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 10325:2026 Square tins of 15 kg or 15 litre capacity for ghee, vanaspati, edible oils and bakery shortenings \u2014 Specification (third revision)",
+      "standardNumber": "IS 10325:2026",
+      "standardName": "Square tins of 15 kg or 15 litre capacity for ghee, vanaspati, edible oils and bakery shortenings \u2014 Specification (third revision)",
+      "departmentName": "PRODUCTION AND GENERAL ENGINEERING DEPARTMENT (PGD)",
+      "sectionalCommitteeName": "PGD 38 - Metal Containers",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2026-08-04",
+      "publishedOnFormatted": "04 Aug 2026"
+    },
+    {
+      "standardId": 67175,
+      "standardEncId": "eyJpdiI6IjVWRjREaUUrU2k2eVJ4TW5EOFh2Znc9PSIsInZhbHVlIjoiTzAvOWNaN0dZNGlHV0V6N21kMTdBZz09IiwibWFjIjoiYzhiOWNhOGMxNzk1MjRkMzZhZDk0ZmE0YmU5YTg0YzAzNzk4MzkyYmMxZmZkNjY1ZWIzOThkZDkyZmU5OGE3NyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 10447:2026 Solid Waste Management in Iron and Steel Plants \u2014 Guidelines ( First Revision )",
+      "standardNumber": "IS 10447:2026",
+      "standardName": "Solid Waste Management in Iron and Steel Plants \u2014 Guidelines ( First Revision )",
+      "departmentName": "ENVIRONMENT AND ECOLOGY DEPARTMENT (EED)",
+      "sectionalCommitteeName": "EED 08 - Waste Management",
+      "typeOfStandardName": "Code of Practice",
+      "publishedOn": "2026-08-04",
+      "publishedOnFormatted": "04 Aug 2026"
+    },
+    {
+      "standardId": 67176,
+      "standardEncId": "eyJpdiI6IjNnTXplS20wOFFJRFJWMEdYSWJVMVE9PSIsInZhbHVlIjoicnFrdDVzNklUV0JmQzZ6Wjl5YW9Vdz09IiwibWFjIjoiYzU5MWE2ZTQ4MjZiNmI4YzIwMjAyNmJkYjNlMDU1OTI0MDVlZjdlYjI5MTljNTFhZjZjZWY5MThhMDU2MjJkYiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 11304:2026 CONTROL OF AIR POLLUTION IN IRON AND STEEL PLANTS \u2014 CODE OF PRACTICE (First Revision)",
+      "standardNumber": "IS 11304:2026",
+      "standardName": "CONTROL OF AIR POLLUTION IN IRON AND STEEL PLANTS \u2014 CODE OF PRACTICE (First Revision)",
+      "departmentName": "ENVIRONMENT AND ECOLOGY DEPARTMENT (EED)",
+      "sectionalCommitteeName": "EED 02 - Air, Soil And Noise  Pollution Control",
+      "typeOfStandardName": "Code of Practice",
+      "publishedOn": "2026-08-04",
+      "publishedOnFormatted": "04 Aug 2026"
+    },
+    {
+      "standardId": 67174,
+      "standardEncId": "eyJpdiI6Ik43MG1EMmlwNjZ0eWpxM2ZCaTAwSWc9PSIsInZhbHVlIjoiMmNzZ25oM05LemNzUDFjbjRwZkd6UT09IiwibWFjIjoiMDE4OGFiZTU3NWQ4YmI2OGRlZjM3MWI5MWY5OTQzZGEyYmE3MGNkNTgyZjJkMjQyNGE0N2IyY2U5Yjc3ZjE3NyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 11916:2026 Textiles \u2013 Continuous filament glass yarn for aerospace and other purposes \u2013 Specification (second revision)",
+      "standardNumber": "IS 11916:2026",
+      "standardName": "Textiles \u2013 Continuous filament glass yarn for aerospace and other purposes \u2013 Specification (second revision)",
+      "departmentName": "TEXTILE DEPARTMENT (TXD)",
+      "sectionalCommitteeName": "TXD 13 - Textile Materials For Aeronautical And Related Products",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2026-08-04",
+      "publishedOnFormatted": "04 Aug 2026"
+    },
+    {
+      "standardId": 67170,
+      "standardEncId": "eyJpdiI6IkZMQ2p0RHJ3SzJ2SjFrczlraXNJNWc9PSIsInZhbHVlIjoiaXNJRGFxR0VMQThVektnYk9Wd2xGZz09IiwibWFjIjoiYTU4ZDc1ZGI2ZTk4Y2Y3MTFlODUxYzM1Y2M2Yjk5YTYxYjgwZTc4MjI5YjNmNzgzMDE2MGEzM2NjMmNkNWI3YSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 12112:2026 Control of Air Pollution in Refractory Industries \u2014 Code of Practice  (First Revision)",
+      "standardNumber": "IS 12112:2026",
+      "standardName": "Control of Air Pollution in Refractory Industries \u2014 Code of Practice  (First Revision)",
+      "departmentName": "ENVIRONMENT AND ECOLOGY DEPARTMENT (EED)",
+      "sectionalCommitteeName": "EED 02 - Air, Soil And Noise  Pollution Control",
+      "typeOfStandardName": "Code of Practice",
+      "publishedOn": "2026-08-04",
+      "publishedOnFormatted": "04 Aug 2026"
+    }
+  ],
+  "totalRecord": 24160,
+  "page": 1,
+  "pageSize": 5,
+  "hasMore": true
+}

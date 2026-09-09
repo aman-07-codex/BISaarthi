@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 22499,
+      "standardEncId": "eyJpdiI6IjZDa3pseFVNTWRTbnZGK3MvdFRUMXc9PSIsInZhbHVlIjoiQ2pzeUphQ0NaWnRadjROV3pZYWtXdz09IiwibWFjIjoiNmI1MTBiOTM0MzY4YmQ4ZDI5NGVkNDViODczZjBiY2E4NGE3OGM5NWE3YmM2NDgzNDE3YTVmMDJkNTAyM2Q5MyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 16654:2017 Geosynthetics - Polypropylene multifilament woven geobags for coastal and waterways protection - Specification",
+      "standardNumber": "IS 16654:2017",
+      "standardName": "Geosynthetics - Polypropylene multifilament woven geobags for coastal and waterways protection - Specification",
+      "departmentName": "TEXTILE DEPARTMENT (TXD)",
+      "sectionalCommitteeName": "TXD 30 - Geosynthetics",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2017-04-30",
+      "publishedOnFormatted": "30 Apr 2017"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

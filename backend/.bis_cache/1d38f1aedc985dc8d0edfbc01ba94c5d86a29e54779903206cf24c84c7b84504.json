@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 65762,
+      "standardEncId": "eyJpdiI6InlpYnZzZnNLSlJDRTVlejBQSWxoUlE9PSIsInZhbHVlIjoiSXNMcE40U0x6cnRWOFVvVTdtclIvdz09IiwibWFjIjoiMWFlMDcxYjBkNTY0MzA4Njk4YzMyMWM1YTdhZWY0YzE5MGY4OWFjMGRhM2NiZjU2YzEwZTY0MGY3MzVkNWI3NiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 733:2025 Wrought Aluminium and  Aluminium Alloy Bars, Rods, Sections, Extruded Tube,  Hollow Sections  and Profiles for  General Engineering Purposes ― Specification (Fourth Revision)",
+      "standardNumber": "IS 733:2025",
+      "standardName": "Wrought Aluminium and  Aluminium Alloy Bars, Rods, Sections, Extruded Tube,  Hollow Sections  and Profiles for  General Engineering Purposes ― Specification (Fourth Revision)",
+      "departmentName": "METALLURGICAL ENGINEERING DEPARTMENT (MTD)",
+      "sectionalCommitteeName": "MTD 07 - Ores And Feed Stock For Aluminium Industry, Its Metals/ Alloys And Products Sectional Committee",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2025-12-29",
+      "publishedOnFormatted": "29 Dec 2025"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

@@ -1,0 +1,28 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": {
+    "subGroups": [
+      {
+        "groupId": 36,
+        "subGroupId": 168,
+        "subGroupName": "Accounting and Book Keeping",
+        "encryptedSubGroupId": "eyJpdiI6IjdtN2pKdUxBWGNzK3djaENEcWsyK0E9PSIsInZhbHVlIjoiK2VkUVdTQlUxMm4zUHlJNitOYXdXZz09IiwibWFjIjoiOTg3N2M2MDNkYTE1Y2UxY2RhZjFmNGM2ZGQzYjM4MDBhNWM2ZTUxOTk1MTIyNDNlYTJiOGU5MmMzYTUxZWMxYSIsInRhZyI6IiJ9"
+      },
+      {
+        "groupId": 36,
+        "subGroupId": 169,
+        "subGroupName": "Auditing",
+        "encryptedSubGroupId": "eyJpdiI6InhTYVk2U1RRZDV3RE1FdjBEbnBKVlE9PSIsInZhbHVlIjoiTkJpS2ptQnlsa1dwV3RSWGw1dk85dz09IiwibWFjIjoiMWY5NmYyZmJiMDZkMjQwMDA0NTc4ZjUxY2JlMzA3NWY2MjdkNDFhZGU5Zjg3YjQ5MTgwZDY5ZDRhODg3NDU0ZiIsInRhZyI6IiJ9"
+      },
+      {
+        "groupId": 36,
+        "subGroupId": 170,
+        "subGroupName": "Financial Services",
+        "encryptedSubGroupId": "eyJpdiI6InBYU0lBUVk4UjNEa0NDUHRTcDBtQ2c9PSIsInZhbHVlIjoibnE2NjEvZ2hrcHJPTEpqRUlXQVd2UT09IiwibWFjIjoiZTNjZTg2N2NmNjI1M2Q4ODNiNTcxZGEwOGJiMGE2NjM1YTA2MDExNTdmMDgwN2YzOTM0YjEwNDdlMWY3YTRlZCIsInRhZyI6IiJ9"
+      }
+    ],
+    "total": 3
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 21685,
+      "standardEncId": "eyJpdiI6ImFqRURHZlA3bU1iRENIbkJsOUsxYmc9PSIsInZhbHVlIjoiUlVpSE4wbmI4bFVGcjRqWUt3T3Bpdz09IiwibWFjIjoiOTIwYzA5NTcyM2MyZmU3NzNmOWQ0ZjE1NDE5ZmM1NmQ1NmQwNDQ0MDFmY2E3ZWIyYzZjNWM3MmJhOTlkNTg5MSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 13252 (Part 22):2019 Information Technology Equipment - Safety Part 22: Equipment to be Installed Outdoors (First Revision)",
+      "standardNumber": "IS 13252 (Part 22):2019",
+      "standardName": "Information Technology Equipment - Safety Part 22: Equipment to be Installed Outdoors (First Revision)",
+      "departmentName": "ELECTRONICS AND INFORMATION TECHNOLOGY DEPARTMENT (LITD)",
+      "sectionalCommitteeName": "LITD 07 - Audio, Video, Multimedia Systems And Communication Equipment Sectional Committee",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2019-05-31",
+      "publishedOnFormatted": "31 May 2019"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 1083,
+      "standardEncId": "eyJpdiI6ImVoc2JsT2NrWkcwbGJJcEpIWWU5YXc9PSIsInZhbHVlIjoibGk3VTY0dUJLWGR5OFhpRXBFdmV6UT09IiwibWFjIjoiZGFjMDlmY2FhZTE5MzcxN2U5ZmJmNTE2YzFkM2QyYjM5OTEwYTExOTg4N2Y0MDU3MzUzNzYxMjNmNGEwYmVkZSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 10262:2019 Concrete Mix Proportioning — Guidelines ( Second Revision )",
+      "standardNumber": "IS 10262:2019",
+      "standardName": "Concrete Mix Proportioning — Guidelines ( Second Revision ) ",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 02 - Cement And Concrete",
+      "typeOfStandardName": "Others",
+      "publishedOn": "2019-01-31",
+      "publishedOnFormatted": "31 Jan 2019"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

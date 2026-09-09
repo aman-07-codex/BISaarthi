@@ -1,0 +1,22 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Standard details fetched successfully",
+  "data": [
+    {
+      "standardId": 111,
+      "pk_is_id": 111,
+      "standardEncId": "eyJpdiI6IjFsTWZITkNaODB4NnhhWlJVSlMyckE9PSIsInZhbHVlIjoiMmt6VnNWWURIbDZPYlltbEYwY2w0UT09IiwibWFjIjoiOWNkY2FhNzI3OGI2MDM1MzZkNzYxZGMyNjAyYjZiZjY0NmE0ZjA0OGQ4YTNmOWFjNWE2M2JmNDE1Zjc5YzQ0NCIsInRhZyI6IiJ9",
+      "standardEncIId": "eyJpdiI6Ik4xQTFSWktZcDliV0kvOWE2cDc4dlE9PSIsInZhbHVlIjoiWEc2M3VDU1lIMXlxejk5NHp4bkdsZz09IiwibWFjIjoiYzJjMzQzMGI3OGNmMGZiODdhNDZlNTY1OTNjYTQwYjJmYmY5MmRiYTY2YWUzNmViMGY4MmFiZDRhMGVlMWVjYSIsInRhZyI6IiJ9",
+      "standardNumber": "IS 269:2015",
+      "standardName": "Ordinary portland cement - Specification (Sixth Revision)",
+      "departmentId": 63,
+      "departmentEncId": "eyJpdiI6InlPcnA4eitCczVlVllIVHJScmxWVVE9PSIsInZhbHVlIjoiNEsvcFNtMUJNYWdZa1pvQi9VczIvZz09IiwibWFjIjoiNzNkMDJlZTZiNTVjZDU2YjFmZTE5NTAzNGQwOTFiNDQ1MGEzMmU3YTA1MzliMzcxNDYxYzI3MzA2MWM1ZGRlYyIsInRhZyI6IiJ9",
+      "committeeId": 190,
+      "committeeEncId": "eyJpdiI6Ill2MUhsOUYyMDRGSFp0S29uRUdqdHc9PSIsInZhbHVlIjoiREs0Tk1NSzJ1MFh3Z1FGR0piUXFXdz09IiwibWFjIjoiM2M1ZGY1MWRiMjhkMjVjMjkzYWVmOTc3YmUzNjgyZTk1OTUyNjdkZWEwNDMwZDgyMGMyNjU0MzUyOWVhMjQ1MCIsInRhZyI6IiJ9",
+      "deptPreparedName": "Civil Engineering Department(CED)",
+      "secCommitteePreparedName": "CED 02 - Cement And Concrete",
+      "reviewId": "eyJpdiI6IlVsM2QxYmlNZkRkL243aTBMck1PUmc9PSIsInZhbHVlIjoiTTV0UGxuTmQ3L29WU0pWWjBJVlBoUT09IiwibWFjIjoiNWQ1OTJjOWUwNGNkNDA0ODllNjBhY2MwMzVhYWVlN2E4NmFkOTM1YjBmNTA4MzQ1ZTgxNDhjNDBlNWY1NmU3OSIsInRhZyI6IiJ9"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Standard details fetched successfully",
+  "data": [
+    {
+      "standardId": 3714,
+      "pk_is_id": 3714,
+      "standardEncId": "eyJpdiI6IllpakxJQVJQeVZOSkRPekp6dTljM0E9PSIsInZhbHVlIjoiYVdlTmh2OGdEb0RRRkJ3cU1mQllPQT09IiwibWFjIjoiZDMxNTZkZDU3ODg1ODVjYTRkMTI1OGYzYjA2YWRkMjg2MTI5ZjI4YWE1MGU0MzcyODk0OTJmZTIxYjUyODZkZiIsInRhZyI6IiJ9",
+      "standardEncIId": "eyJpdiI6IjdpWm5QU1JEblhWNEZSQVNoWEZDUVE9PSIsInZhbHVlIjoicDN4Y2lpRnlNc2ZGNzMvc3BHdDhWZz09IiwibWFjIjoiOGVhOWRkYjYzOWIxOTc5YTVkMGY1NmY4YzNhOWIzMmZkOWY5MzkyYmI3Y2VlMjU2MjIzMWQ2ZjY2NjliYmM0NiIsInRhZyI6IiJ9",
+      "standardNumber": "IS 1239 (Part 2):2011",
+      "standardName": "Steel tubes, tubulars and other steel fittings - Specification: Part 2 steel pipe fittings (Fifth Revision)",
+      "departmentId": 70,
+      "departmentEncId": "eyJpdiI6IkFvZnVqMGU1NSs3MUdad3kzZXlhYnc9PSIsInZhbHVlIjoiWHN4WkV0aDZhZDhmck45a2c3UE5SQT09IiwibWFjIjoiYWI1YjM4YTVmOGU4Yzc3ODU4MzA4YjgwNzVmYzZkMmRhZTEwMTdmMDZjMjMyOWRiYWFhMWMwODk3Y2Q5NGMwYiIsInRhZyI6IiJ9",
+      "committeeId": 40,
+      "committeeEncId": "eyJpdiI6Im1hbUpYekJoelpPMUMxN1hqV0hRUnc9PSIsInZhbHVlIjoiWWQ4dm1yd1lDQ1NmOCs0Ukx0QzlGdz09IiwibWFjIjoiMGI3MWVlOGQ5OTYzY2FjNzc5ZTZhYWU2YTE2YzM5NDVlYjkxNjQ3YWIzYzRmNWMyYzcxZDhjNzZlZTk5N2FmMSIsInRhZyI6IiJ9",
+      "deptPreparedName": "Metallurgical Engineering Department(MTD)",
+      "secCommitteePreparedName": "MTD 19 - Steel Tubes, Pipes And Fittings Sectional Committee",
+      "reviewId": "eyJpdiI6IlVTelZROUZJa3RvSloxbkFrRWp0cXc9PSIsInZhbHVlIjoiR3RTUVlxakFLZGN1dlhpM1R3eitYZz09IiwibWFjIjoiZDhmNDc3YjE1ZThlY2RlZmVmN2I0NzdhMmIzNTg5NGYwNTc5NjE5YjgzMWI1MTI5NTI1YTQwZTVmNGQxMDA5NiIsInRhZyI6IiJ9"
+    }
+  ]
+}

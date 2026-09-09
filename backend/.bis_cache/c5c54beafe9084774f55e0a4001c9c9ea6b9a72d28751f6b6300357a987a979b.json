@@ -1,0 +1,37 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Standard details fetched successfully",
+  "data": [
+    {
+      "standardId": 21219,
+      "pk_is_id": 21223,
+      "standardEncId": "eyJpdiI6IkNISjBobGVDYlJqWHdTR25kWE83SEE9PSIsInZhbHVlIjoiQ29zZVV1MDAzNFFuU3FnMGYyaVF1dz09IiwibWFjIjoiMWNiOTQ1MjZmY2VkMWE3MTc4MTI5YWEzMDc2ZTljNmNkNDE3YjQwZGRhMzRmZDZlMDk2ODRmMjJmMmJmNTE1ZSIsInRhZyI6IiJ9",
+      "standardEncIId": "eyJpdiI6ImV4KytuMnBWQ3hKT0VwbEVjSW1STVE9PSIsInZhbHVlIjoiZUhmSG5vd3FNQkpsdGVoZkNLYjRlUT09IiwibWFjIjoiOWUzNzY5N2RmNDhlYjgzNWIzYTI3MTgwNjg2Y2Q5MDQ5ZWMwNDYwNTljN2ZhY2VmOTJmNWUyNmY3YWFhOWM3ZCIsInRhZyI6IiJ9",
+      "standardNumber": "IS 15885 (Part 1):2011",
+      "standardName": "Safety of lamp controlgear: Part 1 general requirements",
+      "departmentId": 65,
+      "departmentEncId": "eyJpdiI6IlNxalREZ3FpOFRWSG1DeVgwNWxYL2c9PSIsInZhbHVlIjoiWGF1Y0dSaWkwM0YwRmovZDlaaVdTdz09IiwibWFjIjoiNGRjNjIyNTJiY2YxNTM5MzdmZTJjOGVkNjZjNTU2YmQzMzMzZTc2NWNmYzY0OWNhODQ1NWEyNTgwYzM0NThiMyIsInRhZyI6IiJ9",
+      "committeeId": 257,
+      "committeeEncId": "eyJpdiI6IjZZSXZZN1JHblkzL0pCb0dIU2hBWGc9PSIsInZhbHVlIjoiakVuVUExZkE0SmhRSnNValllaWVIdz09IiwibWFjIjoiYjA1MTA2NjJiMTNiNTgyM2EyY2JjZmM2NDgwMjIwNjMyNTExNzYyMTYyMGE0NGRjYzEzNjI1ZTY1MmMyZmE5OCIsInRhZyI6IiJ9",
+      "deptPreparedName": "Electrotechnical Department(ETD)",
+      "secCommitteePreparedName": "ETD 23 - Lamps And Related Equipments",
+      "reviewId": "eyJpdiI6IklrNTA0WkJGM00wa0Z2QWJvSFBpWUE9PSIsInZhbHVlIjoiWjdxOWlkZVN3b0w2ZFJMOFB0Z0phZz09IiwibWFjIjoiMDEyNjQwOTU2YmM5NDU4ZTI5YWM0NjVjNjYzOTI1MWJhMzZlYWE0YTQ3YmVmZmYyY2JlZWZjMjBiODRmOTk2MiIsInRhZyI6IiJ9"
+    },
+    {
+      "standardId": 21219,
+      "pk_is_id": 21223,
+      "standardEncId": "eyJpdiI6IlplejMvd2VwcStYSXdWQlplZSsyemc9PSIsInZhbHVlIjoiOXYzbmNtUGh1bTZtdnlsOEZhN3N0dz09IiwibWFjIjoiYmQ5YWExMmI1NzdjODNlNzIxYmQ2ZjMwMzIwZDdkN2MxZTUxZTc1YmMyZGVlNGMwMGM4OTcwNDk2YTUzYWFiMCIsInRhZyI6IiJ9",
+      "standardEncIId": "eyJpdiI6IlZINnRPdVlxSE9hYXNwM2laUHl6ZlE9PSIsInZhbHVlIjoiaHlzU1gva0xHUkJGTlhwdk5NdU1NQT09IiwibWFjIjoiZGQ0MTJjOGFhMWM5OGQxZWZmYTU3MGJlYzFmMTkwYjg5MThjNWM2MmJjYzVhZWVkNGRiZGUyM2FjZmUxYmQ1MCIsInRhZyI6IiJ9",
+      "standardNumber": "IS 15885 (Part 1):2011",
+      "standardName": "Safety of lamp controlgear: Part 1 general requirements",
+      "departmentId": 65,
+      "departmentEncId": "eyJpdiI6IkhuY2tEVnBPY0MxY21zeE5oeVZwb1E9PSIsInZhbHVlIjoiYS9NMFUyc2ZJSzVmZ3NNZFRmZEo0Zz09IiwibWFjIjoiZmExZjE5YzQzNjUxZjlkMWEzZDI2ZjFhMGRhNzY3NDU0OWIwMGZlY2Y1ZjMxZDgwNzNmNjQyNjRhZmE3YzU2NiIsInRhZyI6IiJ9",
+      "committeeId": 257,
+      "committeeEncId": "eyJpdiI6IkVXRzNKWXBxdmRNRTl4ZGkrdFNEZkE9PSIsInZhbHVlIjoiZWU2cmR5VnlMTUVRRDBySDRRSXVuZz09IiwibWFjIjoiNmNiMzBlYmNkODliMjBiNGRmMzQ4NWE2NWQ1Njg1NWQzMmUzMWExZWE3YWNmZDU5ZTk3MzlkMzMxNTNjNTgzMyIsInRhZyI6IiJ9",
+      "deptPreparedName": "Electrotechnical Department(ETD)",
+      "secCommitteePreparedName": "ETD 23 - Lamps And Related Equipments",
+      "reviewId": "eyJpdiI6IkliS2VvbVdVSkQxQzA1VlpvQzNtTHc9PSIsInZhbHVlIjoiS0x5aWRQemllOC83RjB0ZUE4TW5Tdz09IiwibWFjIjoiN2ZiNzA3M2E5MDE1ZDBmOTVkMTQzYWRhNGQ5OTQ4YjQ3NmY5OTc3YTlkZTBlZWFkNWYyOTM4Mjc0ZGYyOWI4OCIsInRhZyI6IiJ9"
+    }
+  ]
+}

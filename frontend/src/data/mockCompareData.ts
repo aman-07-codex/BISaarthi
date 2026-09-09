@@ -1,4 +1,4 @@
-import { StandardDetailsData, StandardComparisonData, SuggestedComparisonPair, ComparisonRow, KeyDifferenceItem } from '@/types';
+import { StandardDetailsData, StandardComparisonData, SuggestedComparisonPair } from '@/types';
 import { getStandardDetailsBySlug, MOCK_STANDARD_DETAILS } from './mockStandardDetails';
 
 export const SUGGESTED_SELECTABLE_STANDARDS: StandardDetailsData[] = [

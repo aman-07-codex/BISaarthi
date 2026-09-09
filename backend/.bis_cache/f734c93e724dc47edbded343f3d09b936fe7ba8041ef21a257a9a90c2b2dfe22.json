@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 66137,
+      "standardEncId": "eyJpdiI6Ijhpc2pvSE9QMWhoSlJFSW50bGkrSVE9PSIsInZhbHVlIjoiM0ZGdGN0TTVKcVNHZDFrcCtObDNFUT09IiwibWFjIjoiZDJjN2MzYmQ0MTMxODM5ZWY5NTIxMzY0NDdiNmNlZGY2ZjZjN2M3ZDgzYWQ0ZGJiYTZkNThlYjNlNmUzZDMwMiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 6944:2026 Medical Laboratory Glassware — Bijou Bacteriological Bottle — Specification  (First Revision)",
+      "standardNumber": "IS 6944:2026",
+      "standardName": "Medical Laboratory Glassware — Bijou Bacteriological Bottle — Specification  (First Revision)",
+      "departmentName": "MEDICAL EQUIPMENT AND HOSPITAL PLANNING DEPARTMENT (MHD)",
+      "sectionalCommitteeName": "MHD 10 - Medical Laboratory Instruments",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2026-02-18",
+      "publishedOnFormatted": "18 Feb 2026"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

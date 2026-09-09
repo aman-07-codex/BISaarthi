@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 33880,
+      "standardEncId": "eyJpdiI6Ilk1STlVUStUaWs4dWh0S0lBQ0RiZ0E9PSIsInZhbHVlIjoidGhOZ2grakgraE9qelg1SzUwWENndz09IiwibWFjIjoiNjY2YzEyOTU1YzQ1MmZmNzc0ZGNhMTljYjA4ZjUxOTQwMmNmNDg1NjUxNTUxMTc0NmJjNTQ3MGQxOTZhNTA5NSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1077:2025 Common Burnt Clay Building Bricks - Specification (Sixth Revision)",
+      "standardNumber": "IS 1077:2025",
+      "standardName": "Common Burnt Clay Building Bricks - Specification (Sixth Revision)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 30 - Clay And Stabilized Soil Products For Construction",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2025-09-01",
+      "publishedOnFormatted": "01 Sep 2025"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

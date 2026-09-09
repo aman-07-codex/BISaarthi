@@ -1,17 +1,14 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AppLayout } from '@/components/layout/AppLayout';
 import { Button } from '@/components/common/Button';
 import { StandardCard } from '@/components/standards/StandardCard';
 import { DocumentDropzone } from '@/components/standards/DocumentDropzone';
 import { StandardCardData } from '@/types';
-import {
-  MOCK_FIND_STANDARDS_ELECTRIC_HEATER,
-  MOCK_FIND_STANDARDS_LED,
-  MOCK_FIND_STANDARDS_BATTERY,
-} from '@/data/mockFindStandards';
+import { searchStandards, getSavedStandards, saveStandardApi, deleteSavedStandardApi, APIError } from '@/lib/api';
 import { useLanguage } from '@/context/LanguageContext';
+import { useAuth } from '@/context/AuthContext';
 import {
   Search,
   Sparkles,
@@ -23,18 +20,71 @@ import {
   SlidersHorizontal,
   Info,
   ShieldCheck,
+  AlertCircle,
+  Check,
 } from 'lucide-react';
 
 type AnalysisStep = 'idle' | 'analyzing_input' | 'matching_categories' | 'ranking_standards' | 'completed';
 
 export default function FindStandardsPage() {
   const { language, t } = useLanguage();
+  const { token } = useAuth();
   const [productQuery, setProductQuery] = useState('');
   const [attachedFile, setAttachedFile] = useState<File | null>(null);
   const [analysisStep, setAnalysisStep] = useState<AnalysisStep>('idle');
   const [results, setResults] = useState<StandardCardData[] | null>(null);
+  const [totalMatches, setTotalMatches] = useState<number>(0);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [relevanceFilter, setRelevanceFilter] = useState<string>('all');
   const [statusFilter, setStatusFilter] = useState<string>('all');
+  const [savedIsNumbers, setSavedIsNumbers] = useState<Set<string>>(new Set());
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
+
+  const showToast = (msg: string) => {
+    setToastMessage(msg);
+    setTimeout(() => {
+      setToastMessage(null);
+    }, 2500);
+  };
+
+  useEffect(() => {
+    let isMounted = true;
+    Promise.resolve().then(() => {
+      if (!isMounted) return;
+      if (token) {
+        getSavedStandards(token, 1, 100)
+          .then((res) => {
+            if (!isMounted) return;
+            const set = new Set((res.items || []).map((i) => i.standard_is_number));
+            setSavedIsNumbers(set);
+          })
+          .catch(() => {
+            loadLocalSaved();
+          });
+      } else {
+        loadLocalSaved();
+      }
+
+      function loadLocalSaved() {
+        try {
+          const stored = localStorage.getItem('bisaarthi_saved_standards');
+          if (stored) {
+            const parsed = JSON.parse(stored);
+            if (Array.isArray(parsed)) {
+              const set = new Set(parsed.map((item: StandardCardData) => item.is_number));
+              if (isMounted) setSavedIsNumbers(set);
+            }
+          }
+        } catch {
+          // ignore
+        }
+      }
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, [token]);
 
   const examplePrompts = [
     {
@@ -50,12 +100,12 @@ export default function FindStandardsPage() {
       text: language === 'HI' ? 'घरेलू 3-पिन प्लग और सॉकेट पर कौन से मानक और अनिवार्य परीक्षण लागू होते हैं?' : 'Which standards and mandatory testing apply to household 3-pin plugs and sockets?',
     },
     {
-      title: language === 'HI' ? 'लिथियम बैटरी पैक' : 'Lithium Battery Packs',
-      text: language === 'HI' ? 'पोर्टेबल उपकरणों के लिए लिथियम-आयन बैटरी पैक हेतु मानक और सुरक्षा आवश्यकताएं।' : 'Standards and safety requirements for lithium-ion battery packs for portable devices.',
+      title: language === 'HI' ? 'सीमेंट और कंक्रीट' : 'Cement & Concrete',
+      text: language === 'HI' ? 'साधारण पोर्टलैंड सीमेंट (OPC) और कंक्रीट संरचनाओं के लिए मानक।' : 'Standards for Ordinary Portland Cement (OPC) and concrete structures.',
     },
   ];
 
-  const handleSearch = (queryOverride?: string) => {
+  const handleSearch = async (queryOverride?: string) => {
     const query = queryOverride || productQuery;
     if (!query.trim() && !attachedFile) return;
 
@@ -63,32 +113,110 @@ export default function FindStandardsPage() {
       setProductQuery(queryOverride);
     }
 
+    setErrorMessage(null);
     setAnalysisStep('analyzing_input');
     setResults(null);
 
-    setTimeout(() => {
-      setAnalysisStep('matching_categories');
-    }, 450);
+    // Staged visual progression for analysis UX
+    const timer1 = setTimeout(() => setAnalysisStep('matching_categories'), 250);
+    const timer2 = setTimeout(() => setAnalysisStep('ranking_standards'), 500);
 
-    setTimeout(() => {
-      setAnalysisStep('ranking_standards');
-    }, 900);
+    try {
+      const response = await searchStandards({ q: query, page: 1, page_size: 20 });
 
-    setTimeout(() => {
-      let matchedResults: StandardCardData[];
+      clearTimeout(timer1);
+      clearTimeout(timer2);
 
-      const qLower = query.toLowerCase();
-      if (qLower.includes('led') || qLower.includes('lamp') || qLower.includes('lighting')) {
-        matchedResults = MOCK_FIND_STANDARDS_LED;
-      } else if (qLower.includes('battery') || qLower.includes('lithium') || qLower.includes('cell')) {
-        matchedResults = MOCK_FIND_STANDARDS_BATTERY;
-      } else {
-        matchedResults = MOCK_FIND_STANDARDS_ELECTRIC_HEATER;
-      }
+      const mappedCards: StandardCardData[] = response.items.map((item) => {
+        const isPublished =
+          item.status?.toLowerCase().includes('active') ||
+          item.status?.toLowerCase().includes('published');
 
-      setResults(matchedResults);
+        return {
+          is_number: item.is_number,
+          title: item.title,
+          status: isPublished ? 'active' : 'unknown',
+          relevance: 'highly_relevant',
+          reason_selected: item.reason_selected || null,
+          primary_use_case: item.primary_use_case || null,
+          why_applicable: item.reason_selected || item.primary_use_case || (item.category
+            ? `${item.category}${item.department ? ` • ${item.department}` : ''}${item.committee ? ` • ${item.committee}` : ''}`
+            : 'Authoritative standard identified from curated MVP corpus.'),
+          source_refs: [
+            {
+              source_id: `src-${item.standard_id || item.is_number}`,
+              title: item.title,
+              reference_url: 'https://standards.bis.gov.in',
+              reliability_tier: 'primary',
+              source_type: 'bis_standard',
+            },
+          ],
+          is_saved: savedIsNumbers.has(item.is_number),
+        };
+      });
+
+      setTotalMatches(response.total);
+      setResults(mappedCards);
       setAnalysisStep('completed');
-    }, 1350);
+    } catch (err) {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+      setAnalysisStep('idle');
+      const message = err instanceof APIError ? err.message : 'Failed to search standards from the backend.';
+      setErrorMessage(message);
+    }
+  };
+
+  const handleToggleSave = async (isNumber: string, saved: boolean) => {
+    setSavedIsNumbers((prev) => {
+      const next = new Set(prev);
+      if (saved) {
+        next.add(isNumber);
+      } else {
+        next.delete(isNumber);
+      }
+      return next;
+    });
+
+    setResults((prev) => {
+      if (!prev) return prev;
+      return prev.map((s) => (s.is_number === isNumber ? { ...s, is_saved: saved } : s));
+    });
+
+    try {
+      const stored = localStorage.getItem('bisaarthi_saved_standards');
+      let arr: StandardCardData[] = stored ? JSON.parse(stored) : [];
+      if (!Array.isArray(arr)) arr = [];
+
+      if (saved) {
+        const itemToSave = results?.find((r) => r.is_number === isNumber);
+        if (itemToSave && !arr.some((a) => a.is_number === isNumber)) {
+          arr.push({ ...itemToSave, is_saved: true });
+        }
+      } else {
+        arr = arr.filter((a) => a.is_number !== isNumber);
+      }
+      localStorage.setItem('bisaarthi_saved_standards', JSON.stringify(arr));
+    } catch {
+      // ignore
+    }
+
+    if (token) {
+      try {
+        if (saved) {
+          await saveStandardApi(isNumber, token);
+          showToast(`Standard ${isNumber} saved to bookmarks.`);
+        } else {
+          await deleteSavedStandardApi(isNumber, token);
+          showToast(`Standard ${isNumber} removed from bookmarks.`);
+        }
+      } catch (e) {
+        const msg = e instanceof APIError ? e.message : 'Saved locally.';
+        showToast(msg);
+      }
+    } else {
+      showToast(saved ? `Standard ${isNumber} saved locally.` : `Standard ${isNumber} removed.`);
+    }
   };
 
   const handleReset = () => {
@@ -96,6 +224,8 @@ export default function FindStandardsPage() {
     setAttachedFile(null);
     setAnalysisStep('idle');
     setResults(null);
+    setTotalMatches(0);
+    setErrorMessage(null);
   };
 
   const filteredResults = results?.filter((std) => {
@@ -107,6 +237,14 @@ export default function FindStandardsPage() {
   return (
     <AppLayout>
       <div className="space-y-8 animate-in fade-in duration-200">
+        {/* Toast Notification */}
+        {toastMessage && (
+          <div className="fixed bottom-6 right-6 z-50 bg-[#0D3328] text-white px-4 py-2.5 rounded-full shadow-lg border border-[#5B8272]/40 flex items-center gap-2 text-xs animate-in fade-in slide-in-from-bottom-3 duration-150">
+            <Check className="w-4 h-4 text-[#A7B8AE]" />
+            <span>{toastMessage}</span>
+          </div>
+        )}
+
         {/* Page Title & Header Banner */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-[#D9DDD8] dark:border-[#253831]">
           <div>
@@ -130,6 +268,14 @@ export default function FindStandardsPage() {
             </Button>
           )}
         </div>
+
+        {/* Error Notification Banner if Backend is Unavailable */}
+        {errorMessage && (
+          <div className="p-4 rounded-2xl bg-[#FEF2F2] dark:bg-[#2C1616] border border-[#FCA5A5] dark:border-[#7F1D1D] text-[#991B1B] dark:text-[#F87171] text-xs flex items-center gap-3">
+            <AlertCircle className="w-4 h-4 shrink-0" />
+            <span>{errorMessage}</span>
+          </div>
+        )}
 
         {/* Search & Input Workspace */}
         <div className="bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] p-5 sm:p-7 shadow-xs space-y-5">
@@ -217,7 +363,7 @@ export default function FindStandardsPage() {
           </div>
         </div>
 
-        {/* Staged Mock Analysis Progress State */}
+        {/* Staged Analysis Progress State */}
         {analysisStep !== 'idle' && analysisStep !== 'completed' && (
           <div className="p-6 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-xs space-y-4 animate-in fade-in duration-200">
             <div className="flex items-center gap-2.5">
@@ -285,17 +431,17 @@ export default function FindStandardsPage() {
                 <h2 className="text-base font-bold text-[#18211D] dark:text-[#F7F5EF] flex items-center gap-2">
                   <span>{language === 'HI' ? 'पहचाने गए लागू भारतीय मानक' : 'Potentially Applicable Standards'}</span>
                   <span className="text-xs px-2.5 py-0.5 rounded-full bg-[#E8EFEA] text-[#0D3328] dark:text-[#A7B8AE] font-mono font-bold">
-                    {filteredResults?.length} {language === 'HI' ? 'मिले' : 'Found'}
+                    {totalMatches} {language === 'HI' ? 'मिले' : 'Found'}
                   </span>
                 </h2>
                 <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] mt-0.5">
                   {language === 'HI'
-                    ? 'उत्पाद सुरक्षा, हीटिंग तत्व और कनेक्शन घटकों के आधार पर क्रमबद्ध।'
-                    : 'Ranked by qualitative applicability based on product heating, electrical safety, and connection components.'}
+                    ? '100-मानक आधिकारिक डेटाबेस से खोजे गए परिणाम।'
+                    : 'Retrieved directly from the curated 100-standard authoritative corpus.'}
                 </p>
               </div>
 
-              {/* Lightweight Filter / Sort UI */}
+              {/* Filter UI */}
               <div className="flex flex-wrap items-center gap-2.5">
                 <div className="flex items-center gap-1.5 text-xs text-[#606E66] dark:text-[#BAC5BF]">
                   <SlidersHorizontal className="w-3.5 h-3.5 text-[#8B978F]" />
@@ -337,11 +483,19 @@ export default function FindStandardsPage() {
                 {t('find.whyStandardsDesc')}
               </p>
             </div>
+
             {/* List of Ranked Standard Cards */}
             <div className="space-y-4">
               {filteredResults && filteredResults.length > 0 ? (
                 filteredResults.map((std) => (
-                  <StandardCard key={std.is_number} standard={std} />
+                  <StandardCard
+                    key={std.is_number}
+                    standard={{
+                      ...std,
+                      is_saved: savedIsNumbers.has(std.is_number),
+                    }}
+                    onSaveToggle={handleToggleSave}
+                  />
                 ))
               ) : (
                 <div className="p-8 text-center bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] text-xs text-[#8B978F]">
@@ -352,7 +506,7 @@ export default function FindStandardsPage() {
           </div>
         )}
 
-        {/* Initial / Empty State: How Find Standards Works */}
+        {/* Initial / Empty State */}
         {!results && analysisStep === 'idle' && (
           <div className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#15221E] border border-[#D9DDD8] dark:border-[#253831] shadow-2xs space-y-5">
             <div>

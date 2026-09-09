@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 7676,
+      "standardEncId": "eyJpdiI6ImdlWjJEZWNzN2JYNE95cTFvNVhFSWc9PSIsInZhbHVlIjoiYld3UlNYcTBrOVF4VWlVV1o2akZwZz09IiwibWFjIjoiZTRmOTE3ZmY5YzgxNDA5MTQ3Mzc5NzI1ZTFiMDEyN2MxMjllYWZhYTkxMDlhMzk5NGM1YmQ5YWQ1ZjUyNzk1MyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1554 (Part 1):1988 Specification for PVC insulated (Heavy Duty) electric cables: Part 1 for working voltages up to and including 1 100 V (Third Revision)",
+      "standardNumber": "IS 1554 (Part 1):1988",
+      "standardName": "Specification for PVC insulated (Heavy Duty) electric cables: Part 1 for working voltages up to and including 1 100 V (Third Revision)",
+      "departmentName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "sectionalCommitteeName": "ETD 09 - Power Cables",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "1989-06-30",
+      "publishedOnFormatted": "30 Jun 1989"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

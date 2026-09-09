@@ -1,0 +1,18 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Data Found",
+  "data": {
+    "status": "success",
+    "message": "Data Found",
+    "product_manuals_details": [
+      {
+        "pk_is_id": "3714",
+        "is_number": "IS 1239 : Part 2 : 2011",
+        "file_path": "BisProd/bisProd/Standard_Product_Manual/product_manual_68a5752d173451755673901_20082025124141_68a5752d173451755673901.pdf",
+        "file_name": "product_manual_68a5752d173451755673901_20082025124141_68a5752d173451755673901.pdf"
+      }
+    ],
+    "total_count": 1
+  }
+}

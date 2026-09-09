@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 25684,
+      "standardEncId": "eyJpdiI6IjhMN29UNmNVQ0xjK3paY1FFYTI1dXc9PSIsInZhbHVlIjoici9ybjJnQ2grR3VpaXRueUxOUFVLdz09IiwibWFjIjoiMzRmZmQ1ZjkwNzhlMmNjNTM4ZWYyNjUyODc5MDViZjA5MTg4ZjZiNGUyZTMxZjdkYjEyMGFkYjUwNDg5NjY5NCIsInRhZyI6IiJ9",
+      "standardLabel": "IS 516 (Part 1/Sec 1):2021 Hardened concrete - Methods of test: Part 1 Testing of strength of hardened concrete: Section 1 Compressive, flexural and split tensile strength (First Revision)",
+      "standardNumber": "IS 516 (Part 1/Sec 1):2021",
+      "standardName": "Hardened concrete - Methods of test: Part 1 Testing of strength of hardened concrete: Section 1 Compressive, flexural and split tensile strength (First Revision)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 02 - Cement And Concrete",
+      "typeOfStandardName": "Methods of Tests",
+      "publishedOn": "2021-03-31",
+      "publishedOnFormatted": "31 Mar 2021"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

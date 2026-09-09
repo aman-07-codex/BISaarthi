@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 8843,
+      "standardEncId": "eyJpdiI6InBDN3BVUDJZSE1kR29KVUdlbGZZaHc9PSIsInZhbHVlIjoiY1VOOHgxVkVpcHlwdm92anRVQVRxQT09IiwibWFjIjoiYjIxNWRlM2ZlMjliZDA0MDY3ZjhkYzljN2QwZDdhYTBkMjFkMWE2MWQ2ZGU1OTc0MDZlMmJlNWU3OTNmNDI3MSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 2312:1967 Specification for propeller type AC ventilating fans (First Revision)",
+      "standardNumber": "IS 2312:1967",
+      "standardName": "Specification for propeller type AC ventilating fans (First Revision)",
+      "departmentName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "sectionalCommitteeName": "ETD 32 - Electrical Appliances",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "1967-12-31",
+      "publishedOnFormatted": "31 Dec 1967"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

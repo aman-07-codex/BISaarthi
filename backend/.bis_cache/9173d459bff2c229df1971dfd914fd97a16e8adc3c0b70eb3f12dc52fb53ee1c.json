@@ -1,0 +1,40 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "totalAmendments": 4,
+  "data": [
+    {
+      "standardId": 1333,
+      "standardNumber": "IS 10500:2012",
+      "noOfAmendment": 1,
+      "amendmentYear": "2015",
+      "is_documents": "BisProd/bisProd/oldStandards/S16/S16V01/10500A1.pdf",
+      "amendmentLabel": "First Amendment"
+    },
+    {
+      "standardId": 1333,
+      "standardNumber": "IS 10500:2012",
+      "noOfAmendment": 1,
+      "amendmentYear": "2018",
+      "is_documents": "BisProd/bisProd/oldStandards/S16/S16V01/10500A2.pdf",
+      "amendmentLabel": "Second Amendment"
+    },
+    {
+      "standardId": 1333,
+      "standardNumber": "IS 10500:2012",
+      "noOfAmendment": 2,
+      "amendmentYear": "2020",
+      "is_documents": "BisProd/bisProd/oldStandards/S16/S16V01/10500A3.pdf",
+      "amendmentLabel": "Third Amendment"
+    },
+    {
+      "standardId": 1333,
+      "standardNumber": "IS 10500:2012",
+      "noOfAmendment": 3,
+      "amendmentYear": "2021",
+      "is_documents": "BisProd/bisProd/oldStandards/S16/S16V01/10500A4.pdf",
+      "amendmentLabel": "Fourth Amendment"
+    }
+  ]
+}

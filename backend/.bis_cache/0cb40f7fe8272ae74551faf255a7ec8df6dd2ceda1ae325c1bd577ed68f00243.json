@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 2707,
+      "standardEncId": "eyJpdiI6InMzTmtqV3dNZUZweFVnVTFTVVd6c3c9PSIsInZhbHVlIjoiWmtHUmYzbFFTdGFYSlc1aDVKT21tZz09IiwibWFjIjoiZjFiMDllOTFjNTk1ODA5MzMwN2UzNTE5NzVkYzVjYzgwZTkxY2NhYmY2ZGY5ZWRmMzRiNWIwYzllMTM1Mjc5MiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1158:1973 Specification for corn flakes (First Revision)",
+      "standardNumber": "IS 1158:1973",
+      "standardName": "Specification for corn flakes (First Revision)",
+      "departmentName": "FOOD AND AGRICULTURE DEPARTMENT (FAD)",
+      "sectionalCommitteeName": "FAD 16 - Foodgrains, Allied Products And Ready-to-eat Foods",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "1973-07-31",
+      "publishedOnFormatted": "31 Jul 1973"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

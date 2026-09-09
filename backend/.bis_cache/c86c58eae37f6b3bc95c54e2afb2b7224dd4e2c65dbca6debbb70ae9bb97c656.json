@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 29188,
+      "standardEncId": "eyJpdiI6ImFHa2IvMEE4Rit1VzdZSjFranJkT1E9PSIsInZhbHVlIjoiOHVaRUZySW92Q0IxTGt3eGNFSUR3dz09IiwibWFjIjoiYTEwNTA2NzZlYzI4NjM1YTQ1NTU5MDY2ZTNiMWNmZjMyYjhlZGU2NjBiMzU2YzgxOTRhZThhYmZiYWIyYjNkNSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 2542 (Part 1/Sec 1):2023 Gypsum Plaster, Concrete and Products - Methods of Test: Part 1 Plaster and Concrete Section 1 Determination of Normal Consistency of Gypsum Plaster (Second Revision)",
+      "standardNumber": "IS 2542 (Part 1/Sec 1):2023",
+      "standardName": "Gypsum Plaster, Concrete and Products - Methods of Test: Part 1 Plaster and Concrete Section 1 Determination of Normal Consistency of Gypsum Plaster (Second Revision)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 04 - Building Limes And Gypsum Products",
+      "typeOfStandardName": "Methods of Tests",
+      "publishedOn": "2023-08-14",
+      "publishedOnFormatted": "14 Aug 2023"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

@@ -1,0 +1,16 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Gazette details fetched successfully.",
+  "data": [
+    {
+      "IS_NO": 5724,
+      "So_No": "HQ-PUB-015_1_2020 ",
+      "migratedFiles": "BisProd/bisProd/oldStandardsFormulation/GazatteFiles/CED/gf_210_5724_HQ_PUB_015_1_2020.pdf",
+      "pki_id": 3802,
+      "Amd_No": 2,
+      "standardNumber": " Amendment 2 to IS 13920:2016",
+      "standardId": 5724
+    }
+  ]
+}

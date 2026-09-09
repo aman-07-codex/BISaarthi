@@ -1,13 +1,14 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { AppLayout } from '@/components/layout/AppLayout';
 import { StandardCard } from '@/components/standards/StandardCard';
 import { Button } from '@/components/common/Button';
-import { MOCK_INITIAL_SAVED_STANDARDS } from '@/data/mockSavedStandards';
 import { StandardCardData } from '@/types';
 import { useLanguage } from '@/context/LanguageContext';
+import { useAuth } from '@/context/AuthContext';
+import { getSavedStandards, deleteSavedStandardApi } from '@/lib/api';
 import {
   Bookmark,
   Search,
@@ -16,29 +17,85 @@ import {
   FolderHeart,
   Compass,
   X,
+  Loader2,
 } from 'lucide-react';
 
 export default function SavedStandardsPage() {
   const { language, t } = useLanguage();
-  const [savedStandards, setSavedStandards] = useState<StandardCardData[]>(
-    MOCK_INITIAL_SAVED_STANDARDS
-  );
+  const { token } = useAuth();
+  const [savedStandards, setSavedStandards] = useState<StandardCardData[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const [searchQuery, setSearchQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState<string>('all');
   const [sortBy, setSortBy] = useState<'recent' | 'number' | 'relevance'>('recent');
 
-  const handleUnsave = (isNumber: string, saved: boolean) => {
-    if (!saved) {
-      setSavedStandards((prev) => prev.filter((s) => s.is_number !== isNumber));
-    }
-  };
+  useEffect(() => {
+    let isMounted = true;
+    Promise.resolve().then(() => {
+      if (!isMounted) return;
+      if (token) {
+        getSavedStandards(token, 1, 100)
+          .then((res) => {
+            if (!isMounted) return;
+            const mapped: StandardCardData[] = (res.items || []).map((item) => ({
+              is_number: item.standard_is_number,
+              title: item.standard?.title || item.standard_is_number,
+              status: item.standard?.status?.toLowerCase().includes('active') ? 'active' : 'unknown',
+              is_saved: true,
+            }));
+            setSavedStandards(mapped);
+            setIsLoading(false);
+          })
+          .catch(() => {
+            loadLocalSavedStandards();
+          });
+      } else {
+        loadLocalSavedStandards();
+      }
 
-  const handleRestoreSamples = () => {
-    setSavedStandards(MOCK_INITIAL_SAVED_STANDARDS);
-    setSearchQuery('');
-    setStatusFilter('all');
-    setSortBy('recent');
+      function loadLocalSavedStandards() {
+        try {
+          const stored = localStorage.getItem('bisaarthi_saved_standards');
+          if (stored) {
+            const parsed = JSON.parse(stored);
+            if (Array.isArray(parsed)) {
+              if (isMounted) setSavedStandards(parsed);
+            }
+          }
+        } catch {
+          if (isMounted) setSavedStandards([]);
+        } finally {
+          if (isMounted) setIsLoading(false);
+        }
+      }
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, [token]);
+
+  const handleUnsave = async (isNumber: string, saved: boolean) => {
+    if (!saved) {
+      setSavedStandards((prev) => {
+        const next = prev.filter((s) => s.is_number !== isNumber);
+        try {
+          localStorage.setItem('bisaarthi_saved_standards', JSON.stringify(next));
+        } catch {
+          // ignore
+        }
+        return next;
+      });
+
+      if (token) {
+        try {
+          await deleteSavedStandardApi(isNumber, token);
+        } catch {
+          // silent fallback
+        }
+      }
+    }
   };
 
   const filteredStandards = useMemo(() => {
@@ -133,8 +190,16 @@ export default function SavedStandardsPage() {
           </div>
         </div>
 
+        {/* Loading Spinner */}
+        {isLoading && (
+          <div className="p-12 text-center flex flex-col items-center justify-center space-y-3">
+            <Loader2 className="w-8 h-8 text-[#5B8272] animate-spin" />
+            <p className="text-xs text-[#606E66] dark:text-[#BAC5BF]">Loading bookmarked standards...</p>
+          </div>
+        )}
+
         {/* Controls Toolbar (Search, Filter, Sort) */}
-        {savedStandards.length > 0 && (
+        {!isLoading && savedStandards.length > 0 && (
           <div className="bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] p-4 sm:p-5 shadow-2xs space-y-3">
             <div className="grid grid-cols-1 sm:grid-cols-12 gap-3">
               {/* Search input */}
@@ -149,7 +214,7 @@ export default function SavedStandardsPage() {
                       ? 'IS संख्या या शीर्षक से सहेजे गए मानक खोजें...'
                       : 'Search saved standards by number or title...'
                   }
-                  className="w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm rounded-full border border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] focus:outline-none focus:ring-2 focus:ring-[#5B8272]/20 focus:border-[#0D3328] transition-all"
+                  className="w-full pl-10 pr-8 py-2.5 text-xs sm:text-sm rounded-full border border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] focus:outline-none focus:ring-2 focus:ring-[#5B8272]/20 focus:border-[#0D3328] transition-all"
                 />
                 {searchQuery && (
                   <button
@@ -167,119 +232,111 @@ export default function SavedStandardsPage() {
                 <select
                   value={statusFilter}
                   onChange={(e) => setStatusFilter(e.target.value)}
-                  className="w-full px-3.5 py-2.5 text-xs sm:text-sm rounded-full border border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] focus:outline-none focus:border-[#0D3328] transition-all cursor-pointer"
+                  className="w-full px-4 py-2.5 text-xs sm:text-sm rounded-full border border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] focus:outline-none focus:ring-2 focus:ring-[#5B8272]/20 focus:border-[#0D3328] transition-all cursor-pointer font-medium"
                 >
-                  <option value="all">{language === 'HI' ? 'सभी स्थितियां' : 'All Statuses'}</option>
-                  <option value="active">{language === 'HI' ? 'केवल सक्रिय मानक' : 'Active Standards Only'}</option>
-                  <option value="under_revision">{language === 'HI' ? 'संशोधनाधीन' : 'Under Revision'}</option>
+                  <option value="all">{language === 'HI' ? 'सभी स्थितियाँ' : 'All Statuses'}</option>
+                  <option value="active">{language === 'HI' ? 'सक्रिय' : 'Active'}</option>
+                  <option value="under_revision">{language === 'HI' ? 'समीक्षाधीन' : 'Under Revision'}</option>
                 </select>
               </div>
 
-              {/* Sort Dropdown */}
+              {/* Sort By */}
               <div className="sm:col-span-3">
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as 'recent' | 'number' | 'relevance')}
-                  className="w-full px-3.5 py-2.5 text-xs sm:text-sm rounded-full border border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] focus:outline-none focus:border-[#0D3328] transition-all cursor-pointer"
+                  className="w-full px-4 py-2.5 text-xs sm:text-sm rounded-full border border-[#D9DDD8] dark:border-[#253831] bg-[#FAF9F5] dark:bg-[#1B2B26] text-[#18211D] dark:text-[#F7F5EF] focus:outline-none focus:ring-2 focus:ring-[#5B8272]/20 focus:border-[#0D3328] transition-all cursor-pointer font-medium"
                 >
-                  <option value="recent">{language === 'HI' ? 'हाल ही में सहेजे गए' : 'Recently Saved'}</option>
-                  <option value="number">{language === 'HI' ? 'मानक संख्या (A–Z)' : 'Standard Number (A–Z)'}</option>
-                  <option value="relevance">{language === 'HI' ? 'उच्चतम प्रासंगिकता' : 'Highest Relevance'}</option>
+                  <option value="recent">{language === 'HI' ? 'हाल में सहेजे गए' : 'Recently Saved'}</option>
+                  <option value="number">{language === 'HI' ? 'IS संख्या (क्रमबद्ध)' : 'IS Number'}</option>
+                  <option value="relevance">{language === 'HI' ? 'प्रासंगिकता' : 'Relevance'}</option>
                 </select>
               </div>
             </div>
 
-            {/* Results Count & Reset Filter */}
-            <div className="flex items-center justify-between text-xs text-[#606E66] dark:text-[#BAC5BF] pt-1 px-1">
-              <span>
-                Showing {filteredStandards.length} of {savedStandards.length} saved standard{savedStandards.length === 1 ? '' : 's'}
-              </span>
-              {(searchQuery !== '' || statusFilter !== 'all' || sortBy !== 'recent') && (
+            {/* Active search / filter result summary */}
+            {(searchQuery !== '' || statusFilter !== 'all') && (
+              <div className="flex items-center justify-between text-xs text-[#606E66] dark:text-[#BAC5BF] pt-1 border-t border-[#EFECE6] dark:border-[#1C2E28] px-1">
+                <span>
+                  {language === 'HI' ? 'दिखाया जा रहा है:' : 'Showing'} {filteredStandards.length} / {savedStandards.length}
+                </span>
                 <button
                   type="button"
                   onClick={() => {
                     setSearchQuery('');
                     setStatusFilter('all');
-                    setSortBy('recent');
                   }}
                   className="text-[#0D3328] dark:text-[#8FA89B] hover:underline cursor-pointer flex items-center gap-1 font-bold"
                 >
                   <RefreshCw className="w-3 h-3" />
-                  <span>Reset Filters</span>
+                  <span>{language === 'HI' ? 'फ़िल्टर साफ़ करें' : 'Clear Filters'}</span>
                 </button>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         )}
 
-        {/* Saved Standards List or Filter Empty State */}
-        {savedStandards.length > 0 ? (
-          filteredStandards.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {filteredStandards.map((standard) => (
-                <StandardCard
-                  key={standard.is_number}
-                  standard={standard}
-                  onSaveToggle={handleUnsave}
-                />
-              ))}
-            </div>
+        {/* Standards Grid or Empty State */}
+        {!isLoading && (
+          savedStandards.length > 0 ? (
+            filteredStandards.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {filteredStandards.map((standard) => (
+                  <StandardCard
+                    key={standard.is_number}
+                    standard={standard}
+                    onSaveToggle={handleUnsave}
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className="bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] p-8 sm:p-12 text-center space-y-3 shadow-xs">
+                <Search className="w-8 h-8 text-[#8B978F] mx-auto" />
+                <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                  {language === 'HI' ? 'कोई मेल खाने वाला मानक नहीं मिला' : 'No matching standards found'}
+                </h3>
+                <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] max-w-md mx-auto">
+                  {language === 'HI'
+                    ? 'अपनी खोज क्वेरी या फ़िल्टर समायोजित करने का प्रयास करें।'
+                    : 'Try adjusting your search query or reset filters.'}
+                </p>
+                <Button
+                  variant="secondary"
+                  size="sm"
+                  onClick={() => {
+                    setSearchQuery('');
+                    setStatusFilter('all');
+                  }}
+                  className="font-bold text-xs"
+                >
+                  {language === 'HI' ? 'फ़िल्टर रीसेट करें' : 'Reset Filters'}
+                </Button>
+              </div>
+            )
           ) : (
-            /* No Filter Matches State */
-            <div className="bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] p-8 text-center space-y-3 shadow-xs">
-              <Search className="w-8 h-8 text-[#8B978F] mx-auto" />
-              <h3 className="text-sm font-bold text-[#18211D] dark:text-[#F7F5EF]">
-                No saved standards match your search
-              </h3>
-              <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] max-w-md mx-auto">
-                No results found for &ldquo;{searchQuery}&rdquo;. Try clearing your search query or adjusting your filters.
-              </p>
-              <Button
-                variant="secondary"
-                size="sm"
-                onClick={() => {
-                  setSearchQuery('');
-                  setStatusFilter('all');
-                }}
-                className="font-bold text-xs"
-              >
-                Clear Search & Filters
-              </Button>
+            <div className="bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] p-10 sm:p-14 text-center space-y-4 shadow-xs animate-in fade-in duration-200">
+              <div className="w-14 h-14 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] border border-[#D9DDD8] dark:border-[#253831] flex items-center justify-center text-[#0D3328] dark:text-[#8FA89B] mx-auto">
+                <FolderHeart className="w-7 h-7" />
+              </div>
+
+              <div className="space-y-1.5 max-w-md mx-auto">
+                <h2 className="text-lg font-bold text-[#18211D] dark:text-[#F7F5EF]">
+                  {t('saved.emptyHeading')}
+                </h2>
+                <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
+                  {t('saved.emptyDesc')}
+                </p>
+              </div>
+
+              <div className="pt-2">
+                <Link href="/find-standards">
+                  <Button variant="pill" size="md" icon={<Compass className="w-4 h-4" />} className="font-bold text-xs">
+                    {language === 'HI' ? 'मानक खोजें' : 'Find Standards to Bookmark'}
+                  </Button>
+                </Link>
+              </div>
             </div>
           )
-        ) : (
-          /* EMPTY STATE (All standards removed) */
-          <div className="bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] p-10 sm:p-14 text-center space-y-4 shadow-xs animate-in fade-in duration-200">
-            <div className="w-14 h-14 rounded-full bg-[#E8EFEA] dark:bg-[#1B2B26] border border-[#D9DDD8] dark:border-[#253831] flex items-center justify-center text-[#0D3328] dark:text-[#8FA89B] mx-auto">
-              <FolderHeart className="w-7 h-7" />
-            </div>
-
-            <div className="space-y-1.5 max-w-md mx-auto">
-              <h2 className="text-lg font-bold text-[#18211D] dark:text-[#F7F5EF]">
-                No saved standards yet
-              </h2>
-              <p className="text-xs sm:text-sm text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
-                Save standards from Find Standards or Standard Details to access them quickly later.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-              <Link href="/find-standards">
-                <Button variant="pill" size="md" icon={<Compass className="w-4 h-4" />} className="font-bold text-xs">
-                  Find Standards
-                </Button>
-              </Link>
-              <Button
-                variant="secondary"
-                size="md"
-                onClick={handleRestoreSamples}
-                icon={<RefreshCw className="w-4 h-4" />}
-                className="font-bold text-xs"
-              >
-                Restore Sample Standards
-              </Button>
-            </div>
-          </div>
         )}
       </div>
     </AppLayout>

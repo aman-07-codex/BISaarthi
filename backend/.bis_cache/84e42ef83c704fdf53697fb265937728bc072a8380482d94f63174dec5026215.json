@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 5724,
+      "standardEncId": "eyJpdiI6ImkzcGhVa2FsTVNPeDdTcVdQdk0rcVE9PSIsInZhbHVlIjoiKzY4RnJRYVJYZmRuVDNNZnE1dzhLZz09IiwibWFjIjoiN2Y4YjlkMTYzNDg3MjdkYjk1OGU5YWUwNWMzMWMyZDM4MDQ5ZWY1YWFkNWM4NjUxNWNmNGRiYTIzMmM5YjgzMiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 13920:2016 Ductile Design and Detailing of Reinforced Concrete Structures Subjected to Seismic Forces - Code of Practice (First Revision)",
+      "standardNumber": "IS 13920:2016",
+      "standardName": "Ductile Design and Detailing of Reinforced Concrete Structures Subjected to Seismic Forces - Code of Practice (First Revision) ",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 39 - Earthquake Engineering",
+      "typeOfStandardName": "Code of Practice",
+      "publishedOn": "2016-07-31",
+      "publishedOnFormatted": "31 Jul 2016"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

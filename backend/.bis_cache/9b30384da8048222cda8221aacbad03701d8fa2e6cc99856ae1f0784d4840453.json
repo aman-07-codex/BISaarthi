@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 1683,
+      "standardEncId": "eyJpdiI6Im5BYjd1Wi93TVpzVXhmVEZuNlNBK2c9PSIsInZhbHVlIjoic3dxS1E0ZXVZdGpYNzlpckM3dWRJUT09IiwibWFjIjoiNDE4YzIwYjA0ZDA5MzQyNjIxZTk2MmNmZTljYzJmMGU5NTNhNWYxNzE5OTc3NThjYmQ1YmEwOGIzZmUxZWQyZiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1079:2017 Hot rolled carbon steel sheet, plate and strip - Specification (Seventh Revision)",
+      "standardNumber": "IS 1079:2017",
+      "standardName": "Hot rolled carbon steel sheet, plate and strip - Specification (Seventh Revision)",
+      "departmentName": "METALLURGICAL ENGINEERING DEPARTMENT (MTD)",
+      "sectionalCommitteeName": "MTD 04 - Wrought Steel Products Sectional Committee",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2017-05-31",
+      "publishedOnFormatted": "31 May 2017"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 25365,
+      "standardEncId": "eyJpdiI6IlpjdUVEaDA5OVk5Qkp3RG5mcldYT0E9PSIsInZhbHVlIjoiYStjZ0podEFRTEc5UWIrbFR6RE1MUT09IiwibWFjIjoiZWI1ZDY2Y2E2MGYzNDI1OTc0MWU1NDA4ZWM5MTQ0YTBjNWZjMTMwOTQ1Nzg0NThmOTBmOWY3YjA1ZGZkOWUxMCIsInRhZyI6IiJ9",
+      "standardLabel": "Is 15658:2021 Concrete Paving Blocks - Specification ( First Revision )  Amendment - 2",
+      "standardNumber": "Is 15658:2021",
+      "standardName": "Concrete Paving Blocks - Specification ( First Revision )  Amendment - 2",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 05 - Flooring, Wall Finishing And Roofing",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2021-01-31",
+      "publishedOnFormatted": "31 Jan 2021"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

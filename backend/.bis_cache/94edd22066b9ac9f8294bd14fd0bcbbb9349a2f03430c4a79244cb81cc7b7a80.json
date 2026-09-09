@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 30480,
+      "standardEncId": "eyJpdiI6IkVPMzJqR2lKdVhWemVtUGFUNHNCN1E9PSIsInZhbHVlIjoiaERTWXdYSlh2OVZlTWpKdmxZcFZUdz09IiwibWFjIjoiZDhkM2ViNWQyMGMxMDEyOGMwZjE1YjU1YWIzNjE5NjBkODNkNGMzYjc2ZTEzMWIxMDFmZGY0OWI4NTViZmQ4NiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 13428:2024 PACKAGED NATURAL MINERAL WATER - SPECIFICATION Third Revision",
+      "standardNumber": "IS 13428:2024",
+      "standardName": "PACKAGED NATURAL MINERAL WATER - SPECIFICATION Third Revision ",
+      "departmentName": "FOOD AND AGRICULTURE DEPARTMENT (FAD)",
+      "sectionalCommitteeName": "FAD 14 - Drinking Water And Carbonated Beverages",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2024-03-21",
+      "publishedOnFormatted": "21 Mar 2024"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

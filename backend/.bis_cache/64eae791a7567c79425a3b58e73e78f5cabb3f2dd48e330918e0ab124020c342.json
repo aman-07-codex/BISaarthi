@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 21179,
+      "standardEncId": "eyJpdiI6IlRacHdYcDdaMnFUZE5TYk1ZSnhKNmc9PSIsInZhbHVlIjoiYTBBT0dTaDZEMDlIT1RYdXV0U0htUT09IiwibWFjIjoiNDI1MTVjMDQ3MzI3NWIyNjNhODc0OTM1MTY3NTYyMzBjNzYyZDBiZjlhYTQ4NzQzYjlmNGM2ODc4MTA3YzNhOSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 15888:2010 Guideline for the conduct of food safety assessment of foods derived from recombinant - DNA plants",
+      "standardNumber": "IS 15888:2010",
+      "standardName": "Guideline for the conduct of food safety assessment of foods derived from recombinant - DNA plants",
+      "departmentName": "FOOD AND AGRICULTURE DEPARTMENT (FAD)",
+      "sectionalCommitteeName": "FAD 23 - Biotechnology For Food And Agriculture",
+      "typeOfStandardName": "Code of Practice",
+      "publishedOn": "2010-03-31",
+      "publishedOnFormatted": "31 Mar 2010"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

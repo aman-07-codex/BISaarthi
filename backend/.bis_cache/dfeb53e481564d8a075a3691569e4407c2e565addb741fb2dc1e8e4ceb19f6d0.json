@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 33139,
+      "standardEncId": "eyJpdiI6InVkT3VuZkdzWitSeVZGZXhNamMxMFE9PSIsInZhbHVlIjoicjFsOGl2eFdzVE9QajFGMmUxQnRHUT09IiwibWFjIjoiOGQxMTYzODZlYWNiZGU0N2ZkODFmNzE5NjBkN2M3NGVjYTk1YTY2YjhkZGYwMTkxMDc3M2Q2NTcxYzZkYjNkNyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 15410:2025 PLASTIC BOTTLES/CONTAINERS FOR PACKAGING OF NATURAL MINERAL WATER AND PACKAGED DRINKING WATER - SPECIFICATION  (first revision)",
+      "standardNumber": "IS 15410:2025",
+      "standardName": "PLASTIC BOTTLES/CONTAINERS FOR PACKAGING OF NATURAL MINERAL WATER AND PACKAGED DRINKING WATER - SPECIFICATION  (first revision)      ",
+      "departmentName": "PETROLEUM, COAL AND RELATED PRODUCTS DEPARTMENT (PCD)",
+      "sectionalCommitteeName": "PCD 21 - Plastics Packaging",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2025-04-07",
+      "publishedOnFormatted": "07 Apr 2025"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

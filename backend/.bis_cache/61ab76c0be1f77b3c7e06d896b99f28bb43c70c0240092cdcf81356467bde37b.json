@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 32040,
+      "standardEncId": "eyJpdiI6IjZnMENYZ1Fkd0w5ZWtXL0dSbWJ6Wnc9PSIsInZhbHVlIjoiM2x2aWhqUDJSNXhoeGt3R3dKb2hGUT09IiwibWFjIjoiMjFhODRjYzBhY2M3MTYwOWE3YzQ2ZDBiNTk1ZjE0YmRlNzRhMDg2Njk3NWZkZDgyYjRkMTI4OTQyOTg0NzliNCIsInRhZyI6IiJ9",
+      "standardLabel": "IS 3745:2024 Yoke Type Medical Cylinder Valve with Pin Index Connection ( Third Revision )",
+      "standardNumber": "IS 3745:2024",
+      "standardName": "Yoke Type Medical Cylinder Valve with Pin Index Connection ( Third Revision )",
+      "departmentName": "MECHANICAL ENGINEERING DEPARTMENT (MED)",
+      "sectionalCommitteeName": "MED 16 - Gas Cylinders",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2024-10-29",
+      "publishedOnFormatted": "29 Oct 2024"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

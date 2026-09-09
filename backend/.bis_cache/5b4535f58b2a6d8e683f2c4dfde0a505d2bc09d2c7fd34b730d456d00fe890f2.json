@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 8715,
+      "standardEncId": "eyJpdiI6Ind1a0ovYkhuVjg2dlBoWjlHT2tOMmc9PSIsInZhbHVlIjoid20vODNSSng5THdXcDZTVW1vK2hGQT09IiwibWFjIjoiYjBjOGZmZjA0MGU0NTM4NTBmYThkMGRjYWI5NGJiZjVmNmMwM2NlZmFhN2MwZjBjMmQ1OGFjNmI3ZGFkYjhkZCIsInRhZyI6IiJ9",
+      "standardLabel": "IS 2185 (Part 3):1984 Concrete Masonry Units Part 3 Autoclaved Cellular Aerated Concrete Blocks",
+      "standardNumber": "IS 2185 (Part 3):1984",
+      "standardName": "Concrete Masonry Units Part 3 Autoclaved Cellular Aerated Concrete Blocks",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 53 - Cement Matrix Products",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "1985-03-31",
+      "publishedOnFormatted": "31 Mar 1985"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

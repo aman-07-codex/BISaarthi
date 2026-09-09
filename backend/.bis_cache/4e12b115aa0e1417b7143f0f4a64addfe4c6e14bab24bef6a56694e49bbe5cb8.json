@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 28448,
+      "standardEncId": "eyJpdiI6IjZ5TU5qaHVsQ0hnV0FCT3JyTC9OUmc9PSIsInZhbHVlIjoiQWFZcXgxZktVRFFkWGR3OFkvYS9zdz09IiwibWFjIjoiZTYwZWY4ZTQwMTc0NDVmODNhYmNmZDc1NDNmZTgwZjk4OThlMWJlNDI1OTU5NjVlMmJiZTQyZDZlNGFjZjBkNiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 5887 (Part 8/Sec 1):2023 Methods for detection of bacteria responsible for food poisoning- Part 8: Horizontal method for the enumeration of coagulase-positive staphylococci (Staphylococcus aureus and other species) Sec 1: Method using Baird-Parker agar medium",
+      "standardNumber": "IS 5887 (Part 8/Sec 1):2023",
+      "standardName": "Methods for detection of bacteria responsible for food poisoning- Part 8: Horizontal method for the enumeration of coagulase-positive staphylococci (Staphylococcus aureus and other species) Sec 1: Method using Baird-Parker agar medium ",
+      "departmentName": "FOOD AND AGRICULTURE DEPARTMENT (FAD)",
+      "sectionalCommitteeName": "FAD 31 - Food Microbiology Sectional Committee",
+      "typeOfStandardName": "Methods of Tests",
+      "publishedOn": "2023-04-26",
+      "publishedOnFormatted": "26 Apr 2023"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

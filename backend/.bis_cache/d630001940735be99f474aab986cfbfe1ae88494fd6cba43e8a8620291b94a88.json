@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 23725,
+      "standardEncId": "eyJpdiI6ImJCZWtkbGtjZVVDM3l0Si9HZlhEeHc9PSIsInZhbHVlIjoibE1NK2tWK3M0Y1AvOTFCOHRJdFB4Zz09IiwibWFjIjoiMmE4MDNjNzMyZDBiNjY0NTQyNzg2NzhlYzZiZTNhYWVkYzNmYzM2ZWJkYmFhNzAwNzk5ZTJiMTM5YTAzN2RhZCIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1199 (Part 2):2018 Fresh Concrete - Methods of Sampling, Testing and Analysis: Part 2 Determination of Consistency of Fresh Concrete ( First Revision )",
+      "standardNumber": "IS 1199 (Part 2):2018",
+      "standardName": "Fresh Concrete - Methods of Sampling, Testing and Analysis: Part 2 Determination of Consistency of Fresh Concrete ( First Revision ) ",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 02 - Cement And Concrete",
+      "typeOfStandardName": "Methods of Tests",
+      "publishedOn": "2018-12-31",
+      "publishedOnFormatted": "31 Dec 2018"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

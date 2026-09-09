@@ -1,0 +1,22 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Standard details fetched successfully",
+  "data": [
+    {
+      "standardId": 18707,
+      "pk_is_id": 18711,
+      "standardEncId": "eyJpdiI6InRKbUhYNGN0MzBUYWRKek5wTmtWVlE9PSIsInZhbHVlIjoidm96dUJvZUttOHl6aVczb2VkeHFkQT09IiwibWFjIjoiYzY0OTlhYjdiMjQzMjg3NTZkNDViZWQyMGVjNzNiZDU3NzcyMWJiOWY0MTE3ODYwNzk1N2EyMjFmZjZkNGFhOSIsInRhZyI6IiJ9",
+      "standardEncIId": "eyJpdiI6IjFmQ0hvYm9mUVZlQ3pXTkVnc3oxbkE9PSIsInZhbHVlIjoidHNHRk5PbWdjb0FXRkNnK2VOKzJzdz09IiwibWFjIjoiZjk2MzkzYzEzOTdhOWYzYWZhYTFkMTdmNzcwOTU5MDUzOGVjYThjYjljMzhhMmUwZmI4MzA4NDUxNzE2NjQ3YyIsInRhZyI6IiJ9",
+      "standardNumber": "IS 2082:2018",
+      "standardName": "Stationary storage type electric water heaters - Specification (Fifth Revision)",
+      "departmentId": 65,
+      "departmentEncId": "eyJpdiI6ImFBN1k5QjFrNGpYWnFPZUxGNUc4VGc9PSIsInZhbHVlIjoiTGZtMHM3T1grY1JYa3puL2tSQWdUQT09IiwibWFjIjoiNzc1NGMwM2QxMzI1MDZiMWZjZjc0YTZmYThkZjRlYjNmZmU1ZWZlYTQ0YWQ5MGI4ZDQxNTNiYmMyNmI3NTMxZSIsInRhZyI6IiJ9",
+      "committeeId": 265,
+      "committeeEncId": "eyJpdiI6ImhxaG04QnJIUlk0MjM0RlRVWWl4TGc9PSIsInZhbHVlIjoibWpmcU1mUCt2OGcvaGw3c083RGVjZz09IiwibWFjIjoiNjEzZjNlZTlmNzRkZTlhMzZkZmM5M2U0YTVlYzY3ZmFkZmQ5Yjg0OGVjNTkwMWNlNGJhNmFhY2EyZGVhZjE2NyIsInRhZyI6IiJ9",
+      "deptPreparedName": "Electrotechnical Department(ETD)",
+      "secCommitteePreparedName": "ETD 32 - Electrical Appliances",
+      "reviewId": "eyJpdiI6IjlnTnJIU0lZb1liMGQxT0M5SytkYkE9PSIsInZhbHVlIjoidGYxR24wUWZKaUgzakJRQWhZa0JaZz09IiwibWFjIjoiZTIzODliZjQ0ZDA2ZTEyMDMxYTJkYzAxZTMzMGZmNWM1OTkyN2U5YThmODNmZTJkOWQ2YjE1NjY1MGMxODc5NiIsInRhZyI6IiJ9"
+    }
+  ]
+}

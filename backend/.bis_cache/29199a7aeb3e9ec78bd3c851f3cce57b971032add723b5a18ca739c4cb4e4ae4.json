@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 4270,
+      "standardEncId": "eyJpdiI6IlVSSGx3WGVzcFdxSnBoS0pvZ1UrMGc9PSIsInZhbHVlIjoiNi9xWWhTWWJrT3NsYWRXc0xhQlFkUT09IiwibWFjIjoiODdkNTNmOTI2MzczMjAxZGUxMTc1YjcyN2VkODQ3ZDFjYmM1NTYzZWQwOGU5NjgwMGJmY2I5N2Y5NGFjYTMzYiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 12818:2010 Unplasticized Polyvinyl Chloride (PVC-U) Screen and Casing Pipes for Bore/Tubewells - Specification (Second Revision)",
+      "standardNumber": "IS 12818:2010",
+      "standardName": "Unplasticized Polyvinyl Chloride (PVC-U) Screen and Casing Pipes for Bore/Tubewells - Specification (Second Revision)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 50 - Plastic Piping System",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": null,
+      "publishedOnFormatted": "—"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

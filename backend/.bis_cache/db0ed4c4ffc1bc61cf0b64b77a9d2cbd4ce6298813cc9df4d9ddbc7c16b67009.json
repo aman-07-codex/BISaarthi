@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 3683,
+      "standardEncId": "eyJpdiI6InFidmNPK2c1dklDOFRFQlVvZWFJU1E9PSIsInZhbHVlIjoiVGwrcHRXUGovZ0xUSW5BZE5JeUsrdz09IiwibWFjIjoiZTc1MTEyMzU2YmYzYTYyNzRmNWE5ODk4ZDdkOWUyMWY4Yzk1NjIwNTBkMGQ0MTcwZmFlY2IyYTg1MDdhZDQ4NCIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1237:2012 Cement Concrete Flooring Tiles - Specification (Second Revision)",
+      "standardNumber": "IS 1237:2012",
+      "standardName": "Cement Concrete Flooring Tiles - Specification (Second Revision)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 05 - Flooring, Wall Finishing And Roofing",
+      "typeOfStandardName": "Code of Practice",
+      "publishedOn": "2012-03-31",
+      "publishedOnFormatted": "31 Mar 2012"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

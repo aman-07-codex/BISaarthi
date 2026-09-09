@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 33494,
+      "standardEncId": "eyJpdiI6IjFLb3V6NUZIUkd2UmV2OGhxWE5kY3c9PSIsInZhbHVlIjoiL3R0RlZFN1pYenF6N1BTOStFQzVIZz09IiwibWFjIjoiNzQwMGViODFiZGFiMDU2MDEyNDg5MmRlYzMyMTQ4ODJhYjdhODhhNDc4ZGJlZDEyZjA2ZDZhNDU5Mzg3YmIyZSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 398 (Part 2):2025 Aluminium Conductor for Overhead Transmission Purposes - Specification Part 2 Aluminium Conductors Galvanized Steel Reinforced (Fourth Revision)",
+      "standardNumber": "IS 398 (Part 2):2025",
+      "standardName": "Aluminium Conductor for Overhead Transmission Purposes - Specification Part 2 Aluminium Conductors Galvanized Steel Reinforced (Fourth Revision)",
+      "departmentName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "sectionalCommitteeName": "ETD 37 - Conductors And Accessories For Overhead Lines",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2025-06-20",
+      "publishedOnFormatted": "20 Jun 2025"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 4136,
+      "standardEncId": "eyJpdiI6IjZKaC94ck5XZno4ZlVOcEhJWTM1d0E9PSIsInZhbHVlIjoiL3hNUkRZZldTTUc4M3VkSjFiSmFCdz09IiwibWFjIjoiMzQ4YzcxNTc5ZjA0ZTNjMDVmODVhNjRiNTJiMjNiOTQ4YWIyYTE1OTI0YTk1YzY1MGExYzIxY2I1N2NmNmQwMSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 12701:1996 Rotational moulded polyethylene water storage tanks - specification (First Revision)",
+      "standardNumber": "IS 12701:1996",
+      "standardName": "Rotational moulded polyethylene water storage tanks - specification (First Revision)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 03 - Sanitary Appliances And Water Fittings",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "1996-08-31",
+      "publishedOnFormatted": "31 Aug 1996"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

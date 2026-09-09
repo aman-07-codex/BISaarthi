@@ -1,0 +1,16 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Gazette details fetched successfully.",
+  "data": [
+    {
+      "IS_NO": 67129,
+      "So_No": "HQ-PUB013/342/2026-PUB-BIS",
+      "migratedFiles": "BisProd/bisProd/projects/gazettes/2026/08/325_1785736278.pdf",
+      "pki_id": 20957,
+      "Amd_No": 0,
+      "standardNumber": "IS 302 (Part 2/Sec 36):2026",
+      "standardId": 67129
+    }
+  ]
+}

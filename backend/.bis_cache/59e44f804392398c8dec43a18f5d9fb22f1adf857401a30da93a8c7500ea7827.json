@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 8162,
+      "standardEncId": "eyJpdiI6IkxkRzJkL0tQNFJQeG12MWVWMnNLUkE9PSIsInZhbHVlIjoiQThxUkdCdHhSTW5TYzIvay9rR09xUT09IiwibWFjIjoiOTZiMTdlOWFiMzg3Mzc0ZDhiYWMxZDRlOTM1ZWMyMDVkYWQ5OWE1MDZiZGUzZjc4Y2QyMDkwZGM4YzMyMWRhMCIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1757 (Part 1):2020 Metallic Materials — Charpy Pendulum Impact Test Part 1 Test Method ( Fourth Revision )",
+      "standardNumber": "IS 1757 (Part 1):2020",
+      "standardName": "Metallic Materials — Charpy Pendulum Impact Test Part 1 Test Method ( Fourth Revision ) ",
+      "departmentName": "METALLURGICAL ENGINEERING DEPARTMENT (MTD)",
+      "sectionalCommitteeName": "MTD 03 - Mechanical Testing Of Metals Sectional Committee",
+      "typeOfStandardName": "Methods of Tests",
+      "publishedOn": "2020-09-30",
+      "publishedOnFormatted": "30 Sep 2020"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

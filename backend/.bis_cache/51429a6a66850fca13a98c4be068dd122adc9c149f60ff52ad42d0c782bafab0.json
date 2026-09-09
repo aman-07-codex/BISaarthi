@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 29563,
+      "standardEncId": "eyJpdiI6Inh2dWROd3JLZjNHTWlkdUtpdldrdUE9PSIsInZhbHVlIjoiNnlCRVJnZDlXenhOWjFCVHc1Z3lsdz09IiwibWFjIjoiZjE1NDI5MWFlNzY4ZGRiMjEwMzM0OTBkOTk3NTI3ZjRiMTU5ZWVlNmNlNjE3NjNjYjgxODVjZmRiMDMwYjBiYSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 14894:2023 Fasteners ï¿½ Hexagon head bolts of product grade B ï¿½ Reduced shank (shank diameter ? pitch diameter) ï¿½ Specification",
+      "standardNumber": "IS 14894:2023",
+      "standardName": "Fasteners ï¿½ Hexagon head bolts of product grade B ï¿½ Reduced shank (shank diameter ? pitch diameter) ï¿½ Specification",
+      "departmentName": "PRODUCTION AND GENERAL ENGINEERING DEPARTMENT (PGD)",
+      "sectionalCommitteeName": "PGD 37 - General Engineering And Fasteners Standards",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2023-10-05",
+      "publishedOnFormatted": "05 Oct 2023"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

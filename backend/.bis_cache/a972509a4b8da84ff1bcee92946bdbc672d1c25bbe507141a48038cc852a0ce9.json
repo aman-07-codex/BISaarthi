@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 25402,
+      "standardEncId": "eyJpdiI6ImZpb3dvUWd3Nno3c3lVWHdIbU9wNGc9PSIsInZhbHVlIjoiSGdVL1ZwYXJGcUU4RElwTmFrK3JGQT09IiwibWFjIjoiMzg4NzVhMmJkZjQwMDIyYzc5ZWQ0MWNlODgwMTIxMTJkOWZiZTk4YmMyYWQ5MTE1ZGIxNjJkMzdhM2RiMjk0YyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1293:2019 Plugs and Socket-Outlets for Household and Similar Purposes of Rated Voltage up to and Including 250 V and Rated Current up to and Including 16 A - Specification ( Fourth Revision )",
+      "standardNumber": "IS 1293:2019",
+      "standardName": "Plugs and Socket-Outlets for Household and Similar Purposes of Rated Voltage up to and Including 250 V and Rated Current up to and Including 16 A - Specification ( Fourth Revision )",
+      "departmentName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "sectionalCommitteeName": "ETD 14 - Electrical Wiring Accessories",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2019-02-28",
+      "publishedOnFormatted": "28 Feb 2019"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

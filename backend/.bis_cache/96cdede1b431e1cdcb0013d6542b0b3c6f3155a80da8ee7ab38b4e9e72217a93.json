@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 7976,
+      "standardEncId": "eyJpdiI6IlZybERmS2FEM2RxOWFRQytTYWgzTmc9PSIsInZhbHVlIjoiRFhQKzZBUTRaa3l5RkIzWGRFM09TUT09IiwibWFjIjoiZmEwMjRlOGMwZTRiZjNmYzY5M2U4YjExYjk5NjcyYmJmMjg4YzdkMmRkNTE2N2Q1MjQxODU2ZWY4NzU1NmRmNSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 15778:2007 Chlorinated Polyvinyl Chloride (CPVC) Pipes for Potable Hot and Cold Water Distribution Supplies - Specification",
+      "standardNumber": "IS 15778:2007",
+      "standardName": "Chlorinated Polyvinyl Chloride (CPVC) Pipes for Potable Hot and Cold Water Distribution Supplies - Specification",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 50 - Plastic Piping System",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2007-09-30",
+      "publishedOnFormatted": "30 Sep 2007"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

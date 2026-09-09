@@ -1,4 +1,4 @@
-import { StandardCardData, SourceRef } from '@/types';
+import { StandardCardData } from '@/types';
 import { MOCK_SOURCES } from './mockChatData';
 
 export const MOCK_FIND_STANDARDS_ELECTRIC_HEATER: StandardCardData[] = [

@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 8713,
+      "standardEncId": "eyJpdiI6InNVamxyMkg2S1hhZ1dMTzd6Z0VBNlE9PSIsInZhbHVlIjoiY2J1OFM4QmxmbDRUMmthczBkcWtBdz09IiwibWFjIjoiOTJiNTNhOTZjMjk2YTQxNGVlZDcwYjQwNDAzMGFhYTk2NjRjZGYxZTk2OTRhNmFiNmM1YTJmZDZmYzIwZmNkZSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 2185 (Part 1):2005 Concrete masonry units - Specification: Part 1 hollow and solid concrete blocks (Third Revision)",
+      "standardNumber": "IS 2185 (Part 1):2005",
+      "standardName": "Concrete masonry units - Specification: Part 1 hollow and solid concrete blocks (Third Revision)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 53 - Cement Matrix Products",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2005-08-31",
+      "publishedOnFormatted": "31 Aug 2005"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

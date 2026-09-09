@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 111,
+      "standardEncId": "eyJpdiI6IkhYalRrc2hUUHd4QlRoZ0VmWGJhSVE9PSIsInZhbHVlIjoiTUFtVnpPZFpkVTE0ODRWWnZrTHpBUT09IiwibWFjIjoiMDE2ZTlkMDUzYTBlODJjZWFkMDA0NTI1ZGMzODY3OWIwZWQyMmFjNjE1OGYxYzgwMGU5OGFhYjQ1MGUwMGUzYiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 269:2015 Ordinary portland cement - Specification (Sixth Revision)",
+      "standardNumber": "IS 269:2015",
+      "standardName": "Ordinary portland cement - Specification (Sixth Revision)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 02 - Cement And Concrete",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2015-12-31",
+      "publishedOnFormatted": "31 Dec 2015"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

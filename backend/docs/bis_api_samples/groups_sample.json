@@ -1,0 +1,256 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": {
+    "groups": [
+      {
+        "groupId": 36,
+        "groupName": "Accounting and Finance Services",
+        "encryptedGroupId": "eyJpdiI6Ik83TW9FcEJWVHNpSHR3UDM4Njl6REE9PSIsInZhbHVlIjoiRmxiVWI5ZS9DODFlOWtzZjV4ZitGUT09IiwibWFjIjoiNGY4NGNlYjNhMDE4OTJjZjcxN2I1NmYzMDg1MTI2NTJlZjZkNjczODdmYTA4OTE2ODAyNmQ2NmYxMDNmMmE5NCIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 41,
+        "groupName": "Ageing Society Services",
+        "encryptedGroupId": "eyJpdiI6InVHaEYwa3V5cFdlTnBZU1FZb2hTa2c9PSIsInZhbHVlIjoiNElHbDVuOGtySlk2TGxVWmZWQ3hCdz09IiwibWFjIjoiNzIzMTY1ODQ1ZTRlYzczM2I2NmFiYzFkZDRiOTkwNTVmMDUzMzEzMTkxZTU0MGM1ZjIzMzhiYmNlN2NiOWMyYyIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 1,
+        "groupName": "Agriculture, Agricultural Products and Implements",
+        "encryptedGroupId": "eyJpdiI6InY3eVhtL1BJMlN1TGpBZ1F6TEZRYVE9PSIsInZhbHVlIjoiWnFFcVIzdzE3VW9nZGUvWHlhYlRzdz09IiwibWFjIjoiMjFjMmM1NjdlZThlNGFhNWZjMzhmN2RhMzY0OTRmNTA2YWRmZTNjOTk4OTVjMWEyNDlmM2MwMmRhMjE5ZTFjZiIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 32,
+        "groupName": "Banking and Financial Services",
+        "encryptedGroupId": "eyJpdiI6InREVHJkZ1dpS0huamc1NU9kU0h5clE9PSIsInZhbHVlIjoiVVdyVTNSTCtldDhta0pROElMU2ViUT09IiwibWFjIjoiMDMyM2RlMWQxYWNlZmFiMmIwYzQ3YzIxYzNiNDQzZThjMDdiNzNmOTJjNDczY2I3MzVlMjVjY2IzMTViODg0YiIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 40,
+        "groupName": "Biotechnology",
+        "encryptedGroupId": "eyJpdiI6ImUrZVNCMGJSd21lRHRhaHJUeGpmK0E9PSIsInZhbHVlIjoiREFxWXlpbFNyanNZQlhaaG9FTGFUUT09IiwibWFjIjoiNDNlN2YyYWY0OGQzYzUyM2RmZmFlOTdlZmE0MTJjMjBiZjBkZGY3YTJjNWMyNjYxNjRhZGJkMDNmMmZjMTBhZiIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 3,
+        "groupName": "Building Materials including Paints",
+        "encryptedGroupId": "eyJpdiI6IkJmNkJaRkRXcnVtcXkyc2RtaGZQaVE9PSIsInZhbHVlIjoiY0VqUWxBTk1pK2cvOUZONU9SNVYvZz09IiwibWFjIjoiODE2YmI1Yzg2Nzc4YjZmNDE2YjU2ZjBjZGMzOTU0MDE5MmIxOWNjOGRiOGIzMDQ3MDNmZjA3OGI0MTdmYzI3NCIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 34,
+        "groupName": "Business Services",
+        "encryptedGroupId": "eyJpdiI6IndDbFJlQm5Uenk0TWlHK04xOWJJMmc9PSIsInZhbHVlIjoiSmEwenlJNXdSK1Urd3lTdlJzVXVGQT09IiwibWFjIjoiOTM3MmJmMzI3Njg0NmQ1NTViZGE4MTgxMGM0ODJjMDMzN2NjNzY4OTYzY2M0NDcyYWY2OWQxNDkxNTNiMWRmMiIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 19,
+        "groupName": "Chemicals, Plastics and their Products including packaging and Environment",
+        "encryptedGroupId": "eyJpdiI6Ik9MWCtUcGJxa1hiOUhHaXR2RmUxMFE9PSIsInZhbHVlIjoiSnJRTU5EWThkVkk2dFZjUGxkWlZmZz09IiwibWFjIjoiMzZkNWNjMWE1NjA4ZDM5MjhmMjJkZjQ1NDI5ZjJkMmE1ZDEyMjc4YWEwYTRkZmUzYjZkZjllNzJiMTkwZTJlMiIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 4,
+        "groupName": "Civil Engineering Design and Construction",
+        "encryptedGroupId": "eyJpdiI6ImdLd1k2amxnMlQvaExNb0FLdGFRQ1E9PSIsInZhbHVlIjoiMGFGWXZsYU1RNG1iV0xUTUxyV2toUT09IiwibWFjIjoiN2RkZjdmYzg5OTdjNjg0OTBjZTdiYjVkYzVjNWM5Y2U4YjAyNjJkNTI4MmI5ODZhNjdhZWQ5NjUzNDg0Yjc3NyIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 24,
+        "groupName": "Coal and Petroleum products",
+        "encryptedGroupId": "eyJpdiI6IjB0UzRuRlp2R0oxNkJBTlVIdEFzWVE9PSIsInZhbHVlIjoiUThhb0NVS0puOEEwOEY5TklVUTBmQT09IiwibWFjIjoiZDZjNzBhMDJiNjg1NjRmMzZmMGRiNzIwYzE4ZDVkZjgxN2Y5YjI2MjY1Zjc0YjVhYjE3NDEzODEwZTgzMmQ0YiIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 35,
+        "groupName": "Commercial Activities - Retail, E-Commerce and E-Payments",
+        "encryptedGroupId": "eyJpdiI6Ikh2ODJod1ZVandsL3J3WXNhUHh6dmc9PSIsInZhbHVlIjoidVp0RDA4ZkR2a3QrTmtqenhlNXhUdz09IiwibWFjIjoiMzc1MmI3Nzk0MWM3MmNmYjRhNmNlMzY4OTYyMzE4ZGY3Yjk2NWM4MTAxOWUwOGI0NTRiYmZkYTM4ZjQzMzU2ZiIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 30,
+        "groupName": "Communication Services",
+        "encryptedGroupId": "eyJpdiI6Im1GdHVDR2xCS2RreExOSkFFTlJZb3c9PSIsInZhbHVlIjoiK1g1MlQyMFNRL3RnWmtLc1lDWFdxdz09IiwibWFjIjoiOTE1MTU5ODZiZDRjNThlZjNkYWE5ZTlmY2RhYTExYmRhNjlhZmRhOWVjNmVmNTc0OGM0MTFhMjZjYWQyZWJjNiIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 33,
+        "groupName": "Education, Educational Services and other related Services",
+        "encryptedGroupId": "eyJpdiI6IjByYUtxaDE0Z1VOWGdJRWRXY3dMSmc9PSIsInZhbHVlIjoiQmRmUmJkWEJFbk4wRUZOVVNOZXRkdz09IiwibWFjIjoiMTQyOTc4YzkzZTFhOGVmMWZkYjllYzgyYjU1ZWRiY2ZkYTgxOTg0YzY1MDUwZTZlYTkzOTYzYjBjMWZiZmNkYyIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 11,
+        "groupName": "Electrical  Switchgear and Other Electrical Products/Accessories",
+        "encryptedGroupId": "eyJpdiI6Imw3TDd1VDI0dnFwc3QzNFJaenY3SHc9PSIsInZhbHVlIjoidklNMm5UK0RyRzcwZ0x1Z0VoV3hRUT09IiwibWFjIjoiZDI4YjExNGU0YTlmMmIxZTQxNWI0MmQ0ZDgwZmVhNmUyYzI5NzU2YzU4MGJiYzVjMWU1NjRkMjJhMDVlZDdiNiIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 9,
+        "groupName": "Electrical Appliances and Accessories",
+        "encryptedGroupId": "eyJpdiI6IkNFaGJvQ0xlaWhvYWpReFF2V2s4dHc9PSIsInZhbHVlIjoid3d0c1F2eVplWkh6V0Fya3h2aktYQT09IiwibWFjIjoiOTg3MjM4NDI5M2ExYTZhMTEwODBkZjk0NTlmOTZhYmYwZWMwN2EzY2E2MTg4NWRlMGU1N2E5MTIzMDcxNjYxYSIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 10,
+        "groupName": "Electronic  and Telecom equipments, components and devices",
+        "encryptedGroupId": "eyJpdiI6Ik9CbzluNk1sdXFuVFpzMDJleldRM0E9PSIsInZhbHVlIjoiR3YwMzk4R1ZJRGJxRlpjbzhHbm1DUT09IiwibWFjIjoiODc1MWY2MWU5M2FiY2IyZTI4ZjBlNGE4MWVkZTAwYzE3YjhkZGMxZDM5ZjlkOTdlNzIyMzQ2ZGZhZTgyMDRjZCIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 29,
+        "groupName": "Environment Services",
+        "encryptedGroupId": "eyJpdiI6IjArNHp6SG9zVXpXdWEzVUxtNzVCR2c9PSIsInZhbHVlIjoicjNLTjk4VzhKcFpWZTJWb0wvZFh1dz09IiwibWFjIjoiOTAyYTFlM2NjOGRjMzQ3NDJhMDFmYmY4YjFiZDE2YTQ3MzYxMDc3MWQ5ODE4YTRmN2RlMjQ2YzBiYjdhZDU2OSIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 12,
+        "groupName": "Equipments for use in Mines and Explosive Atmosphere",
+        "encryptedGroupId": "eyJpdiI6IkpRNHJsdUFGWEozSzFmdWM4a1VZNEE9PSIsInZhbHVlIjoiNkcwNGp3MEE3b1NXMktzNVJhVWhYZz09IiwibWFjIjoiMmNhMjM4Y2I2ZGE0NDQyMjY4NDdkMzdlNjA3ZmI0ZjY1Y2YzNTU0MTE1YzY5YTg3ZTBhMmYyNTMwZTdiYTA0MCIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 38,
+        "groupName": "Ergonomics and Anthropometry",
+        "encryptedGroupId": "eyJpdiI6ImFSWHlRMHlHRkRQZ1VManZzK3diZ1E9PSIsInZhbHVlIjoibGptd2w1NTRUalA2b3RjZVppZGswQT09IiwibWFjIjoiM2FkYmU0MTljZDYyZTA3N2M1MTczMjE0YmM5YTM0Y2I3NTNmYWEwNDliNzE0NzA2NmVmZjNlZDJkNTM5N2I3OSIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 5,
+        "groupName": "Fire Fighting Equipments and Accessories",
+        "encryptedGroupId": "eyJpdiI6ImY4ZUNrNEZzK1E2RVRpWHo5clVSSHc9PSIsInZhbHVlIjoiZ3pURVNjdVlpSU5mKzJMNjNBV1VsUT09IiwibWFjIjoiYjk4YzAwYzk2Y2M5NThmYWExM2IxM2RmYmRiOGExZDkyNzA1ZWIyNjgzYTMwNTU1ZDEzMzVkNmVlNmMxYTE4MCIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 2,
+        "groupName": "Food,  Food Products and food processing equipments",
+        "encryptedGroupId": "eyJpdiI6IkNMR2hMNU9ucmhzcnZmRW9CWEI1UUE9PSIsInZhbHVlIjoiNUVWejQ5T2pFVnk5VFJOTGFzWnl0UT09IiwibWFjIjoiY2I3OWM4NmE2YjNjYTkwZWYyNWY4ZGVhM2MzY2I3NzE2MGE2MjJhYzczMDRmNTk2N2MyMTUyZDdmOTBiYzUyNSIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 23,
+        "groupName": "Furniture",
+        "encryptedGroupId": "eyJpdiI6Im9uMTRoNHNURWtGNzZMandma2ZjUkE9PSIsInZhbHVlIjoiRk5MNkpEN00xbVBuZ1FaSU03c1lWQT09IiwibWFjIjoiYTM0MzIzYzliYzQ3MjRmZmZlNjZjNjc0Njc3NTUzMTM5MDY0Y2E5MDZlNDM5MTYzNGFmZGUxZjJkMDUyOTU2MyIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 14,
+        "groupName": "Gases, Gas Cylinders , Machine tools and other mechanical products",
+        "encryptedGroupId": "eyJpdiI6Im56eFZpKzFPd0lDR3ZQMlBpeFVjdmc9PSIsInZhbHVlIjoiTGw0VWRZamtsMTdSaERPZ1ZzTjJ4Zz09IiwibWFjIjoiYzJmZDk4NmVkYmQ1NjNmNzY3MGUzNjc1YzhmOTU5NDk4MjdiYTdjMDJjYjUyZjljNTRhMDY0NDk5YmNiNzhmZCIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 27,
+        "groupName": "Health, Sports and Fitness Services",
+        "encryptedGroupId": "eyJpdiI6IjQ5ZlRKVytsV2tMb0NPcjkvYzdhNFE9PSIsInZhbHVlIjoiZjVUOHRKSTgxK2Z1MXZrNFlwQVdTUT09IiwibWFjIjoiM2NjZThhYmE5ZDA4ODFjOTUyZThlODc0MTE3N2UzZTliMzUwODI2NDAzYjY5MzVmNWY5YTk2ODI3MDRmNWM4ZCIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 8,
+        "groupName": "Household Products Appliances(non-electrical)",
+        "encryptedGroupId": "eyJpdiI6InQ3WTdxT1RQV1VPSENPNVgrNmcybVE9PSIsInZhbHVlIjoiaXp3OGNNVHRHZ2hKYVNMV2NTNjh2QT09IiwibWFjIjoiN2M3MWFlNjIzZmUzYTVlYWNhMTRiOTM5MDI3YmQ0M2UxZjAzOGUzMTg0MTFjMjRmNDQ4ZWMxMDM3MGJhMWQzNCIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 25,
+        "groupName": "Information Technology products and applications",
+        "encryptedGroupId": "eyJpdiI6InZSdHo0KzJkeUZsU0lrMUErS3NiVWc9PSIsInZhbHVlIjoiK2ZjMzBVT0RCM1NkaFJEMExWNkh6UT09IiwibWFjIjoiNzNjNjNmOTBlYjJiMzdjNTJlYWJmOGIwMzZlMmRmZDRlZGZhYWU1ZTUzZjRlZTkxNTkyNzM4YjlkY2ZkZGM0NSIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 26,
+        "groupName": "IT and IT Enabled Services",
+        "encryptedGroupId": "eyJpdiI6ImtKNjRackZLelhjV0tJa0RianRTOWc9PSIsInZhbHVlIjoiL3k3dnphb2ZaV2Eyc0FoaDMwcTh1UT09IiwibWFjIjoiYjY2ODFjOGRmODE2YmQ4MmM2ZWIwMDdmZjY4ZWMzNmQyYWM4ZDZjYTI0YjYwZDUyODk3MmM2NGI5MWYzNWEyMCIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 6,
+        "groupName": "Leather and Leather Products",
+        "encryptedGroupId": "eyJpdiI6IlVhUDA2Z1FvMFYwV3A1bWVHZTRVaFE9PSIsInZhbHVlIjoiL1c4MU4zUWpMcGdzaXVaMWJGYXFodz09IiwibWFjIjoiOTdlNTMxZmRjZDg5NTNmODA2MGM0NDI3MDM4ZjliYTkzY2JmY2YyYzhkOGJlZTExZWIzMTUyY2Q5NmFlODJmOSIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 22,
+        "groupName": "Management systems/services and corporate social responsibilities",
+        "encryptedGroupId": "eyJpdiI6IkVodnRoWDZYakwvSXNqS0ZwWGxlbEE9PSIsInZhbHVlIjoiN2RXTEJBNjFJcmdqMHQwdmZCbk9KUT09IiwibWFjIjoiMGY1N2MxMGVmMDVmZmRjOTZjNjI3YTcxZmQ5NjQ2OWVjYzUxN2Y5MjE0NjFiMmVhZWQxNmYwMjA1NWZjNzI4ZSIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 37,
+        "groupName": "Media and Entertainment Services",
+        "encryptedGroupId": "eyJpdiI6IkV0VnRwa0tVWlc1dmlxb0RQa1lEeXc9PSIsInZhbHVlIjoiTXRSRkt1eE9vM1RyeXlRNVI3RDg0UT09IiwibWFjIjoiMGZjMzhlY2E4MzUxODEzZjlkM2NkZTcyOWRmNjRkZTkzZmI2YzRhNmU5ZDgxYjAwNzdiMWNhNjMyYzVkMmVlYyIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 17,
+        "groupName": "Medical and Hospital Equipments",
+        "encryptedGroupId": "eyJpdiI6ImdKU0QrVE9tZ2tlNnFIMnYrVk1QZkE9PSIsInZhbHVlIjoiOU1UUVp5eTZWdFVteFJqTUNDNFNmZz09IiwibWFjIjoiNmY0MjkyM2U3Njg1NGZlZGU0MDAyOTRhYjhlNTJjMWQ3ZGI2MGE5NzQzZmViNTRmNjlhNDAwZmJkYTk1MDJmMSIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 13,
+        "groupName": "Metals, Alloys and Metal Products (including Steel Products)",
+        "encryptedGroupId": "eyJpdiI6InllenFFbVpDWE1QYW84SDVRS3BQQ3c9PSIsInZhbHVlIjoiL05XWUZJdFJYNTBaWnpZbU5DMkx2UT09IiwibWFjIjoiMGRmZmY1MzlkZTg0MjExMGIzMDEyMmQ1ZTQ5ZDg0YmZiNDMyOGJkMDBiZmY1YTUwY2ExM2Y5Yzc5ZWQ1ZmIzYSIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 39,
+        "groupName": "Microbiology",
+        "encryptedGroupId": "eyJpdiI6IjNGZmJhYWtEckpZOGFCVzgvV2c5TWc9PSIsInZhbHVlIjoiRWszZjlPZ29DaU0wWk1Ed0ZIVFQzUT09IiwibWFjIjoiMzlhNjFmZjA1NTU4NTc4ODllNzZmOWRhNWEyNjc4OWIyYmJiNzg5ZGNjODg3MGQ1ZTgwMTI5Yjc0ZmIyYTE1ZiIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 15,
+        "groupName": "Pumps, Engines and Compressors",
+        "encryptedGroupId": "eyJpdiI6IlhIWmQvMDlId1JhV3NWQklHSHlvVHc9PSIsInZhbHVlIjoiZXZjQUdPTXJQcDhhTU1VZkIzTTNpUT09IiwibWFjIjoiZTE0ZjIyMTE3ZjI2MDhkMDg5YTU2ZmZhMDlhODU3MzZiOTc2ZmJjNWUzYmM1YmIwZDdmNjczYjg2MGYwNjc2YSIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 18,
+        "groupName": "Rubber and Rubber Products",
+        "encryptedGroupId": "eyJpdiI6IkdMdThZYmV0MTZBTUt2VWxRTXRKSEE9PSIsInZhbHVlIjoieXhQU2RHZExPSk1SZno5Wkg1MldxQT09IiwibWFjIjoiNTk0MzRjNzAwMDE4M2I5NjQzZWY5ZDNhNzM2OWQ3MjU2ZTQ5ZTAxNzViZDgyN2RlOTc4MzA1NDY0NWI3MmI0NSIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 20,
+        "groupName": "Software and systems",
+        "encryptedGroupId": "eyJpdiI6ImtRNmhKeDh5MFQxQWVKVG4vdFBvOVE9PSIsInZhbHVlIjoiUlp5aW5FNTROTEFXQnlCTWs3bEFadz09IiwibWFjIjoiMDg1NGQ1NmI3NGJiODZhYzY3YjQ3NTFjZTFiNWM1MmFkZGZjOTBmODE3OTM3ZDgxNWQ3NDQxYTlmNzEwZmIzZCIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 21,
+        "groupName": "Sports goods including mountaineering equipment",
+        "encryptedGroupId": "eyJpdiI6InV5S0lxU2MrZ3JaV1gySUJ6RDV3NkE9PSIsInZhbHVlIjoiNmRmVDFvalpnVUlja0loeFhNeDIzZz09IiwibWFjIjoiZWRmMjUwY2E0NzU3MThkM2FhZjhhMWQ0NzViOTIyZDY2NWVmOWM2MWQxZTRiM2RjNzJkNzU4NWRmYmU0NmUwOCIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 7,
+        "groupName": "Textile,  Textile Products and Machinery",
+        "encryptedGroupId": "eyJpdiI6IkIvQlZ5NnI3d2dBY0VaY1FZbGlZS3c9PSIsInZhbHVlIjoiM1RRVEFtbDFnK2NJbERQdEowTnJJZz09IiwibWFjIjoiODVjMWJlNDY1YWYzZDg3Njg5MGZlMjgyMTQ2MmFiNDRiMDM3ZDk1NzU1NWY5MGIyZDZlMGI5MzBkOGRjMGQ0MyIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 28,
+        "groupName": "Transport and Logistics Services",
+        "encryptedGroupId": "eyJpdiI6ImFvd3JyVWlhL1Z2Y05HVTViTmFvL1E9PSIsInZhbHVlIjoiQXhTWVdsNVR4dEpsOGxwZndnRStNQT09IiwibWFjIjoiNDJjMzEwMTgwZTA0MGQxMmRjZWU5ZjMwNjA1MDE0ZGMyMzY0YTMyOTVjMGRmOGVkZTg5NmJlYTllMDU2ODlmNSIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 16,
+        "groupName": "Transport and Related Products",
+        "encryptedGroupId": "eyJpdiI6IjZuaVZPUm5wcGQwcUt6N1ovRWZ0bUE9PSIsInZhbHVlIjoiT3JuSjh4U0VvY3RtSDU2TjBqQWlBZz09IiwibWFjIjoiZjVjMTI1OTY0ZDFmNDBiNTk4ZWI5YTUwMmVkMDJkZTUyNjhkMTk4ZjA3NmRkZWRlZjY5YWZkZDRjZjE3Y2ZiZCIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      },
+      {
+        "groupId": 31,
+        "groupName": "Travel,Tourism and Hospitality   ",
+        "encryptedGroupId": "eyJpdiI6ImNCTCtMU21GMzNERXBvL0plcjlIdXc9PSIsInZhbHVlIjoicjFMWll1T2N3ZDRJU09adkFLekdCZz09IiwibWFjIjoiMGUxOThmN2Y2MmYyZjU4YzRmNjQ4N2NkMzBiZGI0M2U5NGM3NDRkNzk3MzZkZDU5ODZhMDJkMmRmYjNhOTg0MyIsInRhZyI6IiJ9",
+        "isCurrentGroup": false
+      }
+    ],
+    "total": 41
+  }
+}

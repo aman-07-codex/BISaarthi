@@ -1,0 +1,22 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Standard details fetched successfully",
+  "data": [
+    {
+      "standardId": 6876,
+      "pk_is_id": 6876,
+      "standardEncId": "eyJpdiI6IkdqZ3JKWkQyK29rTzN5VGNYZ2llQUE9PSIsInZhbHVlIjoiY3dpeHRZN0NqeHlUVENDdWpidkh4UT09IiwibWFjIjoiNDU5YWQ1ZjMzYmVjM2RiN2M5ZDM4OWU2NTJmN2E3ZDNjNDIxNGM3OGRjNjQ0ODdlOWZhZTc0MGVkODBkMmU5MyIsInRhZyI6IiJ9",
+      "standardEncIId": "eyJpdiI6ImpHQm9iQzY5NUIzbS9SVnNtSC96VHc9PSIsInZhbHVlIjoiNXI4N2FWVnRxTEVMWVVrczhaY08xdz09IiwibWFjIjoiMGNhMzdkZWMzNjJmMmE1OWU4YTdhNjU5NjFhNDBhOWZiMTZjMzU1OWFjOTg5NmZmNTEzMDg5ZGI4MTVjODU2NiIsInRhZyI6IiJ9",
+      "standardNumber": "IS 1489 (Part 2):2015",
+      "standardName": "Portland  Pozzolana Cement - Specification: Part 2 Calcined Clay Based (Fourth Revision)",
+      "departmentId": 63,
+      "departmentEncId": "eyJpdiI6IlRGQ1ROZmEzdDBuZmROd2VDWnpvRHc9PSIsInZhbHVlIjoiNVVGWXk0eGxZem91WVovOERtSFFpdz09IiwibWFjIjoiMWE5NzdlYmEwMjYyOTI3OTNjMDFkYWEyZGY3MzQ4NjNkZjkwNzRmNGFjODYwYTYwNDc5YTZjNThlZjBhNmZiOCIsInRhZyI6IiJ9",
+      "committeeId": 190,
+      "committeeEncId": "eyJpdiI6Ilhac0NuM090RjN3Vms3VFAzU1Y4S2c9PSIsInZhbHVlIjoiTXBUSnlOTlFSWmVnYlVaVmFXczRiUT09IiwibWFjIjoiMGM1NDAxZDU2MjRmYjZhMDRhODQ1OWQ2ZGJhZDMwNDRlOWQxN2RkNjZhMGU1YTczZjkwNDM4MzM3NWJiNmYyMCIsInRhZyI6IiJ9",
+      "deptPreparedName": "Civil Engineering Department(CED)",
+      "secCommitteePreparedName": "CED 02 - Cement And Concrete",
+      "reviewId": "eyJpdiI6IlJHT2hPTGh0ZmZBU3NMM3RSajdHaGc9PSIsInZhbHVlIjoiSU5NNW42eTdFRmpFYXRlQnh1amxjQT09IiwibWFjIjoiZDU4NWExY2JhZmUxMzYzMTM1MmUxOTcxODc2M2UyYmE3YmNlMDU5MzhlMDQ2ZWRmMzNiNDYzYjA2ZDRlMjk5YiIsInRhZyI6IiJ9"
+    }
+  ]
+}

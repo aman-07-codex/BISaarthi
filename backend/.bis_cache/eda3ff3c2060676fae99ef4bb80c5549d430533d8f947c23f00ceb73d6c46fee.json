@@ -1,0 +1,18 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Data Found",
+  "data": {
+    "status": "success",
+    "message": "Data Found",
+    "product_manuals_details": [
+      {
+        "pk_is_id": "25898",
+        "is_number": "IS 4985 : 2021",
+        "file_path": "BisProd/bisProd/Standard_Product_Manual/product_manual_2_09012024165731_2.pdf",
+        "file_name": "product_manual_2_09012024165731_2.pdf"
+      }
+    ],
+    "total_count": 1
+  }
+}

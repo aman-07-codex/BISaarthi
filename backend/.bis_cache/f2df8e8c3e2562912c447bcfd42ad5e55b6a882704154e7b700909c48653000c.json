@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 33650,
+      "standardEncId": "eyJpdiI6Img4UzVReldQMkxwd1lxdkZGRG9IVVE9PSIsInZhbHVlIjoiVm1FVDVsOXFmQ2JWTERoTHkwRmlOQT09IiwibWFjIjoiNjc5ZjFhZGE0ZDE2NGRkMjZjOWViZWMyZDY5ZDkzODQxOGViZDhhODdmMWY0MjdkMDg3OWQzNGM1ZDQ2YTc2NSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 10142:2025 POLYSTYRENE CRYSTAL AND HIGH IMPACT FOR ITS SAFE USE IN CONTACT WITH FOODSTUFFS PHARMACEUTICALS AND DRINKING WATER - SPECIFICATION   (second revison)",
+      "standardNumber": "IS 10142:2025",
+      "standardName": "POLYSTYRENE CRYSTAL AND HIGH IMPACT FOR ITS SAFE USE IN CONTACT WITH FOODSTUFFS PHARMACEUTICALS AND DRINKING WATER - SPECIFICATION   (second revison)",
+      "departmentName": "PETROLEUM, COAL AND RELATED PRODUCTS DEPARTMENT (PCD)",
+      "sectionalCommitteeName": "PCD 12 - Plastics",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2025-07-17",
+      "publishedOnFormatted": "17 Jul 2025"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

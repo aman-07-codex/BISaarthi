@@ -1,0 +1,22 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Standard details fetched successfully",
+  "data": [
+    {
+      "standardId": 67129,
+      "pk_is_id": 67129,
+      "standardEncId": "eyJpdiI6InZVZUthYnc5TDBsQVd1UnZ6SGZpUWc9PSIsInZhbHVlIjoiOXlHM2kvV253ZUdydkFCMUg5bHltZz09IiwibWFjIjoiOTNhYWJkZTYxYWMyYTYwNmE0ZjlhYjc5MTRhOGRkZWU5ODg2M2ZkYWI1NmEwYjhjYWVkYjM3NjE5MzgwZGRlMCIsInRhZyI6IiJ9",
+      "standardEncIId": "eyJpdiI6Ik1xRVdRTDlTcjFMSkh2aGZjRVNmUnc9PSIsInZhbHVlIjoiTzNkaUdmbzlIVmc4VS95LzNjM09oUT09IiwibWFjIjoiZmZkNjQ5YWI2NGM3MGViNjY5MDA1NDZjNjllYjdiODNkYmRkMDk4YzE2MWQ4ZDcwODc5ZTg1NDczODMwZTQwZiIsInRhZyI6IiJ9",
+      "standardNumber": "IS 302 (Part 2/Sec 36):2026",
+      "standardName": "Household and Similar Electrical  Appliances — Safety  Part 2 Particular Requirements Section 36 Commercial Electric Cooking Ranges, Ovens, Hobs and Hob Elements",
+      "departmentId": 65,
+      "departmentEncId": "eyJpdiI6ImdXMkRIcTNqek9GS1hJK3dlcGtoNnc9PSIsInZhbHVlIjoiUUpMNkc5TU9lencxaG5UZWtWT0tkZz09IiwibWFjIjoiMDg4N2UwYzA5MGJmZDM4NGU5MDExOTYxZjY5NjNiNDU0YTAwY2I3ODBmMDVlYmQ3Y2IyNGJmYTNmNDY2ZWU3NyIsInRhZyI6IiJ9",
+      "committeeId": 265,
+      "committeeEncId": "eyJpdiI6InJFcTVWbWV0VzJTcllpY1VwM0hLMXc9PSIsInZhbHVlIjoiMmw1ZHBjVEJmTFNGM1NGQmU1NlJGQT09IiwibWFjIjoiNzZjYjdmNzI4MzA3NTJjMWNlZmQ3M2FmYzBlZmU3ZDYwOTEwZDdhOWYyNWMyMjYyN2UxODQ2ZjE5ZTA3OGYzOCIsInRhZyI6IiJ9",
+      "deptPreparedName": "Electrotechnical Department(ETD)",
+      "secCommitteePreparedName": "ETD 32 - Electrical Appliances",
+      "reviewId": "eyJpdiI6InFBZ3pmL2QycUlhSGhaMWl2VitDVmc9PSIsInZhbHVlIjoieTdWRFp3Q0xIVVovU3lRZVRzdUJmUT09IiwibWFjIjoiMzJhNzhmNjA4NGQ2NjliY2JjMTlhMThiOWY1YmJjZTY3ODViY2MyYzhiM2ZlYmEwZTM1OTUxNTJhZWRjMGQ1YyIsInRhZyI6IiJ9"
+    }
+  ]
+}

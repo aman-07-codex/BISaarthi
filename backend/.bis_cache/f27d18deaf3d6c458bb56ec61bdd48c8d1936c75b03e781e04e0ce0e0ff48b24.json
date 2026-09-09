@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 229,
+      "standardEncId": "eyJpdiI6IlJXRlR6Y3BQMjU0REg2ODVuYWFkWWc9PSIsInZhbHVlIjoibGYwK1FKZTRjRTRBKzJLTzhoQVVtZz09IiwibWFjIjoiY2E3MDAyMzk0YWRhZTJhN2FhMDYyOTA2MWI3ODJmMzQ1MjdkZWI5NmI0OGI2ZDIwZTI5ZDI5M2Q4OTdlNTJiZiIsInRhZyI6IiJ9",
+      "standardLabel": "IS 16068:2013 Microbiology of food and animal feeding stuffs - Horizontal method for the enumeration of mesophilic lactic acid bacteria - Colony Count technique at 30oC",
+      "standardNumber": "IS 16068:2013",
+      "standardName": "Microbiology of food and animal feeding stuffs - Horizontal method for the enumeration of mesophilic lactic acid bacteria - Colony Count technique at 30oC",
+      "departmentName": "FOOD AND AGRICULTURE DEPARTMENT (FAD)",
+      "sectionalCommitteeName": "FAD 31 - Food Microbiology Sectional Committee",
+      "typeOfStandardName": "Methods of Tests",
+      "publishedOn": "2013-03-31",
+      "publishedOnFormatted": "31 Mar 2013"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

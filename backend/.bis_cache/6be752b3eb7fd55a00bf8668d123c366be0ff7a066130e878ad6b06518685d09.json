@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 6875,
+      "standardEncId": "eyJpdiI6InVXL0tFWldFMnlIRkt4Wmd2YjIrcUE9PSIsInZhbHVlIjoieDhIK0prYU5MdHRWRXpzdURhSEMwUT09IiwibWFjIjoiMzAyYThkMjhhZTVkNGM1NWM5NjYzOWM3NTcyZmIwMDljNTUyMWJmZTljM2UyMTNiMmJlMWEyM2ZlN2M5ZDNiYyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 1489 (Part 1)  : 2015 Portland Pozzolana Cement - Specification: Part 1 fly Ash Based (Fourth Revision)",
+      "standardNumber": "IS 1489 (Part 1)  : 2015",
+      "standardName": "Portland Pozzolana Cement - Specification: Part 1 fly Ash Based (Fourth Revision)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 02 - Cement And Concrete",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2015-12-31",
+      "publishedOnFormatted": "31 Dec 2015"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

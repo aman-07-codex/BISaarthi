@@ -72,15 +72,27 @@ export const StandardCard: React.FC<StandardCardProps> = ({
           {standard.title}
         </h3>
 
-        {/* Why Applicable Callout */}
-        {standard.why_applicable && (
-          <div className="p-3.5 rounded-2xl bg-[#FAF9F5] dark:bg-[#1B2B26]/60 border-l-4 border-l-[#0D3328] dark:border-l-[#5B8272] border border-[#EFECE6] dark:border-[#253831] mb-4 space-y-1">
-            <p className="text-[11px] font-bold text-[#0D3328] dark:text-[#8FA89B] uppercase tracking-wider">
-              Why Applicable
-            </p>
-            <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
-              {standard.why_applicable}
-            </p>
+        {/* Why This Standard Is Relevant Callout */}
+        {(standard.reason_selected || standard.why_applicable) && (
+          <div className="p-3.5 rounded-2xl bg-[#FAF9F5] dark:bg-[#1B2B26]/60 border-l-4 border-l-[#0D3328] dark:border-l-[#5B8272] border border-[#EFECE6] dark:border-[#253831] mb-4 space-y-2">
+            <div>
+              <p className="text-[11px] font-bold text-[#0D3328] dark:text-[#8FA89B] uppercase tracking-wider mb-1">
+                Why This Standard Is Relevant
+              </p>
+              <p className="text-xs text-[#18211D] dark:text-[#BAC5BF] leading-relaxed">
+                {standard.reason_selected || standard.why_applicable}
+              </p>
+            </div>
+            {standard.primary_use_case && (
+              <div className="pt-2 border-t border-[#EFECE6] dark:border-[#253831]">
+                <p className="text-[10px] font-bold text-[#606E66] dark:text-[#BAC5BF] uppercase tracking-wider mb-0.5">
+                  Primary Application
+                </p>
+                <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
+                  {standard.primary_use_case}
+                </p>
+              </div>
+            )}
           </div>
         )}
       </div>
@@ -88,7 +100,7 @@ export const StandardCard: React.FC<StandardCardProps> = ({
       {/* Footer row: Source Reference Tag + View Details CTA */}
       <div className="pt-3 border-t border-[#EFECE6] dark:border-[#1C2E28] flex flex-wrap items-center justify-between gap-3 mt-2">
         <div>
-          <SourceReferenceTag sources={standard.source_refs} />
+          <SourceReferenceTag sources={standard.source_refs || []} />
         </div>
 
         <Link

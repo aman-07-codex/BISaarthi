@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 1333,
+      "standardEncId": "eyJpdiI6ImRjVEFvL3dMbHFiSXVXTmc2YlM5L3c9PSIsInZhbHVlIjoiNkxadURPK1RQcTNuamZqSm1aZVdTQT09IiwibWFjIjoiYzlkYzFlMzA2NTg3ZDJlZDQ2ZGZiYzM0ZTY5Njk5MTFjM2NlMGQ2MDFlMDJiNDYwMGM1MGQ5OTZlYjc3OGM0OCIsInRhZyI6IiJ9",
+      "standardLabel": "IS 10500:2012 Drinking Water - Specification (Second Revision)",
+      "standardNumber": "IS 10500:2012",
+      "standardName": "Drinking Water - Specification (Second Revision)",
+      "departmentName": "FOOD AND AGRICULTURE DEPARTMENT (FAD)",
+      "sectionalCommitteeName": "FAD 14 - Drinking Water And Carbonated Beverages",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2012-05-31",
+      "publishedOnFormatted": "31 May 2012"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 11237,
+      "standardEncId": "eyJpdiI6IjZnYk5nWk94cWU4cWRVeWhCNUNuK2c9PSIsInZhbHVlIjoieVNuQWQ3Vit4STF4VnJIbzBkcjZOUT09IiwibWFjIjoiZThhOWRhNjkxMDAxZTNjYzU1M2UwNTc3YWE5YzdkYjM4NjRmZTUzZTFmZDk0OGQ4Y2E5M2UwMTRiZGM0NjU4NSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 455:2015 Portland slag cement - Specification (fifth revision)",
+      "standardNumber": "IS 455:2015",
+      "standardName": "Portland slag cement - Specification (fifth revision)",
+      "departmentName": "CIVIL ENGINEERING DEPARTMENT (CED)",
+      "sectionalCommitteeName": "CED 02 - Cement And Concrete",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2015-12-31",
+      "publishedOnFormatted": "31 Dec 2015"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

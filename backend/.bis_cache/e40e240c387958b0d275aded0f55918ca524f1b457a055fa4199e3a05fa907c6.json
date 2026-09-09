@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 5393,
+      "standardEncId": "eyJpdiI6IklPRmlMREp1VFFoY1F3REIwRWoybUE9PSIsInZhbHVlIjoiaUhNUVFEUXhGUUo4elVZVXpEMC82QT09IiwibWFjIjoiMjE4ODJhNzM0ZmY1OGViZDcxNmNiMWE1M2E4MDc3MTE4NGYyMjZiNmVjMzhmMjJjYjRkNmM0ZmQ3YWEwMDMzNyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 13688:2020 Packaged Pasteurized Milk â€” Specification ( Second Revision )  Amendment - 1",
+      "standardNumber": "IS 13688:2020",
+      "standardName": "Packaged Pasteurized Milk â€” Specification ( Second Revision )  Amendment - 1",
+      "departmentName": "FOOD AND AGRICULTURE DEPARTMENT (FAD)",
+      "sectionalCommitteeName": "FAD 19 - Dairy Products",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2020-06-30",
+      "publishedOnFormatted": "30 Jun 2020"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

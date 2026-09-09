@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 27687,
+      "standardEncId": "eyJpdiI6Imwyd1RabnE2b1VZUE5rQ3pPMnQrdFE9PSIsInZhbHVlIjoiSGVJM2ZVSDErdzhSRG53Z1JIc0NDUT09IiwibWFjIjoiMzM0MDM1NWU5YmZkNjVmZDBmN2QxNmQ3OGYzYzEwYTYyNWIyODY5ODdhNjJhMDRlNTg1NjhhNjIyZWIxY2I5NSIsInRhZyI6IiJ9",
+      "standardLabel": "IS 3748:2022 Tool Steels - Specification",
+      "standardNumber": "IS 3748:2022",
+      "standardName": "Tool Steels - Specification",
+      "departmentName": "METALLURGICAL ENGINEERING DEPARTMENT (MTD)",
+      "sectionalCommitteeName": "MTD 16 - Alloy Steels And Forging Sectional Committee",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2022-11-30",
+      "publishedOnFormatted": "30 Nov 2022"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

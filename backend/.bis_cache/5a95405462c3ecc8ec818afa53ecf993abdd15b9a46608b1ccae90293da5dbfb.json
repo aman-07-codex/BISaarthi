@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 10334,
+      "standardEncId": "eyJpdiI6IjlDWm53L0xrKzQ2WlVNUE9ESHNsMGc9PSIsInZhbHVlIjoic3pjS255WlM4czliSFZ5UFZOR0dXZz09IiwibWFjIjoiN2JhNjNlY2I1NmJhMDMwYzhhM2VjYzc3NjNmNzdlNjc0NTE5ZTg0YzJiMzc2MjFkNjYwYzc2NTFjNjQ5NDE1MCIsInRhZyI6IiJ9",
+      "standardLabel": "IS 374:2019 Specification for electric ceiling type fans and regulators (Third Revision)",
+      "standardNumber": "IS 374:2019",
+      "standardName": "Specification for electric ceiling type fans and regulators (Third Revision)",
+      "departmentName": "ELECTROTECHNICAL DEPARTMENT (ETD)",
+      "sectionalCommitteeName": "ETD 32 - Electrical Appliances",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2019-01-31",
+      "publishedOnFormatted": "31 Jan 2019"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}

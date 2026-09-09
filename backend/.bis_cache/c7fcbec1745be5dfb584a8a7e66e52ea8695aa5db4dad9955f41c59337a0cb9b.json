@@ -1,0 +1,23 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Record fetched successfully.",
+  "data": [
+    {
+      "standardId": 6872,
+      "standardEncId": "eyJpdiI6IkNjQnRFblFldWhnemhTNWcxNGUyYUE9PSIsInZhbHVlIjoiK01tQzhSQStkOGhweHJ3MFVkRjhDdz09IiwibWFjIjoiZmYwNGNmYTliMjdiZjgzYTZmNWYwODAwN2YwZDhkYjg5MDgzYjg0MjIzYTk0NzRhYmMyZGFhYzQ3ZjBiNWExMyIsInRhZyI6IiJ9",
+      "standardLabel": "IS 14887:2014 Textiles - High density polyethylene (HDPE)/polypropylene (PP) woven sacks for packaging of 50 kg food grains - Specification (first revision)",
+      "standardNumber": "IS 14887:2014",
+      "standardName": "Textiles - High density polyethylene (HDPE)/polypropylene (PP) woven sacks for packaging of 50 kg food grains - Specification (first revision)",
+      "departmentName": "TEXTILE DEPARTMENT (TXD)",
+      "sectionalCommitteeName": "TXD 23 - Textile Materials Made From Polyolefins",
+      "typeOfStandardName": "Product Specification",
+      "publishedOn": "2014-06-30",
+      "publishedOnFormatted": "30 Jun 2014"
+    }
+  ],
+  "totalRecord": 1,
+  "page": 1,
+  "pageSize": 20,
+  "hasMore": false
+}
