@@ -88,6 +88,21 @@ def create_app() -> FastAPI:
     # Register API Router
     app.include_router(api_router, prefix=settings.API_PREFIX)
 
+    @app.get("/", tags=["Root"])
+    async def root():
+        return {
+            "status": "ok",
+            "name": settings.APP_NAME,
+            "version": "1.0.0",
+            "api_prefix": settings.API_PREFIX,
+            "health": f"{settings.API_PREFIX}/health",
+            "docs": "/docs",
+        }
+
+    @app.get("/favicon.ico", include_in_schema=False)
+    async def favicon():
+        return Response(status_code=204)
+
     return app
 
 
