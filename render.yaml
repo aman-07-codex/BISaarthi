@@ -1,4 +1,5 @@
 services:
+  # 1. FastAPI Python Backend
   - type: web
     name: bisaarthi-backend
     runtime: python
@@ -31,4 +32,18 @@ services:
       - key: FRONTEND_URL
         sync: false
       - key: ALLOWED_ORIGINS
+        value: "*"
+
+  # 2. Next.js Frontend
+  - type: web
+    name: bisaarthi-frontend
+    runtime: node
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20.18.0
+      - key: NEXT_PUBLIC_API_URL
         sync: false
