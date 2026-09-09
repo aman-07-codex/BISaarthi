@@ -71,13 +71,17 @@ def create_app() -> FastAPI:
     )
 
     # CORS Middleware
-    app.add_middleware(
-        CORSMiddleware,
-        allow_origins=settings.cors_origins,
-        allow_credentials=True,
-        allow_methods=["*"],
-        allow_headers=["*"],
-    )
+    cors_kwargs = {
+        "allow_credentials": True,
+        "allow_methods": ["*"],
+        "allow_headers": ["*"],
+    }
+    if "*" in settings.cors_origins:
+        cors_kwargs["allow_origin_regex"] = r"^https?://.*"
+    else:
+        cors_kwargs["allow_origins"] = settings.cors_origins
+
+    app.add_middleware(CORSMiddleware, **cors_kwargs)
 
     # Request Logging Middleware
     app.add_middleware(RequestLoggingMiddleware)
