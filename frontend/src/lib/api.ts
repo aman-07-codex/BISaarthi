@@ -11,8 +11,18 @@ import {
   StandardSearchResponse,
 } from '@/types';
 
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, '') || 'http://localhost:8000/api';
+function getApiBaseUrl(): string {
+  const raw = (process.env.NEXT_PUBLIC_API_URL || '').trim().replace(/\/+$/, '');
+  if (!raw) {
+    return 'http://localhost:8000/api';
+  }
+  if (!raw.endsWith('/api')) {
+    return `${raw}/api`;
+  }
+  return raw;
+}
+
+const API_BASE_URL = getApiBaseUrl();
 
 export class APIError extends Error {
   status: number;

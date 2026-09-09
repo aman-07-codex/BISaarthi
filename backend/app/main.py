@@ -89,8 +89,10 @@ def create_app() -> FastAPI:
     # Centralized Exception Handlers
     register_exception_handlers(app)
 
-    # Register API Router
+    # Register API Router under prefix (e.g. /api) and root as fallback
     app.include_router(api_router, prefix=settings.API_PREFIX)
+    if settings.API_PREFIX and settings.API_PREFIX.strip() not in ("", "/"):
+        app.include_router(api_router)
 
     @app.get("/", tags=["Root"])
     async def root():
