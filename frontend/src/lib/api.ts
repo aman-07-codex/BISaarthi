@@ -321,3 +321,139 @@ export async function deleteSavedStandardApi(
     },
   });
 }
+
+/**
+ * 13. Conversations: List user conversations
+ */
+export async function getConversations(
+  token: string,
+  page = 1,
+  pageSize = 20
+): Promise<{
+  items: Array<{
+    id: string;
+    user_id: string;
+    title: string;
+    preview?: string;
+    message_count: number;
+    created_at: string;
+    updated_at: string;
+  }>;
+  total: number;
+  page: number;
+  page_size: number;
+}> {
+  return fetchAPI(`/conversations?page=${page}&page_size=${pageSize}`, {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}
+
+/**
+ * 14. Conversations: Create new conversation thread
+ */
+export async function createConversation(
+  payload: { title?: string; initial_message?: string },
+  token: string
+): Promise<{
+  id: string;
+  user_id: string;
+  title: string;
+  messages: Array<{
+    id: string;
+    conversation_id: string;
+    role: string;
+    content: string;
+    source_refs?: any[];
+    verification_status?: string;
+    created_at: string;
+  }>;
+  created_at: string;
+  updated_at: string;
+}> {
+  return fetchAPI('/conversations', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(payload),
+  });
+}
+
+/**
+ * 15. Conversations: Get conversation thread details
+ */
+export async function getConversationDetails(
+  conversationId: string,
+  token: string
+): Promise<{
+  id: string;
+  user_id: string;
+  title: string;
+  messages: Array<{
+    id: string;
+    conversation_id: string;
+    role: string;
+    content: string;
+    source_refs?: any[];
+    verification_status?: string;
+    created_at: string;
+  }>;
+  created_at: string;
+  updated_at: string;
+}> {
+  return fetchAPI(`/conversations/${encodeURIComponent(conversationId)}`, {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}
+
+/**
+ * 16. Conversations: Delete conversation thread
+ */
+export async function deleteConversationApi(
+  conversationId: string,
+  token: string
+): Promise<void> {
+  return fetchAPI(`/conversations/${encodeURIComponent(conversationId)}`, {
+    method: 'DELETE',
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}
+
+/**
+ * 17. Conversations: Append message to conversation
+ */
+export async function addMessageToConversation(
+  conversationId: string,
+  payload: {
+    role: string;
+    content: string;
+    source_refs?: any[];
+    verification_status?: string;
+  },
+  token: string
+): Promise<{
+  id: string;
+  conversation_id: string;
+  role: string;
+  content: string;
+  source_refs?: any[];
+  verification_status?: string;
+  created_at: string;
+}> {
+  return fetchAPI(`/conversations/${encodeURIComponent(conversationId)}/messages`, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(payload),
+  });
+}
+

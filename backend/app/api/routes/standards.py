@@ -162,8 +162,8 @@ async def list_standards(
             total_result = await db.execute(count_stmt)
             total = total_result.scalar_one() or 0
 
-            # If search query was not provided, or if DB search found matching records, return DB items
-            if not (q and q.strip()) or total > 0:
+            # If DB search found matching records, return DB items
+            if total > 0:
                 # Deterministic ordering & pagination
                 offset = (page - 1) * page_size
                 stmt = stmt.order_by(Standard.is_number.asc()).offset(offset).limit(page_size)
@@ -524,10 +524,12 @@ async def save_standard(
     res_std = await db.execute(stmt_std)
     existing_std = res_std.scalar_one_or_none()
     if existing_std is None:
+        raw_status = str(getattr(standard, "status", "active") or "active").lower()
+        valid_status = raw_status if raw_status in ("active", "superseded", "withdrawn", "under_revision", "unknown") else "active"
         db_std = Standard(
             is_number=standard.is_number,
             title=standard.title,
-            status=getattr(standard, "status", "active") or "active",
+            status=valid_status,
             scope=getattr(standard, "scope", getattr(standard, "primary_use_case", None)),
             categories=getattr(standard, "categories", []) or [],
         )
@@ -580,9 +582,19 @@ async def delete_saved_standard(
         raise ValidationError("Database connection is currently unavailable.")
 
     cleaned = is_number.strip()
+    try:
+        resolved_std = await _get_standard_or_404(cleaned, db)
+        canonical_num = resolved_std.is_number
+    except Exception:
+        canonical_num = cleaned
+
     stmt = select(SavedStandard).where(
         SavedStandard.user_id == current_user.id,
-        func.lower(SavedStandard.standard_is_number) == cleaned.lower(),
+        or_(
+            func.lower(SavedStandard.standard_is_number) == cleaned.lower(),
+            func.lower(SavedStandard.standard_is_number) == canonical_num.lower(),
+            SavedStandard.standard_is_number.ilike(f"{cleaned}%"),
+        ),
     )
     res = await db.execute(stmt)
     saved = res.scalar_one_or_none()

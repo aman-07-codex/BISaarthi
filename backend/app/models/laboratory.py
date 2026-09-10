@@ -1,6 +1,6 @@
 import uuid
 from typing import TYPE_CHECKING, Any, Dict, List, Optional
-from sqlalchemy import DateTime, ForeignKey, String, Table, func
+from sqlalchemy import DateTime, ForeignKey, JSON, String, Table, func
 from sqlalchemy.dialects.postgresql import JSONB, UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -41,7 +41,7 @@ class Laboratory(Base):
     name: Mapped[str] = mapped_column(String(255), nullable=False)
     location: Mapped[Optional[str]] = mapped_column(String(255), nullable=True)
     contact_info: Mapped[Optional[Dict[str, Any]]] = mapped_column(
-        JSONB,
+        JSON().with_variant(JSONB, "postgresql"),
         nullable=True,
     )
     source_id: Mapped[Optional[uuid.UUID]] = mapped_column(

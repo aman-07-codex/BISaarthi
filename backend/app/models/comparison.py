@@ -1,6 +1,6 @@
 import uuid
 from typing import TYPE_CHECKING, Any, Dict
-from sqlalchemy import CheckConstraint, DateTime, ForeignKey, Index, String, func
+from sqlalchemy import CheckConstraint, DateTime, ForeignKey, Index, JSON, String, func
 from sqlalchemy.dialects.postgresql import JSONB, UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -44,7 +44,7 @@ class Comparison(Base):
         index=True,
     )
     result_json: Mapped[Dict[str, Any]] = mapped_column(
-        JSONB,
+        JSON().with_variant(JSONB, "postgresql"),
         nullable=False,
     )
     created_at: Mapped[DateTime] = mapped_column(

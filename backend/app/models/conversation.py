@@ -1,6 +1,6 @@
 import uuid
 from typing import TYPE_CHECKING, Any, Dict, List, Optional
-from sqlalchemy import CheckConstraint, DateTime, ForeignKey, Index, String, Text, func
+from sqlalchemy import CheckConstraint, DateTime, ForeignKey, Index, JSON, String, Text, func
 from sqlalchemy.dialects.postgresql import JSONB, UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -80,7 +80,7 @@ class Message(Base):
     role: Mapped[str] = mapped_column(String(10), nullable=False)
     content: Mapped[str] = mapped_column(Text, nullable=False)
     source_refs: Mapped[List[Dict[str, Any]]] = mapped_column(
-        JSONB,
+        JSON().with_variant(JSONB, "postgresql"),
         nullable=False,
         default=list,
     )

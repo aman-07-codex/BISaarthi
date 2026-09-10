@@ -1,7 +1,7 @@
 import datetime
 import uuid
 from typing import TYPE_CHECKING, List, Optional
-from sqlalchemy import CheckConstraint, Date, DateTime, ForeignKey, Index, Integer, String, Text, UniqueConstraint, func
+from sqlalchemy import CheckConstraint, Date, DateTime, ForeignKey, Index, Integer, JSON, String, Text, UniqueConstraint, func
 from sqlalchemy.dialects.postgresql import JSONB, UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -30,7 +30,7 @@ class Standard(Base):
     publication_date: Mapped[Optional[datetime.date]] = mapped_column(Date, nullable=True)
     revision_info: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     categories: Mapped[List[str]] = mapped_column(
-        JSONB,
+        JSON().with_variant(JSONB, "postgresql"),
         nullable=False,
         default=list,
     )

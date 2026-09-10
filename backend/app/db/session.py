@@ -23,12 +23,24 @@ _async_engine: Optional[AsyncEngine] = None
 _async_session_factory: Optional[async_sessionmaker[AsyncSession]] = None
 
 
+import urllib.parse
+
 def get_effective_database_url() -> str:
     """Determine effective database connection URL (PostgreSQL / Supabase or resilient local SQLite)."""
     if settings.DATABASE_URL and settings.DATABASE_URL.strip():
         url = settings.DATABASE_URL.strip()
-        if url.startswith("postgresql://"):
-            url = url.replace("postgresql://", "postgresql+asyncpg://", 1)
+        if url.startswith("postgresql://") or url.startswith("postgresql+asyncpg://"):
+            prefix = "postgresql+asyncpg://"
+            rest = url.split("://", 1)[1]
+            if "@" in rest:
+                creds, host_part = rest.rsplit("@", 1)
+                if ":" in creds:
+                    user, pwd = creds.split(":", 1)
+                    safe_user = urllib.parse.quote_plus(urllib.parse.unquote_plus(user))
+                    safe_pwd = urllib.parse.quote_plus(urllib.parse.unquote_plus(pwd))
+                    return f"{prefix}{safe_user}:{safe_pwd}@{host_part}"
+                return f"{prefix}{creds}@{host_part}"
+            return f"{prefix}{rest}"
         return url
 
     # Default to resilient local async SQLite database
@@ -55,6 +67,10 @@ def init_db_engine() -> Optional[AsyncEngine]:
         }
         if not is_sqlite:
             engine_kwargs["pool_pre_ping"] = True
+            engine_kwargs["connect_args"] = {
+                "statement_cache_size": 0,
+                "prepared_statement_cache_size": 0,
+            }
 
         _async_engine = create_async_engine(url, **engine_kwargs)
         _async_session_factory = async_sessionmaker(

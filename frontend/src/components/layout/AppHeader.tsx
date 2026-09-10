@@ -4,7 +4,9 @@ import React, { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { Menu, Sparkles, ChevronRight, ShieldCheck } from 'lucide-react';
 import { ThemeToggle } from '@/components/common/ThemeToggle';
+import { useTheme } from '@/context/ThemeContext';
 import { useLanguage } from '@/context/LanguageContext';
+import { useAuth } from '@/context/AuthContext';
 
 interface AppHeaderProps {
   onMobileMenuToggle?: () => void;
@@ -14,7 +16,18 @@ export const AppHeader: React.FC<AppHeaderProps> = ({ onMobileMenuToggle }) => {
   const pathname = usePathname();
   const router = useRouter();
   const { t } = useLanguage();
+  const { user, isAuthenticated } = useAuth();
   const [quickQuery, setQuickQuery] = useState('');
+
+  const getInitials = (name?: string, email?: string) => {
+    if (name && name.trim()) {
+      const parts = name.trim().split(/\s+/);
+      if (parts.length >= 2) return `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase();
+      return name.substring(0, 2).toUpperCase();
+    }
+    if (email && email.trim()) return email.substring(0, 2).toUpperCase();
+    return 'GU';
+  };
 
   const getPageTitle = () => {
     if (pathname === '/dashboard') return { title: t('nav.dashboard'), category: t('cat.overview') };
@@ -94,14 +107,14 @@ export const AppHeader: React.FC<AppHeaderProps> = ({ onMobileMenuToggle }) => {
 
         <div className="flex items-center gap-2 pl-2 border-l border-[#D9DDD8] dark:border-[#253831]">
           <div className="w-8 h-8 rounded-full bg-[#0D3328] text-white font-bold text-xs flex items-center justify-center border border-[#5B8272]/40">
-            AM
+            {getInitials(user?.name, user?.email)}
           </div>
           <div className="hidden xl:block text-left">
             <p className="text-xs font-bold text-[#18211D] dark:text-[#F7F5EF] leading-tight">
-              Aman Mishra
+              {user?.name || (isAuthenticated ? (user?.email?.split('@')[0] || 'User') : 'Guest User')}
             </p>
             <p className="text-[10px] text-[#8B978F]">
-              MSME Verified
+              {isAuthenticated ? 'MSME Verified' : 'Guest Mode'}
             </p>
           </div>
         </div>

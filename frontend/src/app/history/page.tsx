@@ -6,6 +6,8 @@ import { AppLayout } from '@/components/layout/AppLayout';
 import { Button } from '@/components/common/Button';
 import { RecentConversation } from '@/types';
 import { useLanguage } from '@/context/LanguageContext';
+import { useAuth } from '@/context/AuthContext';
+import { getConversations } from '@/lib/api';
 import {
   History,
   MessageSquare,
@@ -21,6 +23,7 @@ import {
 
 export default function HistoryPage() {
   const { t } = useLanguage();
+  const { token } = useAuth();
   const [conversations, setConversations] = useState<RecentConversation[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [timeFilter, setTimeFilter] = useState<'all' | 'today' | 'this_week' | 'older'>('all');
@@ -29,23 +32,55 @@ export default function HistoryPage() {
     let isMounted = true;
     Promise.resolve().then(() => {
       if (!isMounted) return;
-      try {
-        const stored = localStorage.getItem('bisaarthi_chat_history');
-        if (stored) {
-          const parsed = JSON.parse(stored);
-          if (Array.isArray(parsed)) {
-            setConversations(parsed);
+
+      if (token) {
+        getConversations(token, 1, 50)
+          .then((res) => {
+            if (!isMounted) return;
+            const mapped: RecentConversation[] = res.items.map((item) => {
+              const date = new Date(item.updated_at);
+              const now = new Date();
+              const diffHours = (now.getTime() - date.getTime()) / (1000 * 60 * 60);
+              const timeBucket: 'today' | 'this_week' | 'older' =
+                diffHours < 24 ? 'today' : diffHours < 168 ? 'this_week' : 'older';
+
+              return {
+                id: item.id,
+                title: item.title,
+                preview: item.preview || 'Conversation thread',
+                updated_at: date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+                timestamp: date.getTime(),
+                time_bucket: timeBucket,
+              };
+            });
+            setConversations(mapped);
+          })
+          .catch(() => {
+            loadLocalHistory();
+          });
+      } else {
+        loadLocalHistory();
+      }
+
+      function loadLocalHistory() {
+        try {
+          const stored = localStorage.getItem('bisaarthi_chat_history');
+          if (stored) {
+            const parsed = JSON.parse(stored);
+            if (Array.isArray(parsed)) {
+              if (isMounted) setConversations(parsed);
+            }
           }
+        } catch {
+          if (isMounted) setConversations([]);
         }
-      } catch {
-        setConversations([]);
       }
     });
 
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [token]);
 
   const filteredConversations = useMemo(() => {
     return conversations.filter((conv) => {

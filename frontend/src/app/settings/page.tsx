@@ -8,6 +8,7 @@ import { SourceReferenceTag } from '@/components/common/SourceReferenceTag';
 import { useTheme } from '@/context/ThemeContext';
 import { useLanguage } from '@/context/LanguageContext';
 import { useAuth } from '@/context/AuthContext';
+import { updateUserPreferences } from '@/lib/api';
 import { SourceRef } from '@/types';
 import {
   Settings,
@@ -46,7 +47,7 @@ const VERIFIED_SAMPLE_SOURCES: SourceRef[] = [
 export default function SettingsPage() {
   const { language, setLanguage, t } = useLanguage();
   const { theme, setTheme } = useTheme();
-  const { user, isAuthenticated, logout } = useAuth();
+  const { user, token, isAuthenticated, logout } = useAuth();
 
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
@@ -57,10 +58,29 @@ export default function SettingsPage() {
     }, 2500);
   };
 
+  const handleLanguageChange = (lang: 'EN' | 'HI') => {
+    setLanguage(lang);
+    showToast(lang === 'HI' ? 'भाषा प्राथमिकता: हिन्दी सक्रिय' : 'Interface language set to English.');
+    if (token) {
+      updateUserPreferences({ preferred_language: lang.toLowerCase() }, token).catch(() => {});
+    }
+  };
+
+  const handleThemeChange = (newTheme: 'light' | 'dark' | 'system') => {
+    setTheme(newTheme);
+    showToast(`${newTheme.charAt(0).toUpperCase() + newTheme.slice(1)} mode active.`);
+    if (token) {
+      updateUserPreferences({ theme: newTheme }, token).catch(() => {});
+    }
+  };
+
   const handleResetPreferences = () => {
     setLanguage('EN');
     setTheme('system');
     showToast('Preferences restored to defaults.');
+    if (token) {
+      updateUserPreferences({ preferred_language: 'en', theme: 'system' }, token).catch(() => {});
+    }
   };
 
   return (
@@ -205,10 +225,7 @@ export default function SettingsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
             <button
               type="button"
-              onClick={() => {
-                setLanguage('EN');
-                showToast(language === 'HI' ? 'इंटरफ़ेस भाषा: English' : 'Interface language set to English.');
-              }}
+              onClick={() => handleLanguageChange('EN')}
               className={`p-4 rounded-2xl border text-left flex items-center justify-between transition-all cursor-pointer ${
                 language === 'EN'
                   ? 'bg-[#E8EFEA] dark:bg-[#113624] border-[#0D3328] dark:border-[#5B8272] text-[#0D3328] dark:text-[#A7F3D0] shadow-2xs font-bold'
@@ -230,10 +247,7 @@ export default function SettingsPage() {
 
             <button
               type="button"
-              onClick={() => {
-                setLanguage('HI');
-                showToast(language === 'EN' ? 'भाषा प्राथमिकता: हिन्दी सक्रिय' : 'भाषा प्राथमिकता: हिन्दी');
-              }}
+              onClick={() => handleLanguageChange('HI')}
               className={`p-4 rounded-2xl border text-left flex items-center justify-between transition-all cursor-pointer ${
                 language === 'HI'
                   ? 'bg-[#E8EFEA] dark:bg-[#113624] border-[#0D3328] dark:border-[#5B8272] text-[#0D3328] dark:text-[#A7F3D0] shadow-2xs font-bold'
@@ -274,10 +288,7 @@ export default function SettingsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
             <button
               type="button"
-              onClick={() => {
-                setTheme('light');
-                showToast('Light mode active.');
-              }}
+              onClick={() => handleThemeChange('light')}
               className={`p-4 rounded-2xl border text-left flex items-center justify-between transition-all cursor-pointer ${
                 theme === 'light'
                   ? 'bg-[#E8EFEA] dark:bg-[#113624] border-[#0D3328] dark:border-[#5B8272] text-[#0D3328] dark:text-[#A7F3D0] shadow-2xs font-bold'
@@ -293,10 +304,7 @@ export default function SettingsPage() {
 
             <button
               type="button"
-              onClick={() => {
-                setTheme('dark');
-                showToast('Dark mode active.');
-              }}
+              onClick={() => handleThemeChange('dark')}
               className={`p-4 rounded-2xl border text-left flex items-center justify-between transition-all cursor-pointer ${
                 theme === 'dark'
                   ? 'bg-[#E8EFEA] dark:bg-[#113624] border-[#0D3328] dark:border-[#5B8272] text-[#0D3328] dark:text-[#A7F3D0] shadow-2xs font-bold'
@@ -312,10 +320,7 @@ export default function SettingsPage() {
 
             <button
               type="button"
-              onClick={() => {
-                setTheme('system');
-                showToast('System appearance mode active.');
-              }}
+              onClick={() => handleThemeChange('system')}
               className={`p-4 rounded-2xl border text-left flex items-center justify-between transition-all cursor-pointer ${
                 theme === 'system'
                   ? 'bg-[#E8EFEA] dark:bg-[#113624] border-[#0D3328] dark:border-[#5B8272] text-[#0D3328] dark:text-[#A7F3D0] shadow-2xs font-bold'

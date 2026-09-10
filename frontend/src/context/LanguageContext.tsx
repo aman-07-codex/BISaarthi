@@ -65,7 +65,7 @@ const translations: Record<Language, Record<string, string>> = {
     'btn.resetDefaults': 'Reset to Defaults',
 
     // Dashboard
-    'dash.welcome': 'Welcome back, Aman Mishra',
+    'dash.welcome': 'Welcome back',
     'dash.subtitle': 'Your AI-powered regulatory assistant for Indian Standards, Quality Control Orders (QCOs), and BIS conformity assessment.',
     'dash.quickPromptTitle': 'Quick Compliance Query',
     'dash.quickPromptPlaceholder': 'E.g. What BIS standard applies to electric immersion water heaters in India?',
@@ -365,7 +365,7 @@ const translations: Record<Language, Record<string, string>> = {
     'btn.resetDefaults': 'डिफ़ॉल्ट सेटिंग्स रीसेट करें',
 
     // Dashboard
-    'dash.welcome': 'स्वागत है, अमन मिश्रा',
+    'dash.welcome': 'आपका स्वागत है',
     'dash.subtitle': 'भारतीय मानकों (IS), अनिवार्य QCO और बीआईएस प्रमाणन प्रक्रियाओं के लिए आपका एआई नियामक सहायक।',
     'dash.quickPromptTitle': 'त्वरित अनुपालन प्रश्न',
     'dash.quickPromptPlaceholder': 'उदा. भारत में इलेक्ट्रिक इमर्शन वाटर हीटर पर कौन सा बीआईएस मानक लागू होता है?',

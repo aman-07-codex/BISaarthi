@@ -1,0 +1,18 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Data Found",
+  "data": {
+    "status": "success",
+    "message": "Data Found",
+    "product_manuals_details": [
+      {
+        "pk_is_id": "31901",
+        "is_number": "IS 302 : Part 1 : 2024",
+        "file_path": "BisProd/bisProd/Standard_Product_Manual/product_manual_698afa5be3a591770715739_10022026145859_698afa5be3a591770715739.pdf",
+        "file_name": "product_manual_698afa5be3a591770715739_10022026145859_698afa5be3a591770715739.pdf"
+      }
+    ],
+    "total_count": 1
+  }
+}

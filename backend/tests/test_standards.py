@@ -164,12 +164,12 @@ async def sample_data(test_db_session: AsyncSession):
 
 @pytest.mark.asyncio
 async def test_list_standards_empty(async_client: AsyncClient):
-    """Empty database returns 0 items."""
+    """Empty database falls back to authoritative 100-standard corpus."""
     res = await async_client.get("/api/standards")
     assert res.status_code == 200
     data = res.json()
-    assert data["items"] == []
-    assert data["total"] == 0
+    assert len(data["items"]) > 0
+    assert data["total"] == 100
     assert data["page"] == 1
 
 

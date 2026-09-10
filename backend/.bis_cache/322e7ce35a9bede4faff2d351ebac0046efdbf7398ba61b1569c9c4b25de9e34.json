@@ -1,0 +1,22 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Standard details fetched successfully",
+  "data": [
+    {
+      "standardId": 31712,
+      "pk_is_id": 31901,
+      "standardEncId": "eyJpdiI6Ikg1YkVwOFV0U3NIMHloQ1dSRUY4dFE9PSIsInZhbHVlIjoiMkl0aWs2K0ZGZUJQS0daVE9wbDZ5QT09IiwibWFjIjoiMDkwNjk4NzEwZTVhNjg0MWM0ODYwZGRkYmZhOTVjMzU3YTYxMTgxODQzM2ZiZDBkYTIwMzA3NzE5YzZiODdlNiIsInRhZyI6IiJ9",
+      "standardEncIId": "eyJpdiI6Ii95ZFhLZWtVV0JvMXpnWkxBQ2liTWc9PSIsInZhbHVlIjoicitGTVJ5WEFFMmlkR3IrV2Z6QVFZZz09IiwibWFjIjoiNTg3MGNjN2RhODFkNzcxNTFlY2U5MmIzOGEyM2FiOTNmYWZmNjc4NDcxZjlhYWMxZjQ0ODM4ZWU1NmQzZjA4ZSIsInRhZyI6IiJ9",
+      "standardNumber": "IS 302 (Part 1):2024",
+      "standardName": "Household and Similar Electrical Appliances â€”  Safety  Part 1 General Requirements (Seventh Revision)",
+      "departmentId": 65,
+      "departmentEncId": "eyJpdiI6InRKQTg1cWhra2Q4UjFMbnFtU00rZGc9PSIsInZhbHVlIjoiYkJCS2NIZHJocCtSU05uNUhHc0RpZz09IiwibWFjIjoiMGFiOTg1NTk1M2U2MDI0OWExNjZkOTE5ZjEzZjBkNDEwNmYyOTc1NTRkMDE4MWNiOGYyMDhmYzhmOGE2ZWJhZiIsInRhZyI6IiJ9",
+      "committeeId": 265,
+      "committeeEncId": "eyJpdiI6InFjV2tFTE10UEZhWjE5alNIVUlEU2c9PSIsInZhbHVlIjoid3ZtZVJDdDNIVmVNSGNKbTl0bUsxdz09IiwibWFjIjoiMWMxOGJmNjNkNmRjZTdkODY1M2Y2N2I2Zjg0NTgxNmNlODNiZWZmMDEyODNhMTYzNjAxMjk3ZjllMTYwMzg3OCIsInRhZyI6IiJ9",
+      "deptPreparedName": "Electrotechnical Department(ETD)",
+      "secCommitteePreparedName": "ETD 32 - Electrical Appliances",
+      "reviewId": "eyJpdiI6Ikhsb3k3TWN3YUl5Y0Mxa3dqUngrMWc9PSIsInZhbHVlIjoiZUpNdHdqcDVOb3lDNDZYVm9HajdhZz09IiwibWFjIjoiYjU2Yjk2ZWQxNjg4MTE2MGEyZjA3ZGYzY2Y0ZGY1ZTc3NDY1ODkwMzEzNDUyNTNkMGFkMDQzNjZjZjIwYmM2MCIsInRhZyI6IiJ9"
+    }
+  ]
+}

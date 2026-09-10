@@ -6,9 +6,16 @@ import { ChatMessageData, SourceRef } from '@/types';
 import { ChatMessage } from './ChatMessage';
 import { ChatComposer } from './ChatComposer';
 import { ChatEmptyState } from './ChatEmptyState';
-import { sendChatMessage, APIError } from '@/lib/api';
+import {
+  sendChatMessage,
+  createConversation,
+  addMessageToConversation,
+  getConversationDetails,
+  APIError,
+} from '@/lib/api';
 import { Plus, History, ShieldCheck, Loader2 } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import { useAuth } from '@/context/AuthContext';
 
 interface ChatViewProps {
   initialConversationId?: string;
@@ -16,16 +23,46 @@ interface ChatViewProps {
 }
 
 export const ChatView: React.FC<ChatViewProps> = ({
+  initialConversationId,
   initialPrompt,
 }) => {
   const { language, t } = useLanguage();
+  const { token } = useAuth();
+  const [activeConversationId, setActiveConversationId] = useState<string | undefined>(initialConversationId);
   const [messages, setMessages] = useState<ChatMessageData[]>([]);
   const [isThinking, setIsThinking] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const initialPromptSentRef = useRef<boolean>(false);
 
+  // Load existing conversation messages if initialConversationId is provided
+  useEffect(() => {
+    let isMounted = true;
+    if (initialConversationId && token) {
+      getConversationDetails(initialConversationId, token)
+        .then((res) => {
+          if (!isMounted) return;
+          setActiveConversationId(res.id);
+          const mapped: ChatMessageData[] = res.messages.map((m) => ({
+            id: m.id,
+            role: m.role as 'user' | 'assistant',
+            content: m.content,
+            source_refs: m.source_refs as SourceRef[],
+            created_at: new Date(m.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+          }));
+          setMessages(mapped);
+        })
+        .catch(() => {
+          // ignore error
+        });
+    }
+    return () => {
+      isMounted = false;
+    };
+  }, [initialConversationId, token]);
+
   const handleResetChat = () => {
     setMessages([]);
+    setActiveConversationId(undefined);
     setIsThinking(false);
   };
 
@@ -43,6 +80,28 @@ export const ChatView: React.FC<ChatViewProps> = ({
     setIsThinking(true);
 
     try {
+      // Backend conversation persistence for user message
+      let currentConvId = activeConversationId;
+      if (token) {
+        try {
+          if (!currentConvId) {
+            const newConv = await createConversation({
+              title: content.slice(0, 60) + (content.length > 60 ? '...' : ''),
+              initial_message: content,
+            }, token);
+            currentConvId = newConv.id;
+            setActiveConversationId(newConv.id);
+          } else {
+            await addMessageToConversation(currentConvId, {
+              role: 'user',
+              content,
+            }, token);
+          }
+        } catch {
+          // Fallback to local
+        }
+      }
+
       const langCode = language.toLowerCase() === 'hi' ? 'hi' : 'en';
       const response = await sendChatMessage({
         message: content,
@@ -92,12 +151,26 @@ export const ChatView: React.FC<ChatViewProps> = ({
       setMessages((prev) => [...prev, assistantMsg]);
       setIsThinking(false);
 
+      // Backend conversation persistence for assistant turn
+      if (token && currentConvId) {
+        try {
+          await addMessageToConversation(currentConvId, {
+            role: 'assistant',
+            content: response.answer,
+            source_refs: sources,
+            verification_status: response.grounding_status,
+          }, token);
+        } catch {
+          // Fallback
+        }
+      }
+
       // Persist real conversation summary to local storage for Dashboard and History pages
       try {
         const storedHistoryStr = localStorage.getItem('bisaarthi_chat_history');
         const existingHistory = storedHistoryStr ? JSON.parse(storedHistoryStr) : [];
         const newEntry = {
-          id: `conv-${Date.now()}`,
+          id: currentConvId || `conv-${Date.now()}`,
           title: content.slice(0, 60) + (content.length > 60 ? '...' : ''),
           preview: response.answer.slice(0, 100) + (response.answer.length > 100 ? '...' : ''),
           updated_at: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
@@ -123,7 +196,7 @@ export const ChatView: React.FC<ChatViewProps> = ({
       };
       setMessages((prev) => [...prev, errorMsg]);
     }
-  }, [language]);
+  }, [language, token, activeConversationId]);
 
   useEffect(() => {
     if (initialPrompt && !initialPromptSentRef.current) {
