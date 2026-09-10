@@ -27,6 +27,7 @@ class StandardSummary(BaseModel):
     categories: List[str] = Field(default_factory=list, description="Categories and domains")
     reason_selected: Optional[str] = Field(default=None, description="Rationale for inclusion in MVP corpus")
     primary_use_case: Optional[str] = Field(default=None, description="Primary industry/consumer use case")
+    why_applicable: Optional[str] = Field(default=None, description="Contextual applicability rationale for specific query")
     last_synced_at: Optional[datetime.datetime] = Field(default=None, description="Timestamp when standard was last synced")
     created_at: Optional[datetime.datetime] = Field(default=None, description="Record creation timestamp")
     updated_at: Optional[datetime.datetime] = Field(default=None, description="Record update timestamp")

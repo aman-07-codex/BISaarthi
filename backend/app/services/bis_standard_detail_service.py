@@ -138,7 +138,7 @@ class BISStandardDetailService:
             source_endpoint=basic_endpoint,
         )
 
-        # 2. Laboratory Testing Infrastructure (review-service)
+        # 2. Laboratory Testing Infrastructure (review-service or AI enrichment)
         lab_items: List[Dict[str, Any]] = []
         lab_endpoint = f"{self.bis_client.review_base_url}/getStandardLaboratoryDetails"
         if standard_enc_id:

@@ -224,11 +224,14 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {labItems.map((lab, idx) => {
-                const labName = lab.lab_name || lab.labName || `Testing Laboratory ${idx + 1}`;
-                const location = [lab.district, lab.state, lab.pincode].filter(Boolean).join(', ') || lab.address || 'India';
-                const bisCode = lab.bis_code || lab.bisCode;
-                const oslCode = lab.osl_code || lab.oslCode;
+              {labItems.map((lab: any, idx) => {
+                const labName = lab.lab_name || lab.labName || lab.name || `Testing Laboratory ${idx + 1}`;
+                const location = [lab.district, lab.state, lab.pincode].filter(Boolean).join(', ') || lab.location || lab.address || 'India';
+                const bisCode = lab.bis_code || lab.bisCode || lab.contact_info?.bis_code;
+                const oslCode = lab.osl_code || lab.oslCode || lab.contact_info?.osl_code;
+                const scope = lab.testing_scope || lab.contact_info?.scope;
+                const phone = lab.contact_phone || lab.contact_info?.phone;
+                const contact = lab.contact_person || lab.contact_info?.email;
 
                 return (
                   <div
@@ -240,9 +243,9 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
                         <h3 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] leading-snug">
                           {labName}
                         </h3>
-                        {lab.lab_type && (
+                        {(lab.lab_type || lab.contact_info?.lab_type) && (
                           <span className="text-[10px] bg-white dark:bg-[#15221E] text-[#0D3328] dark:text-[#8FA89B] font-semibold px-2 py-0.5 rounded-full border border-[#D9DDD8] dark:border-[#253831] shrink-0">
-                            {lab.lab_type}
+                            {lab.lab_type || lab.contact_info?.lab_type}
                           </span>
                         )}
                       </div>
@@ -251,6 +254,12 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
                         <span>{location}</span>
                       </p>
                     </div>
+
+                    {scope && (
+                      <p className="text-[11px] text-[#606E66] dark:text-[#BAC5BF] leading-relaxed pt-1 border-t border-[#EFECE6] dark:border-[#253831]/50">
+                        {scope}
+                      </p>
+                    )}
 
                     <div className="pt-2 border-t border-[#EFECE6] dark:border-[#253831] flex flex-wrap items-center justify-between gap-2 text-[11px] text-[#8B978F]">
                       <div className="flex items-center gap-2">
@@ -265,9 +274,10 @@ export default function RecognizedLaboratoriesPage({ params }: LaboratoriesPageP
                           </span>
                         )}
                       </div>
-                      {lab.contact_person && (
-                        <span className="truncate max-w-[140px]">{lab.contact_person}</span>
-                      )}
+                      <div className="flex items-center gap-2">
+                        {contact && <span className="truncate max-w-[140px]">{contact}</span>}
+                        {phone && <span>{phone}</span>}
+                      </div>
                     </div>
                   </div>
                 );

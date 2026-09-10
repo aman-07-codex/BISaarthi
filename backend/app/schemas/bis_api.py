@@ -23,6 +23,7 @@ class StandardListItem(BaseModel):
     document_available: bool = Field(default=False, description="Whether legitimate document has been acquired")
     reason_selected: Optional[str] = Field(default=None, description="Rationale for inclusion in MVP corpus")
     primary_use_case: Optional[str] = Field(default=None, description="Primary industry/consumer use case")
+    why_applicable: Optional[str] = Field(default=None, description="Why this standard applies to query")
 
 
 class StandardSearchResponse(BaseModel):
@@ -57,6 +58,7 @@ class StandardDetailsResponse(BaseModel):
     selection_confidence: Optional[str] = Field(default=None, description="Corpus selection confidence")
     reason_selected: Optional[str] = Field(default=None, description="Rationale for inclusion in MVP corpus")
     primary_use_case: Optional[str] = Field(default=None, description="Primary industry/consumer use case")
+    why_applicable: Optional[str] = Field(default=None, description="Contextual applicability rationale")
     scope: Optional[str] = Field(default=None, description="Scope description")
     revision_info: Optional[str] = Field(default=None, description="Revision information")
     related_selected_standards: List[str] = Field(

@@ -139,9 +139,9 @@ export default function FindStandardsPage() {
           relevance: 'highly_relevant',
           reason_selected: item.reason_selected || null,
           primary_use_case: item.primary_use_case || null,
-          why_applicable: item.reason_selected || item.primary_use_case || (item.category
+          why_applicable: (item as any).why_applicable || item.reason_selected || item.primary_use_case || (item.category
             ? `${item.category}${item.department ? ` • ${item.department}` : ''}${item.committee ? ` • ${item.committee}` : ''}`
-            : 'Authoritative standard identified from curated MVP corpus.'),
+            : 'Authoritative standard identified for this product.'),
           source_refs: [
             {
               source_id: `src-${item.standard_id || item.is_number}`,

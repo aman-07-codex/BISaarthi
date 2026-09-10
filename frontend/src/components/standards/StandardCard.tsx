@@ -73,14 +73,14 @@ export const StandardCard: React.FC<StandardCardProps> = ({
         </h3>
 
         {/* Why This Standard Is Relevant Callout */}
-        {(standard.reason_selected || standard.why_applicable) && (
+        {(standard.why_applicable || standard.reason_selected || standard.primary_use_case) && (
           <div className="p-3.5 rounded-2xl bg-[#FAF9F5] dark:bg-[#1B2B26]/60 border-l-4 border-l-[#0D3328] dark:border-l-[#5B8272] border border-[#EFECE6] dark:border-[#253831] mb-4 space-y-2">
             <div>
               <p className="text-[11px] font-bold text-[#0D3328] dark:text-[#8FA89B] uppercase tracking-wider mb-1">
                 Why This Standard Is Relevant
               </p>
               <p className="text-xs text-[#18211D] dark:text-[#BAC5BF] leading-relaxed">
-                {standard.reason_selected || standard.why_applicable}
+                {standard.why_applicable || standard.reason_selected || standard.primary_use_case}
               </p>
             </div>
             {standard.primary_use_case && (

@@ -1,0 +1,22 @@
+{
+  "status": "SUCCESS",
+  "statusCode": 200,
+  "msg": "Standard details fetched successfully",
+  "data": [
+    {
+      "standardId": 25402,
+      "pk_is_id": 25470,
+      "standardEncId": "eyJpdiI6InJZdXI2WWpGOU9veWJDcmVXSEhZZnc9PSIsInZhbHVlIjoiWGRlWXBYeGVGT2ViQkhFTTVFMFQvZz09IiwibWFjIjoiNWUzZGI1ZTc3YjllYTAxODY5NzhjNWNkZDNjZTFmZGJjYTc2Y2RkM2Q4MTE3NDJlMjU5NWUzNTE2Njk4ODA2NSIsInRhZyI6IiJ9",
+      "standardEncIId": "eyJpdiI6IjlwZnNDajlJaVdGbWZqWTlBbzhEYnc9PSIsInZhbHVlIjoiL0xTUlpqT2R2VGNicHZHWkFBOGZRQT09IiwibWFjIjoiZjYxY2U0NmZmMGRmNGI5MDM4YjkzYTgwMDU5ZDgwYjcwMTgxMjgwMmNjY2I2Yzk4MGY3MTFiNmE0N2M2NGVkMyIsInRhZyI6IiJ9",
+      "standardNumber": "IS 1293:2019",
+      "standardName": "Plugs and Socket-Outlets for Household and Similar Purposes of Rated Voltage up to and Including 250 V and Rated Current up to and Including 16 A - Specification ( Fourth Revision )",
+      "departmentId": 65,
+      "departmentEncId": "eyJpdiI6Ii85aWFZb1JiMy9kSmpxNmdqd0lJYkE9PSIsInZhbHVlIjoiU3B6RUNIZzhlUnRnc1gxU2ZZcXFPQT09IiwibWFjIjoiOTkxYzNmNGUyOWE2NjZmMzY4Yjk2NzEzMDViYmU4Zjg3ZjYyMjEzODVkMTEyM2E4ZTI1YjA5YzYwNGE5MzhhZSIsInRhZyI6IiJ9",
+      "committeeId": 248,
+      "committeeEncId": "eyJpdiI6IkRrQ3JZa2dvNVVVR2diUVpwdmlVa3c9PSIsInZhbHVlIjoidGxZWlJBT3p2eUZWRHJQUmVUdWFhZz09IiwibWFjIjoiM2UyMTlmOTk2MmUxODUxZjdkZGNkMTZkY2ViY2E1NDJiZjYzNThkMDgxMTMwOWU3NjQ2ZGIxNjg3MTRiZjEzNSIsInRhZyI6IiJ9",
+      "deptPreparedName": "Electrotechnical Department(ETD)",
+      "secCommitteePreparedName": "ETD 14 - Electrical Wiring Accessories",
+      "reviewId": "eyJpdiI6IkhWUk1qZmE1MERJcytQdDZEdU1ZUkE9PSIsInZhbHVlIjoiQ2h2RmlneXN2U09Xa05pZEgvL25SZz09IiwibWFjIjoiYjE4N2I4OTA5Y2UxOGI2NTI3OGJiOWQ2OWUzNTdmZDU5MGU1MGZjNTJiNWVhMjQyYWE4NmNkYTYzOThmYzI3NyIsInRhZyI6IiJ9"
+    }
+  ]
+}
