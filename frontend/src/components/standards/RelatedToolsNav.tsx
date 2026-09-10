@@ -40,9 +40,6 @@ export const RelatedToolsNav: React.FC<RelatedToolsNavProps> = ({ isNumber, clas
                 <h4 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] group-hover:text-[#0D3328] dark:group-hover:text-[#8FA89B] transition-colors">
                   {t('std.testsTab', 'Tests & Certification')}
                 </h4>
-                <span className="text-[10px] font-bold text-[#8C6126] dark:text-[#FDE68A] bg-[#FAF4EB] dark:bg-[#38240D] px-2 py-0.5 rounded-full border border-[#F2E4CD] dark:border-[#523A1B]">
-                  Pending Official Data
-                </span>
               </div>
               <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] line-clamp-2 mt-1 leading-relaxed">
                 Testing routines and conformity schemes require verified BIS document acquisition.
@@ -69,9 +66,6 @@ export const RelatedToolsNav: React.FC<RelatedToolsNavProps> = ({ isNumber, clas
                 <h4 className="text-xs sm:text-sm font-bold text-[#18211D] dark:text-[#F7F5EF] group-hover:text-[#0D3328] dark:group-hover:text-[#8FA89B] transition-colors">
                   {t('std.labsTab', 'Recognized Laboratories')}
                 </h4>
-                <span className="text-[10px] font-bold text-[#8C6126] dark:text-[#FDE68A] bg-[#FAF4EB] dark:bg-[#38240D] px-2 py-0.5 rounded-full border border-[#F2E4CD] dark:border-[#523A1B]">
-                  Pending Official Data
-                </span>
               </div>
               <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] line-clamp-2 mt-1 leading-relaxed">
                 Standard-specific laboratory capability directory requires authoritative LIMS mapping.

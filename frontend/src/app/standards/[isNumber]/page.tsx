@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { AppLayout } from '@/components/layout/AppLayout';
 import { StatusBadge } from '@/components/common/StatusBadge';
 import { RelevanceBadge } from '@/components/common/RelevanceBadge';
-import { UncertaintyNotice } from '@/components/common/UncertaintyNotice';
 import { RelatedToolsNav } from '@/components/standards/RelatedToolsNav';
 import { getStandardDetails, getOfficialStandardDetails, saveStandardApi, deleteSavedStandardApi, APIError } from '@/lib/api';
 import { StandardDetailsResponse, OfficialStandardDetailDocument, StandardCardData } from '@/types';
@@ -22,7 +21,6 @@ import {
   ExternalLink,
   Layers,
   FileCheck,
-  Info,
   FileText,
 } from 'lucide-react';
 
@@ -430,41 +428,6 @@ export default function StandardDetailsPage({ params }: StandardDetailsPageProps
             </div>
           </div>
         )}
-
-        {/* Corpus Inclusion Rationale & Primary Application */}
-        <div className="bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] p-6 shadow-xs space-y-4">
-          <div className="flex items-center gap-2">
-            <Info className="w-4 h-4 text-[#0D3328] dark:text-[#8FA89B]" />
-            <h2 className="text-base font-bold text-[#18211D] dark:text-[#F7F5EF]">
-              Why This Standard Is Included
-            </h2>
-          </div>
-
-          <div className="space-y-3">
-            <div>
-              <h3 className="text-xs font-bold text-[#606E66] dark:text-[#BAC5BF] uppercase tracking-wider mb-1.5">
-                Corpus Inclusion Rationale
-              </h3>
-              <div className="p-4 rounded-2xl bg-[#FAF9F5] dark:bg-[#1B2B26]/60 border-l-4 border-l-[#0D3328] border border-[#EFECE6] dark:border-[#253831] text-xs sm:text-sm text-[#18211D] dark:text-[#BAC5BF] leading-relaxed">
-                {standard.reason_selected || 'Standard is included in the curated 100-standard BISaarthi MVP corpus.'}
-              </div>
-            </div>
-
-            {standard.primary_use_case && (
-              <div className="p-4 rounded-2xl bg-[#FAF9F5] dark:bg-[#1B2B26]/40 border border-[#EFECE6] dark:border-[#253831] space-y-1.5">
-                <h3 className="text-xs font-bold text-[#18211D] dark:text-[#F7F5EF] uppercase tracking-wider flex items-center gap-1.5">
-                  <ShieldCheck className="w-3.5 h-3.5 text-[#2D9D5D]" />
-                  <span>Primary Application</span>
-                </h3>
-                <p className="text-xs text-[#606E66] dark:text-[#BAC5BF] leading-relaxed">
-                  {standard.primary_use_case}
-                </p>
-              </div>
-            )}
-          </div>
-
-          <UncertaintyNotice message="Corpus rationale reflects editorial selection criteria. Product compliance requires verification of the latest official BIS standard text and applicable gazetted regulatory orders." />
-        </div>
 
         {/* Documentation & Clause Availability Notice */}
         <div className="bg-white dark:bg-[#15221E] rounded-3xl border border-[#D9DDD8] dark:border-[#253831] p-6 shadow-xs space-y-4">
